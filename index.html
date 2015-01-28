@@ -47,10 +47,6 @@
           <input type="text" id="name" placeholder="Jane Doe" />
       </div>
       <div>
-          <label for="mail">Email:</label>
-          <input type="email" id="mail" placeholder="jane@gmail.com" />
-      </div>
-      <div>
           <label for="password">Password:</label>
           <input type="password" id="password" />
       </div>
@@ -67,9 +63,15 @@
 
     $('#sign-up').on('submit', function(){
       var user = new Parse.User();
-      user.set("username", "my name");
-      user.set("password", "my pass");
-      user.set("email", "email@example.com");
+
+      // Get user information from inputs
+      var username = $('#sign-up #name').val();
+      var password = $('#sign-up #password').val();
+      var email = $('#sign-up #mail').val();
+
+      user.set("username", username);
+      user.set("password", password);
+      user.set("email", email);
         
       // other fields can be set just like with Parse.Object
       user.set("phone", "650-555-0000");
@@ -88,7 +90,11 @@
     });
 
     $('#log-in').on('submit', function(){
-      Parse.User.logIn("myname", "mypass", {
+      // Get user information from inputs
+      var username = $('#log-in #name').val();
+      var password = $('#log-in #password').val();
+
+      Parse.User.logIn(username, password, {
         success: function(user) {
           // Redirect into the site
           alert("You're in!");
