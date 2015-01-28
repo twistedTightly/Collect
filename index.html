@@ -34,7 +34,7 @@
       </div>
       
       <div class="button">
-          <button type="button">Sign Up</button>
+          <button type="submit">Sign Up</button>
       </div>
     </form>
 
@@ -56,7 +56,7 @@
       </div>
       
       <div class="button">
-          <button type="button">Log In</button>
+          <button type="submit">Log In</button>
       </div>
     </form>
 
@@ -84,10 +84,11 @@
           alert("Error: " + error.code + " " + error.message);
         }
       });
+      return false;
     });
 
     $('#log-in').on('submit', function(){
-      Parse.User.logIn("my name", "my pass", {
+      Parse.User.logIn("myname", "mypass", {
         success: function(user) {
           // Redirect into the site
           alert("You're in!");
@@ -97,6 +98,7 @@
           alert("Error: " + error.code + " " + error.message);
         }
       });
+      return false;
     });
   </script>
 </body>
