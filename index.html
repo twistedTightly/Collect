@@ -78,8 +78,7 @@
         
       user.signUp(null, {
         success: function(user) {
-          // Hooray! Let them use the app now.
-          alert("You're in!");
+          window.location.href = "profile.html"
         },
         error: function(user, error) {
           // Show the error message somewhere and let the user try again.
@@ -96,8 +95,7 @@
 
       Parse.User.logIn(username, password, {
         success: function(user) {
-          // Redirect into the site
-          alert("You're in!");
+          window.location.href = "profile.html"
         },
         error: function(user, error) {
           // Show the error message somewhere and let the user try again.
