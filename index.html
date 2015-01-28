@@ -2,8 +2,8 @@
 <head>
   <meta charset="utf-8">
 
-  <title>My Parse App</title>
-  <meta name="description" content="My Parse App">
+  <title>Collect Log In</title>
+  <meta name="description" content="Collect Log In">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -14,14 +14,29 @@
 <body>
   
   <div id="main">
-    <h1>You're ready to use Parse!</h1>
+    <h1>Collect</h1>
 
-    <p>Read the documentation and start building your JavaScript app:</p>
+    <p>A beautiful website to preserve the past and build upon our personal histories, dedicated to archiving memories and shared experiences in order to adapt history to its most individualized expression.</p>
 
-    <ul>
-      <li><a href="https://www.parse.com/docs/js_guide">Parse JavaScript Guide</a></li>
-      <li><a href="https://www.parse.com/docs/js">Parse JavaScript API Documentation</a></li>
-    </ul>
+    <form id="sign-up">
+      <h3>Sign Up</h3>
+      <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Jane Doe" />
+      </div>
+      <div>
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" placeholder="jane@gmail.com" />
+      </div>
+      <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" />
+      </div>
+      
+      <div class="button">
+          <button type="button">Sign Up</button>
+      </div>
+    </form>
 
     <div style="display:none" class="error">
       Looks like there was a problem saving the test object. Make sure you've set your application ID and javascript key correctly in the call to <code>Parse.initialize</code> in this file.
@@ -40,35 +55,28 @@
 
   <script type="text/javascript">
     Parse.initialize("zJmWzfcq3FcJAK4YcVpMt2EA9DScA5cgtQabb1Jo", "jInuu7BeuMeLlNocKR1DYkOiJpvPiCUcydpJuZlD");
-    
-    var TestObject = Parse.Object.extend("TestObject");
-    var testObject = new TestObject();
-      testObject.save({foo: "bar"}, {
-      success: function(object) {
-        $(".success").show();
-      },
-      error: function(model, error) {
-        $(".error").show();
-      }
+
+    $('#sign-up').on('submit', function(){
+      var user = new Parse.User();
+      user.set("username", "my name");
+      user.set("password", "my pass");
+      user.set("email", "email@example.com");
+        
+      // other fields can be set just like with Parse.Object
+      user.set("phone", "650-555-0000");
+        
+      user.signUp(null, {
+        success: function(user) {
+          // Hooray! Let them use the app now.
+          alert("You're in!");
+        },
+        error: function(user, error) {
+          // Show the error message somewhere and let the user try again.
+          alert("Error: " + error.code + " " + error.message);
+        }
+      });
     });
 
-    var user = new Parse.User();
-    user.set("username", "my name");
-    user.set("password", "my pass");
-    user.set("email", "email@example.com");
-      
-    // other fields can be set just like with Parse.Object
-    user.set("phone", "650-555-0000");
-      
-    user.signUp(null, {
-      success: function(user) {
-        // Hooray! Let them use the app now.
-        alert("You're in!");
-      },
-      error: function(user, error) {
-        // Show the error message somewhere and let the user try again.
-        alert("Error: " + error.code + " " + error.message);
-      }
     });
   </script>
 </body>
