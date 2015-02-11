@@ -18,11 +18,11 @@
 
     <p>A beautiful website to preserve the past and build upon our personal histories, dedicated to archiving memories and shared experiences in order to adapt history to its most individualized expression.</p>
 
-    <form id="sign-up">
+    <form id="sign-up" name="signUp" method="post" action="/profile">
       <h3>Sign Up</h3>
       <div>
           <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Jane Doe" />
+          <input type="text" id="name" name="username" placeholder="Jane Doe" />
       </div>
       <div>
           <label for="mail">Email:</label>
@@ -40,11 +40,11 @@
 
     <p>OR</p>
 
-    <form id="log-in">
+    <form id="log-in" name="logIn" method="get" action="/profile">
       <h3>Log In</h3>
       <div>
           <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Jane Doe" />
+          <input type="text" id="name" name="username" placeholder="Jane Doe" />
       </div>
       <div>
           <label for="password">Password:</label>
@@ -78,7 +78,7 @@
         
       user.signUp(null, {
         success: function(user) {
-          window.location.href = "profile.html"
+          document.signUp.submit();
         },
         error: function(user, error) {
           // Show the error message somewhere and let the user try again.
@@ -95,7 +95,7 @@
 
       Parse.User.logIn(username, password, {
         success: function(user) {
-          window.location.href = "profile.html"
+          document.logIn.submit();
         },
         error: function(user, error) {
           // Show the error message somewhere and let the user try again.
