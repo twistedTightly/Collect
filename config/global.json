@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Collect": {
+            "applicationId": "zJmWzfcq3FcJAK4YcVpMt2EA9DScA5cgtQabb1Jo", 
+            "masterKey": "KWoBmNnbzQ2QoebgYRjl4VbU5wWwaIlEQd3SmubG"
+        }, 
+        "_default": {
+            "link": "Collect"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.4"
+    }
+}

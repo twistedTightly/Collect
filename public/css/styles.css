@@ -1,7 +1,6 @@
 body {
     background: #eee;
     text-align: center;
-    padding: 0 25px;
 }
 
 #main {
@@ -38,3 +37,23 @@ body {
     color: green;
     line-height: 13px;
 }
+
+/********************
+ *
+ * Profile
+ *
+ ********************/
+
+ header {
+    height: 60px;
+    background-color: #272727;
+    color: white;
+ }
+
+ #add-memory {
+    float: left;
+ }
+
+ #user-info {
+    float: right;
+ }
