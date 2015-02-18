@@ -9,11 +9,23 @@ app.set('view engine', 'ejs');    // Set the template engine
 app.use(express.bodyParser());    // Middleware for reading request body
 
 app.get('/profile', function(req, res) {
-	res.render('profile', { username: req.query.username });
+	var name = req.query.username;
+	var phoneNumber = '';
+
+	// Get the rest of the user's information
+	var query = new Parse.Query(Parse.User);
+	query.equalTo("username", name);
+	query.find({
+		success: function(user) {
+			phoneNumber = user.get('phone');
+		}
+	});
+
+	res.render('profile', { username: name, phone: phoneNumber });
 });
 
 app.post('/profile', function(req, res) {
-	res.render('profile', { username: req.body.username });
+	res.render('profile', { username: req.body.username, phone: '9199954988' });
 });
 
 // // Example reading from the request query string of an HTTP get request.
