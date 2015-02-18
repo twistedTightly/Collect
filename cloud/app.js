@@ -25,7 +25,8 @@ app.get('/profile', function(req, res) {
 });
 
 app.post('/profile', function(req, res) {
-	res.render('profile', { username: req.body.username, phone: '9199954988' });
+	console.log(req.body);
+	res.render('profile', { username: req.body.firstname, age: '' });
 });
 
 // // Example reading from the request query string of an HTTP get request.
