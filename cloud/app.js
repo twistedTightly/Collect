@@ -23,19 +23,32 @@ app.use(sass({
 app.use(express.static( path.join( __dirname, 'public' ) ) );
 
 app.get('/profile', function(req, res) {
-	var name = req.query.username;
-	var phoneNumber = '';
+	console.log('profile get');
+	console.log(req.query.email);
+	var age = '';
+	var name = '';
 
 	// Get the rest of the user's information
 	var query = new Parse.Query(Parse.User);
-	query.equalTo("username", name);
-	query.find({
-		success: function(user) {
-			phoneNumber = user.get('phone');
+	query.equalTo('username', req.query.email);
+	query.find().then(
+		// Query was successful
+		function(user) {
+			console.log('successful query');
+			age = user.get('updatedAt');
+			name = user.get('updatedAt') + ' ' + user.get('createdAt');
+			console.log(age);
+			console.log(name);
+		},
+		// Query had a error
+		function(error) {
+			console.log('failed query');
+			console.log('Error: ' + error.code + ' ' + error.message);
+			age = error.message;
 		}
-	});
-
-	res.render('profile', { username: name, phone: phoneNumber });
+	);
+	console.log('about to render');
+	res.render('profile', { username: req.query.email, age: age });
 });
 
 app.post('/profile', function(req, res) {
