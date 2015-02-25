@@ -15,7 +15,7 @@ app.use(express.bodyParser());
 // Compile the SCSS
 app.use(sass({
   src: __dirname,
-  dest: __dirname + '/public/css',
+  dest: __dirname + '/../public/',
   outputStyle: 'compressed'
 }));
 
