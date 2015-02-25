@@ -1,16 +1,14 @@
 body {
     background: #eee;
     text-align: center;
+    width: 100%;
 }
 
 #main {
-    width: 500px;
+    width: 100%;
     margin: auto;
     text-align: left;
-    background: white;
-    padding: 50px 60px;
-    border: solid #ddd;
-    border-width: 0 1px 1px 1px;
+    padding: 40px 0;
 }
 
 #main h1 {
@@ -37,23 +35,92 @@ body {
     color: green;
     line-height: 13px;
 }
+.row {
+    max-width: 65rem;
+}
 
 /********************
  *
- * Profile
+ * Profile Header
  *
  ********************/
 
  header {
-    height: 60px;
+    height: 4em;
+    min-height: 30px;
     background-color: #272727;
+    text-align: right;
+    vertical-align: middle;
     color: white;
+    padding: 0 1.7em; 
+    text-transform: uppercase;
  }
-
- #add-memory {
+ header #logo {
     float: left;
+    width: 104px;
+    height: auto;
  }
+ .triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 64px solid transparent;
+    border-right: 80px solid #50D6AA;
+    border-bottom: 64px solid transparent;
+}
+#pullout-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#pullout-menu-icon-holder {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 50px 0;
+}
 
- #user-info {
-    float: right;
- }
+/********************
+ *
+ * User Profile
+ *
+ ********************/
+
+#user-information {
+    height: 220px;
+    background-color: #50D6AA;
+    margin: 0 10px;
+}
+
+/********************
+ *
+ * Memory Gallery
+ *
+ ********************/
+
+/****** Header ******/
+#gallery-header {
+    padding: 15px 0;
+}
+#gallery-header p {
+    margin: 0;
+}
+#gallery-header #user-location img, #gallery-header #user-location p {
+    display: inline-block;
+}
+#gallery-header #user-location img {
+    width: 15px;
+    height: 20px;
+}
+
+/****** Rows *******/
+.gallery-row.row {
+    margin: 0.5em 5%;
+}
+.test-block.collection {
+    height: 160px;
+    background-color: blue;
+    margin: auto;
+}
+.collection .content-holder {
+    text-align: center;
+}
