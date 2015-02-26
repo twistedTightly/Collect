@@ -1,7 +1,6 @@
 
 // These two lines are required to initialize Express in Cloud Code.
 var express = require('express');
-var sass = require('node-sass-middleware'); // Loading the sass module
 var path = require('path'); // Loading the path module
 var app = express();
 
@@ -11,13 +10,6 @@ app.set('view engine', 'ejs');    // Set the template engine
 
 // Middleware for reading request body
 app.use(express.bodyParser());
-
-// Compile the SCSS
-app.use(sass({
-  src: __dirname,
-  dest: __dirname + '/../public/',
-  outputStyle: 'compressed'
-}));
 
 // The static middleware must come after the sass middleware
 app.use(express.static( path.join( __dirname, 'public' ) ) );
