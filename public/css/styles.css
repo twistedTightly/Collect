@@ -35,9 +35,22 @@ body {
     color: green;
     line-height: 13px;
 }
+.flat-button {
+    background-color: #272727;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+
+/*******************
+ *
+ * Foundation Overrides
+ *
+ ******************/
 .row {
     max-width: 65rem;
 }
+
 
 /********************
  *
@@ -89,6 +102,12 @@ body {
     height: 220px;
     background-color: #50D6AA;
     margin: 0 10px;
+    position: relative; /* Necessary to postiion 'add' button absolutely on it */
+}
+#add-memory {
+    position: absolute;
+    top: 50%;
+    right: -15px;
 }
 
 /********************
