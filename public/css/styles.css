@@ -51,13 +51,11 @@ body {
     max-width: 65rem;
 }
 
-
 /********************
  *
  * Profile Header
  *
  ********************/
-
  header {
     height: 4em;
     min-height: 30px;
@@ -67,12 +65,27 @@ body {
     color: white;
     padding: 0 1.7em; 
     text-transform: uppercase;
+    -webkit-transition:  padding 1s;
+    transition: padding 1s;
  }
  header #logo {
     float: left;
     width: 104px;
     height: auto;
  }
+ header .svg-container {
+    height: 1.5em;
+    min-height: 10px;
+ }
+ header img {
+    display: inline-block;
+ }
+
+/********************
+ *
+ * Pullout Menu
+ *
+ ********************/
  .triangle-left {
     width: 0;
     height: 0;
@@ -80,10 +93,13 @@ body {
     border-right: 80px solid #50D6AA;
     border-bottom: 64px solid transparent;
 }
-#pullout-menu {
+#pullout-menu-tab {
+    z-index: 100;
     position: absolute;
     right: 0;
     top: 0;
+    -webkit-transition:  right 1s;
+    transition: right 1s;
 }
 #pullout-menu-icon-holder {
     position: absolute;
@@ -91,13 +107,39 @@ body {
     top: 0;
     padding: 50px 0;
 }
+#pullout-menu {
+    width: 20%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: -20%; /* "Hides" the menu off screen */
+    background-color: rgba(143, 143, 143, 0.7);
+    -webkit-transition:  right 1s;
+    transition: right 1s;
+}
+/* Pulled out menu styles */
+#pullout-menu.show {
+    right: 0;
+    -webkit-transition:  right 1s;
+    transition: right 1s;
+}
+#pullout-menu-tab.show {
+    right: 20%;
+    -webkit-transition:  right 1s;
+    transition: right 1s;
+}
+header.shift {
+    padding-right: 25%;
+    -webkit-transition:  padding 1s;
+    transition: padding 1s;
+}
 
 /********************
  *
  * User Profile
  *
  ********************/
-
 #user-information {
     height: 220px;
     background-color: #50D6AA;

@@ -8,15 +8,32 @@
 
   <body>
   	<header>
-          <span id="logo">COLLECT</span>
-          <span id="user-info"><%= username %></span>
-          <a href="">
-            <div id="pullout-menu" class="triangle-left"></div>
+          <div class="left">
+           <span id="logo">COLLECT</span>
+         </div>
+         <div class="right">
+            <div class="svg-container">
+              <a href="/connections"><img class="svg-icon" src="images/connections_icon_white.svg" alt="Connections"></a>
+              <a href="#"><img class="svg-icon" src="images/messages_icon_white.svg" alt="Messages"></a>
+            </div>
+            <span id="user-info"><%= username %></span>
+          </div>
+
+          <div id="pullout-menu-tab">
+            <div class="triangle-left"></div>
             <div id="pullout-menu-icon-holder">
                 <img src="" alt="Pullout Menu"/>
             </div>
-          </a>
+          </div>
     </header>
+
+    <!-- Pullout Menu -->
+    <div id="pullout-menu">
+      <input type="text" placeholder="Search"/>
+      <a href="#">Settings</a>
+      <a href="#">About</a>
+      <a href="#">Log In / Register</a>
+    </div>
 
     <!-- Main body of the site -->
     <div id="main" class="row">
