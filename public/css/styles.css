@@ -41,6 +41,12 @@ body {
     color: white;
     text-align: center;
 }
+.svg-icon {
+    height: 100%;
+}
+.svg-container {
+    display: inline-block;
+}
 
 /*******************
  *
