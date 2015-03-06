@@ -5,14 +5,12 @@ var path = require('path'); // Loading the path module
 var app = express();
 
 // Global app configuration section
-app.set('views', __dirname + '/views');  // Specify the folder to find templates
+app.set('views', 'cloud/views');  // Specify the folder to find templates
 app.set('view engine', 'ejs');    // Set the template engine
 
 // Middleware for reading request body
 app.use(express.bodyParser());
 
-// The static middleware must come after the sass middleware
-app.use(express.static( path.join( __dirname, 'public' ) ) );
 
 app.get('/profile', function(req, res) {
 	console.log('profile get');
