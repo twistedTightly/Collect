@@ -11,6 +11,9 @@ app.set('view engine', 'ejs');    // Set the template engine
 // Middleware for reading request body
 app.use(express.bodyParser());
 
+app.get('/collection', function(req, res) {
+	res.render('collection');
+});
 
 app.get('/connections', function(req, res) {
 	res.render('connections', { username: ''});

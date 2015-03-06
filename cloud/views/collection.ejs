@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+  <head>
+    <% include partials/head.ejs %>
+    <title>Connections</title>
+    <meta name="description" content="View Your Connections">
+  </head>
+  <body>
+    <header>
+      <div class="left">
+        <span id="logo">COLLECT</span>
+      </div>
+     <div class="right">
+        <div class="svg-container">
+          <a href="/connections"><img class="svg-icon" src="images/connections_icon_white.svg" alt="Connections"></a>
+          <a href="#"><img class="svg-icon" src="images/messages_icon_white.svg" alt="Messages"></a>
+        </div>
+        <span id="user-info"><%= username %></span>
+      </div>
+
+      <div id="pullout-menu-tab">
+        <div class="triangle-left"></div>
+        <div id="pullout-menu-icon-holder">
+            <img src="" alt="Pullout Menu"/>
+        </div>
+      </div>
+    </header>
+
+    <!-- Pullout Menu -->
+    <div id="pullout-menu">
+      <input type="text" placeholder="Search"/>
+      <a href="#">Settings</a>
+      <a href="#">About</a>
+      <a href="#">Log In / Register</a>
+    </div>
+
+    <!-- Display all connections -->
+
+    <% include partials/footer.ejs %>
+    <% include partials/scripts.ejs %>
+  </body>
+</html>
