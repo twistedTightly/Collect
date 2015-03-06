@@ -2,18 +2,8 @@
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" >
   <head>
-    <meta charset="utf-8">
-
+    <% include 'partials/head.ejs' %>
     <title><%= username %></title>
-    <meta name="description" content="Collect Log In">
-    <meta name="viewport" content="width=device-width">
-
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="style/test.css">
-
-    <script src="js/vendor/modernizr.js"></script>
   </head>
 
   <body>
@@ -104,17 +94,7 @@
       </div><!-- End memory-gallery -->
     </div>
 
-    <!-- Timeline in footer -->
-    <div class="row" style="background-color: blue;">
-      <div>Test</div>
-    </div>
-
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.3.min.js"></script>
-    <script src="/js/vendor/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-    <script type="text/javascript" src="/js/vendor/foundation.reveal.js"></script>
+    <% include 'partials/footer.ejs' %>
+    <% include 'partials/scripts.ejs' %>
   </body>
 </html>
