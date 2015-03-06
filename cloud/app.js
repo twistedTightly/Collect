@@ -12,6 +12,10 @@ app.set('view engine', 'ejs');    // Set the template engine
 app.use(express.bodyParser());
 
 
+app.get('/connections', function(req, res) {
+	res.render('connections', { username: ''});
+});
+
 app.get('/profile', function(req, res) {
 	console.log('profile get');
 	console.log(req.query.email);
@@ -45,18 +49,6 @@ app.post('/profile', function(req, res) {
 	console.log(req.body);
 	res.render('profile', { username: req.body.firstname, age: '' });
 });
-
-// // Example reading from the request query string of an HTTP get request.
-// app.get('/test', function(req, res) {
-//   // GET http://example.parseapp.com/test?message=hello
-//   res.send(req.query.message);
-// });
-
-// // Example reading from the request body of an HTTP post request.
-// app.post('/test', function(req, res) {
-//   // POST http://example.parseapp.com/test (with request body "message=hello")
-//   res.send(req.body.message);
-// });
 
 // This line is required to make Express respond to http requests.
 // Attach the Express app to Cloud Code.
