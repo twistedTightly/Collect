@@ -9242,3 +9242,7 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+/* line 42, ../scss/app.scss */
+body {
+  overflow: hidden;
+}
