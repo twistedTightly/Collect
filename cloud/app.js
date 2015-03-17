@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');    // Set the template engine
 app.use(express.bodyParser());
 
 app.get('/collection', function(req, res) {
-	res.render('collection');
+	res.render('collection', { username: ''});
 });
 
 app.get('/connections', function(req, res) {
