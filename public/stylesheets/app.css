@@ -9279,10 +9279,111 @@ body {
 
 /********************
  *
+ * Pullout Menu
+ *
+ ********************/
+/* line 53, ../scss/app.scss */
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 64px solid transparent;
+  border-right: 64px solid #50D6AA;
+  border-bottom: 64px solid transparent;
+}
+
+/* line 60, ../scss/app.scss */
+#pullout-menu-tab {
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: right 1s;
+  transition: right 1s;
+}
+
+/* line 68, ../scss/app.scss */
+#pullout-menu-icon-holder {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 50px 0;
+}
+
+/* line 74, ../scss/app.scss */
+#pullout-menu-icon-holder .svg-icon {
+  padding-right: 10px;
+}
+
+/* line 77, ../scss/app.scss */
+#pullout-menu {
+  width: 20%;
+  height: 100%;
+  padding: 45px 2%;
+  text-align: left;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: -20%;
+  /* "Hides" the menu off screen */
+  -webkit-transition: right 1s;
+  transition: right 1s;
+  background: #707070;
+  background: -moz-linear-gradient(-45deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #707070), color-stop(37%, rgba(112, 112, 112, 0.95)), color-stop(81%, rgba(112, 112, 112, 0.85)), color-stop(100%, rgba(112, 112, 112, 0.7)));
+  background: -webkit-linear-gradient(-45deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
+  background: -o-linear-gradient(-45deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
+  background: -ms-linear-gradient(-45deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
+  background: linear-gradient(135deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8f8f', endColorstr='#8f8f8f', GradientType=1 );
+}
+/* line 98, ../scss/app.scss */
+#pullout-menu a {
+  display: block;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding-top: 45px;
+  padding-left: 15px;
+}
+/* line 105, ../scss/app.scss */
+#pullout-menu a:visited {
+  color: #FFFFFF;
+}
+/* line 108, ../scss/app.scss */
+#pullout-menu input[type="search"] {
+  border-radius: 50px;
+  padding: 5px 15px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+/* Pulled out menu styles */
+/* line 116, ../scss/app.scss */
+#pullout-menu.show {
+  right: 0;
+  -webkit-transition: right 1s;
+  transition: right 1s;
+}
+
+/* line 121, ../scss/app.scss */
+#pullout-menu-tab.show {
+  right: 20%;
+  -webkit-transition: right 1s;
+  transition: right 1s;
+}
+
+/* line 126, ../scss/app.scss */
+header.shift {
+  padding-right: 25%;
+  -webkit-transition: padding 1s;
+  transition: padding 1s;
+}
+
+/********************
+ *
  * User Profile
  *
  ********************/
-/* line 52, ../scss/app.scss */
+/* line 138, ../scss/app.scss */
 #user-information {
   min-height: 220px;
   background-color: #50D6AA;
@@ -9292,18 +9393,18 @@ body {
   text-align: center;
   font-size: 60%;
 }
-/* line 60, ../scss/app.scss */
+/* line 146, ../scss/app.scss */
 #user-information #profile-picture {
   padding: 15px 0px;
 }
-/* line 63, ../scss/app.scss */
+/* line 149, ../scss/app.scss */
 #user-information p {
   text-transform: uppercase;
   padding: 15px 0px;
   margin: 0px;
   font-size: 60%;
 }
-/* line 69, ../scss/app.scss */
+/* line 155, ../scss/app.scss */
 #user-information hr {
   border: 0;
   margin: 0px auto 15px auto;
@@ -9318,21 +9419,21 @@ body {
  *
  ********************/
 /****** Header ******/
-/* line 85, ../scss/app.scss */
+/* line 171, ../scss/app.scss */
 #gallery-header {
   padding: 15px 0 35px 0;
 }
-/* line 88, ../scss/app.scss */
+/* line 174, ../scss/app.scss */
 #gallery-header p {
   font-size: 140%;
   margin: 0;
   display: inline-block;
 }
-/* line 93, ../scss/app.scss */
+/* line 179, ../scss/app.scss */
 #gallery-header p#username {
   font-style: italic;
 }
-/* line 96, ../scss/app.scss */
+/* line 182, ../scss/app.scss */
 #gallery-header #user-location p {
   text-transform: uppercase;
 }
