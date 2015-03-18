@@ -9281,3 +9281,32 @@ body {
   height: 1px;
   width: 60%;
 }
+
+/********************
+ *
+ * Memory Gallery
+ *
+ ********************/
+/****** Header ******/
+/* line 85, ../scss/app.scss */
+#gallery-header {
+  padding: 15px 0 35px 0;
+}
+/* line 88, ../scss/app.scss */
+#gallery-header p {
+  font-size: 140%;
+  margin: 0;
+  display: inline-block;
+}
+/* line 93, ../scss/app.scss */
+#gallery-header p#username {
+  font-style: italic;
+}
+/* line 96, ../scss/app.scss */
+#gallery-header #user-location p {
+  text-transform: uppercase;
+}
+/* line 99, ../scss/app.scss */
+#gallery-header #user-location img, #gallery-header #user-location p {
+  display: inline-block;
+}

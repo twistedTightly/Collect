@@ -157,21 +157,6 @@ header.shift {
  *
  ********************/
 
-/****** Header ******/
-#gallery-header {
-    padding: 15px 0;
-}
-#gallery-header p {
-    margin: 0;
-}
-#gallery-header #user-location img, #gallery-header #user-location p {
-    display: inline-block;
-}
-#gallery-header #user-location img {
-    width: 15px;
-    height: 20px;
-}
-
 /****** Rows *******/
 .gallery-row.row {
     margin: 0.5em 5%;

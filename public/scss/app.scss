@@ -74,3 +74,29 @@ $user-info-spacing: 15px;
 	   width: 60%;
 	}
 }
+
+/********************
+ *
+ * Memory Gallery
+ *
+ ********************/
+
+/****** Header ******/
+#gallery-header {
+    padding: 15px 0 35px 0;
+
+    p {
+    	font-size: $large-font-size;
+    	margin: 0;
+    	display: inline-block;
+    }
+	p#username {
+	    font-style: italic;
+	}
+	#user-location p {
+		text-transform: uppercase;
+	}
+	#user-location img, #user-location p {
+	    display: inline-block;
+	}
+}

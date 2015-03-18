@@ -39,6 +39,8 @@
 
     <!-- Main body of the site -->
     <div id="main" class="row">
+
+      <!-- User Information Block (on side) -->
       <div id="user-information-block" class="small-2 columns">
         <div id="user-information">
 
@@ -68,16 +70,20 @@
           </div>
 
         </div>
-      </div>
+      </div><!-- End User Information Block (on side) -->
 
+      <!-- Memory Gallery (main part of page) -->
       <div id="memory-gallery" class="small-10 columns" style="background-color: purple;">
-        <div id="gallery-header" class="row" style="background-color: green;">
-          <p id="username">Name of user</p>
+        <!-- Gallery Header -->
+        <div id="gallery-header" class="row">
+          <p id="username">First Last</p>
           <div id="user-location">
-            <img src="" alt="Map Pin Icon"/>
+            <div class="svg-container">
+              <img class="svg-icon" src="images/icons/location_icon_black.svg" alt="Map Pin Icon"/>
+            </div>
             <p>Location, Location</p>
           </div>
-        </div><!-- End galler-header -->
+        </div><!-- End Gallery Header -->
 
         <div class="gallery-row row">
           <div class="test-block collection small-12 medium-6 large-3 columns">
@@ -124,7 +130,7 @@
             </div>
           </div>
         </div>
-      </div><!-- End memory-gallery -->
+      </div><!-- End Memory Gallery (main part of page) -->
     </div>
 
     <% include partials/footer.ejs %>
