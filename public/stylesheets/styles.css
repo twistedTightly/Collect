@@ -46,6 +46,8 @@ body {
 }
 .svg-container {
     display: inline-block;
+    height: 1.5em;
+    min-height: 10px;
 }
 
 /*******************
@@ -78,10 +80,6 @@ body {
     float: left;
     width: 104px;
     height: auto;
- }
- header .svg-container {
-    height: 1.5em;
-    min-height: 10px;
  }
  header img {
     display: inline-block;
@@ -146,16 +144,11 @@ header.shift {
  * User Profile
  *
  ********************/
-#user-information {
-    height: 220px;
-    background-color: #50D6AA;
-    margin: 0 10px;
-    position: relative; /* Necessary to postiion 'add' button absolutely on it */
-}
 #add-memory {
     position: absolute;
     top: 50%;
     right: -15px;
+    padding: 5px;
 }
 
 /********************

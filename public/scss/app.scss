@@ -42,3 +42,35 @@
 body {
 	overflow: hidden;
 }
+
+/********************
+ *
+ * User Profile
+ *
+ ********************/
+$user-info-spacing: 15px;
+#user-information {
+    min-height: 220px;
+    background-color: #50D6AA;
+    margin: 0 10px;
+    position: relative; /* Necessary to postiion 'add' button absolutely on it */
+    text-align: center;
+   	font-size: $small-font-size;
+
+   	#profile-picture {
+   		padding: $user-info-spacing 0px;
+   	}
+	p {
+	    text-transform: uppercase;
+	   	padding: $user-info-spacing 0px;
+	   	margin: 0px;
+	    font-size: $small-font-size;
+	}
+	hr {
+	   border: 0;
+	   margin: 0px auto $user-info-spacing auto;
+	   background-color: $black;
+	   height: 1px;
+	   width: 60%;
+	}
+}

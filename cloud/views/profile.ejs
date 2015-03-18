@@ -39,14 +39,28 @@
 
     <!-- Main body of the site -->
     <div id="main" class="row">
-      <div id="user-information-block" class="small-2 columns" style="background-color: red;">
+      <div id="user-information-block" class="small-2 columns">
         <div id="user-information">
-          <p>I'm <%= age %> years old</p>
-          <a href="#" data-reveal-id="myModal">
+
+          <div id="profile-picture">
+            <img src="images/my-profile-pic.jpg" alt="Profile picture">
+          </div>
+        
+          <div class="svg-container" id="user-memories-count">
+            <img class="svg-icon" src="images/icons/memories_icon_black.svg" alt="Memories icon">
+          </div>
+          <p><%= age %> memories</p>
+          <hr />
+          <div class="svg-container" id="user-connections-count">
+            <img class="svg-icon" src="images/icons/connections_icon_black.svg" alt="Connections icon">
+          </div>
+          <p><%= age %> connections</p>
+
+          <a href="#" data-reveal-id="add-memory-modal">
             <div id="add-memory" class="flat-button">Add</div>
           </a>
 
-          <div id="myModal" class="reveal-modal" data-reveal>
+          <div id="add-memory-modal" class="reveal-modal" data-reveal>
             <h2>Create a memory.</h2>
             <p class="lead">You can add info here.</p>
             <p>I'm a cool paragraph that lives inside of an even cooler modal.</p>
