@@ -61,32 +61,6 @@ body {
 
 /********************
  *
- * Profile Header
- *
- ********************/
- header {
-    height: 4em;
-    min-height: 30px;
-    background-color: #272727;
-    text-align: right;
-    vertical-align: middle;
-    color: white;
-    padding: 0 1.7em; 
-    text-transform: uppercase;
-    -webkit-transition:  padding 1s;
-    transition: padding 1s;
- }
- header #logo {
-    float: left;
-    width: 104px;
-    height: auto;
- }
- header img {
-    display: inline-block;
- }
-
-/********************
- *
  * User Profile
  *
  ********************/

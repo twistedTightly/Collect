@@ -1,20 +1,22 @@
 @import "settings";
-@import "foundation";
+// @import "foundation";
 
 // Or selectively include components
-// @import
+@import
+    "foundation/components/buttons",
+    "foundation/components/forms",
+    "foundation/components/grid",
+    "foundation/components/reveal",
+    "foundation/components/type";
 //   "foundation/components/accordion",
 //   "foundation/components/alert-boxes",
 //   "foundation/components/block-grid",
 //   "foundation/components/breadcrumbs",
 //   "foundation/components/button-groups",
-//   "foundation/components/buttons",
 //   "foundation/components/clearing",
 //   "foundation/components/dropdown",
 //   "foundation/components/dropdown-buttons",
 //   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
 //   "foundation/components/inline-lists",
 //   "foundation/components/joyride",
 //   "foundation/components/keystrokes",
@@ -25,7 +27,6 @@
 //   "foundation/components/panels",
 //   "foundation/components/pricing-tables",
 //   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
 //   "foundation/components/side-nav",
 //   "foundation/components/split-buttons",
 //   "foundation/components/sub-nav",
@@ -35,7 +36,6 @@
 //   "foundation/components/thumbs",
 //   "foundation/components/tooltips",
 //   "foundation/components/top-bar",
-//   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
@@ -43,19 +43,55 @@ body {
 	overflow: hidden;
 }
 
+$header-height: 64px;
+
+/********************
+ *
+ * Profile Header
+ *
+ ********************/
+ header {
+    height: $header-height;
+    min-height: 30px;
+    background-color: #272727;
+    text-align: right;
+    vertical-align: middle;
+    color: white;
+    padding-right: 0; // This will change when menu expands
+    padding-left: 20px; 
+    text-transform: uppercase;
+    -webkit-transition:  padding 1s;
+    transition: padding 1s;
+
+    #toolbar {
+        padding-right: $header-height + 15px;
+        line-height: $header-height;
+    }
+	#logo {
+	    float: left;
+	    width: 104px;
+	    height: auto;
+        line-height: $header-height;
+	}
+	img {
+    	display: inline-block;
+	}
+}
+
 /********************
  *
  * Pullout Menu
  *
  ********************/
+$pullout-menu-width: 20%;
 $pullout-menu-contents-spacing: 45px;
 $link-alignment-padding: 15px;
 .triangle-left {
     width: 0;
     height: 0;
-    border-top: 64px solid transparent;
-    border-right: 64px solid #50D6AA;
-    border-bottom: 64px solid transparent;
+    border-top: $header-height solid transparent;
+    border-right: $header-height solid #50D6AA;
+    border-bottom: $header-height solid transparent;
 }
 #pullout-menu-tab {
     z-index: 100;
@@ -64,28 +100,31 @@ $link-alignment-padding: 15px;
     top: 0;
     -webkit-transition:  right 1s;
     transition: right 1s;
+    cursor: pointer;
 }
 #pullout-menu-icon-holder {
     position: absolute;
     right: 0;
     top: 0;
     padding: 50px 0;
-}
-#pullout-menu-icon-holder .svg-icon {
-    padding-right: 10px;
+
+    .svg-icon {
+        padding-right: 10px;
+    }
 }
 #pullout-menu {
-    width: 20%;
+    width: $pullout-menu-width;
     height: 100%;
     padding: $pullout-menu-contents-spacing 2%;
     text-align: left;
     z-index: 100;
     position: absolute;
     top: 0;
-    right: -20%; /* "Hides" the menu off screen */
+    right: -$pullout-menu-width; // "Hides" the menu off screen
     -webkit-transition:  right 1s;
     transition: right 1s;
 
+    // Cursor generated using: http://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28\-45deg\%2C\%20rgba\%28112\%2C112\%2C112\%2C1\%29\%200\%25\%2C\%20rgba\%28123\%2C123\%2C123\%2C0\.95\%29\%2037\%25\%2C\%20rgba\%28137\%2C137\%2C137\%2C0\.85\%29\%2081\%25\%2C\%20rgba\%28143\%2C143\%2C143\%2C0\.7\%29\%20100\%25\%29\%3B'
     background: rgba(112,112,112,1);
 	background: -moz-linear-gradient(-45deg, rgba(112,112,112,1) 0%, rgba(112,112,112,0.95) 37%, rgba(112,112,112,0.85) 81%, rgba(112,112,112,0.7) 100%);
 	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(112,112,112,1)), color-stop(37%, rgba(112,112,112,0.95)), color-stop(81%, rgba(112,112,112,0.85)), color-stop(100%, rgba(112,112,112,0.7)));
@@ -101,9 +140,9 @@ $link-alignment-padding: 15px;
     	text-transform: uppercase;
     	padding-top: $pullout-menu-contents-spacing;
     	padding-left: $link-alignment-padding;
-    }
-    a:visited {
-    	color: $white;
+        &:visited {
+        	color: $white;
+        }
     }
     input[type="search"] {
 	    border-radius: 50px;
@@ -112,19 +151,19 @@ $link-alignment-padding: 15px;
 		text-transform: uppercase;
     }
 }
-/* Pulled out menu styles */
+// Pulled out menu styles
 #pullout-menu.show {
     right: 0;
     -webkit-transition:  right 1s;
     transition: right 1s;
 }
 #pullout-menu-tab.show {
-    right: 20%;
+    right: $pullout-menu-width;
     -webkit-transition:  right 1s;
     transition: right 1s;
 }
 header.shift {
-    padding-right: 25%;
+    padding-right: $pullout-menu-width;
     -webkit-transition:  padding 1s;
     transition: padding 1s;
 }
@@ -139,7 +178,7 @@ $user-info-spacing: 15px;
     min-height: 220px;
     background-color: #50D6AA;
     margin: 0 10px;
-    position: relative; /* Necessary to postiion 'add' button absolutely on it */
+    position: relative; // Necessary to postiion 'add' button absolutely on it
     text-align: center;
    	font-size: $small-font-size;
 
