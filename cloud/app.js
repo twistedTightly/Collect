@@ -45,12 +45,14 @@ app.get('/profile', function(req, res) {
 		}
 	);
 	console.log('about to render');
-	res.render('profile', { username: req.query.email, age: age });
+	res.render('profile', { username: req.query.email,
+							age: age });
 });
 
 app.post('/profile', function(req, res) {
 	console.log(req.body);
-	res.render('profile', { username: req.body.firstname, age: '' });
+	res.render('profile', { username: req.body.firstname,
+							age: '' });
 });
 
 // This line is required to make Express respond to http requests.
