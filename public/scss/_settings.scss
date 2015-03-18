@@ -89,8 +89,40 @@ $include-html-global-classes: $include-html-classes;
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
+// Include custom fonts
+@font-face {
+	font-family: 'Axel';
+	src: url('../fonts/axel/Axel-RegularWeb.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/axel/Axel-RegularWeb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('../fonts/axel/Axel-RegularWeb.woff') format('woff'), /* Pretty Modern Browsers */
+	   url('../fonts/axel/Axel-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+	font-family: 'Axel';
+	src: url('../fonts/axel/Axel-BoldWeb.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/axel/Axel-BoldWeb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('../fonts/axel/Axel-BoldWeb.woff') format('woff'), /* Pretty Modern Browsers */
+	   url('../fonts/axel/Axel-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+	font-weight: bold;
+}
+@font-face {
+  font-family: 'AxelSC';
+  src: url('../fonts/axel/AxelSC-RegularWeb.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/axel/AxelSC-RegularWeb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/axel/AxelSC-RegularWeb.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/axel/AxelSC-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+	font-family: 'Axel';
+	src: url('../fonts/axel/AxelSC-BoldWeb.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/axel/AxelSC-BoldWeb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('../fonts/axel/AxelSC-BoldWeb.woff') format('woff'), /* Pretty Modern Browsers */
+	   url('../fonts/axel/AxelSC-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+	font-weight: bold;
+}
+
 // We use these to define default font stacks
-// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif: Axel, AxelSC, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
@@ -129,7 +161,7 @@ $secondary-color: #e7e7e7;
 // We use these to control various global styles
 // $body-bg: $white;
 // $body-font-color: $jet;
-// $body-font-family: $font-family-sans-serif;
+$body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 

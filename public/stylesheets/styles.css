@@ -94,7 +94,7 @@ body {
     width: 0;
     height: 0;
     border-top: 64px solid transparent;
-    border-right: 80px solid #50D6AA;
+    border-right: 64px solid #50D6AA;
     border-bottom: 64px solid transparent;
 }
 #pullout-menu-tab {
@@ -110,6 +110,9 @@ body {
     right: 0;
     top: 0;
     padding: 50px 0;
+}
+#pullout-menu-icon-holder .svg-icon {
+    padding-right: 10px;
 }
 #pullout-menu {
     width: 20%;
@@ -148,7 +151,7 @@ header.shift {
     position: absolute;
     top: 50%;
     right: -15px;
-    padding: 5px;
+    padding: 3px 5px;
 }
 
 /********************
