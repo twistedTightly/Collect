@@ -18,26 +18,8 @@
             </div>
             <span id="user-info"><%= username %></span>
           </div>
-
-          <div id="pullout-menu-tab">
-            <div class="triangle-left"></div>
-            <div id="pullout-menu-icon-holder">
-              <div class="svg-container">
-                <img class="svg-icon" src="images/icons/pullmenu_icon.svg" alt="Pullout Menu"/>
-              </div>
-            </div>
-          </div>
-    </header>
-
-    <!-- Pullout Menu -->
-    <div id="pullout-menu-wrapper">
-      <div id="pullout-menu">
-        <input type="search" placeholder="Search"/>
-        <a href="#">Settings</a>
-        <a href="#">About</a>
-        <a href="#">Log In / Register</a>
-      </div>
-    </div>
+    <!-- NOTE: The following *must* be included as it closes the header tag -->
+    <% include partials/header-end.ejs %>
 
     <!-- Main body of the site -->
     <div id="main" class="row">
