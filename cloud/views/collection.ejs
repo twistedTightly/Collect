@@ -9,14 +9,14 @@
   <body>
     <header>
       <div class="left">
-        <span id="logo"><span id="logo"><img src="images/collect_logo.svg" alt="Logo"></span></span>
+        <span id="logo"><img src="images/collect_logo.svg" alt="Logo"></span>
       </div>
      <div class="right">
         <div class="svg-container">
           <a href="/connections"><img class="svg-icon" src="images/connections_icon_white.svg" alt="Connections"></a>
           <a href="#"><img class="svg-icon" src="images/messages_icon_white.svg" alt="Messages"></a>
         </div>
-        <span id="user-info"><%= username %></span>
+        <span class="header-text" id="user-info"><%= username %></span>
       </div>
     <!-- NOTE: The following *must* be included as it closes the header tag -->
     <% include partials/header-end.ejs %>

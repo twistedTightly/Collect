@@ -122,15 +122,16 @@ $row-width: rem-calc(1100);
 }
 
 // We use these to define default font stacks
-$font-family-sans-serif: Axel, AxelSC, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-// $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-// $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-serif: "kepler-std-display", Georgia, serif;
+$font-family-monospace: AxelSC, "Orator Std", monospace;
+$font-family-monospace-lower: Axel, "Orator Std", monospace;
 
 // We use these to define default font weights
 // $font-weight-normal: normal;
 // $font-weight-bold: bold;
 
-$white       : #FFFFFF;
+$white       	: #FFFFFF;
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
@@ -148,20 +149,21 @@ $white       : #FFFFFF;
 // $tuatara     : #444444;
 // $oil         : #333333;
 // $jet         : #222222;
-$black       : #000000;
+$yellow			: #D1DBBD;
+$teal			: #91AA9D;
+$blue			: #5F7FAE;
+$dark-grey		: #979797; // Grey on add form
+$light-grey		: #D8D8D8; // Only for frame icons, triangle on inputs on add form
+$black       	: #272727; // Icons on pages, filled in text
 
 // We use these as default colors throughout
-$primary-color: #008CBA;
+$primary-color: $yellow;
 $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
 
 // We use these to control various global styles
-// $body-bg: $white;
-// $body-font-color: $jet;
-$body-font-family: $font-family-sans-serif;
+$body-bg: $white;
+$body-font-color: $black;
+$body-font-family: $font-family-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -295,7 +297,7 @@ $large-font-size: 140%;
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
 // $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
+$anchor-font-color-hover: $primary-color;
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;

@@ -16,7 +16,7 @@
               <a href="/connections"><img class="svg-icon" src="images/connections_icon_white.svg" alt="Connections"></a>
               <a href="#"><img class="svg-icon" src="images/messages_icon_white.svg" alt="Messages"></a>
             </div>
-            <span id="user-info"><%= username %></span>
+            <span class="header-text" id="user-info"><%= username %></span>
           </div>
     <!-- NOTE: The following *must* be included as it closes the header tag -->
     <% include partials/header-end.ejs %>
@@ -26,7 +26,7 @@
 
       <!-- User Information Block (on side) -->
       <div id="user-information-block" class="small-2 columns">
-        <div id="user-information">
+        <div class="header-text" id="user-information">
 
           <div id="profile-picture">
             <img src="images/my-profile-pic.jpg" alt="Profile picture">
@@ -65,7 +65,7 @@
             <div class="svg-container">
               <img class="svg-icon" src="images/icons/location_icon_black.svg" alt="Map Pin Icon"/>
             </div>
-            <p>Location, Location</p>
+            <p class="header-text">Location, Location</p>
           </div>
         </div><!-- End Gallery Header -->
 

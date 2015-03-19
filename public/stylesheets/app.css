@@ -119,11 +119,11 @@ body {
 
 /* line 420, ../bower_components/foundation/scss/foundation/components/_global.scss */
 body {
-  background: #fff;
-  color: #222;
+  background: #FFFFFF;
+  color: #272727;
   padding: 0;
   margin: 0;
-  font-family: Axel, AxelSC, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "kepler-std-display", Georgia, serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
@@ -215,7 +215,7 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: Axel, AxelSC, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "kepler-std-display", Georgia, serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -228,14 +228,14 @@ button, .button {
   display: inline-block;
   padding: 1rem 2rem 1.0625rem 2rem;
   font-size: 1rem;
-  background-color: #008CBA;
-  border-color: #007095;
-  color: #FFFFFF;
+  background-color: #D1DBBD;
+  border-color: #acbe88;
+  color: #333333;
   transition: background-color 300ms ease-out;
 }
 /* line 158, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #007095;
+  background-color: #acbe88;
 }
 /* line 164, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
@@ -352,16 +352,16 @@ button.round, .button.round {
 }
 /* line 237, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  background-color: #008CBA;
-  border-color: #007095;
-  color: #FFFFFF;
+  background-color: #D1DBBD;
+  border-color: #acbe88;
+  color: #333333;
   cursor: default;
   opacity: 0.7;
   box-shadow: none;
 }
 /* line 158, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #007095;
+  background-color: #acbe88;
 }
 /* line 164, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
@@ -369,7 +369,7 @@ button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[dis
 }
 /* line 175, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #008CBA;
+  background-color: #D1DBBD;
 }
 /* line 238, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
@@ -533,7 +533,7 @@ form .row textarea.columns {
 /* line 386, ../bower_components/foundation/scss/foundation/components/_forms.scss */
 label {
   font-size: 0.875rem;
-  color: #4d4d4d;
+  color: #686868;
   cursor: pointer;
   display: block;
   font-weight: normal;
@@ -554,7 +554,7 @@ label.inline {
 /* line 390, ../bower_components/foundation/scss/foundation/components/_forms.scss */
 label small {
   text-transform: capitalize;
-  color: #676767;
+  color: #7e7e7e;
 }
 
 /* Attach elements to the beginning or end of an input */
@@ -942,7 +942,7 @@ span.error, small.error {
 }
 /* line 560, ../bower_components/foundation/scss/foundation/components/_forms.scss */
 .error > label > small {
-  color: #676767;
+  color: #7e7e7e;
   background: transparent;
   padding: 0;
   text-transform: capitalize;
@@ -2467,8 +2467,8 @@ label.error {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #000000;
-  background: rgba(0, 0, 0, 0.45);
+  background: #272727;
+  background: rgba(39, 39, 39, 0.45);
   z-index: 1004;
   display: none;
   left: 0;
@@ -2487,7 +2487,7 @@ label.error {
   background-color: #FFFFFF;
   padding: 1.875rem;
   border: solid 1px #666666;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(39, 39, 39, 0.4);
 }
 @media only screen and (max-width: 40em) {
   /* line 171, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
@@ -2879,13 +2879,13 @@ td {
 /* Default Link Styles */
 /* line 217, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a {
-  color: #008CBA;
+  color: #D1DBBD;
   text-decoration: none;
   line-height: inherit;
 }
 /* line 222, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a:hover, a:focus {
-  color: #0078a0;
+  color: #D1DBBD;
 }
 /* line 230, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a img {
@@ -2917,7 +2917,7 @@ p aside {
 /* Default header styles */
 /* line 252, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: Axel, AxelSC, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "kepler-std-display", Georgia, serif;
   font-weight: normal;
   font-style: normal;
   color: #222222;
@@ -3004,7 +3004,7 @@ small {
 
 /* line 304, ../bower_components/foundation/scss/foundation/components/_type.scss */
 code {
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: AxelSC, "Orator Std", monospace;
   font-weight: normal;
   color: #333333;
   background-color: #f8f8f8;
@@ -3102,7 +3102,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #222;
+  color: #272727;
   cursor: help;
 }
 
@@ -3215,7 +3215,7 @@ blockquote p {
 }
 /* line 42, ../scss/app.scss */
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   background: #eee;
   text-align: center;
   width: 100%;
@@ -3224,38 +3224,44 @@ body {
 /* line 49, ../scss/app.scss */
 .flat-button {
   background-color: #272727;
-  text-transform: uppercase;
-  color: white;
+  color: #FFFFFF;
   text-align: center;
 }
 
-/* line 55, ../scss/app.scss */
+/* line 54, ../scss/app.scss */
 .svg-icon {
   height: 100%;
 }
 
-/* line 58, ../scss/app.scss */
+/* line 57, ../scss/app.scss */
 .svg-container {
   display: inline-block;
   height: 1.5em;
   min-height: 10px;
 }
 
-/* line 63, ../scss/app.scss */
+/* line 62, ../scss/app.scss */
 #main {
   width: 100%;
   margin: auto;
   text-align: left;
   padding: 40px 0;
 }
-/* line 68, ../scss/app.scss */
+/* line 67, ../scss/app.scss */
 #main h1 {
   margin-top: 0;
   font-size: 35px;
 }
-/* line 72, ../scss/app.scss */
+/* line 71, ../scss/app.scss */
 #main ul {
   padding-left: 20px;
+}
+
+/* line 75, ../scss/app.scss */
+.header-text {
+  letter-spacing: 3px;
+  font-family: AxelSC, "Orator Std", monospace;
+  text-transform: lowercase;
 }
 
 /********************
@@ -3263,7 +3269,7 @@ body {
  * Profile Header
  *
  ********************/
-/* line 84, ../scss/app.scss */
+/* line 88, ../scss/app.scss */
 header {
   height: 64px;
   min-height: 30px;
@@ -3273,23 +3279,22 @@ header {
   color: white;
   padding-right: 0;
   padding-left: 20px;
-  text-transform: uppercase;
   -webkit-transition: padding 1s;
   transition: padding 1s;
 }
-/* line 97, ../scss/app.scss */
+/* line 100, ../scss/app.scss */
 header #toolbar {
   padding-right: 79px;
   line-height: 64px;
 }
-/* line 101, ../scss/app.scss */
+/* line 104, ../scss/app.scss */
 header #logo {
   float: left;
   width: 104px;
   height: auto;
   line-height: 64px;
 }
-/* line 107, ../scss/app.scss */
+/* line 110, ../scss/app.scss */
 header img {
   display: inline-block;
 }
@@ -3299,16 +3304,16 @@ header img {
  * Pullout Menu
  *
  ********************/
-/* line 120, ../scss/app.scss */
+/* line 123, ../scss/app.scss */
 .triangle-left {
   width: 0;
   height: 0;
   border-top: 64px solid transparent;
-  border-right: 64px solid #50D6AA;
+  border-right: 64px solid #D1DBBD;
   border-bottom: 64px solid transparent;
 }
 
-/* line 127, ../scss/app.scss */
+/* line 130, ../scss/app.scss */
 #pullout-menu-tab {
   z-index: 100;
   position: absolute;
@@ -3319,19 +3324,19 @@ header img {
   cursor: pointer;
 }
 
-/* line 136, ../scss/app.scss */
+/* line 139, ../scss/app.scss */
 #pullout-menu-icon-holder {
   position: absolute;
   right: 0;
   top: 0;
   padding: 50px 0;
 }
-/* line 142, ../scss/app.scss */
+/* line 145, ../scss/app.scss */
 #pullout-menu-icon-holder .svg-icon {
   padding-right: 10px;
 }
 
-/* line 146, ../scss/app.scss */
+/* line 149, ../scss/app.scss */
 #pullout-menu {
   width: 20%;
   height: 100%;
@@ -3352,41 +3357,41 @@ header img {
   background: linear-gradient(135deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8f8f', endColorstr='#8f8f8f', GradientType=1 );
 }
-/* line 168, ../scss/app.scss */
+/* line 171, ../scss/app.scss */
 #pullout-menu a {
   display: block;
   color: #FFFFFF;
-  text-transform: uppercase;
   padding-top: 45px;
   padding-left: 15px;
 }
-/* line 174, ../scss/app.scss */
-#pullout-menu a:visited {
-  color: #FFFFFF;
+/* line 176, ../scss/app.scss */
+#pullout-menu a:hover {
+  color: #D1DBBD;
 }
-/* line 178, ../scss/app.scss */
+/* line 180, ../scss/app.scss */
 #pullout-menu input[type="search"] {
   border-radius: 50px;
   padding: 5px 15px;
   margin-bottom: 0;
-  text-transform: uppercase;
+  text-transform: lowercase;
+  letter-spacing: 3px;
 }
 
-/* line 186, ../scss/app.scss */
+/* line 189, ../scss/app.scss */
 #pullout-menu.show {
   right: 0;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 191, ../scss/app.scss */
+/* line 194, ../scss/app.scss */
 #pullout-menu-tab.show {
   right: 20%;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 196, ../scss/app.scss */
+/* line 199, ../scss/app.scss */
 header.shift {
   padding-right: 20%;
   -webkit-transition: padding 1s;
@@ -3398,36 +3403,35 @@ header.shift {
  * User Profile
  *
  ********************/
-/* line 208, ../scss/app.scss */
+/* line 211, ../scss/app.scss */
 #user-information {
   min-height: 220px;
-  background-color: #50D6AA;
+  background-color: #D1DBBD;
   margin: 0 10px;
   position: relative;
   text-align: center;
   font-size: 60%;
 }
-/* line 216, ../scss/app.scss */
+/* line 219, ../scss/app.scss */
 #user-information #profile-picture {
   padding: 15px 0px;
 }
-/* line 219, ../scss/app.scss */
+/* line 222, ../scss/app.scss */
 #user-information p {
-  text-transform: uppercase;
   padding: 15px 0px;
   margin: 0px;
   font-size: 60%;
 }
-/* line 225, ../scss/app.scss */
+/* line 227, ../scss/app.scss */
 #user-information hr {
   border: 0;
   margin: 0px auto 15px auto;
-  background-color: #000000;
+  background-color: #272727;
   height: 1px;
   width: 60%;
 }
 
-/* line 233, ../scss/app.scss */
+/* line 235, ../scss/app.scss */
 #add-memory {
   position: absolute;
   top: 45%;
@@ -3441,39 +3445,41 @@ header.shift {
  *
  ********************/
 /****** Header ******/
-/* line 247, ../scss/app.scss */
+/* line 249, ../scss/app.scss */
 #gallery-header {
-  padding: 15px 0 35px 0;
+  padding-top: 15px;
 }
-/* line 250, ../scss/app.scss */
+/* line 252, ../scss/app.scss */
 #gallery-header p {
-  font-size: 140%;
   margin: 0;
   display: inline-block;
 }
-/* line 255, ../scss/app.scss */
+/* line 256, ../scss/app.scss */
 #gallery-header p#username {
+  font-size: 140%;
   font-style: italic;
 }
-/* line 258, ../scss/app.scss */
-#gallery-header #user-location p {
-  text-transform: uppercase;
+/* line 260, ../scss/app.scss */
+#gallery-header .svg-container {
+  height: 1em;
 }
 
 /****** Rows *******/
-/* line 264, ../scss/app.scss */
+/* line 266, ../scss/app.scss */
 .gallery-row.row {
-  margin: 0.5em 5%;
+  margin: 2.5em 5% 0.5em 5%;
 }
-
-/* line 267, ../scss/app.scss */
-.test-block.collection {
+/* line 269, ../scss/app.scss */
+.gallery-row.row .collection {
   height: 160px;
-  background-color: blue;
   margin: auto;
 }
-
-/* line 272, ../scss/app.scss */
-.collection .content-holder {
+/* line 273, ../scss/app.scss */
+.gallery-row.row .collection .content-holder {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
   text-align: center;
+  border: solid #D8D8D8;
+  border-width: 2px;
 }

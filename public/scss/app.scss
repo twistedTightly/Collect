@@ -40,16 +40,15 @@
 //   "foundation/components/visibility";
 
 body {
-	overflow: hidden;
+	overflow-x: hidden;
     background: #eee;
     text-align: center;
     width: 100%;
 }
 // Universal classes
 .flat-button {
-    background-color: #272727;
-    text-transform: uppercase;
-    color: white;
+    background-color: $black;
+    color: $white;
     text-align: center;
 }
 .svg-icon {
@@ -73,6 +72,11 @@ body {
         padding-left: 20px;
     }
 }
+.header-text {
+    letter-spacing: 3px;
+    font-family: $font-family-monospace;
+    text-transform: lowercase;
+}
 
 $header-height: 64px;
 
@@ -84,13 +88,12 @@ $header-height: 64px;
  header {
     height: $header-height;
     min-height: 30px;
-    background-color: #272727;
+    background-color: $black;
     text-align: right;
     vertical-align: middle;
     color: white;
     padding-right: 0; // This will change when menu expands
     padding-left: 20px; 
-    text-transform: uppercase;
     -webkit-transition:  padding 1s;
     transition: padding 1s;
 
@@ -121,7 +124,7 @@ $link-alignment-padding: 15px;
     width: 0;
     height: 0;
     border-top: $header-height solid transparent;
-    border-right: $header-height solid #50D6AA;
+    border-right: $header-height solid $primary-color;
     border-bottom: $header-height solid transparent;
 }
 #pullout-menu-tab {
@@ -168,18 +171,18 @@ $link-alignment-padding: 15px;
     a {
     	display: block;
     	color: $white;
-    	text-transform: uppercase;
     	padding-top: $pullout-menu-contents-spacing;
     	padding-left: $link-alignment-padding;
-        &:visited {
-        	color: $white;
+        &:hover {
+        	color: $primary-color;
         }
     }
     input[type="search"] {
 	    border-radius: 50px;
 		padding: 5px $link-alignment-padding;
 		margin-bottom: 0;
-		text-transform: uppercase;
+        text-transform: lowercase;
+        letter-spacing: 3px;
     }
 }
 // Pulled out menu styles
@@ -207,7 +210,7 @@ header.shift {
 $user-info-spacing: 15px;
 #user-information {
     min-height: 220px;
-    background-color: #50D6AA;
+    background-color: $primary-color;
     margin: 0 10px;
     position: relative; // Necessary to postiion 'add' button absolutely on it
     text-align: center;
@@ -217,7 +220,6 @@ $user-info-spacing: 15px;
    		padding: $user-info-spacing 0px;
    	}
 	p {
-	    text-transform: uppercase;
 	   	padding: $user-info-spacing 0px;
 	   	margin: 0px;
 	    font-size: $small-font-size;
@@ -245,31 +247,37 @@ $user-info-spacing: 15px;
 
 /****** Header ******/
 #gallery-header {
-    padding: 15px 0 35px 0;
+    padding-top: 15px;
 
     p {
-    	font-size: $large-font-size;
     	margin: 0;
     	display: inline-block;
     }
 	p#username {
+        font-size: $large-font-size;
 	    font-style: italic;
 	}
-	#user-location p {
-		text-transform: uppercase;
-	}
+    .svg-container {
+        height: 1em;
+    }
 }
 
 /****** Rows *******/
 .gallery-row.row {
-    margin: 0.5em 5%;
-}
-.test-block.collection {
-    height: 160px;
-    background-color: blue;
-    margin: auto;
-}
-.collection .content-holder {
-    text-align: center;
+    margin: 2.5em 5% 0.5em 5%;
+
+    .collection {
+        height: 160px;
+        margin: auto;
+
+        .content-holder {
+            height: 100%;
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+            border: solid $light-grey;
+            border-width: 2px;
+        }
+    }
 }
 
