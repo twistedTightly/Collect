@@ -39,6 +39,10 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
+
+$header-height: 64px;
+$footer-height: 80px;
+
 body {
 	overflow-x: hidden;
     background: #eee;
@@ -46,6 +50,14 @@ body {
     width: 100%;
 }
 // Universal classes
+// Maintains footer at bottom of page
+// Credit: http://ryanfait.com/sticky-footer/
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -$footer-height;
+}
 .flat-button {
     background-color: $black;
     color: $white;
@@ -77,8 +89,6 @@ body {
     font-family: $font-family-monospace;
     text-transform: lowercase;
 }
-
-$header-height: 64px;
 
 /********************
  *
@@ -281,3 +291,11 @@ $user-info-spacing: 15px;
     }
 }
 
+/********************
+ *
+ * Footer
+ *
+ ********************/
+#footer {
+    height: $footer-height;
+}

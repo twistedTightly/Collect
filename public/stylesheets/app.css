@@ -3213,7 +3213,7 @@ blockquote p {
     font-size: 1rem;
   }
 }
-/* line 42, ../scss/app.scss */
+/* line 46, ../scss/app.scss */
 body {
   overflow-x: hidden;
   background: #eee;
@@ -3221,43 +3221,51 @@ body {
   width: 100%;
 }
 
-/* line 49, ../scss/app.scss */
+/* line 55, ../scss/app.scss */
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto-80px;
+}
+
+/* line 61, ../scss/app.scss */
 .flat-button {
   background-color: #272727;
   color: #FFFFFF;
   text-align: center;
 }
 
-/* line 54, ../scss/app.scss */
+/* line 66, ../scss/app.scss */
 .svg-icon {
   height: 100%;
 }
 
-/* line 57, ../scss/app.scss */
+/* line 69, ../scss/app.scss */
 .svg-container {
   display: inline-block;
   height: 1.5em;
   min-height: 10px;
 }
 
-/* line 62, ../scss/app.scss */
+/* line 74, ../scss/app.scss */
 #main {
   width: 100%;
   margin: auto;
   text-align: left;
   padding: 40px 0;
 }
-/* line 67, ../scss/app.scss */
+/* line 79, ../scss/app.scss */
 #main h1 {
   margin-top: 0;
   font-size: 35px;
 }
-/* line 71, ../scss/app.scss */
+/* line 83, ../scss/app.scss */
 #main ul {
   padding-left: 20px;
 }
 
-/* line 75, ../scss/app.scss */
+/* line 87, ../scss/app.scss */
 .header-text {
   letter-spacing: 3px;
   font-family: AxelSC, "Orator Std", monospace;
@@ -3269,7 +3277,7 @@ body {
  * Profile Header
  *
  ********************/
-/* line 88, ../scss/app.scss */
+/* line 98, ../scss/app.scss */
 header {
   height: 64px;
   min-height: 30px;
@@ -3282,19 +3290,19 @@ header {
   -webkit-transition: padding 1s;
   transition: padding 1s;
 }
-/* line 100, ../scss/app.scss */
+/* line 110, ../scss/app.scss */
 header #toolbar {
   padding-right: 79px;
   line-height: 64px;
 }
-/* line 104, ../scss/app.scss */
+/* line 114, ../scss/app.scss */
 header #logo {
   float: left;
   width: 104px;
   height: auto;
   line-height: 64px;
 }
-/* line 110, ../scss/app.scss */
+/* line 120, ../scss/app.scss */
 header img {
   display: inline-block;
 }
@@ -3304,7 +3312,7 @@ header img {
  * Pullout Menu
  *
  ********************/
-/* line 123, ../scss/app.scss */
+/* line 133, ../scss/app.scss */
 .triangle-left {
   width: 0;
   height: 0;
@@ -3313,7 +3321,7 @@ header img {
   border-bottom: 64px solid transparent;
 }
 
-/* line 130, ../scss/app.scss */
+/* line 140, ../scss/app.scss */
 #pullout-menu-tab {
   z-index: 100;
   position: absolute;
@@ -3324,19 +3332,19 @@ header img {
   cursor: pointer;
 }
 
-/* line 139, ../scss/app.scss */
+/* line 149, ../scss/app.scss */
 #pullout-menu-icon-holder {
   position: absolute;
   right: 0;
   top: 0;
   padding: 50px 0;
 }
-/* line 145, ../scss/app.scss */
+/* line 155, ../scss/app.scss */
 #pullout-menu-icon-holder .svg-icon {
   padding-right: 10px;
 }
 
-/* line 149, ../scss/app.scss */
+/* line 159, ../scss/app.scss */
 #pullout-menu {
   width: 20%;
   height: 100%;
@@ -3357,18 +3365,18 @@ header img {
   background: linear-gradient(135deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8f8f', endColorstr='#8f8f8f', GradientType=1 );
 }
-/* line 171, ../scss/app.scss */
+/* line 181, ../scss/app.scss */
 #pullout-menu a {
   display: block;
   color: #FFFFFF;
   padding-top: 45px;
   padding-left: 15px;
 }
-/* line 176, ../scss/app.scss */
+/* line 186, ../scss/app.scss */
 #pullout-menu a:hover {
   color: #D1DBBD;
 }
-/* line 180, ../scss/app.scss */
+/* line 190, ../scss/app.scss */
 #pullout-menu input[type="search"] {
   border-radius: 50px;
   padding: 5px 15px;
@@ -3377,21 +3385,21 @@ header img {
   letter-spacing: 3px;
 }
 
-/* line 189, ../scss/app.scss */
+/* line 199, ../scss/app.scss */
 #pullout-menu.show {
   right: 0;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 194, ../scss/app.scss */
+/* line 204, ../scss/app.scss */
 #pullout-menu-tab.show {
   right: 20%;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 199, ../scss/app.scss */
+/* line 209, ../scss/app.scss */
 header.shift {
   padding-right: 20%;
   -webkit-transition: padding 1s;
@@ -3403,7 +3411,7 @@ header.shift {
  * User Profile
  *
  ********************/
-/* line 211, ../scss/app.scss */
+/* line 221, ../scss/app.scss */
 #user-information {
   min-height: 220px;
   background-color: #D1DBBD;
@@ -3412,17 +3420,17 @@ header.shift {
   text-align: center;
   font-size: 60%;
 }
-/* line 219, ../scss/app.scss */
+/* line 229, ../scss/app.scss */
 #user-information #profile-picture {
   padding: 15px 0px;
 }
-/* line 222, ../scss/app.scss */
+/* line 232, ../scss/app.scss */
 #user-information p {
   padding: 15px 0px;
   margin: 0px;
   font-size: 60%;
 }
-/* line 227, ../scss/app.scss */
+/* line 237, ../scss/app.scss */
 #user-information hr {
   border: 0;
   margin: 0px auto 15px auto;
@@ -3431,7 +3439,7 @@ header.shift {
   width: 60%;
 }
 
-/* line 235, ../scss/app.scss */
+/* line 245, ../scss/app.scss */
 #add-memory {
   position: absolute;
   top: 45%;
@@ -3445,36 +3453,36 @@ header.shift {
  *
  ********************/
 /****** Header ******/
-/* line 249, ../scss/app.scss */
+/* line 259, ../scss/app.scss */
 #gallery-header {
   padding-top: 15px;
 }
-/* line 252, ../scss/app.scss */
+/* line 262, ../scss/app.scss */
 #gallery-header p {
   margin: 0;
   display: inline-block;
 }
-/* line 256, ../scss/app.scss */
+/* line 266, ../scss/app.scss */
 #gallery-header p#username {
   font-size: 140%;
   font-style: italic;
 }
-/* line 260, ../scss/app.scss */
+/* line 270, ../scss/app.scss */
 #gallery-header .svg-container {
   height: 1em;
 }
 
 /****** Rows *******/
-/* line 266, ../scss/app.scss */
+/* line 276, ../scss/app.scss */
 .gallery-row.row {
   margin: 2.5em 5% 0.5em 5%;
 }
-/* line 269, ../scss/app.scss */
+/* line 279, ../scss/app.scss */
 .gallery-row.row .collection {
   height: 160px;
   margin: auto;
 }
-/* line 273, ../scss/app.scss */
+/* line 283, ../scss/app.scss */
 .gallery-row.row .collection .content-holder {
   height: 100%;
   width: 100%;
@@ -3482,4 +3490,14 @@ header.shift {
   text-align: center;
   border: solid #D8D8D8;
   border-width: 2px;
+}
+
+/********************
+ *
+ * Footer
+ *
+ ********************/
+/* line 299, ../scss/app.scss */
+#footer {
+  height: 80px;
 }
