@@ -2917,7 +2917,7 @@ p aside {
 /* Default header styles */
 /* line 252, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "kepler-std-display", Georgia, serif;
+  font-family: AxelSC, "Orator Std", monospace;
   font-weight: normal;
   font-style: normal;
   color: #222222;
@@ -2928,7 +2928,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* line 262, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-  font-size: 60%;
+  font-size: 75%;
   color: #6f6f6f;
   line-height: 0;
 }
@@ -2998,7 +2998,7 @@ b {
 
 /* line 299, ../bower_components/foundation/scss/foundation/components/_type.scss */
 small {
-  font-size: 60%;
+  font-size: 75%;
   line-height: inherit;
 }
 
@@ -3359,7 +3359,7 @@ header.shift {
   margin: 0 10px;
   position: relative;
   text-align: center;
-  font-size: 60%;
+  font-size: 75%;
 }
 /* line 144, ../scss/profile.scss */
 #user-information #profile-picture {
@@ -3369,7 +3369,7 @@ header.shift {
 #user-information p {
   padding: 15px 0px;
   margin: 0px;
-  font-size: 60%;
+  font-size: 75%;
 }
 /* line 152, ../scss/profile.scss */
 #user-information hr {

@@ -149,9 +149,9 @@ $white       	: #FFFFFF;
 // $tuatara     : #444444;
 // $oil         : #333333;
 // $jet         : #222222;
-$yellow			: #D1DBBD;
-$teal			: #91AA9D;
-$blue			: #5F7FAE;
+$yellow			: #D1DBBD; // rgb(209,219,189)
+$teal			: #91AA9D; // rgb(145,170,157)
+$blue			: #5F7FAE; // rgb(95,127,174)
 $dark-grey		: #979797; // Grey on add form
 $light-grey		: #D8D8D8; // Only for frame icons, triangle on inputs on add form
 $black       	: #272727; // Icons on pages, filled in text
@@ -236,7 +236,7 @@ $footer-height: 80px;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+$header-font-family: $font-family-monospace;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: $jet;
@@ -269,7 +269,7 @@ $footer-height: 80px;
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
-$small-font-size: 60%;
+$small-font-size: 75%;
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // A general <large> styling
@@ -280,7 +280,7 @@ $large-font-size: 140%;
 // $paragraph-font-weight: $font-weight-normal;
 // $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
-// $paragraph-margin-bottom: rem-calc(20);
+$paragraph-margin-bottom: 0;
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
 // $paragraph-aside-font-style: italic;

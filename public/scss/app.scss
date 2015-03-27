@@ -44,6 +44,10 @@ body {
     text-align: center;
     width: 100%;
 }
+h1, h2, h3, h4, h5 {
+    letter-spacing: 3px;
+    text-transform: lowercase;
+}
 // Universal classes
 // Maintains footer at bottom of page
 // Credit: http://ryanfait.com/sticky-footer/
