@@ -3219,18 +3219,22 @@ img {
   width: auto;
 }
 
+/* line 16, ../scss/homepage.scss */
+body {
+  background: url("../images/background-grain.jpg");
+}
+
 /********************
  *
  * Main block
  *
  ********************/
-/* line 21, ../scss/homepage.scss */
+/* line 25, ../scss/homepage.scss */
 #main {
-  background: #272727;
   color: #FFFFFF;
   padding: 0;
 }
-/* line 25, ../scss/homepage.scss */
+/* line 28, ../scss/homepage.scss */
 #main .triangle-left {
   width: 0;
   height: 0;
@@ -3241,102 +3245,143 @@ img {
   top: 0;
   right: 0;
 }
-/* line 35, ../scss/homepage.scss */
+/* line 38, ../scss/homepage.scss */
 #main #banner {
   margin: 150px 0 0 50px;
   font-size: 140%;
   text-align: center;
 }
-/* line 40, ../scss/homepage.scss */
+/* line 43, ../scss/homepage.scss */
 #main #logo {
-  height: 120px;
+  height: 100px;
   text-align: left;
 }
-/* line 44, ../scss/homepage.scss */
+/* line 47, ../scss/homepage.scss */
 #main .button-container {
   line-height: 100%;
   height: 100%;
 }
-/* line 48, ../scss/homepage.scss */
+/* line 50, ../scss/homepage.scss */
+#main .button-container a.button {
+  padding-left: 0;
+  padding-right: 0;
+  width: 200px;
+}
+/* line 56, ../scss/homepage.scss */
 #main #tagline {
   padding-left: 50px;
   margin-top: 100px;
 }
-/* line 51, ../scss/homepage.scss */
+/* line 59, ../scss/homepage.scss */
 #main #tagline p {
   font-size: 140%;
 }
-/* line 55, ../scss/homepage.scss */
-#main #about {
-  height: 420px;
-  color: #272727;
-}
-/* line 58, ../scss/homepage.scss */
-#main #about p.header-text {
-  text-align: center;
-  padding-bottom: 50px;
-}
-/* line 62, ../scss/homepage.scss */
-#main #about p {
-  font-size: 75%;
-  color: black;
-}
-/* line 66, ../scss/homepage.scss */
-#main #about .about-block {
-  padding: 90px 6%;
-  height: 100%;
-}
-/* line 70, ../scss/homepage.scss */
-#main #about #yellow-about {
-  background-color: rgba(209, 219, 189, 0.8);
-}
-/* line 73, ../scss/homepage.scss */
-#main #about #green-about {
-  background-color: rgba(145, 170, 157, 0.8);
-}
-/* line 76, ../scss/homepage.scss */
-#main #about #blue-about {
-  background-color: rgba(95, 127, 142, 0.8);
-}
 
-/* line 81, ../scss/homepage.scss */
+/* line 64, ../scss/homepage.scss */
 #tagline-subtext {
   margin-left: 120px;
   font-style: italic;
 }
 
-/* line 86, ../scss/homepage.scss */
+/* line 69, ../scss/homepage.scss */
+#about {
+  background-color: #76727C;
+  color: #272727;
+  text-align: left;
+}
+/* line 73, ../scss/homepage.scss */
+#about .row {
+  height: 450px;
+}
+/* line 76, ../scss/homepage.scss */
+#about p.header-text {
+  text-align: center;
+  padding-bottom: 50px;
+}
+/* line 80, ../scss/homepage.scss */
+#about p {
+  font-size: 85%;
+  color: black;
+}
+/* line 84, ../scss/homepage.scss */
+#about .about-block {
+  height: 100%;
+  padding: 0;
+}
+/* line 88, ../scss/homepage.scss */
+#about .about-background {
+  width: 100%;
+  height: 100%;
+}
+/* line 91, ../scss/homepage.scss */
+#about .about-background::after {
+  content: "";
+  background-image: url(../images/background_blur.jpg);
+  opacity: 0.25;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+/* line 102, ../scss/homepage.scss */
+#about #yellow-about {
+  background-color: rgba(209, 219, 189, 0.7);
+}
+/* line 105, ../scss/homepage.scss */
+#about #green-about {
+  background-color: rgba(145, 170, 157, 0.7);
+}
+/* line 108, ../scss/homepage.scss */
+#about #blue-about {
+  background-color: rgba(95, 127, 142, 0.7);
+}
+/* line 111, ../scss/homepage.scss */
+#about .about-content {
+  padding: 90px 16%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+/* line 120, ../scss/homepage.scss */
 #how-it-works {
   text-align: left;
   padding: 90px 50px;
-  width: 60%;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+/* line 125, ../scss/homepage.scss */
+#how-it-works p {
+  width: 600px;
 }
 
-/* line 92, ../scss/homepage.scss */
+/* line 130, ../scss/homepage.scss */
 #quote {
   text-align: left;
-  background: #5F7F8E;
+  background: #D9D5C2;
   padding: 90px 0;
 }
-/* line 96, ../scss/homepage.scss */
+/* line 134, ../scss/homepage.scss */
 #quote .wrapper {
   margin: auto;
-  width: 40%;
+  width: 600px;
 }
-/* line 100, ../scss/homepage.scss */
+/* line 138, ../scss/homepage.scss */
 #quote blockquote {
   border: none;
   color: black;
   padding: 0;
 }
 
-/* line 107, ../scss/homepage.scss */
+/* line 145, ../scss/homepage.scss */
 footer {
   background: black;
   color: #FFFFFF;
-  font-size: 75%;
+  font-size: 85%;
 }
-/* line 111, ../scss/homepage.scss */
+/* line 149, ../scss/homepage.scss */
 footer h5 {
   letter-spacing: regular;
 }

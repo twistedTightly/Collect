@@ -13,13 +13,16 @@ img {
 	width: auto;
 }
 
+body {
+	background: url('../images/background-grain.jpg');
+}
+
 /********************
  *
  * Main block
  *
  ********************/
 #main {
-	background: $black;
 	color: $white;
 	padding: 0;
 	.triangle-left {
@@ -38,12 +41,17 @@ img {
 		text-align: center;
 	}
 	#logo {
-		height: 120px;
+		height: 100px;
 		text-align: left;
 	}
 	.button-container {
 		line-height: 100%;
 		height: 100%;
+		a.button {
+			padding-left: 0;
+			padding-right: 0;
+			width: 200px;
+		}
 	}
 	#tagline {
 		padding-left: $side-padding-base;
@@ -52,50 +60,80 @@ img {
 			font-size: $large-font-size;
 		}
 	}
-	#about {
-		height: 420px;
-		color: $black;
-		p.header-text {
-			text-align: center;
-			padding-bottom: $side-padding-base;
-		}
-		p {
-			font-size: $small-font-size;
-			color: black;
-		}
-		.about-block {
-			padding: $top-bottom-padding-base 6%;
-			height: 100%;
-		}
-		#yellow-about {
-			background-color: rgba(209,219,189,0.8);
-		}
-		#green-about {
-			background-color: rgba(145,170,157,0.8);
-		}
-		#blue-about {
-			background-color: rgba(95,127,142,0.8);
-		}
-	}
 }
 #tagline-subtext {
 	margin-left: 120px;
 	font-style: italic;
 }
 
+#about {
+	background-color: $purple;
+	color: $black;
+	text-align: left;
+	.row {
+		height: 450px;
+	}
+	p.header-text {
+		text-align: center;
+		padding-bottom: $side-padding-base;
+	}
+	p {
+		font-size: $small-font-size;
+		color: black;
+	}
+	.about-block {
+		height: 100%;
+		padding: 0;
+	}
+	.about-background {
+		width: 100%;
+		height: 100%;
+		&::after {
+			content: "";
+			background-image: url(../images/background_blur.jpg);
+			opacity: 0.25;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+		 }
+	}
+	#yellow-about {
+		background-color: rgba(209,219,189,0.7);
+	}
+	#green-about {
+		background-color: rgba(145,170,157,0.7);
+	}
+	#blue-about {
+		background-color: rgba(95,127,142,0.7);
+	}
+	.about-content {
+		padding: $top-bottom-padding-base 16%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+}
+
 #how-it-works {
 	text-align: left;
 	padding: $top-bottom-padding-base $side-padding-base;
-	width: 60%;
+	width: 100%;
+	background-color: $white;
+	p {
+		width: 600px;
+	}
 }
 
 #quote {
 	text-align: left;
-	background: $blue;
+	background: $beige;
 	padding: $top-bottom-padding-base 0;
 	.wrapper {
 		margin: auto;
-		width: 40%;
+		width: 600px;
 	}
 	blockquote {
 		border: none;
