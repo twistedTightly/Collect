@@ -24,7 +24,12 @@
 
     #toolbar {
         padding-right: $header-height + 15px;
-        line-height: $header-height;
+        height: 100%;
+        display: table;
+        .wrapper {
+            display: table-cell;
+            vertical-align: middle;
+        }
     }
 	#logo {
 	    float: left;

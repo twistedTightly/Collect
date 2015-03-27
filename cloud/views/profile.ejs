@@ -14,11 +14,19 @@
              <span id="logo"><img src="images/collect_logo.svg" alt="Logo"></span>
            </div>
            <div class="right" id="toolbar">
-              <div class="svg-container">
-                <a href="/connections"><img class="svg-icon" src="images/connections_icon_white.svg" alt="Connections"></a>
-                <a href="#"><img class="svg-icon" src="images/messages_icon_white.svg" alt="Messages"></a>
+              <div class="wrapper">
+                <a href="/connections">
+                  <div class="svg-container">
+                    <img class="svg-icon" src="images/connections_icon_white.svg" alt="Connections">
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="svg-container">
+                    <img class="svg-icon" src="images/messages_icon_white.svg" alt="Messages">
+                  </div>
+                </a>
+                <span class="header-text" id="user-info"><%= username %></span>
               </div>
-              <span class="header-text" id="user-info"><%= username %></span>
             </div>
       <!-- NOTE: The following *must* be included as it closes the header tag -->
       <% include partials/header-end.ejs %>

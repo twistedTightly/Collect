@@ -3234,16 +3234,22 @@ header {
 /* line 25, ../scss/profile.scss */
 header #toolbar {
   padding-right: 79px;
-  line-height: 64px;
+  height: 100%;
+  display: table;
 }
 /* line 29, ../scss/profile.scss */
+header #toolbar .wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 34, ../scss/profile.scss */
 header #logo {
   float: left;
   width: 104px;
   height: auto;
   line-height: 64px;
 }
-/* line 35, ../scss/profile.scss */
+/* line 40, ../scss/profile.scss */
 header img {
   display: inline-block;
 }
@@ -3253,7 +3259,7 @@ header img {
  * Pullout Menu
  *
  ********************/
-/* line 48, ../scss/profile.scss */
+/* line 53, ../scss/profile.scss */
 .triangle-left {
   width: 0;
   height: 0;
@@ -3262,7 +3268,7 @@ header img {
   border-bottom: 64px solid transparent;
 }
 
-/* line 55, ../scss/profile.scss */
+/* line 60, ../scss/profile.scss */
 #pullout-menu-tab {
   z-index: 100;
   position: absolute;
@@ -3273,19 +3279,19 @@ header img {
   cursor: pointer;
 }
 
-/* line 64, ../scss/profile.scss */
+/* line 69, ../scss/profile.scss */
 #pullout-menu-icon-holder {
   position: absolute;
   right: 0;
   top: 0;
   padding: 50px 0;
 }
-/* line 70, ../scss/profile.scss */
+/* line 75, ../scss/profile.scss */
 #pullout-menu-icon-holder .svg-icon {
   padding-right: 10px;
 }
 
-/* line 74, ../scss/profile.scss */
+/* line 79, ../scss/profile.scss */
 #pullout-menu {
   width: 20%;
   height: 100%;
@@ -3306,18 +3312,18 @@ header img {
   background: linear-gradient(135deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8f8f', endColorstr='#8f8f8f', GradientType=1 );
 }
-/* line 96, ../scss/profile.scss */
+/* line 101, ../scss/profile.scss */
 #pullout-menu a {
   display: block;
   color: #FFFFFF;
   padding-top: 45px;
   padding-left: 15px;
 }
-/* line 101, ../scss/profile.scss */
+/* line 106, ../scss/profile.scss */
 #pullout-menu a:hover {
   color: #D1DBBD;
 }
-/* line 105, ../scss/profile.scss */
+/* line 110, ../scss/profile.scss */
 #pullout-menu input[type="search"] {
   border-radius: 50px;
   padding: 5px 15px;
@@ -3326,21 +3332,21 @@ header img {
   letter-spacing: 3px;
 }
 
-/* line 114, ../scss/profile.scss */
+/* line 119, ../scss/profile.scss */
 #pullout-menu.show {
   right: 0;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 119, ../scss/profile.scss */
+/* line 124, ../scss/profile.scss */
 #pullout-menu-tab.show {
   right: 20%;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 124, ../scss/profile.scss */
+/* line 129, ../scss/profile.scss */
 header.shift {
   padding-right: 20%;
   -webkit-transition: padding 1s;
@@ -3352,7 +3358,7 @@ header.shift {
  * User Profile
  *
  ********************/
-/* line 136, ../scss/profile.scss */
+/* line 141, ../scss/profile.scss */
 #user-information {
   min-height: 220px;
   background-color: #D1DBBD;
@@ -3361,17 +3367,17 @@ header.shift {
   text-align: center;
   font-size: 75%;
 }
-/* line 144, ../scss/profile.scss */
+/* line 149, ../scss/profile.scss */
 #user-information #profile-picture {
   padding: 15px 0px;
 }
-/* line 147, ../scss/profile.scss */
+/* line 152, ../scss/profile.scss */
 #user-information p {
   padding: 15px 0px;
   margin: 0px;
   font-size: 75%;
 }
-/* line 152, ../scss/profile.scss */
+/* line 157, ../scss/profile.scss */
 #user-information hr {
   border: 0;
   margin: 0px auto 15px auto;
@@ -3380,7 +3386,7 @@ header.shift {
   width: 60%;
 }
 
-/* line 160, ../scss/profile.scss */
+/* line 165, ../scss/profile.scss */
 #add-memory {
   position: absolute;
   top: 45%;
@@ -3394,36 +3400,36 @@ header.shift {
  *
  ********************/
 /****** Header ******/
-/* line 173, ../scss/profile.scss */
+/* line 178, ../scss/profile.scss */
 #gallery-header {
   padding-top: 15px;
 }
-/* line 176, ../scss/profile.scss */
+/* line 181, ../scss/profile.scss */
 #gallery-header p {
   margin: 0;
   display: inline-block;
 }
-/* line 180, ../scss/profile.scss */
+/* line 185, ../scss/profile.scss */
 #gallery-header p#username {
   font-size: 140%;
   font-style: italic;
 }
-/* line 184, ../scss/profile.scss */
+/* line 189, ../scss/profile.scss */
 #gallery-header .svg-container {
   height: 1em;
 }
 
 /****** Rows *******/
-/* line 189, ../scss/profile.scss */
+/* line 194, ../scss/profile.scss */
 .gallery-row.row {
   margin: 2.5em 5% 0.5em 5%;
 }
-/* line 192, ../scss/profile.scss */
+/* line 197, ../scss/profile.scss */
 .gallery-row.row .collection {
   height: 160px;
   margin: auto;
 }
-/* line 196, ../scss/profile.scss */
+/* line 201, ../scss/profile.scss */
 .gallery-row.row .collection .content-holder {
   height: 100%;
   width: 100%;
@@ -3438,7 +3444,7 @@ header.shift {
  * Footer
  *
  ********************/
-/* line 212, ../scss/profile.scss */
+/* line 217, ../scss/profile.scss */
 #footer {
   height: 80px;
 }
