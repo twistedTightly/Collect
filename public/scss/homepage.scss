@@ -5,8 +5,88 @@
 	    "foundation/components/reveal",
 	    "foundation/components/type";
 
+$side-padding-base: 50px;
+$top-bottom-padding-base: 90px;
+
+img {
+	height: 100%;
+	width: auto;
+}
+
 /********************
  *
- * Homepage Styling
+ * Main block
  *
  ********************/
+#main {
+	background: $black;
+	padding: 0;
+	.triangle-left {
+	    width: 0;
+	    height: 0;
+	    border-top: $header-height solid transparent;
+	    border-right: $header-height solid rgba(95,127,174,0.8); // $blue
+	    border-bottom: $header-height solid transparent;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	}
+	#logo {
+		height: 160px;
+		margin: 150px 0 0 $side-padding-base;
+	}
+	#about {
+		height: 420px;
+		p.header-text {
+			text-align: center;
+			padding-bottom: $side-padding-base;
+		}
+		p {
+			font-size: $small-font-size;
+			color: black;
+		}
+		.about-block {
+			padding: $top-bottom-padding-base 6%;
+			height: 100%;
+		}
+		#yellow-about {
+			background-color: rgba(209,219,189,0.8);
+		}
+		#green-about {
+			background-color: rgba(145,170,157,0.8);
+		}
+		#blue-about {
+			background-color: rgba(95,127,174,0.8);
+		}
+	}
+}
+
+#how-it-works {
+	text-align: left;
+	padding: $top-bottom-padding-base $side-padding-base;
+	width: 60%;
+}
+
+#quote {
+	text-align: left;
+	background: $blue;
+	padding: $top-bottom-padding-base 0;
+	.wrapper {
+		margin: auto;
+		width: 40%;
+	}
+	blockquote {
+		border: none;
+		color: black;
+		padding: 0;
+	}
+}
+
+footer {
+	background: black;
+	color: $white;
+	font-size: $small-font-size;
+	h5 {
+		letter-spacing: regular;
+	}
+}
