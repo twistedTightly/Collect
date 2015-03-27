@@ -20,6 +20,7 @@ img {
  ********************/
 #main {
 	background: $black;
+	color: $white;
 	padding: 0;
 	.triangle-left {
 	    width: 0;
@@ -31,12 +32,23 @@ img {
 	    top: 0;
 	    right: 0;
 	}
-	#logo {
-		height: 160px;
+	#banner {
 		margin: 150px 0 0 $side-padding-base;
+		font-size: $large-font-size;
+	}
+	#logo {
+		height: 120px;
+	}
+	#tagline {
+		padding-left: $side-padding-base;
+		margin-top: $side-padding-base * 2;
+		p {
+			font-size: $large-font-size;
+		}
 	}
 	#about {
 		height: 420px;
+		color: $black;
 		p.header-text {
 			text-align: center;
 			padding-bottom: $side-padding-base;
@@ -59,6 +71,10 @@ img {
 			background-color: rgba(95,127,174,0.8);
 		}
 	}
+}
+#tagline-subtext {
+	margin-left: 120px;
+	font-style: italic;
 }
 
 #how-it-works {
