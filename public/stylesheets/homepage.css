@@ -213,9 +213,9 @@ select {
 /* line 213, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button, .button {
   border-style: solid;
-  border-width: 0;
+  border-width: 2px;
   cursor: pointer;
-  font-family: "kepler-std-display", Georgia, serif;
+  font-family: AxelSC, "Orator Std", monospace;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -228,14 +228,14 @@ button, .button {
   display: inline-block;
   padding: 1rem 2rem 1.0625rem 2rem;
   font-size: 1rem;
-  background-color: #D1DBBD;
-  border-color: #acbe88;
-  color: #333333;
+  background-color: transparent;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
   transition: background-color 300ms ease-out;
 }
 /* line 158, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #acbe88;
+  background-color: #5F7F8E;
 }
 /* line 164, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
@@ -352,16 +352,16 @@ button.round, .button.round {
 }
 /* line 237, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  background-color: #D1DBBD;
-  border-color: #acbe88;
-  color: #333333;
+  background-color: transparent;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
   cursor: default;
   opacity: 0.7;
   box-shadow: none;
 }
 /* line 158, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #acbe88;
+  background-color: #5F7F8E;
 }
 /* line 164, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
@@ -369,7 +369,7 @@ button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[dis
 }
 /* line 175, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #D1DBBD;
+  background-color: transparent;
 }
 /* line 238, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
@@ -2879,13 +2879,13 @@ td {
 /* Default Link Styles */
 /* line 217, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a {
-  color: #D1DBBD;
+  color: #5F7F8E;
   text-decoration: none;
   line-height: inherit;
 }
 /* line 222, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a:hover, a:focus {
-  color: #D1DBBD;
+  color: #5F7F8E;
 }
 /* line 230, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a img {
@@ -3235,7 +3235,7 @@ img {
   width: 0;
   height: 0;
   border-top: 64px solid transparent;
-  border-right: 64px solid rgba(95, 127, 174, 0.8);
+  border-right: 64px solid rgba(95, 127, 142, 0.8);
   border-bottom: 64px solid transparent;
   position: absolute;
   top: 0;
@@ -3245,91 +3245,98 @@ img {
 #main #banner {
   margin: 150px 0 0 50px;
   font-size: 140%;
+  text-align: center;
 }
-/* line 39, ../scss/homepage.scss */
+/* line 40, ../scss/homepage.scss */
 #main #logo {
   height: 120px;
+  text-align: left;
 }
-/* line 42, ../scss/homepage.scss */
+/* line 44, ../scss/homepage.scss */
+#main .button-container {
+  line-height: 100%;
+  height: 100%;
+}
+/* line 48, ../scss/homepage.scss */
 #main #tagline {
   padding-left: 50px;
   margin-top: 100px;
 }
-/* line 45, ../scss/homepage.scss */
+/* line 51, ../scss/homepage.scss */
 #main #tagline p {
   font-size: 140%;
 }
-/* line 49, ../scss/homepage.scss */
+/* line 55, ../scss/homepage.scss */
 #main #about {
   height: 420px;
   color: #272727;
 }
-/* line 52, ../scss/homepage.scss */
+/* line 58, ../scss/homepage.scss */
 #main #about p.header-text {
   text-align: center;
   padding-bottom: 50px;
 }
-/* line 56, ../scss/homepage.scss */
+/* line 62, ../scss/homepage.scss */
 #main #about p {
   font-size: 75%;
   color: black;
 }
-/* line 60, ../scss/homepage.scss */
+/* line 66, ../scss/homepage.scss */
 #main #about .about-block {
   padding: 90px 6%;
   height: 100%;
 }
-/* line 64, ../scss/homepage.scss */
+/* line 70, ../scss/homepage.scss */
 #main #about #yellow-about {
   background-color: rgba(209, 219, 189, 0.8);
 }
-/* line 67, ../scss/homepage.scss */
+/* line 73, ../scss/homepage.scss */
 #main #about #green-about {
   background-color: rgba(145, 170, 157, 0.8);
 }
-/* line 70, ../scss/homepage.scss */
+/* line 76, ../scss/homepage.scss */
 #main #about #blue-about {
-  background-color: rgba(95, 127, 174, 0.8);
+  background-color: rgba(95, 127, 142, 0.8);
 }
 
-/* line 75, ../scss/homepage.scss */
+/* line 81, ../scss/homepage.scss */
 #tagline-subtext {
   margin-left: 120px;
   font-style: italic;
 }
 
-/* line 80, ../scss/homepage.scss */
+/* line 86, ../scss/homepage.scss */
 #how-it-works {
   text-align: left;
   padding: 90px 50px;
   width: 60%;
 }
 
-/* line 86, ../scss/homepage.scss */
+/* line 92, ../scss/homepage.scss */
 #quote {
   text-align: left;
-  background: #5F7FAE;
+  background: #5F7F8E;
   padding: 90px 0;
 }
-/* line 90, ../scss/homepage.scss */
+/* line 96, ../scss/homepage.scss */
 #quote .wrapper {
   margin: auto;
   width: 40%;
 }
-/* line 94, ../scss/homepage.scss */
+/* line 100, ../scss/homepage.scss */
 #quote blockquote {
   border: none;
   color: black;
   padding: 0;
 }
 
-/* line 101, ../scss/homepage.scss */
+/* line 107, ../scss/homepage.scss */
 footer {
   background: black;
   color: #FFFFFF;
   font-size: 75%;
 }
-/* line 105, ../scss/homepage.scss */
+/* line 111, ../scss/homepage.scss */
 footer h5 {
   letter-spacing: regular;
 }

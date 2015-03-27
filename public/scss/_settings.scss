@@ -157,7 +157,7 @@ $light-grey		: #D8D8D8; // Only for frame icons, triangle on inputs on add form
 $black       	: #272727; // Icons on pages, filled in text
 
 // We use these as default colors throughout
-$primary-color: $yellow;
+$primary-color: $blue;
 $secondary-color: #e7e7e7;
 
 // We use these to control various global styles
@@ -466,7 +466,7 @@ $anchor-font-color-hover: $primary-color;
 // 05. Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-button-classes: $include-html-classes;
+$include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
 // $button-tny: rem-calc(10);
@@ -479,7 +479,7 @@ $anchor-font-color-hover: $primary-color;
 // $button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
-// $button-font-family: $body-font-family;
+$button-font-family: $header-font-family;
 // $button-font-color: $white;
 // $button-font-color-alt: $oil;
 // $button-font-tny: rem-calc(11);
@@ -493,11 +493,12 @@ $anchor-font-color-hover: $primary-color;
 // $button-function-factor: -20%;
 
 // We use these to control button border styles.
-// $button-border-width: 0;
+$button-border-width: 2px;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
-// $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
-// $button-border-color: $button-bg-hover;
+$button-bg-color: transparent;
+$button-bg-hover: $primary-color; //scale-color($button-bg-color, $lightness: $button-function-factor);
+$button-border-color: $white;
+$button-border-color-hover: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
 // $secondary-button-border-color: $secondary-button-bg-hover;
 // $success-button-bg-hover: scale-color($success-color, $lightness: $button-function-factor);
