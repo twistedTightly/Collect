@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5 {
 // Universal classes
 // Maintains footer at bottom of page
 // Credit: http://ryanfait.com/sticky-footer/
-.wrapper {
+body > .wrapper {
     min-height: 100%;
     height: auto !important;
     height: 100%;
