@@ -3478,10 +3478,19 @@ ul#mnemonic-explanation .selected .mnemonic-content-right, ul#mnemonic-explanati
 /* line 234, ../scss/homepage.scss */
 footer {
   background: black;
+  padding: 50px;
   color: #FFFFFF;
   font-size: 85%;
+  text-align: left;
 }
-/* line 238, ../scss/homepage.scss */
+/* line 240, ../scss/homepage.scss */
 footer h5 {
   letter-spacing: regular;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+/* line 245, ../scss/homepage.scss */
+footer p#version {
+  margin-top: 15px;
+  font-style: italic;
 }
