@@ -5,6 +5,19 @@ function toggleMnemonicContent() {
 	});
 }
 
+function toggleButtonDropdown() {
+	$( "#banner .button" ).hover(
+		// Applied when mouse enters
+		function(event) {
+			$( event.target ).toggleClass( "show-form" );
+			$( "ul#memory-carousel" ).toggleClass( "shifted" );
+		}, function(event) { // Applied when mouse leaves
+			$( event.target ).toggleClass( "show-form" );
+			$( "ul#memory-carousel" ).toggleClass( "shifted" );
+		}
+	);
+}
+
 function scrollALittle() {
 	// 1. Scroll the carousel a little
 	// 2. Set a timer to repeat the event
@@ -13,7 +26,7 @@ function scrollALittle() {
 
 // Attaches listeners to the DOM once it has loaded
 $( document ).ready(function() {
+	toggleButtonDropdown();
 	// Toggles which section of the mnemonic content is showing
 	toggleMnemonicContent();
-	$('#memory-carousel').scrollALittle();
-});
+	$('#memory-carousel').scrollALittle();});
