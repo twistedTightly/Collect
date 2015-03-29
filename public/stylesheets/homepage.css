@@ -3322,13 +3322,20 @@ body {
  ********************/
 /* line 102, ../scss/homepage.scss */
 ul#memory-carousel {
-  margin: 100px 0;
-  padding: 0;
   height: 100px;
-  -webkit-transition: margin 1s;
-  transition: margin 1s;
+  position: relative;
+  top: 0;
+  margin: 0;
+  display: -webkit-flex;
+  -webkit-flex-direction: row-reverse;
+  -webkit-justify-content: flex-start;
+  right: 0px;
 }
-/* line 108, ../scss/homepage.scss */
+/* line 111, ../scss/homepage.scss */
+ul#memory-carousel .memory {
+  -webkit-flex-shrink: 0;
+}
+/* line 114, ../scss/homepage.scss */
 ul#memory-carousel li {
   display: inline-block;
   height: 100px;
@@ -3336,8 +3343,16 @@ ul#memory-carousel li {
   padding: 0 5px;
 }
 
-/* line 115, ../scss/homepage.scss */
-ul#memory-carousel.shifted {
+/* line 121, ../scss/homepage.scss */
+#scrollwrapper {
+  position: relative;
+  margin: 100px 0;
+  overflow-x: hidden;
+  -webkit-transition: margin 1s;
+  transition: margin 1s;
+}
+/* line 127, ../scss/homepage.scss */
+#scrollwrapper.shifted {
   margin-top: 200px;
   margin-bottom: 0;
   -webkit-transition: margin 1s;
@@ -3349,37 +3364,37 @@ ul#memory-carousel.shifted {
  * About section
  *
  ********************/
-/* line 127, ../scss/homepage.scss */
+/* line 140, ../scss/homepage.scss */
 #about {
   background-color: #76727C;
   color: #272727;
   text-align: left;
 }
-/* line 131, ../scss/homepage.scss */
+/* line 144, ../scss/homepage.scss */
 #about .row {
   height: 450px;
 }
-/* line 134, ../scss/homepage.scss */
+/* line 147, ../scss/homepage.scss */
 #about p.header-text {
   text-align: center;
   padding-bottom: 50px;
 }
-/* line 138, ../scss/homepage.scss */
+/* line 151, ../scss/homepage.scss */
 #about p {
   font-size: 85%;
   color: black;
 }
-/* line 142, ../scss/homepage.scss */
+/* line 155, ../scss/homepage.scss */
 #about .about-block {
   height: 100%;
   padding: 0;
 }
-/* line 146, ../scss/homepage.scss */
+/* line 159, ../scss/homepage.scss */
 #about .about-background {
   width: 100%;
   height: 100%;
 }
-/* line 149, ../scss/homepage.scss */
+/* line 162, ../scss/homepage.scss */
 #about .about-background::after {
   content: "";
   background-image: url(../images/background_blur.jpg);
@@ -3390,19 +3405,19 @@ ul#memory-carousel.shifted {
   right: 0;
   position: absolute;
 }
-/* line 160, ../scss/homepage.scss */
+/* line 173, ../scss/homepage.scss */
 #about #yellow-about {
   background-color: rgba(209, 219, 189, 0.7);
 }
-/* line 163, ../scss/homepage.scss */
+/* line 176, ../scss/homepage.scss */
 #about #green-about {
   background-color: rgba(145, 170, 157, 0.7);
 }
-/* line 166, ../scss/homepage.scss */
+/* line 179, ../scss/homepage.scss */
 #about #blue-about {
   background-color: rgba(95, 127, 142, 0.7);
 }
-/* line 169, ../scss/homepage.scss */
+/* line 182, ../scss/homepage.scss */
 #about .about-content {
   padding: 90px 16%;
   height: 100%;
@@ -3416,38 +3431,38 @@ ul#memory-carousel.shifted {
  * How It Works section
  *
  ********************/
-/* line 184, ../scss/homepage.scss */
+/* line 197, ../scss/homepage.scss */
 #how-it-works {
   text-align: left;
   padding: 90px 50px;
   width: 100%;
   background-color: #FFFFFF;
 }
-/* line 189, ../scss/homepage.scss */
+/* line 202, ../scss/homepage.scss */
 #how-it-works p {
   width: 600px;
 }
 
-/* line 193, ../scss/homepage.scss */
+/* line 206, ../scss/homepage.scss */
 ul#mnemonic-explanation {
   text-align: right;
   margin-top: 130px;
   margin-bottom: 200px;
 }
-/* line 197, ../scss/homepage.scss */
+/* line 210, ../scss/homepage.scss */
 ul#mnemonic-explanation li {
   display: inline-block;
   margin-left: 12%;
   position: relative;
 }
-/* line 201, ../scss/homepage.scss */
+/* line 214, ../scss/homepage.scss */
 ul#mnemonic-explanation li img {
   cursor: pointer;
   height: 50px;
   width: auto;
   opacity: 0.5;
 }
-/* line 207, ../scss/homepage.scss */
+/* line 220, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-left {
   display: none;
   position: absolute;
@@ -3455,21 +3470,21 @@ ul#mnemonic-explanation li .mnemonic-content-left {
   left: 0;
   pointer-events: none;
 }
-/* line 213, ../scss/homepage.scss */
+/* line 226, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-left .vertical-line {
   position: absolute;
   top: 0;
   left: -20px;
   height: 100%;
 }
-/* line 219, ../scss/homepage.scss */
+/* line 232, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-left p {
   font-style: italic;
   text-align: left;
   width: 300px;
   margin-top: 75px;
 }
-/* line 226, ../scss/homepage.scss */
+/* line 239, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-right {
   display: none;
   position: absolute;
@@ -3477,48 +3492,48 @@ ul#mnemonic-explanation li .mnemonic-content-right {
   right: 0;
   pointer-events: none;
 }
-/* line 232, ../scss/homepage.scss */
+/* line 245, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-right .vertical-line {
   position: absolute;
   top: 0;
   right: -20px;
   height: 100%;
 }
-/* line 238, ../scss/homepage.scss */
+/* line 251, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-right p {
   font-style: italic;
   text-align: right;
   width: 300px;
   margin-top: 75px;
 }
-/* line 247, ../scss/homepage.scss */
+/* line 260, ../scss/homepage.scss */
 ul#mnemonic-explanation .selected img {
   opacity: 1;
 }
-/* line 250, ../scss/homepage.scss */
+/* line 263, ../scss/homepage.scss */
 ul#mnemonic-explanation .selected .mnemonic-content-right, ul#mnemonic-explanation .selected .mnemonic-content-left {
   display: block;
 }
 
-/* line 256, ../scss/homepage.scss */
+/* line 269, ../scss/homepage.scss */
 #quote {
   text-align: left;
   background: #D9D5C2;
   padding: 90px 0;
 }
-/* line 260, ../scss/homepage.scss */
+/* line 273, ../scss/homepage.scss */
 #quote .wrapper {
   margin: auto;
   width: 600px;
 }
-/* line 264, ../scss/homepage.scss */
+/* line 277, ../scss/homepage.scss */
 #quote blockquote {
   border: none;
   color: black;
   padding: 0;
 }
 
-/* line 271, ../scss/homepage.scss */
+/* line 284, ../scss/homepage.scss */
 footer {
   background: black;
   padding: 50px;
@@ -3526,37 +3541,14 @@ footer {
   font-size: 85%;
   text-align: left;
 }
-/* line 277, ../scss/homepage.scss */
+/* line 290, ../scss/homepage.scss */
 footer h5 {
   letter-spacing: regular;
   color: #FFFFFF;
   margin-bottom: 15px;
 }
-/* line 282, ../scss/homepage.scss */
+/* line 295, ../scss/homepage.scss */
 footer p#version {
   margin-top: 15px;
   font-style: italic;
-}
-
-/* line 288, ../scss/homepage.scss */
-#scrollwrapper {
-  position: relative;
-  margin: 100px 0;
-  overflow-x: hidden;
-}
-
-/* line 294, ../scss/homepage.scss */
-ul#memory-carousel {
-  position: relative;
-  top: 0;
-  margin: 0;
-  display: -webkit-flex;
-  -webkit-flex-direction: row-reverse;
-  -webkit-justify-content: flex-start;
-  right: 0px;
-}
-
-/* line 304, ../scss/homepage.scss */
-ul#memory-carousel .memory {
-  -webkit-flex-shrink: 0;
 }
