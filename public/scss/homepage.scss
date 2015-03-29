@@ -140,6 +140,12 @@ body {
 	}
 }
 
+/********************
+ *
+ * How It Works section
+ *
+ ********************/
+ $icon-height: 50px;
 #how-it-works {
 	text-align: left;
 	padding: $top-bottom-padding-base $side-padding-base;
@@ -147,6 +153,47 @@ body {
 	background-color: $white;
 	p {
 		width: 600px;
+	}
+}
+ul#mnemonic-explanation {
+	text-align: right;
+	margin-top: $side-padding-base * 2;
+	margin-bottom: 200px;
+	li {
+		display: inline-block;
+		margin-left: 12%;
+		position: relative; 
+		img {
+			height: $icon-height;
+			width: auto;
+			opacity: 0.5;
+		}
+		.mnemonic-content {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			.vertical-line {
+				position: absolute;
+				top: 0;
+				left: -20px;
+				height: 100%;
+			}
+			p {
+				font-style: italic;
+				text-align: left;
+				width: 300px;
+				margin-top: $icon-height * 1.5;
+			}
+		}
+	}
+	.selected {
+		img {
+			opacity: 1;
+		}
+		.mnemonic-content {
+			display: block;
+		}
 	}
 }
 

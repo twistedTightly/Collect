@@ -3370,43 +3370,96 @@ ul#memory-carousel li {
   position: absolute;
 }
 
-/* line 143, ../scss/homepage.scss */
+/********************
+ *
+ * How It Works section
+ *
+ ********************/
+/* line 149, ../scss/homepage.scss */
 #how-it-works {
   text-align: left;
   padding: 90px 50px;
   width: 100%;
   background-color: #FFFFFF;
 }
-/* line 148, ../scss/homepage.scss */
+/* line 154, ../scss/homepage.scss */
 #how-it-works p {
   width: 600px;
 }
 
-/* line 153, ../scss/homepage.scss */
+/* line 158, ../scss/homepage.scss */
+ul#mnemonic-explanation {
+  text-align: right;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+/* line 162, ../scss/homepage.scss */
+ul#mnemonic-explanation li {
+  display: inline-block;
+  margin-left: 12%;
+  position: relative;
+}
+/* line 166, ../scss/homepage.scss */
+ul#mnemonic-explanation li img {
+  height: 50px;
+  width: auto;
+  opacity: 0.5;
+}
+/* line 171, ../scss/homepage.scss */
+ul#mnemonic-explanation li .mnemonic-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 176, ../scss/homepage.scss */
+ul#mnemonic-explanation li .mnemonic-content .vertical-line {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  height: 100%;
+}
+/* line 182, ../scss/homepage.scss */
+ul#mnemonic-explanation li .mnemonic-content p {
+  font-style: italic;
+  text-align: left;
+  width: 300px;
+  margin-top: 75px;
+}
+/* line 191, ../scss/homepage.scss */
+ul#mnemonic-explanation .selected img {
+  opacity: 1;
+}
+/* line 194, ../scss/homepage.scss */
+ul#mnemonic-explanation .selected .mnemonic-content {
+  display: block;
+}
+
+/* line 200, ../scss/homepage.scss */
 #quote {
   text-align: left;
   background: #D9D5C2;
   padding: 90px 0;
 }
-/* line 157, ../scss/homepage.scss */
+/* line 204, ../scss/homepage.scss */
 #quote .wrapper {
   margin: auto;
   width: 600px;
 }
-/* line 161, ../scss/homepage.scss */
+/* line 208, ../scss/homepage.scss */
 #quote blockquote {
   border: none;
   color: black;
   padding: 0;
 }
 
-/* line 168, ../scss/homepage.scss */
+/* line 215, ../scss/homepage.scss */
 footer {
   background: black;
   color: #FFFFFF;
   font-size: 85%;
 }
-/* line 172, ../scss/homepage.scss */
+/* line 219, ../scss/homepage.scss */
 footer h5 {
   letter-spacing: regular;
 }
