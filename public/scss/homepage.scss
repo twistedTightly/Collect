@@ -157,18 +157,19 @@ body {
 }
 ul#mnemonic-explanation {
 	text-align: right;
-	margin-top: $side-padding-base * 2;
+	margin-top: $side-padding-base * 2 + 30px;
 	margin-bottom: 200px;
 	li {
 		display: inline-block;
 		margin-left: 12%;
-		position: relative; 
+		position: relative;
+		cursor: pointer;
 		img {
 			height: $icon-height;
 			width: auto;
 			opacity: 0.5;
 		}
-		.mnemonic-content {
+		.mnemonic-content-left {
 			display: none;
 			position: absolute;
 			top: 0;
@@ -186,12 +187,30 @@ ul#mnemonic-explanation {
 				margin-top: $icon-height * 1.5;
 			}
 		}
+		.mnemonic-content-right {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			.vertical-line {
+				position: absolute;
+				top: 0;
+				right: -20px;
+				height: 100%;
+			}
+			p {
+				font-style: italic;
+				text-align: right;
+				width: 300px;
+				margin-top: $icon-height * 1.5;
+			}
+		}
 	}
 	.selected {
 		img {
 			opacity: 1;
 		}
-		.mnemonic-content {
+		.mnemonic-content-right, .mnemonic-content-left {
 			display: block;
 		}
 	}
