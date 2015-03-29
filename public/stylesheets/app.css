@@ -3246,42 +3246,44 @@ body > .wrapper {
 .button {
   letter-spacing: 3px;
   text-transform: lowercase;
+  padding: 0.7rem 0 0.65rem 0 !important;
+  font-size: 85%;
 }
-/* line 69, ../scss/app.scss */
+/* line 70, ../scss/app.scss */
 .button:hover {
   border-color: rgba(95, 127, 142, 0.7);
 }
 
-/* line 73, ../scss/app.scss */
+/* line 74, ../scss/app.scss */
 .svg-icon {
   height: 100%;
 }
 
-/* line 76, ../scss/app.scss */
+/* line 77, ../scss/app.scss */
 .svg-container {
   display: inline-block;
   height: 1.5em;
   min-height: 10px;
 }
 
-/* line 81, ../scss/app.scss */
+/* line 82, ../scss/app.scss */
 #main {
   width: 100%;
   margin: auto;
   text-align: left;
   padding: 40px 0;
 }
-/* line 86, ../scss/app.scss */
+/* line 87, ../scss/app.scss */
 #main h1 {
   margin-top: 0;
   font-size: 35px;
 }
-/* line 90, ../scss/app.scss */
+/* line 91, ../scss/app.scss */
 #main ul {
   padding-left: 20px;
 }
 
-/* line 94, ../scss/app.scss */
+/* line 95, ../scss/app.scss */
 .header-text {
   letter-spacing: 3px;
   font-family: AxelSC, "Orator Std", monospace;

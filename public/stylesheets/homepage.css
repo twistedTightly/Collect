@@ -3267,31 +3267,41 @@ body {
   padding-left: 0;
   padding-right: 0;
   width: 200px;
+  font-size: 100%;
 }
-/* line 57, ../scss/homepage.scss */
+/* line 58, ../scss/homepage.scss */
 #main #tagline {
   padding-left: 50px;
   margin-top: 100px;
 }
-/* line 60, ../scss/homepage.scss */
+/* line 61, ../scss/homepage.scss */
 #main #tagline p {
   font-size: 140%;
   letter-spacing: 6px;
 }
-/* line 65, ../scss/homepage.scss */
+/* line 66, ../scss/homepage.scss */
 #main form {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
   position: absolute;
   top: 70px;
   left: 0;
   right: 0;
   padding: 0 25%;
 }
-/* line 72, ../scss/homepage.scss */
+/* line 77, ../scss/homepage.scss */
 #main form p {
   font-family: Axel, "Orator Std", monospace;
+  font-size: 14px;
+  padding: 0 25px;
+  line-height: 16px;
+  text-align: left;
+  margin-top: 15px;
 }
-/* line 75, ../scss/homepage.scss */
+/* line 85, ../scss/homepage.scss */
 #main form input {
   background: none;
   text-align: center;
@@ -3299,15 +3309,29 @@ body {
   border-left: none;
   border-right: none;
   border-top: none;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1.5px solid #FFFFFF;
   color: #FFFFFF;
+  font-size: 80%;
+  box-shadow: none;
+  padding: 25px 0;
 }
-/* line 86, ../scss/homepage.scss */
+/* line 98, ../scss/homepage.scss */
+#main form .button {
+  border-width: 1px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100px;
+  margin-top: 25px;
+}
+/* line 106, ../scss/homepage.scss */
 #main form.show {
-  display: block;
+  height: auto;
+  opacity: 1;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
 }
 
-/* line 90, ../scss/homepage.scss */
+/* line 113, ../scss/homepage.scss */
 #tagline-subtext {
   margin-left: 190px;
   font-style: italic;
@@ -3320,7 +3344,7 @@ body {
  * Memory Carousel
  *
  ********************/
-/* line 102, ../scss/homepage.scss */
+/* line 125, ../scss/homepage.scss */
 ul#memory-carousel {
   height: 100px;
   position: relative;
@@ -3331,11 +3355,11 @@ ul#memory-carousel {
   -webkit-justify-content: flex-start;
   right: 0px;
 }
-/* line 111, ../scss/homepage.scss */
+/* line 134, ../scss/homepage.scss */
 ul#memory-carousel .memory {
   -webkit-flex-shrink: 0;
 }
-/* line 114, ../scss/homepage.scss */
+/* line 137, ../scss/homepage.scss */
 ul#memory-carousel li {
   display: inline-block;
   height: 100px;
@@ -3343,7 +3367,7 @@ ul#memory-carousel li {
   padding: 0 5px;
 }
 
-/* line 121, ../scss/homepage.scss */
+/* line 144, ../scss/homepage.scss */
 #scrollwrapper {
   position: relative;
   margin: 100px 0;
@@ -3351,7 +3375,7 @@ ul#memory-carousel li {
   -webkit-transition: margin 1s;
   transition: margin 1s;
 }
-/* line 127, ../scss/homepage.scss */
+/* line 150, ../scss/homepage.scss */
 #scrollwrapper.shifted {
   margin-top: 200px;
   margin-bottom: 0;
@@ -3364,37 +3388,38 @@ ul#memory-carousel li {
  * About section
  *
  ********************/
-/* line 140, ../scss/homepage.scss */
+/* line 163, ../scss/homepage.scss */
 #about {
   background-color: #76727C;
   color: #272727;
   text-align: left;
 }
-/* line 144, ../scss/homepage.scss */
+/* line 167, ../scss/homepage.scss */
 #about .row {
   height: 450px;
 }
-/* line 147, ../scss/homepage.scss */
+/* line 170, ../scss/homepage.scss */
 #about p.header-text {
   text-align: center;
   padding-bottom: 50px;
 }
-/* line 151, ../scss/homepage.scss */
+/* line 174, ../scss/homepage.scss */
 #about p {
   font-size: 85%;
   color: black;
 }
-/* line 155, ../scss/homepage.scss */
+/* line 178, ../scss/homepage.scss */
 #about .about-block {
   height: 100%;
   padding: 0;
+  float: left !important;
 }
-/* line 159, ../scss/homepage.scss */
+/* line 183, ../scss/homepage.scss */
 #about .about-background {
   width: 100%;
   height: 100%;
 }
-/* line 162, ../scss/homepage.scss */
+/* line 186, ../scss/homepage.scss */
 #about .about-background::after {
   content: "";
   background-image: url(../images/background_blur.jpg);
@@ -3405,19 +3430,19 @@ ul#memory-carousel li {
   right: 0;
   position: absolute;
 }
-/* line 173, ../scss/homepage.scss */
+/* line 197, ../scss/homepage.scss */
 #about #yellow-about {
   background-color: rgba(209, 219, 189, 0.7);
 }
-/* line 176, ../scss/homepage.scss */
+/* line 200, ../scss/homepage.scss */
 #about #green-about {
   background-color: rgba(145, 170, 157, 0.7);
 }
-/* line 179, ../scss/homepage.scss */
+/* line 203, ../scss/homepage.scss */
 #about #blue-about {
   background-color: rgba(95, 127, 142, 0.7);
 }
-/* line 182, ../scss/homepage.scss */
+/* line 206, ../scss/homepage.scss */
 #about .about-content {
   padding: 90px 16%;
   height: 100%;
@@ -3431,38 +3456,38 @@ ul#memory-carousel li {
  * How It Works section
  *
  ********************/
-/* line 197, ../scss/homepage.scss */
+/* line 221, ../scss/homepage.scss */
 #how-it-works {
   text-align: left;
   padding: 90px 50px;
   width: 100%;
   background-color: #FFFFFF;
 }
-/* line 202, ../scss/homepage.scss */
+/* line 226, ../scss/homepage.scss */
 #how-it-works p {
   width: 600px;
 }
 
-/* line 206, ../scss/homepage.scss */
+/* line 230, ../scss/homepage.scss */
 ul#mnemonic-explanation {
   text-align: right;
   margin-top: 130px;
   margin-bottom: 200px;
 }
-/* line 210, ../scss/homepage.scss */
+/* line 234, ../scss/homepage.scss */
 ul#mnemonic-explanation li {
   display: inline-block;
   margin-left: 12%;
   position: relative;
 }
-/* line 214, ../scss/homepage.scss */
+/* line 238, ../scss/homepage.scss */
 ul#mnemonic-explanation li img {
   cursor: pointer;
   height: 50px;
   width: auto;
   opacity: 0.5;
 }
-/* line 220, ../scss/homepage.scss */
+/* line 244, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-left {
   display: none;
   position: absolute;
@@ -3470,21 +3495,21 @@ ul#mnemonic-explanation li .mnemonic-content-left {
   left: 0;
   pointer-events: none;
 }
-/* line 226, ../scss/homepage.scss */
+/* line 250, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-left .vertical-line {
   position: absolute;
   top: 0;
   left: -20px;
   height: 100%;
 }
-/* line 232, ../scss/homepage.scss */
+/* line 256, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-left p {
   font-style: italic;
   text-align: left;
   width: 300px;
   margin-top: 75px;
 }
-/* line 239, ../scss/homepage.scss */
+/* line 263, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-right {
   display: none;
   position: absolute;
@@ -3492,48 +3517,48 @@ ul#mnemonic-explanation li .mnemonic-content-right {
   right: 0;
   pointer-events: none;
 }
-/* line 245, ../scss/homepage.scss */
+/* line 269, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-right .vertical-line {
   position: absolute;
   top: 0;
   right: -20px;
   height: 100%;
 }
-/* line 251, ../scss/homepage.scss */
+/* line 275, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-right p {
   font-style: italic;
   text-align: right;
   width: 300px;
   margin-top: 75px;
 }
-/* line 260, ../scss/homepage.scss */
+/* line 284, ../scss/homepage.scss */
 ul#mnemonic-explanation .selected img {
   opacity: 1;
 }
-/* line 263, ../scss/homepage.scss */
+/* line 287, ../scss/homepage.scss */
 ul#mnemonic-explanation .selected .mnemonic-content-right, ul#mnemonic-explanation .selected .mnemonic-content-left {
   display: block;
 }
 
-/* line 269, ../scss/homepage.scss */
+/* line 293, ../scss/homepage.scss */
 #quote {
   text-align: left;
   background: #D9D5C2;
   padding: 90px 0;
 }
-/* line 273, ../scss/homepage.scss */
+/* line 297, ../scss/homepage.scss */
 #quote .wrapper {
   margin: auto;
   width: 600px;
 }
-/* line 277, ../scss/homepage.scss */
+/* line 301, ../scss/homepage.scss */
 #quote blockquote {
   border: none;
   color: black;
   padding: 0;
 }
 
-/* line 284, ../scss/homepage.scss */
+/* line 308, ../scss/homepage.scss */
 footer {
   background: black;
   padding: 50px;
@@ -3541,13 +3566,13 @@ footer {
   font-size: 85%;
   text-align: left;
 }
-/* line 290, ../scss/homepage.scss */
+/* line 314, ../scss/homepage.scss */
 footer h5 {
   letter-spacing: regular;
   color: #FFFFFF;
   margin-bottom: 15px;
 }
-/* line 295, ../scss/homepage.scss */
+/* line 319, ../scss/homepage.scss */
 footer p#version {
   margin-top: 15px;
   font-style: italic;

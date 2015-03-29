@@ -20,21 +20,22 @@
         <a href="#" class="button">log in</a>
         <form id="log-in" name="logIn" method="get" action="/profile">
           <p>Log in with an existing account or Sign in below</p>
-          <div>
-              <input type="email" id="log-in-email" name="email" placeholder="email" />
-          </div>
-          <div>
-              <input type="password" id="password" placeholder="password" />
-          </div>
-          <button class="header-text" type="submit">sign in</button>
+          <input type="email" id="log-in-email" name="email" placeholder="email" />
+          <input type="password" id="password" placeholder="password" />
+          <button class="header-text button" type="submit">sign in</button>
         </form>
       </div>
 
       <div class="button-container small-6 large-3 columns">
-        <a href="#" class="button">Sign Up</a>
-        <div id="signup">
+        <a href="#" class="button">sign up</a>
+        <form id="sign-up" name="signUp" method="post" action="/profile">
           <p>Connect to an existing account or Sign up below</p>
-        </div>
+          <input type="text" id="first-name" name="firstname" placeholder="name" />
+          <input type="email" id="user-email" name="email" placeholder="email" />
+          <input type="password" id="password" placeholder="password" />
+          <button class="header-text button" type="submit">create</button>
+        </form>
+
       </div>
     </div> <!-- End banner -->
 

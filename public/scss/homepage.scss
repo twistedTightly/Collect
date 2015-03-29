@@ -52,6 +52,7 @@ body {
 			padding-left: 0;
 			padding-right: 0;
 			width: 200px;
+			font-size: 100%;
 		}
 	}
 	#tagline {
@@ -63,7 +64,11 @@ body {
 		}
 	}
 	form {
-		display: none;
+		height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: opacity 1s;
+		-webkit-transition: opacity 1s;
 		position: absolute;
 		top: 70px;
 		left: 0;
@@ -71,6 +76,11 @@ body {
 		padding: 0 25%;
 		p {
 			font-family: $font-family-monospace-lower;
+			font-size: 14px;
+			padding: 0 25px;
+			line-height: 16px;
+			text-align: left;
+			margin-top: 15px;
 		}
 		input {
 			background: none;
@@ -79,12 +89,25 @@ body {
 			border-left: none;
 			border-right: none;
 			border-top: none;
-			border-bottom: 1px solid $white;
+			border-bottom: 1.5px solid $white;
 			color: $white;
+			font-size: 80%;
+			box-shadow: none;
+			padding: 25px 0;
+		}
+		.button {
+			border-width: 1px;
+			padding-left: 0;
+			padding-right: 0;
+			width: 100px;
+			margin-top: 25px;
 		}
 	}
 	form.show {
-		display: block;
+		height: auto;
+		opacity: 1;
+		transition: opacity 1s;
+		-webkit-transition: opacity 1s;
 	}
 }
 #tagline-subtext {
@@ -155,6 +178,7 @@ body {
 	.about-block {
 		height: 100%;
 		padding: 0;
+		float: left !important;
 	}
 	.about-background {
 		width: 100%;
