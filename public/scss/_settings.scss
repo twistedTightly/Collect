@@ -500,7 +500,7 @@ $button-border-width: 2px;
 $button-bg-color: transparent;
 $button-bg-hover: rgba(95,127,142,0.7); // $primary-color //scale-color($button-bg-color, $lightness: $button-function-factor);
 $button-border-color: $white;
-$button-border-color-hover: $button-bg-hover;
+$button-border-color-hover: transparent;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
 // $secondary-button-border-color: $secondary-button-bg-hover;
 // $success-button-bg-hover: scale-color($success-color, $lightness: $button-function-factor);

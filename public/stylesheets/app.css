@@ -3251,7 +3251,7 @@ body > .wrapper {
 }
 /* line 70, ../scss/app.scss */
 .button:hover {
-  border-color: rgba(95, 127, 142, 0.7);
+  border-color: transparent;
 }
 
 /* line 74, ../scss/app.scss */

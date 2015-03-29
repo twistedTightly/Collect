@@ -3377,7 +3377,7 @@ ul#memory-carousel li {
 }
 /* line 150, ../scss/homepage.scss */
 #scrollwrapper.shifted {
-  margin-top: 200px;
+  margin-top: 250px;
   margin-bottom: 0;
   -webkit-transition: margin 1s;
   transition: margin 1s;
