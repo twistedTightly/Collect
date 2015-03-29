@@ -170,8 +170,8 @@ ul#mnemonic-explanation {
 		display: inline-block;
 		margin-left: 12%;
 		position: relative;
-		cursor: pointer;
 		img {
+			cursor: pointer;
 			height: $icon-height;
 			width: auto;
 			opacity: 0.5;
@@ -181,6 +181,7 @@ ul#mnemonic-explanation {
 			position: absolute;
 			top: 0;
 			left: 0;
+			pointer-events: none;
 			.vertical-line {
 				position: absolute;
 				top: 0;
@@ -199,6 +200,7 @@ ul#mnemonic-explanation {
 			position: absolute;
 			top: 0;
 			right: 0;
+			pointer-events: none;
 			.vertical-line {
 				position: absolute;
 				top: 0;
