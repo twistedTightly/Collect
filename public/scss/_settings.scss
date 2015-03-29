@@ -498,7 +498,7 @@ $button-font-family: $header-font-family;
 $button-border-width: 2px;
 // $button-border-style: solid;
 $button-bg-color: transparent;
-$button-bg-hover: $primary-color; //scale-color($button-bg-color, $lightness: $button-function-factor);
+$button-bg-hover: rgba(95,127,142,0.7); // $primary-color //scale-color($button-bg-color, $lightness: $button-function-factor);
 $button-border-color: $white;
 $button-border-color-hover: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
