@@ -74,7 +74,6 @@ body {
  ul#memory-carousel {
  	margin: $side-padding-base * 2 0;
  	padding: 0;
- 	overflow: hidden;
 	height: 100px;
 	-webkit-transition:  margin 1s;
     transition: margin 1s;
@@ -258,10 +257,20 @@ footer {
 
 #scrollwrapper {
 	position: relative;
-	margin: 300px 0;
+	margin: 100px 0;
+	overflow-x: hidden;
 }
 
 ul#memory-carousel {
-	position: absolute;
-	top: -200px;
+	position: relative;
+	top: 0;
+	margin: 0;
+	display: -webkit-flex;
+	-webkit-flex-direction: row-reverse;
+	-webkit-justify-content: flex-start;
+	right: 0px;
+}
+
+ul#memory-carousel .memory {
+	-webkit-flex-shrink: 0;
 }
