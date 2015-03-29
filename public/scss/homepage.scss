@@ -233,9 +233,17 @@ ul#mnemonic-explanation {
 
 footer {
 	background: black;
+	padding: $side-padding-base;
 	color: $white;
 	font-size: $small-font-size;
+	text-align: left;
 	h5 {
 		letter-spacing: regular;
+		color: $white;
+		margin-bottom: 15px;
+	}
+	p#version {
+		margin-top: 15px;
+		font-style: italic;
 	}
 }
