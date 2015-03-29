@@ -15,11 +15,26 @@
       <div id="logo" class="small-12 large-6 columns">
         <img src="images/collect_logo.svg" alt="Collect Logo"/>
       </div>
+
       <div class="button-container small-6 large-3 columns">
-        <a href="#" class="button">Log In</a>
+        <a href="#" class="button">log in</a>
+        <form id="log-in" name="logIn" method="get" action="/profile">
+          <p>Log in with an existing account or Sign in below</p>
+          <div>
+              <input type="email" id="log-in-email" name="email" placeholder="email" />
+          </div>
+          <div>
+              <input type="password" id="password" placeholder="password" />
+          </div>
+          <button class="header-text" type="submit">sign in</button>
+        </form>
       </div>
+
       <div class="button-container small-6 large-3 columns">
         <a href="#" class="button">Sign Up</a>
+        <div id="signup">
+          <p>Connect to an existing account or Sign up below</p>
+        </div>
       </div>
     </div> <!-- End banner -->
 
@@ -163,5 +178,6 @@
 
     <% include partials/scripts.ejs %>
     <script type="text/javascript" src="/js/homepage.js"></script>
+    <script type="text/javascript" src="/js/user.js"></script>
   </body>
 </html>

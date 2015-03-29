@@ -6,16 +6,10 @@ function toggleMnemonicContent() {
 }
 
 function toggleButtonDropdown() {
-	$( "#banner .button" ).hover(
-		// Applied when mouse enters
-		function(event) {
-			$( event.target ).toggleClass( "show-form" );
-			$( "ul#memory-carousel" ).toggleClass( "shifted" );
-		}, function(event) { // Applied when mouse leaves
-			$( event.target ).toggleClass( "show-form" );
-			$( "ul#memory-carousel" ).toggleClass( "shifted" );
-		}
-	);
+	$( "#banner .button" ).click(function(event) {
+		$( event.target ).next( "form" ).toggleClass( "show" );
+		$( "ul#memory-carousel" ).toggleClass( "shifted" );
+	});
 }
 
 function scrollALittle() {
