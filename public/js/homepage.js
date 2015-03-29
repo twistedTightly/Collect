@@ -6,7 +6,16 @@ function toggleMnemonicContent() {
 }
 
 function scrollALittle() {
-	// 1. Scroll the carousel a little
+	// Scroll the carousel a little
+	$('#memory-carousel')
+	var images = $('#memory-carousel .memory').get();
+	for (var index = 0; index < images.length; index++) {
+		// 1. Check to see if the image is out of the page's bounds
+		if (images[index].getBoundingClientRect.left+images[index].getBoundingClientRect.width < 0) {
+			// 2. If it is, put it at the end of the queue
+			$('#memory-carousel').append(images[index].clone());
+		}
+	};
 	// 2. Set a timer to repeat the event
 	setTimeout(scrollALittle, 1000);
 }
@@ -15,5 +24,6 @@ function scrollALittle() {
 $( document ).ready(function() {
 	// Toggles which section of the mnemonic content is showing
 	toggleMnemonicContent();
-	$('#memory-carousel').scrollALittle();
+	// Turn on scrolling for the carousel
+	scrollALittle();
 });

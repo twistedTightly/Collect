@@ -3494,3 +3494,15 @@ footer p#version {
   margin-top: 15px;
   font-style: italic;
 }
+
+/* line 251, ../scss/homepage.scss */
+#scrollwrapper {
+  position: relative;
+  margin: 300px 0;
+}
+
+/* line 256, ../scss/homepage.scss */
+ul#memory-carousel {
+  position: absolute;
+  top: -200px;
+}

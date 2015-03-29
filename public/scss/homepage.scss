@@ -247,3 +247,13 @@ footer {
 		font-style: italic;
 	}
 }
+
+#scrollwrapper {
+	position: relative;
+	margin: 300px 0;
+}
+
+ul#memory-carousel {
+	position: absolute;
+	top: -200px;
+}
