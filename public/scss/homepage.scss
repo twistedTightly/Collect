@@ -66,6 +66,29 @@ body {
 	font-style: italic;
 }
 
+/********************
+ *
+ * Memory Carousel
+ *
+ ********************/
+ ul#memory-carousel {
+ 	margin: $side-padding-base * 2 0;
+ 	padding: 0;
+ 	overflow: hidden;
+	height: 100px;
+ 	li {
+ 		display: inline-block;
+ 		height: 100px;
+ 		width: auto;
+ 		padding: 0 5px;
+ 	}
+ }
+
+/********************
+ *
+ * About section
+ *
+ ********************/
 #about {
 	background-color: $purple;
 	color: $black;

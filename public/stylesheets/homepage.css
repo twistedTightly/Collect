@@ -3283,37 +3283,62 @@ body {
   font-style: italic;
 }
 
-/* line 69, ../scss/homepage.scss */
+/********************
+ *
+ * Memory Carousel
+ *
+ ********************/
+/* line 74, ../scss/homepage.scss */
+ul#memory-carousel {
+  margin: 100px 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100px;
+}
+/* line 79, ../scss/homepage.scss */
+ul#memory-carousel li {
+  display: inline-block;
+  height: 100px;
+  width: auto;
+  padding: 0 5px;
+}
+
+/********************
+ *
+ * About section
+ *
+ ********************/
+/* line 92, ../scss/homepage.scss */
 #about {
   background-color: #76727C;
   color: #272727;
   text-align: left;
 }
-/* line 73, ../scss/homepage.scss */
+/* line 96, ../scss/homepage.scss */
 #about .row {
   height: 450px;
 }
-/* line 76, ../scss/homepage.scss */
+/* line 99, ../scss/homepage.scss */
 #about p.header-text {
   text-align: center;
   padding-bottom: 50px;
 }
-/* line 80, ../scss/homepage.scss */
+/* line 103, ../scss/homepage.scss */
 #about p {
   font-size: 85%;
   color: black;
 }
-/* line 84, ../scss/homepage.scss */
+/* line 107, ../scss/homepage.scss */
 #about .about-block {
   height: 100%;
   padding: 0;
 }
-/* line 88, ../scss/homepage.scss */
+/* line 111, ../scss/homepage.scss */
 #about .about-background {
   width: 100%;
   height: 100%;
 }
-/* line 91, ../scss/homepage.scss */
+/* line 114, ../scss/homepage.scss */
 #about .about-background::after {
   content: "";
   background-image: url(../images/background_blur.jpg);
@@ -3324,19 +3349,19 @@ body {
   right: 0;
   position: absolute;
 }
-/* line 102, ../scss/homepage.scss */
+/* line 125, ../scss/homepage.scss */
 #about #yellow-about {
   background-color: rgba(209, 219, 189, 0.7);
 }
-/* line 105, ../scss/homepage.scss */
+/* line 128, ../scss/homepage.scss */
 #about #green-about {
   background-color: rgba(145, 170, 157, 0.7);
 }
-/* line 108, ../scss/homepage.scss */
+/* line 131, ../scss/homepage.scss */
 #about #blue-about {
   background-color: rgba(95, 127, 142, 0.7);
 }
-/* line 111, ../scss/homepage.scss */
+/* line 134, ../scss/homepage.scss */
 #about .about-content {
   padding: 90px 16%;
   height: 100%;
@@ -3345,43 +3370,43 @@ body {
   position: absolute;
 }
 
-/* line 120, ../scss/homepage.scss */
+/* line 143, ../scss/homepage.scss */
 #how-it-works {
   text-align: left;
   padding: 90px 50px;
   width: 100%;
   background-color: #FFFFFF;
 }
-/* line 125, ../scss/homepage.scss */
+/* line 148, ../scss/homepage.scss */
 #how-it-works p {
   width: 600px;
 }
 
-/* line 130, ../scss/homepage.scss */
+/* line 153, ../scss/homepage.scss */
 #quote {
   text-align: left;
   background: #D9D5C2;
   padding: 90px 0;
 }
-/* line 134, ../scss/homepage.scss */
+/* line 157, ../scss/homepage.scss */
 #quote .wrapper {
   margin: auto;
   width: 600px;
 }
-/* line 138, ../scss/homepage.scss */
+/* line 161, ../scss/homepage.scss */
 #quote blockquote {
   border: none;
   color: black;
   padding: 0;
 }
 
-/* line 145, ../scss/homepage.scss */
+/* line 168, ../scss/homepage.scss */
 footer {
   background: black;
   color: #FFFFFF;
   font-size: 85%;
 }
-/* line 149, ../scss/homepage.scss */
+/* line 172, ../scss/homepage.scss */
 footer h5 {
   letter-spacing: regular;
 }
