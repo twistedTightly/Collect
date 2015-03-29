@@ -5,7 +5,7 @@
 	<!ENTITY st1 "fill:#1B1B1B;">
 ]>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 48.2 100" style="enable-background:new 0 0 48.2 100;" xml:space="preserve">
+	 viewBox="0 0 65.8 100" style="enable-background:new 0 0 65.8 100;" xml:space="preserve">
 <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c014 79.156821, 2014/08/29-03:07:50        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -597,11 +597,6 @@
                            
 <?xpacket end="w"?>
 	</metadata>
-<g>
-	<path style="&st0;" d="M44.6,13.4C40.2,6.2,32.5,1.9,24.1,1.9c-8.4,0-16,4.2-20.4,11.3c-4.4,7.1-4.9,15.8-1.2,23.3l21.1,43.2
-		l22-42.8C49.3,29.4,49,20.6,44.6,13.4z M42.4,35.3L23.6,71.9l-18-37C2.4,28.5,2.8,21,6.6,15c3.8-6.1,10.3-9.7,17.5-9.7
-		c7.2,0,13.8,3.7,17.6,9.9C45.4,21.3,45.7,28.9,42.4,35.3z"/>
-	<path style="&st0;" d="M24.1,13.3c-7.3,0-13.3,5.9-13.3,13.1s5.9,13.1,13.3,13.1c7.3,0,13.3-5.9,13.3-13.1S31.4,13.3,24.1,13.3z
-		 M24.1,36.1c-5.4,0-9.8-4.3-9.8-9.7c0-5.3,4.4-9.7,9.8-9.7c5.4,0,9.8,4.3,9.8,9.7C33.9,31.8,29.5,36.1,24.1,36.1z"/>
-</g>
+<path style="&st0;" d="M0,9.3v66.1h65.8V9.3H0z M62.3,30.5L41.7,71.9H36l26.3-52.7V30.5z M3.5,12.7h58.1L32.1,71.9H3.5V12.7z
+	 M45.6,71.9l16.7-33.6v33.6H45.6z"/>
 </svg>
