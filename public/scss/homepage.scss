@@ -76,6 +76,8 @@ body {
  	padding: 0;
  	overflow: hidden;
 	height: 100px;
+	-webkit-transition:  margin 1s;
+    transition: margin 1s;
  	li {
  		display: inline-block;
  		height: 100px;
@@ -83,6 +85,12 @@ body {
  		padding: 0 5px;
  	}
  }
+  ul#memory-carousel.shifted {
+  	margin-top: $side-padding-base * 4;
+  	margin-bottom: 0;
+	-webkit-transition:  margin 1s;
+    transition: margin 1s;
+  }
 
 /********************
  *
