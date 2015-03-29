@@ -96,20 +96,12 @@ body {
 
 /********************
  *
- * Log In / Sign Up
- *
- ********************/
-
-
-/********************
- *
  * Memory Carousel
  *
  ********************/
  ul#memory-carousel {
  	margin: $side-padding-base * 2 0;
  	padding: 0;
- 	overflow: hidden;
 	height: 100px;
 	-webkit-transition:  margin 1s;
     transition: margin 1s;
@@ -206,8 +198,8 @@ ul#mnemonic-explanation {
 		display: inline-block;
 		margin-left: 12%;
 		position: relative;
-		cursor: pointer;
 		img {
+			cursor: pointer;
 			height: $icon-height;
 			width: auto;
 			opacity: 0.5;
@@ -217,6 +209,7 @@ ul#mnemonic-explanation {
 			position: absolute;
 			top: 0;
 			left: 0;
+			pointer-events: none;
 			.vertical-line {
 				position: absolute;
 				top: 0;
@@ -235,6 +228,7 @@ ul#mnemonic-explanation {
 			position: absolute;
 			top: 0;
 			right: 0;
+			pointer-events: none;
 			.vertical-line {
 				position: absolute;
 				top: 0;
@@ -289,4 +283,24 @@ footer {
 		margin-top: 15px;
 		font-style: italic;
 	}
+}
+
+#scrollwrapper {
+	position: relative;
+	margin: 100px 0;
+	overflow-x: hidden;
+}
+
+ul#memory-carousel {
+	position: relative;
+	top: 0;
+	margin: 0;
+	display: -webkit-flex;
+	-webkit-flex-direction: row-reverse;
+	-webkit-justify-content: flex-start;
+	right: 0px;
+}
+
+ul#memory-carousel .memory {
+	-webkit-flex-shrink: 0;
 }
