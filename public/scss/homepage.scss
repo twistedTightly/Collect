@@ -80,7 +80,18 @@ body {
 			padding: 0 25px;
 			line-height: 16px;
 			text-align: left;
-			margin-top: 15px;
+			margin: 10px 0;
+		}
+		#social-account-icons {
+			padding: 0;
+			margin: auto;
+			li {
+				display: inline-block;
+				padding: 10px;
+				img {
+					height: 26px;
+				}
+			}
 		}
 		input {
 			background: none;
