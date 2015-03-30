@@ -213,7 +213,7 @@ select {
 /* line 213, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button, .button {
   border-style: solid;
-  border-width: 2px;
+  border-width: 1pt;
   cursor: pointer;
   font-family: AxelSC, "Orator Std", monospace;
   font-weight: normal;
@@ -3243,8 +3243,9 @@ div.flex-container #collection.flex-item {
   height: 65px;
   width: 65px;
   position: relative;
+  overflow: hidden;
 }
-/* line 32, ../scss/collection.scss */
+/* line 33, ../scss/collection.scss */
 #info-box #back.button {
   background-color: #5F7F8E;
   height: 25px;
@@ -3253,7 +3254,7 @@ div.flex-container #collection.flex-item {
   transition: color 1s;
   -webkit-transition: color 1s;
 }
-/* line 39, ../scss/collection.scss */
+/* line 40, ../scss/collection.scss */
 #info-box #back.button:hover {
   color: rgba(39, 39, 39, 0.7);
   transition: color 1s;

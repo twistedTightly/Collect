@@ -213,7 +213,7 @@ select {
 /* line 213, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button, .button {
   border-style: solid;
-  border-width: 2px;
+  border-width: 1pt;
   cursor: pointer;
   font-family: AxelSC, "Orator Std", monospace;
   font-weight: normal;
@@ -3259,44 +3259,49 @@ body > .wrapper {
   color: #272727;
   border-color: #272727;
 }
+/* line 77, ../scss/app.scss */
+.dark.button:hover {
+  border-color: transparent;
+  background-color: #272727;
+}
 
-/* line 78, ../scss/app.scss */
+/* line 82, ../scss/app.scss */
 .svg-icon {
   height: 100%;
 }
 
-/* line 81, ../scss/app.scss */
+/* line 85, ../scss/app.scss */
 .svg-container {
   display: inline-block;
   height: 1.5em;
   min-height: 10px;
 }
 
-/* line 86, ../scss/app.scss */
+/* line 90, ../scss/app.scss */
 .centered {
   position: absolute;
   left: 50%;
   top: 50%;
 }
 
-/* line 91, ../scss/app.scss */
+/* line 95, ../scss/app.scss */
 #main {
   width: 100%;
   margin: auto;
   text-align: left;
   padding: 40px 0;
 }
-/* line 96, ../scss/app.scss */
+/* line 100, ../scss/app.scss */
 #main h1 {
   margin-top: 0;
   font-size: 35px;
 }
-/* line 100, ../scss/app.scss */
+/* line 104, ../scss/app.scss */
 #main ul {
   padding-left: 20px;
 }
 
-/* line 104, ../scss/app.scss */
+/* line 108, ../scss/app.scss */
 .header-text {
   letter-spacing: 3px;
   font-family: AxelSC, "Orator Std", monospace;

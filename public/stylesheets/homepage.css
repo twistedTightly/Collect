@@ -213,7 +213,7 @@ select {
 /* line 213, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 button, .button {
   border-style: solid;
-  border-width: 2px;
+  border-width: 1pt;
   cursor: pointer;
   font-family: AxelSC, "Orator Std", monospace;
   font-weight: normal;

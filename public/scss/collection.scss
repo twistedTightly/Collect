@@ -28,6 +28,7 @@ div.flex-container {
  		height: 65px;
  		width: 65px;
  		position: relative;
+ 		overflow: hidden;
  	}
  	#back.button {
  		background-color: $primary-color;

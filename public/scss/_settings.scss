@@ -495,7 +495,7 @@ $button-font-family: $header-font-family;
 // $button-function-factor: -20%;
 
 // We use these to control button border styles.
-$button-border-width: 2px;
+$button-border-width: 1pt;
 // $button-border-style: solid;
 $button-bg-color: transparent;
 $button-bg-hover: rgba(95,127,142,0.7); // $primary-color //scale-color($button-bg-color, $lightness: $button-function-factor);
