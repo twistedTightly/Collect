@@ -71,6 +71,10 @@ body > .wrapper {
         border-color: $button-border-color-hover;
     }
 }
+.dark.button {
+    color: $black;
+    border-color: $button-border-color-dark;
+}
 .svg-icon {
     height: 100%;
 }
