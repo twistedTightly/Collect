@@ -3490,14 +3490,35 @@ header.shift {
   -webkit-flex-grow: 1;
   min-width: 230px;
   max-width: 280px;
-  border: 2pt solid gray;
+  border: 2pt solid #D8D8D8;
   margin: 20px;
+  padding: 22px 27px 32px 27px;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
 }
-/* line 264, ../scss/profile.scss */
+/* line 265, ../scss/profile.scss */
+#gallery .gallery-box .content {
+  margin: 3px;
+  background-color: #D8D8D8;
+  -webkit-flex-grow: 1;
+}
+/* line 271, ../scss/profile.scss */
+#gallery .one-pic .content, #gallery .two-pic .content, #gallery .three-pic .content {
+  max-width: 220px;
+}
+/* line 274, ../scss/profile.scss */
+#gallery .four-pic .content {
+  min-width: 82px;
+}
+/* line 277, ../scss/profile.scss */
+#gallery .text-only .content {
+  background-color: white;
+}
+/* line 280, ../scss/profile.scss */
 #gallery .gallery-box.ghost {
   border: none;
 }
-/* line 267, ../scss/profile.scss */
+/* line 283, ../scss/profile.scss */
 #gallery .gallery-box::after {
   content: '';
   padding-top: 71.4%;
@@ -3509,7 +3530,7 @@ header.shift {
  * Footer
  *
  ********************/
-/* line 279, ../scss/profile.scss */
+/* line 295, ../scss/profile.scss */
 #footer {
   height: 80px;
 }

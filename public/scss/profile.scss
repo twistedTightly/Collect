@@ -257,9 +257,25 @@ $user-info-spacing: 15px;
         -webkit-flex-grow: 1;
         min-width: 230px;
         max-width: 280px;
-        border: 2pt solid gray;
+        border: 2pt solid $light-grey;
         margin: 20px;
-
+        padding: 22px 27px 32px 27px;
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        .content {
+            margin: 3px;
+            background-color: $light-grey;
+        -webkit-flex-grow: 1;
+        }
+    }
+    .one-pic .content, .two-pic .content, .three-pic .content {
+        max-width: 220px;
+    }
+    .four-pic .content {
+        min-width: 82px;
+    }
+    .text-only .content{
+        background-color: white;
     }
     .gallery-box.ghost {
         border: none;
