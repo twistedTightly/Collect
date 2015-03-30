@@ -3370,47 +3370,47 @@ header.shift {
   text-align: center;
   font-size: 85%;
 }
-/* line 157, ../scss/profile.scss */
+/* line 153, ../scss/profile.scss */
 #user-information #user-memories-count {
   width: 25px;
   height: 25px;
   margin-top: 15px;
 }
-/* line 161, ../scss/profile.scss */
+/* line 157, ../scss/profile.scss */
 #user-information #user-memories-count img {
   width: 100%;
   height: auto;
 }
-/* line 167, ../scss/profile.scss */
+/* line 163, ../scss/profile.scss */
 #user-information #user-connections-count {
   width: 26px;
   height: 28px;
   margin-top: 15px;
 }
-/* line 171, ../scss/profile.scss */
+/* line 167, ../scss/profile.scss */
 #user-information #user-connections-count img {
   width: 100%;
   height: auto;
 }
-/* line 177, ../scss/profile.scss */
+/* line 173, ../scss/profile.scss */
 #user-information #profile-picture {
   margin-top: 20px;
   width: 160px;
   height: 120px;
 }
-/* line 181, ../scss/profile.scss */
+/* line 177, ../scss/profile.scss */
 #user-information #profile-picture img {
   width: auto;
   height: 100%;
 }
-/* line 186, ../scss/profile.scss */
+/* line 182, ../scss/profile.scss */
 #user-information p {
   line-height: 8pt;
   padding: 15px 0;
   margin: 0px;
   font-size: 12pt;
 }
-/* line 192, ../scss/profile.scss */
+/* line 188, ../scss/profile.scss */
 #user-information hr {
   border: 0;
   margin: 0 auto 0 auto;
@@ -3418,20 +3418,22 @@ header.shift {
   height: 1pt;
   width: 95px;
 }
-/* line 199, ../scss/profile.scss */
+/* line 195, ../scss/profile.scss */
 #user-information a {
   display: block;
   margin-top: 10px;
   width: 100%;
   height: 42px;
+  line-height: 42px;
+  padding: 0;
 }
 
-/* line 207, ../scss/profile.scss */
+/* line 205, ../scss/profile.scss */
 #main {
   display: -webkit-flex;
   -webkit-flex-direction: row;
 }
-/* line 210, ../scss/profile.scss */
+/* line 208, ../scss/profile.scss */
 #main #body-section {
   -webkit-flex-grow: 1;
 }
@@ -3442,41 +3444,41 @@ header.shift {
  *
  ********************/
 /****** Header ******/
-/* line 221, ../scss/profile.scss */
+/* line 219, ../scss/profile.scss */
 #gallery-header {
   padding-left: 40px;
   padding-top: 48px;
 }
-/* line 224, ../scss/profile.scss */
+/* line 222, ../scss/profile.scss */
 #gallery-header p {
   margin: 0;
   display: inline-block;
 }
-/* line 228, ../scss/profile.scss */
+/* line 226, ../scss/profile.scss */
 #gallery-header p#username {
   font-style: italic;
   font-size: 25pt;
   line-height: 20pt;
 }
-/* line 233, ../scss/profile.scss */
+/* line 231, ../scss/profile.scss */
 #gallery-header p.header-text {
   font-size: 13pt;
   line-height: 10pt;
   margin-left: 8px;
 }
-/* line 238, ../scss/profile.scss */
+/* line 236, ../scss/profile.scss */
 #gallery-header .svg-container {
   width: 13px;
   height: 20px;
 }
-/* line 241, ../scss/profile.scss */
+/* line 239, ../scss/profile.scss */
 #gallery-header .svg-container img {
   width: 100%;
   height: auto;
 }
 
 /****** Rows and Memory Boxes *******/
-/* line 249, ../scss/profile.scss */
+/* line 247, ../scss/profile.scss */
 #gallery {
   margin-right: 85px;
   margin-top: 37px;
@@ -3485,30 +3487,31 @@ header.shift {
   -webkit-flex-flow: row wrap;
   -webkit-justify-content: flex-start;
 }
-/* line 256, ../scss/profile.scss */
+/* line 254, ../scss/profile.scss */
 #gallery .gallery-box {
   -webkit-flex-grow: 1;
   min-width: 230px;
-  max-width: 280px;
   border: 2pt solid #D8D8D8;
   margin: 20px;
   padding: 22px 27px 32px 27px;
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
 }
-/* line 265, ../scss/profile.scss */
+/* line 263, ../scss/profile.scss */
 #gallery .gallery-box .content {
   margin: 3px;
   background-color: #D8D8D8;
   -webkit-flex-grow: 1;
 }
-/* line 271, ../scss/profile.scss */
+/* line 269, ../scss/profile.scss */
 #gallery .one-pic .content, #gallery .two-pic .content, #gallery .three-pic .content {
   max-width: 220px;
 }
-/* line 274, ../scss/profile.scss */
-#gallery .four-pic .content {
-  min-width: 82px;
+/* line 272, ../scss/profile.scss */
+#gallery .four-pic .content-col {
+  display: -webkit-flex;
+  -webkit-flex-flow: column wrap;
+  -webkit-flex-grow: 1;
 }
 /* line 277, ../scss/profile.scss */
 #gallery .text-only .content {

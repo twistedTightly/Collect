@@ -44,16 +44,14 @@
           <div class="svg-container" id="user-connections-count">
             <img class="svg-icon" src="images/icons/connections_icon_black.svg" alt="Connections icon">
           </div>
-          <p><%= age %> connections</p>
+          <p><%= age %>12 connections</p>
           <hr />
           <div class="svg-container" id="user-memories-count">
             <img class="svg-icon" src="images/icons/narrative_icon_black.svg" alt="Memories icon">
           </div>
           <p>30 memories</p>
 
-          <a href="#" class='button dark' data-reveal-id="add-memory-modal">
-            add a memory
-          </a>
+          <a href="#" class='button dark' data-reveal-id="add-memory-modal">add a memory</a>
 
           <div id="add-memory-modal" class="reveal-modal" data-reveal data-options="animation:fade;">
             <h2>Create a memory.</h2>
@@ -75,8 +73,18 @@
             </div>
           </div> <!-- End User Information in the Body Section. Gallery Header. -->
           <div id="gallery"> <!-- Gallery of memory boxes -->
-            <div class="gallery-box one-pic">
-              <div class="content"></div>
+            <div class="gallery-box four-pic">
+              <div class="content-col">
+                <div class="content"></div>
+                <div class="content"></div>
+              </div>
+              <div class="content-col">
+                <div class="content"></div>
+                <div class="content"></div>
+              </div>
+            </div>
+            <div class="gallery-box text-only">
+              <p class="content">Here's a bunch <!--of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum.--></p>
             </div>
             <div class="gallery-box two-pic">
               <div class="content"></div>
@@ -88,13 +96,17 @@
               <div class="content"></div>
             </div>
             <div class="gallery-box four-pic">
-              <div class="content"></div>
-              <div class="content"></div>
-              <div class="content"></div>
-              <div class="content"></div>
+              <div class="content-col">
+                <div class="content"></div>
+                <div class="content"></div>
+              </div>
+              <div class="content-col">
+                <div class="content"></div>
+                <div class="content"></div>
+              </div>
             </div>
             <div class="gallery-box text-only">
-              <p class="content">Here's a bunch of text content. Lorem ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum.</p>
+              <p class="content">Here's a bunch <!--of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum.--></p>
             </div>
             <div class="gallery-box ghost">
             </div>

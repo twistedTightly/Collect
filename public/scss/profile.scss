@@ -150,10 +150,6 @@ $user-info-spacing: 15px;
     text-align: center;
    	font-size: $small-font-size;
 
-    img {
-
-    }
-
     #user-memories-count {
         width: 25px;
         height: 25px;
@@ -201,6 +197,8 @@ $user-info-spacing: 15px;
         margin-top: 10px;
         width: 100%;
         height: 42px;
+        line-height: 42px;
+        padding: 0;
     }
 }
 
@@ -256,7 +254,7 @@ $user-info-spacing: 15px;
     .gallery-box {
         -webkit-flex-grow: 1;
         min-width: 230px;
-        max-width: 280px;
+        //max-width: 280px; // Add back in to restrict gallery box size but leave whitespace sometimes
         border: 2pt solid $light-grey;
         margin: 20px;
         padding: 22px 27px 32px 27px;
@@ -271,8 +269,10 @@ $user-info-spacing: 15px;
     .one-pic .content, .two-pic .content, .three-pic .content {
         max-width: 220px;
     }
-    .four-pic .content {
-        min-width: 82px;
+    .four-pic .content-col {
+        display: -webkit-flex;
+        -webkit-flex-flow: column wrap;
+        -webkit-flex-grow: 1;
     }
     .text-only .content{
         background-color: white;
