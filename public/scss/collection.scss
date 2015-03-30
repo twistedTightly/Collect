@@ -1,0 +1,45 @@
+@import "settings",
+        "foundation/components/buttons",
+        "foundation/components/forms",
+        "foundation/components/reveal",
+        "foundation/components/type";
+
+div.flex-container {
+	display: -webkit-flex;
+	-webkit-flex-direction: row;
+	#user-info.flex-item {
+		-webkit-flex-grow: 1;
+		margin-top: 50px;
+		margin-left: 40px;
+	}
+	#collection.flex-item {
+		-webkit-flex-grow: 20;
+	}
+}
+
+/********************
+ *
+ * Info box
+ *
+ ********************/
+ #info-box {
+ 	width: 65px;
+ 	.crop {
+ 		height: 65px;
+ 		width: 65px;
+ 		position: relative;
+ 	}
+ 	#back.button {
+ 		background-color: $primary-color;
+ 		height: 25px;
+ 		width: 100%;
+ 		color: transparent;
+ 		transition: color 1s;
+ 		-webkit-transition: color 1s;
+ 		&:hover {
+ 			color: rgba(39,39,39,0.7); // $black
+	 		transition: color 1s;
+	 		-webkit-transition: color 1s;
+ 		}
+ 	}
+ }

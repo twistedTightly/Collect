@@ -71,6 +71,10 @@ body > .wrapper {
         border-color: $button-border-color-hover;
     }
 }
+.dark.button {
+    color: $black;
+    border-color: $button-border-color-dark;
+}
 .svg-icon {
     height: 100%;
 }
@@ -78,6 +82,11 @@ body > .wrapper {
     display: inline-block;
     height: 1.5em;
     min-height: 10px;
+}
+.centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }
 #main {
     width: 100%;

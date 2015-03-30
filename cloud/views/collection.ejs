@@ -5,6 +5,7 @@
     <% include partials/head.ejs %>
     <!-- TODO: Remove this and generalize the code in it that this page needs -->
     <link rel="stylesheet" href="stylesheets/profile.css">
+    <link rel="stylesheet" href="stylesheets/collection.css">
     <title>Collection</title>
     <meta name="description" content="View Your Memory Collections">
   </head>
@@ -31,8 +32,18 @@
       <!-- NOTE: The following *must* be included as it closes the header tag -->
       <% include partials/header-end.ejs %>
 
-
     <!-- Display all collections -->
+    <div class="flex-container">
+      <div id="user-info" class="flex-item">
+        <div id="info-box">
+          <div class="crop">
+            <img class="centered" src="../images/my-profile-pic.jpg" alt="Profile picture" />
+          </div>
+          <a href="/profile?email=testUser" id="back" class="button">back</a>
+        </div>
+      </div>
+      <div id="collection" class="flex-item">Collection</div>
+    </div>
 
     <% include partials/scripts.ejs %>
   </body>
