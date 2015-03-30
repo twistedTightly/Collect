@@ -177,10 +177,14 @@ $user-info-spacing: 15px;
    		margin-top: 20px;
         width: 160px;
         height: 120px;
+        img {
+            width: auto;
+            height: 100%;
+        }
    	}
 	p {
         line-height: 8pt;
-	   	padding: 16px 0;
+	   	padding: 15px 0;
 	   	margin: 0px;
 	    font-size: 12pt;
 	}

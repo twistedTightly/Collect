@@ -3397,14 +3397,19 @@ header.shift {
   width: 160px;
   height: 120px;
 }
-/* line 181, ../scss/profile.scss */
+/* line 180, ../scss/profile.scss */
+#user-information #profile-picture img {
+  width: auto;
+  height: 100%;
+}
+/* line 185, ../scss/profile.scss */
 #user-information p {
   line-height: 8pt;
-  padding: 16px 0;
+  padding: 15px 0;
   margin: 0px;
   font-size: 12pt;
 }
-/* line 187, ../scss/profile.scss */
+/* line 191, ../scss/profile.scss */
 #user-information hr {
   border: 0;
   margin: 0 auto 0 auto;
@@ -3412,7 +3417,7 @@ header.shift {
   height: 1pt;
   width: 95px;
 }
-/* line 194, ../scss/profile.scss */
+/* line 198, ../scss/profile.scss */
 #user-information a {
   display: block;
   margin-top: 10px;
@@ -3420,12 +3425,12 @@ header.shift {
   height: 42px;
 }
 
-/* line 202, ../scss/profile.scss */
+/* line 206, ../scss/profile.scss */
 #main {
   display: -webkit-flex;
   -webkit-flex-direction: row;
 }
-/* line 205, ../scss/profile.scss */
+/* line 209, ../scss/profile.scss */
 #main #body-section {
   -webkit-flex-grow: 1;
 }
@@ -3436,50 +3441,50 @@ header.shift {
  *
  ********************/
 /****** Header ******/
-/* line 216, ../scss/profile.scss */
+/* line 220, ../scss/profile.scss */
 #gallery-header {
   padding-left: 40px;
   padding-top: 48px;
 }
-/* line 219, ../scss/profile.scss */
+/* line 223, ../scss/profile.scss */
 #gallery-header p {
   margin: 0;
   display: inline-block;
 }
-/* line 223, ../scss/profile.scss */
+/* line 227, ../scss/profile.scss */
 #gallery-header p#username {
   font-style: italic;
   font-size: 25pt;
   line-height: 20pt;
 }
-/* line 228, ../scss/profile.scss */
+/* line 232, ../scss/profile.scss */
 #gallery-header p.header-text {
   font-size: 13pt;
   line-height: 10pt;
   margin-left: 8px;
 }
-/* line 233, ../scss/profile.scss */
+/* line 237, ../scss/profile.scss */
 #gallery-header .svg-container {
   width: 13px;
   height: 20px;
 }
-/* line 236, ../scss/profile.scss */
+/* line 240, ../scss/profile.scss */
 #gallery-header .svg-container img {
   width: 100%;
   height: auto;
 }
 
 /****** Rows *******/
-/* line 243, ../scss/profile.scss */
+/* line 247, ../scss/profile.scss */
 .gallery-row.row {
   margin: 2.5em 5% 0.5em 5%;
 }
-/* line 246, ../scss/profile.scss */
+/* line 250, ../scss/profile.scss */
 .gallery-row.row .collection {
   height: 160px;
   margin: auto;
 }
-/* line 250, ../scss/profile.scss */
+/* line 254, ../scss/profile.scss */
 .gallery-row.row .collection .content-holder {
   height: 100%;
   width: 100%;
@@ -3494,7 +3499,7 @@ header.shift {
  * Footer
  *
  ********************/
-/* line 266, ../scss/profile.scss */
+/* line 270, ../scss/profile.scss */
 #footer {
   height: 80px;
 }
