@@ -1,7 +1,7 @@
 Parse.initialize("zJmWzfcq3FcJAK4YcVpMt2EA9DScA5cgtQabb1Jo", "jInuu7BeuMeLlNocKR1DYkOiJpvPiCUcydpJuZlD");
 
 $('#sign-up').on('submit', function(){
-  var user = new Parse.User();
+  /*var user = new Parse.User();
 
   // Get user information from inputs
   var username = $('#sign-up #name').val();
@@ -29,7 +29,8 @@ $('#sign-up').on('submit', function(){
       // Show the error message somewhere and let the user try again.
       alert("Error: " + error.code + " " + error.message);
     }
-  });
+  });*/
+  alert("Thanks for joining our mailing list! This version is currently in beta.\nTry logging in as...");
   return false;
 });
 

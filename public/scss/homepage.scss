@@ -47,10 +47,12 @@ body {
 	.button-container {
 		line-height: 100%;
 		height: 100%;
+		position: relative;
 		a.button {
 			padding-left: 0;
 			padding-right: 0;
 			width: 200px;
+			font-size: 100%;
 		}
 	}
 	#tagline {
@@ -58,12 +60,76 @@ body {
 		margin-top: $side-padding-base * 2;
 		p {
 			font-size: $large-font-size;
+			letter-spacing: 6px;
 		}
+	}
+	form {
+		height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: opacity 1s;
+		-webkit-transition: opacity 1s;
+		position: absolute;
+		top: 70px;
+		left: 0;
+		right: 0;
+		padding: 0 25%;
+		p {
+			font-family: $font-family-monospace-lower;
+			font-size: 14px;
+			padding: 0 25px;
+			line-height: 16px;
+			text-align: left;
+			margin: 10px 0;
+		}
+		#social-account-icons {
+			padding: 0;
+			margin: auto;
+			li {
+				display: inline-block;
+				padding: 10px;
+				img {
+					height: 26px;
+				}
+			}
+		}
+		input {
+			background: none;
+			text-align: center;
+			font-style: italic;
+			border-left: none;
+			border-right: none;
+			border-top: none;
+			border-bottom: 1.5px solid $white;
+			color: $white;
+			font-size: 80%;
+			box-shadow: none;
+			padding: 25px 0;
+		}
+		.button {
+			border-width: 1px;
+			padding-left: 0;
+			padding-right: 0;
+			width: 100px;
+			margin-top: 25px;
+		}
+	}
+	form.show {
+		height: auto;
+		opacity: 1;
+		transition: opacity 1s;
+		-webkit-transition: opacity 1s;
 	}
 }
 #tagline-subtext {
-	margin-left: 120px;
+	margin-left: 190px;
 	font-style: italic;
+	line-height: 15px;
+	letter-spacing: 2px !important;
+}
+.permahover {
+	background-color: $button-bg-hover;
+	border-color: $button-border-color-hover;
 }
 
 /********************
@@ -72,11 +138,17 @@ body {
  *
  ********************/
  ul#memory-carousel {
- 	margin: $side-padding-base * 2 0;
- 	padding: 0;
 	height: 100px;
-	-webkit-transition:  margin 1s;
-    transition: margin 1s;
+    position: relative;
+	top: 0;
+	margin: 0;
+	display: -webkit-flex;
+	-webkit-flex-direction: row-reverse;
+	-webkit-justify-content: flex-start;
+	right: 0px;
+	.memory {
+		-webkit-flex-shrink: 0;
+	}
  	li {
  		display: inline-block;
  		height: 100px;
@@ -84,12 +156,19 @@ body {
  		padding: 0 5px;
  	}
  }
-  ul#memory-carousel.shifted {
-  	margin-top: $side-padding-base * 4;
-  	margin-bottom: 0;
+#scrollwrapper {
+	position: relative;
+	margin: 100px 0;
+	overflow-x: hidden;
 	-webkit-transition:  margin 1s;
     transition: margin 1s;
-  }
+	&.shifted {
+	  	margin-top: $side-padding-base * 5;
+	  	margin-bottom: 0;
+		-webkit-transition:  margin 1s;
+	    transition: margin 1s;
+	  }
+}
 
 /********************
  *
@@ -114,6 +193,7 @@ body {
 	.about-block {
 		height: 100%;
 		padding: 0;
+		float: left !important;
 	}
 	.about-background {
 		width: 100%;
@@ -255,24 +335,4 @@ footer {
 		margin-top: 15px;
 		font-style: italic;
 	}
-}
-
-#scrollwrapper {
-	position: relative;
-	margin: 100px 0;
-	overflow-x: hidden;
-}
-
-ul#memory-carousel {
-	position: relative;
-	top: 0;
-	margin: 0;
-	display: -webkit-flex;
-	-webkit-flex-direction: row-reverse;
-	-webkit-justify-content: flex-start;
-	right: 0px;
-}
-
-ul#memory-carousel .memory {
-	-webkit-flex-shrink: 0;
 }

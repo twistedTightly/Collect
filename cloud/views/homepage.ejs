@@ -4,7 +4,7 @@
   <head>
     <% include partials/head.ejs %>
     <link rel="stylesheet" href="stylesheets/homepage.css">
-    <title>COLLECT</title>
+    <title>C O L L E C T</title>
   </head>
   <body>
 
@@ -15,11 +15,37 @@
       <div id="logo" class="small-12 large-6 columns">
         <img src="images/collect_logo.svg" alt="Collect Logo"/>
       </div>
+
       <div class="button-container small-6 large-3 columns">
-        <a href="#" class="button">Log In</a>
+        <a href="#" class="button">log in</a>
+        <form id="log-in" name="logIn" method="get" action="/profile">
+          <p>Log in with an existing account or Sign in below</p>
+          <ul id="social-account-icons">
+            <li><img src="../images/icons/facebook_icon.svg" /></li>
+            <li><img src="../images/icons/youtube_icon.svg" /></li>
+            <li><img src="../images/icons/flickr_icon.svg" /></li>
+          </ul>
+          <input type="email" id="log-in-email" name="email" placeholder="email" />
+          <input type="password" id="password" placeholder="password" />
+          <button class="header-text button" type="submit">sign in</button>
+        </form>
       </div>
+
       <div class="button-container small-6 large-3 columns">
-        <a href="#" class="button">Sign Up</a>
+        <a href="#" class="button">sign up</a>
+        <form id="sign-up" name="signUp" method="post" action="/profile">
+          <p>Connect to an existing account or Sign up below</p>
+          <ul id="social-account-icons">
+            <li><img src="../images/icons/facebook_icon.svg" /></li>
+            <li><img src="../images/icons/youtube_icon.svg" /></li>
+            <li><img src="../images/icons/flickr_icon.svg" /></li>
+          </ul>
+          <input type="text" id="first-name" name="firstname" placeholder="name" />
+          <input type="email" id="user-email" name="email" placeholder="email" />
+          <input type="password" id="password" placeholder="password" />
+          <button class="header-text button" type="submit">create</button>
+        </form>
+
       </div>
     </div> <!-- End banner -->
 
@@ -89,7 +115,7 @@
         <div id="blue-about" class="about-background"></div>
         <div class="about-content">
           <p class="header-text">protect the past</p>
-          <p>With <span class="header-text">collect</span>, users can privately manage their past by gathering memories and building shared recollection spaces with friends and family. Organized and accessible, the platform archives memories by date, location and content, and allows for the incorporation of visual and auditory aids. The design strives to increase the dimensionality of our narratives, reinforcing personal histories with greater tactility—metaphorically returning us to the place where we first captured each experience.</p>
+          <p>With  <span class="header-text">collect</span>, users can privately manage their past by gathering memories and building shared recollection spaces with friends and family. Organized and accessible, the platform archives memories by date, location and content, and allows for the incorporation of visual and auditory aids. The design strives to increase the dimensionality of our narratives, reinforcing personal histories with greater tactility—metaphorically returning us to the place where we first captured each experience.</p>
         </div>
       </div>
     </div>
@@ -165,5 +191,6 @@
 
     <% include partials/scripts.ejs %>
     <script type="text/javascript" src="/js/homepage.js"></script>
+    <script type="text/javascript" src="/js/user.js"></script>
   </body>
 </html>

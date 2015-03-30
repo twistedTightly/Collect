@@ -65,7 +65,8 @@ body > .wrapper {
 .button {
     letter-spacing: 3px;
     text-transform: lowercase;
-    //padding: 0.7rem 2.5rem 0.65rem 2.5rem !important;
+    padding: 0.7rem 0 0.65rem 0 !important;
+    font-size: 85%;
     &:hover {
         border-color: $button-border-color-hover;
     }
