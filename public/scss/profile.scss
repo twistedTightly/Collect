@@ -140,6 +140,7 @@ header.shift {
 
 $user-info-spacing: 15px;
 #user-information {
+    -webkit-flex-shrink: 0;
     min-height: 220px;
     background-color: $primary-color;
     margin-left: 40px;
@@ -243,22 +244,30 @@ $user-info-spacing: 15px;
         }
     }
 }
-/****** Rows *******/
-.gallery-row.row {
-    margin: 2.5em 5% 0.5em 5%;
+/****** Rows and Memory Boxes *******/
 
-    .collection {
-        height: 160px;
-        margin: auto;
+#gallery {
+    margin-right: 85px;
+    margin-top: 37px;
+    margin-left: 85px;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+    .gallery-box {
+        -webkit-flex-grow: 1;
+        min-width: 230px;
+        max-width: 280px;
+        border: 2pt solid gray;
+        margin: 20px;
 
-        .content-holder {
-            height: 100%;
-            width: 100%;
-            padding: 5px;
-            text-align: center;
-            border: solid $light-grey;
-            border-width: 2px;
-        }
+    }
+    .gallery-box.ghost {
+        border: none;
+    }
+    .gallery-box::after {
+        content: '';
+        padding-top: 71.4%;
+        display: block;
     }
 }
 

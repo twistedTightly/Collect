@@ -3360,6 +3360,7 @@ header.shift {
  ********************/
 /* line 142, ../scss/profile.scss */
 #user-information {
+  -webkit-flex-shrink: 0;
   min-height: 220px;
   background-color: #5F7F8E;
   margin-left: 40px;
@@ -3369,47 +3370,47 @@ header.shift {
   text-align: center;
   font-size: 85%;
 }
-/* line 156, ../scss/profile.scss */
+/* line 157, ../scss/profile.scss */
 #user-information #user-memories-count {
   width: 25px;
   height: 25px;
   margin-top: 15px;
 }
-/* line 160, ../scss/profile.scss */
+/* line 161, ../scss/profile.scss */
 #user-information #user-memories-count img {
   width: 100%;
   height: auto;
 }
-/* line 166, ../scss/profile.scss */
+/* line 167, ../scss/profile.scss */
 #user-information #user-connections-count {
   width: 26px;
   height: 28px;
   margin-top: 15px;
 }
-/* line 170, ../scss/profile.scss */
+/* line 171, ../scss/profile.scss */
 #user-information #user-connections-count img {
   width: 100%;
   height: auto;
 }
-/* line 176, ../scss/profile.scss */
+/* line 177, ../scss/profile.scss */
 #user-information #profile-picture {
   margin-top: 20px;
   width: 160px;
   height: 120px;
 }
-/* line 180, ../scss/profile.scss */
+/* line 181, ../scss/profile.scss */
 #user-information #profile-picture img {
   width: auto;
   height: 100%;
 }
-/* line 185, ../scss/profile.scss */
+/* line 186, ../scss/profile.scss */
 #user-information p {
   line-height: 8pt;
   padding: 15px 0;
   margin: 0px;
   font-size: 12pt;
 }
-/* line 191, ../scss/profile.scss */
+/* line 192, ../scss/profile.scss */
 #user-information hr {
   border: 0;
   margin: 0 auto 0 auto;
@@ -3417,7 +3418,7 @@ header.shift {
   height: 1pt;
   width: 95px;
 }
-/* line 198, ../scss/profile.scss */
+/* line 199, ../scss/profile.scss */
 #user-information a {
   display: block;
   margin-top: 10px;
@@ -3425,12 +3426,12 @@ header.shift {
   height: 42px;
 }
 
-/* line 206, ../scss/profile.scss */
+/* line 207, ../scss/profile.scss */
 #main {
   display: -webkit-flex;
   -webkit-flex-direction: row;
 }
-/* line 209, ../scss/profile.scss */
+/* line 210, ../scss/profile.scss */
 #main #body-section {
   -webkit-flex-grow: 1;
 }
@@ -3441,57 +3442,66 @@ header.shift {
  *
  ********************/
 /****** Header ******/
-/* line 220, ../scss/profile.scss */
+/* line 221, ../scss/profile.scss */
 #gallery-header {
   padding-left: 40px;
   padding-top: 48px;
 }
-/* line 223, ../scss/profile.scss */
+/* line 224, ../scss/profile.scss */
 #gallery-header p {
   margin: 0;
   display: inline-block;
 }
-/* line 227, ../scss/profile.scss */
+/* line 228, ../scss/profile.scss */
 #gallery-header p#username {
   font-style: italic;
   font-size: 25pt;
   line-height: 20pt;
 }
-/* line 232, ../scss/profile.scss */
+/* line 233, ../scss/profile.scss */
 #gallery-header p.header-text {
   font-size: 13pt;
   line-height: 10pt;
   margin-left: 8px;
 }
-/* line 237, ../scss/profile.scss */
+/* line 238, ../scss/profile.scss */
 #gallery-header .svg-container {
   width: 13px;
   height: 20px;
 }
-/* line 240, ../scss/profile.scss */
+/* line 241, ../scss/profile.scss */
 #gallery-header .svg-container img {
   width: 100%;
   height: auto;
 }
 
-/****** Rows *******/
-/* line 247, ../scss/profile.scss */
-.gallery-row.row {
-  margin: 2.5em 5% 0.5em 5%;
+/****** Rows and Memory Boxes *******/
+/* line 249, ../scss/profile.scss */
+#gallery {
+  margin-right: 85px;
+  margin-top: 37px;
+  margin-left: 85px;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
 }
-/* line 250, ../scss/profile.scss */
-.gallery-row.row .collection {
-  height: 160px;
-  margin: auto;
+/* line 256, ../scss/profile.scss */
+#gallery .gallery-box {
+  -webkit-flex-grow: 1;
+  min-width: 230px;
+  max-width: 280px;
+  border: 2pt solid gray;
+  margin: 20px;
 }
-/* line 254, ../scss/profile.scss */
-.gallery-row.row .collection .content-holder {
-  height: 100%;
-  width: 100%;
-  padding: 5px;
-  text-align: center;
-  border: solid #D8D8D8;
-  border-width: 2px;
+/* line 264, ../scss/profile.scss */
+#gallery .gallery-box.ghost {
+  border: none;
+}
+/* line 267, ../scss/profile.scss */
+#gallery .gallery-box::after {
+  content: '';
+  padding-top: 71.4%;
+  display: block;
 }
 
 /********************
@@ -3499,7 +3509,7 @@ header.shift {
  * Footer
  *
  ********************/
-/* line 270, ../scss/profile.scss */
+/* line 279, ../scss/profile.scss */
 #footer {
   height: 80px;
 }
