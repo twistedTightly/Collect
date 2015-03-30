@@ -4,16 +4,19 @@
         "foundation/components/reveal",
         "foundation/components/type";
 
-div.flex-container {
+// Main page structure
+#main.flex-container {
 	display: -webkit-flex;
 	-webkit-flex-direction: row;
+	padding: 0;
 	#user-info.flex-item {
 		-webkit-flex-grow: 1;
 		margin-top: 50px;
 		margin-left: 40px;
 	}
 	#collection.flex-item {
-		-webkit-flex-grow: 20;
+		-webkit-flex-grow: 25;
+		margin-top: 45px;
 	}
 }
 
@@ -24,23 +27,48 @@ div.flex-container {
  ********************/
  #info-box {
  	width: 65px;
- 	.crop {
+ 	#profile-pic {
+ 		background-image: url(../images/my-profile-pic.jpg);
+ 		background-repeat: no-repeat;
+ 		background-size: cover;
  		height: 65px;
- 		width: 65px;
- 		position: relative;
- 		overflow: hidden;
+ 	}
+ 	a.button {
+ 		width: 100%;
+ 		padding: 0;
+ 		height: 25px;
+ 		line-height: 25px;
  	}
  	#back.button {
  		background-color: $primary-color;
- 		height: 25px;
- 		width: 100%;
+ 		border-width: 0;
  		color: transparent;
- 		transition: color 1s;
- 		-webkit-transition: color 1s;
+ 		transition: color 0.5s;
+ 		-webkit-transition: color 0.5s;
+ 		margin-bottom: 10px;
  		&:hover {
  			color: rgba(39,39,39,0.7); // $black
-	 		transition: color 1s;
-	 		-webkit-transition: color 1s;
+	 		transition: color 0.5s;
+	 		-webkit-transition: color 0.5s;
  		}
  	}
  }
+
+ /********************
+ *
+ * Collection
+ *
+ ********************/
+ // Structure for collection section
+#collection.flex-container {
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+}
+#memory-gallery.flex-container {
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+}
+.memory.flex-container {
+	display: -webkit-flex;
+	-webkit-flex-direction: row;
+}

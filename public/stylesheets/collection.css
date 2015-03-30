@@ -3213,20 +3213,22 @@ blockquote p {
     font-size: 1rem;
   }
 }
-/* line 7, ../scss/collection.scss */
-div.flex-container {
+/* line 8, ../scss/collection.scss */
+#main.flex-container {
   display: -webkit-flex;
   -webkit-flex-direction: row;
+  padding: 0;
 }
-/* line 10, ../scss/collection.scss */
-div.flex-container #user-info.flex-item {
+/* line 12, ../scss/collection.scss */
+#main.flex-container #user-info.flex-item {
   -webkit-flex-grow: 1;
   margin-top: 50px;
   margin-left: 40px;
 }
-/* line 15, ../scss/collection.scss */
-div.flex-container #collection.flex-item {
-  -webkit-flex-grow: 20;
+/* line 17, ../scss/collection.scss */
+#main.flex-container #collection.flex-item {
+  -webkit-flex-grow: 25;
+  margin-top: 45px;
 }
 
 /********************
@@ -3234,29 +3236,59 @@ div.flex-container #collection.flex-item {
  * Info box
  *
  ********************/
-/* line 25, ../scss/collection.scss */
+/* line 28, ../scss/collection.scss */
 #info-box {
   width: 65px;
 }
-/* line 27, ../scss/collection.scss */
-#info-box .crop {
+/* line 30, ../scss/collection.scss */
+#info-box #profile-pic {
+  background-image: url(../images/my-profile-pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 65px;
-  width: 65px;
-  position: relative;
-  overflow: hidden;
 }
-/* line 33, ../scss/collection.scss */
+/* line 36, ../scss/collection.scss */
+#info-box a.button {
+  width: 100%;
+  padding: 0;
+  height: 25px;
+  line-height: 25px;
+}
+/* line 42, ../scss/collection.scss */
 #info-box #back.button {
   background-color: #5F7F8E;
-  height: 25px;
-  width: 100%;
+  border-width: 0;
   color: transparent;
-  transition: color 1s;
-  -webkit-transition: color 1s;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  margin-bottom: 10px;
 }
-/* line 40, ../scss/collection.scss */
+/* line 49, ../scss/collection.scss */
 #info-box #back.button:hover {
   color: rgba(39, 39, 39, 0.7);
-  transition: color 1s;
-  -webkit-transition: color 1s;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+}
+
+/********************
+*
+* Collection
+*
+********************/
+/* line 63, ../scss/collection.scss */
+#collection.flex-container {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+}
+
+/* line 67, ../scss/collection.scss */
+#memory-gallery.flex-container {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+}
+
+/* line 71, ../scss/collection.scss */
+.memory.flex-container {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
 }

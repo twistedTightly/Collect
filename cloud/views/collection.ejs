@@ -33,13 +33,18 @@
       <% include partials/header-end.ejs %>
 
     <!-- Display all collections -->
-    <div class="flex-container">
+    <div id="main" class="flex-container">
       <div id="user-info" class="flex-item">
         <div id="info-box">
-          <div class="crop">
-            <img src="../images/my-profile-pic.jpg" alt="Profile picture" />
-          </div>
+          <div class="profile-pic"></div>
           <a href="/profile?email=testUser" id="back" class="button">back</a>
+          <a href="#" class='button dark' data-reveal-id="add-memory-modal">
+            add
+          </a>
+
+          <div id="add-memory-modal" class="reveal-modal" data-reveal data-options="animation:fade;">
+            <!-- TODO: Add HTML from profile.ejs when it's done -->
+          </div>
         </div>
       </div>
       <div id="collection" class="flex-item">Collection</div>

@@ -3246,7 +3246,7 @@ body > .wrapper {
 .button {
   letter-spacing: 3px;
   text-transform: lowercase;
-  padding: 0.7rem 0 0.65rem 0 !important;
+  padding: 0.7rem 0 0.65rem 0;
   font-size: 85%;
 }
 /* line 70, ../scss/app.scss */
