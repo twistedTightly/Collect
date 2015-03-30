@@ -63,6 +63,7 @@ body {
 	#tagline {
 		padding-left: $side-padding-base;
 		margin-top: $side-padding-base * 2;
+		pointer-events: none;
 		p {
 			font-size: $large-font-size;
 			letter-spacing: 6px;
