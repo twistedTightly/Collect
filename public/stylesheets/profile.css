@@ -3316,8 +3316,8 @@ header img {
 #pullout-menu a {
   display: block;
   color: #FFFFFF;
-  padding-top: 45px;
-  padding-left: 15px;
+  margin-top: 45px;
+  margin-left: 15px;
 }
 /* line 106, ../scss/profile.scss */
 #pullout-menu a:hover {

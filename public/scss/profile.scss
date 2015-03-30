@@ -101,8 +101,8 @@ $link-alignment-padding: 15px;
     a {
     	display: block;
     	color: $white;
-    	padding-top: $pullout-menu-contents-spacing;
-    	padding-left: $link-alignment-padding;
+    	margin-top: $pullout-menu-contents-spacing;
+    	margin-left: $link-alignment-padding;
         &:hover {
         	color: $primary-color;
         }
