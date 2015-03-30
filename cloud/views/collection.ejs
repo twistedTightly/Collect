@@ -3,27 +3,37 @@
 <html class="no-js" lang="en" >
   <head>
     <% include partials/head.ejs %>
-    <title>Connections</title>
-    <meta name="description" content="View Your Connections">
+    <!-- TODO: Remove this and generalize the code in it that this page needs -->
+    <link rel="stylesheet" href="stylesheets/profile.css">
+    <title>Collection</title>
+    <meta name="description" content="View Your Memory Collections">
   </head>
   <body>
     <header>
       <div class="left">
-        <span id="logo"><img src="images/collect_logo.svg" alt="Logo"></span>
-      </div>
-     <div class="right">
-        <div class="svg-container">
-          <a href="/connections"><img class="svg-icon" src="images/connections_icon_white.svg" alt="Connections"></a>
-          <a href="#"><img class="svg-icon" src="images/messages_icon_white.svg" alt="Messages"></a>
+       <span id="logo"><img src="images/collect_logo.svg" alt="Logo"></span>
+     </div>
+     <div class="right" id="toolbar">
+        <div class="wrapper">
+          <a href="/connections">
+            <div class="svg-container">
+              <img class="svg-icon" src="images/connections_icon_white.svg" alt="Connections">
+            </div>
+          </a>
+          <a href="#">
+            <div class="svg-container">
+              <img class="svg-icon" src="images/messages_icon_white.svg" alt="Messages">
+            </div>
+          </a>
+          <span class="header-text" id="user-info"><%= username %></span>
         </div>
-        <span class="header-text" id="user-info"><%= username %></span>
       </div>
-    <!-- NOTE: The following *must* be included as it closes the header tag -->
-    <% include partials/header-end.ejs %>
+      <!-- NOTE: The following *must* be included as it closes the header tag -->
+      <% include partials/header-end.ejs %>
 
-    <!-- Display all connections -->
 
-    <% include partials/footer.ejs %>
+    <!-- Display all collections -->
+
     <% include partials/scripts.ejs %>
   </body>
 </html>
