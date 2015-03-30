@@ -83,6 +83,11 @@ body > .wrapper {
     height: 1.5em;
     min-height: 10px;
 }
+.centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
 #main {
     width: 100%;
     margin: auto;
