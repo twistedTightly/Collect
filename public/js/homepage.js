@@ -8,6 +8,7 @@ function toggleMnemonicContent() {
 function toggleButtonDropdown() {
 	$( "#banner .button" ).click(function(event) {
 		$( event.target ).next( "form" ).toggleClass( "show" );
+		$( event.target ).toggleClass( "permahover" );
 		$( "#scrollwrapper" ).toggleClass( "shifted" );
 	});
 }

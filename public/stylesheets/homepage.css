@@ -3353,6 +3353,12 @@ body {
   letter-spacing: 2px !important;
 }
 
+/* line 130, ../scss/homepage.scss */
+.permahover {
+  background-color: rgba(95, 127, 142, 0.7);
+  border-color: transparent;
+}
+
 /********************
  *
  * Memory Carousel
