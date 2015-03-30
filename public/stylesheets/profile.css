@@ -3358,40 +3358,76 @@ header.shift {
  * User Profile
  *
  ********************/
-/* line 141, ../scss/profile.scss */
+/* line 142, ../scss/profile.scss */
 #user-information {
   min-height: 220px;
   background-color: #5F7F8E;
-  margin: 0 10px;
+  margin-left: 40px;
+  width: 160px;
+  height: 310px;
   position: relative;
   text-align: center;
   font-size: 85%;
 }
-/* line 149, ../scss/profile.scss */
+/* line 156, ../scss/profile.scss */
+#user-information #user-memories-count {
+  width: 25px;
+  height: 25px;
+  margin-top: 15px;
+}
+/* line 160, ../scss/profile.scss */
+#user-information #user-memories-count img {
+  width: 100%;
+  height: auto;
+}
+/* line 166, ../scss/profile.scss */
+#user-information #user-connections-count {
+  width: 26px;
+  height: 28px;
+  margin-top: 15px;
+}
+/* line 170, ../scss/profile.scss */
+#user-information #user-connections-count img {
+  width: 100%;
+  height: auto;
+}
+/* line 176, ../scss/profile.scss */
 #user-information #profile-picture {
-  padding: 15px 0px;
+  margin-top: 20px;
+  width: 160px;
+  height: 120px;
 }
-/* line 152, ../scss/profile.scss */
+/* line 181, ../scss/profile.scss */
 #user-information p {
-  padding: 15px 0px;
+  line-height: 8pt;
+  padding: 16px 0;
   margin: 0px;
-  font-size: 85%;
+  font-size: 12pt;
 }
-/* line 157, ../scss/profile.scss */
+/* line 187, ../scss/profile.scss */
 #user-information hr {
   border: 0;
-  margin: 0px auto 15px auto;
+  margin: 0 auto 0 auto;
   background-color: #272727;
-  height: 1px;
-  width: 60%;
+  height: 1pt;
+  width: 95px;
+}
+/* line 194, ../scss/profile.scss */
+#user-information a {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  height: 42px;
 }
 
-/* line 165, ../scss/profile.scss */
-#add-memory {
-  position: absolute;
-  top: 45%;
-  right: -15px;
-  padding: 3px 5px;
+/* line 202, ../scss/profile.scss */
+#main {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+}
+/* line 205, ../scss/profile.scss */
+#main #body-section {
+  -webkit-flex-grow: 1;
 }
 
 /********************
@@ -3400,36 +3436,50 @@ header.shift {
  *
  ********************/
 /****** Header ******/
-/* line 178, ../scss/profile.scss */
+/* line 216, ../scss/profile.scss */
 #gallery-header {
-  padding-top: 15px;
+  padding-left: 40px;
+  padding-top: 48px;
 }
-/* line 181, ../scss/profile.scss */
+/* line 219, ../scss/profile.scss */
 #gallery-header p {
   margin: 0;
   display: inline-block;
 }
-/* line 185, ../scss/profile.scss */
+/* line 223, ../scss/profile.scss */
 #gallery-header p#username {
-  font-size: 140%;
   font-style: italic;
+  font-size: 25pt;
+  line-height: 20pt;
 }
-/* line 189, ../scss/profile.scss */
+/* line 228, ../scss/profile.scss */
+#gallery-header p.header-text {
+  font-size: 13pt;
+  line-height: 10pt;
+  margin-left: 8px;
+}
+/* line 233, ../scss/profile.scss */
 #gallery-header .svg-container {
-  height: 1em;
+  width: 13px;
+  height: 20px;
+}
+/* line 236, ../scss/profile.scss */
+#gallery-header .svg-container img {
+  width: 100%;
+  height: auto;
 }
 
 /****** Rows *******/
-/* line 194, ../scss/profile.scss */
+/* line 243, ../scss/profile.scss */
 .gallery-row.row {
   margin: 2.5em 5% 0.5em 5%;
 }
-/* line 197, ../scss/profile.scss */
+/* line 246, ../scss/profile.scss */
 .gallery-row.row .collection {
   height: 160px;
   margin: auto;
 }
-/* line 201, ../scss/profile.scss */
+/* line 250, ../scss/profile.scss */
 .gallery-row.row .collection .content-holder {
   height: 100%;
   width: 100%;
@@ -3444,7 +3494,7 @@ header.shift {
  * Footer
  *
  ********************/
-/* line 217, ../scss/profile.scss */
+/* line 266, ../scss/profile.scss */
 #footer {
   height: 80px;
 }

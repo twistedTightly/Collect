@@ -137,36 +137,74 @@ header.shift {
  * User Profile
  *
  ********************/
+
 $user-info-spacing: 15px;
 #user-information {
     min-height: 220px;
     background-color: $primary-color;
-    margin: 0 10px;
+    margin-left: 40px;
+    width: 160px;
+    height: 310px;
     position: relative; // Necessary to postiion 'add' button absolutely on it
     text-align: center;
    	font-size: $small-font-size;
 
+    img {
+
+    }
+
+    #user-memories-count {
+        width: 25px;
+        height: 25px;
+        margin-top: 15px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    #user-connections-count {
+        width: 26px;
+        height: 28px;
+        margin-top: 15px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
    	#profile-picture {
-   		padding: $user-info-spacing 0px;
+   		margin-top: 20px;
+        width: 160px;
+        height: 120px;
    	}
 	p {
-	   	padding: $user-info-spacing 0px;
+        line-height: 8pt;
+	   	padding: 16px 0;
 	   	margin: 0px;
-	    font-size: $small-font-size;
+	    font-size: 12pt;
 	}
 	hr {
 	   border: 0;
-	   margin: 0px auto $user-info-spacing auto;
+	   margin: 0 auto 0 auto;
 	   background-color: $black;
-	   height: 1px;
-	   width: 60%;
+	   height: 1pt;
+	   width: 95px;
 	}
+    a {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+        height: 42px;
+    }
 }
-#add-memory {
-    position: absolute;
-    top: 45%;
-    right: -15px;
-    padding: 3px 5px;
+
+#main {
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    #body-section {
+        -webkit-flex-grow: 1;
+    }
 }
 
 /********************
@@ -176,18 +214,29 @@ $user-info-spacing: 15px;
  ********************/
 /****** Header ******/
 #gallery-header {
-    padding-top: 15px;
-
+    padding-left: 40px;
+    padding-top: 48px;
     p {
     	margin: 0;
     	display: inline-block;
     }
 	p#username {
-        font-size: $large-font-size;
 	    font-style: italic;
+        font-size: 25pt;
+        line-height: 20pt;
 	}
+    p.header-text {
+        font-size: 13pt;
+        line-height: 10pt;
+        margin-left: 8px;
+    }
     .svg-container {
-        height: 1em;
+        width: 13px;
+        height: 20px;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 /****** Rows *******/

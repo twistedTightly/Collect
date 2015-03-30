@@ -32,44 +32,40 @@
       <% include partials/header-end.ejs %>
 
       <!-- Main body of the site -->
-      <div id="main" class="row">
+      <div id="main">
 
-        <!-- User Information Block (on side) -->
-        <div id="user-information-block" class="small-2 columns">
-          <div class="header-text" id="user-information">
+        <!-- User Information. Profile information on the side of the page. -->
+        <div class="header-text" id="user-information">
 
-            <div id="profile-picture">
-              <img src="images/my-profile-pic.jpg" alt="Profile picture">
-            </div>
-          
-            <div class="svg-container" id="user-memories-count">
-              <img class="svg-icon" src="images/icons/memories_icon_black.svg" alt="Memories icon">
-            </div>
-            <p><%= age %> memories</p>
-            <hr />
-            <div class="svg-container" id="user-connections-count">
-              <img class="svg-icon" src="images/icons/connections_icon_black.svg" alt="Connections icon">
-            </div>
-            <p><%= age %> connections</p>
-
-            <a href="#" data-reveal-id="add-memory-modal">
-              <div id="add-memory" class="flat-button">Add</div>
-            </a>
-
-            <div id="add-memory-modal" class="reveal-modal" data-reveal data-options="animation:fade;">
-              <h2>Create a memory.</h2>
-              <p class="lead">You can add info here.</p>
-              <p>I'm a cool paragraph that lives inside of an even cooler modal.</p>
-              <a class="close-reveal-modal">&#215;</a>
-            </div>
-
+          <div id="profile-picture">
+            <img src="images/my-profile-pic.jpg" alt="Profile picture">
           </div>
-        </div><!-- End User Information Block (on side) -->
+        
+          <div class="svg-container" id="user-connections-count">
+            <img class="svg-icon" src="images/icons/connections_icon_black.svg" alt="Connections icon">
+          </div>
+          <p><%= age %> connections</p>
+          <hr />
+          <div class="svg-container" id="user-memories-count">
+            <img class="svg-icon" src="images/icons/narrative_icon_black.svg" alt="Memories icon">
+          </div>
+          <p><%= age %> memories</p>
 
-        <!-- Memory Gallery (main part of page) -->
-        <div id="memory-gallery" class="small-10 columns">
-          <!-- Gallery Header -->
-          <div id="gallery-header" class="row">
+          <a href="#" class='button dark' data-reveal-id="add-memory-modal">
+            add a memory
+          </a>
+
+          <div id="add-memory-modal" class="reveal-modal" data-reveal data-options="animation:fade;">
+            <h2>Create a memory.</h2>
+            <p class="lead">You can add info here.</p>
+            <p>I'm a cool paragraph that lives inside of an even cooler modal.</p>
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+        </div><!-- End User Information -->
+          
+        <div id="body-section"> <!-- Body Section. This is where the memories are shown in table form. The memory gallery. -->
+
+          <div id="gallery-header"> <!-- User Information in the Body Section. Gallery Header. -->
             <p id="username"><%= username %></p>
             <div id="user-location">
               <div class="svg-container">
@@ -77,54 +73,9 @@
               </div>
               <p class="header-text">Location, Location</p>
             </div>
-          </div><!-- End Gallery Header -->
+          </div> <!-- End User Information in the Body Section. Gallery Header. -->
 
-          <div class="gallery-row row">
-            <div class="test-block collection small-12 medium-6 large-3 columns">
-              <div class="content-holder">
-                <img src="images/memory.JPG" alt="Memory"/>
-              </div>
-            </div>
-            <div class="test-block collection small-12 medium-6 large-3 columns">
-              <div class="content-holder">
-                <img src="images/memory.JPG" alt="Memory"/>
-              </div>
-            </div>
-            <div class="test-block collection small-12 medium-6 large-3 columns">
-              <div class="content-holder">
-                <img src="images/memory.JPG" alt="Memory"/>
-              </div>
-            </div>
-            <div class="test-block collection small-12 medium-6 large-3 columns">
-              <div class="content-holder">
-                <img src="images/memory.JPG" alt="Memory"/>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-row row">
-            <div class="test-block collection small-12 medium-6 large-3 columns">
-              <div class="content-holder">
-                <img src="images/memory.JPG" alt="Memory"/>
-              </div>
-            </div>
-            <div class="test-block collection small-12 medium-6 large-3 columns">
-              <div class="content-holder">
-                <img src="images/memory.JPG" alt="Memory"/>
-              </div>
-            </div>
-            <div class="test-block collection small-12 medium-6 large-3 columns">
-              <div class="content-holder">
-                <img src="images/memory.JPG" alt="Memory"/>
-              </div>
-            </div>
-            <div class="test-block collection small-12 medium-6 large-3 columns">
-              <div class="content-holder">
-                <img src="images/memory.JPG" alt="Memory"/>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Memory Gallery (main part of page) -->
+        </div> <!-- End Body Section. The memory gallery. -->
       </div>
     </div>
 
