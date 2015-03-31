@@ -260,6 +260,7 @@ $user-info-spacing: 15px;
         padding: 22px 27px 32px 27px;
         display: -webkit-flex;
         -webkit-flex-wrap: wrap;
+        overflow: hidden;
         .content {
             margin: 3px;
             background-color: $light-grey;
@@ -274,15 +275,18 @@ $user-info-spacing: 15px;
         -webkit-flex-flow: column wrap;
         -webkit-flex-grow: 1;
     }
-    .text-only .content{
+    .text-only .content {
+        width: 50px; // Arbitrary - just needs to be less than minimum width of the gallery box (172)
+        height: 106px; // Arbitrary - just needs to be less than minimum height of the gallery box (106)
         background-color: white;
+        font-style: italic;
     }
     .gallery-box.ghost {
         border: none;
     }
     .gallery-box::after {
         content: '';
-        padding-top: 71.4%;
+        padding-top: 62%;
         display: block;
     }
 }
