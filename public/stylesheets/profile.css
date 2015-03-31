@@ -3464,21 +3464,20 @@ header.shift {
 #gallery-header p.header-text {
   font-size: 13pt;
   line-height: 10pt;
-  margin-left: 8px;
 }
-/* line 236, ../scss/profile.scss */
+/* line 235, ../scss/profile.scss */
 #gallery-header .svg-container {
   width: 13px;
   height: 20px;
 }
-/* line 239, ../scss/profile.scss */
+/* line 238, ../scss/profile.scss */
 #gallery-header .svg-container img {
   width: 100%;
   height: auto;
 }
 
 /****** Rows and Memory Boxes *******/
-/* line 247, ../scss/profile.scss */
+/* line 246, ../scss/profile.scss */
 #gallery {
   margin-right: 85px;
   margin-top: 37px;
@@ -3487,7 +3486,7 @@ header.shift {
   -webkit-flex-flow: row wrap;
   -webkit-justify-content: flex-start;
 }
-/* line 254, ../scss/profile.scss */
+/* line 253, ../scss/profile.scss */
 #gallery .gallery-box {
   -webkit-flex-grow: 1;
   min-width: 230px;
@@ -3501,13 +3500,13 @@ header.shift {
   overflow: hidden;
   position: relative;
 }
-/* line 267, ../scss/profile.scss */
+/* line 266, ../scss/profile.scss */
 #gallery .gallery-box .content {
   margin: 3px;
   background-color: #D8D8D8;
   -webkit-flex-grow: 1;
 }
-/* line 272, ../scss/profile.scss */
+/* line 271, ../scss/profile.scss */
 #gallery .gallery-box .collection-title {
   text-align: center;
   position: absolute;
@@ -3520,25 +3519,25 @@ header.shift {
   -webkit-align-items: center;
   -webkit-justify-content: center;
 }
-/* line 286, ../scss/profile.scss */
+/* line 285, ../scss/profile.scss */
 #gallery .four-pic .content-col {
   display: -webkit-flex;
   -webkit-flex-flow: column wrap;
   -webkit-flex-grow: 1;
 }
-/* line 291, ../scss/profile.scss */
+/* line 290, ../scss/profile.scss */
 #gallery .text-only .content {
   width: 50px;
   height: 106px;
   background-color: white;
   font-style: italic;
 }
-/* line 297, ../scss/profile.scss */
+/* line 296, ../scss/profile.scss */
 #gallery .gallery-box.ghost {
   background: none;
   height: 0;
 }
-/* line 301, ../scss/profile.scss */
+/* line 300, ../scss/profile.scss */
 #gallery .gallery-box::after {
   content: '';
   padding-top: 62%;
@@ -3550,7 +3549,7 @@ header.shift {
  * Footer
  *
  ********************/
-/* line 313, ../scss/profile.scss */
+/* line 312, ../scss/profile.scss */
 #footer {
   height: 80px;
 }
