@@ -7,39 +7,59 @@
 
 /********************
  *
- * Profile Header
+ * Header
  *
  ********************/
  header {
+    display: -webkit-flex;
+    -webkit-align-items: center;
     height: $header-height;
-    min-height: 30px;
     background-color: $black;
-    text-align: right;
-    vertical-align: middle;
     color: white;
     padding-right: 0; // This will change when menu expands
-    padding-left: 20px; 
     -webkit-transition:  padding 1s;
     transition: padding 1s;
 
+    #logo {
+        margin-left: 40px;
+        width: auto;
+        height: 28px;
+    }
+    #middle {
+        -webkit-flex-grow: 1;
+    }
     #toolbar {
-        padding-right: $header-height + 15px;
-        height: 100%;
-        display: table;
-        .wrapper {
-            display: table-cell;
-            vertical-align: middle;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        margin-right: 80px; // Width of pullout menu triangle
+        & > * {
+            -webkit-flex-shrink: 0;
+            margin-right: 30px;
+        }
+        #username {
+            font-size: 12pt;
+        }
+        #profile-icon {
+            border-radius: 50%;
+            background: url(../images/my-profile-pic.jpg);
+            background-size: cover;
+            height: 27px;
+            width: 27px;
+            margin-right: 25px;
+        }
+        .svg-container {
+            width: 31px;
+            height: 27px;
+            #connections-icon {
+                height: 100%;
+                width: auto;
+            }
+            #messages-icon {
+                width: 31px;
+                height: 23px;
+            }
         }
     }
-	#logo {
-	    float: left;
-	    width: 104px;
-	    height: auto;
-        line-height: $header-height;
-	}
-	img {
-    	display: inline-block;
-	}
 }
 
 /********************
@@ -54,7 +74,7 @@ $link-alignment-padding: 15px;
     width: 0;
     height: 0;
     border-top: $header-height solid transparent;
-    border-right: $header-height solid $primary-color;
+    border-right: ($header-height + 10) solid $primary-color;
     border-bottom: $header-height solid transparent;
 }
 #pullout-menu-tab {
@@ -70,11 +90,7 @@ $link-alignment-padding: 15px;
     position: absolute;
     right: 0;
     top: 0;
-    padding: 50px 0;
-
-    .svg-icon {
-        padding-right: 10px;
-    }
+    padding: 50px 15px;
 }
 #pullout-menu {
     width: $pullout-menu-width;
@@ -183,7 +199,7 @@ $user-info-spacing: 15px;
         line-height: 8pt;
 	   	padding: 15px 0;
 	   	margin: 0px;
-	    font-size: 12pt;
+	    font-size: 10pt;
 	}
 	hr {
 	   border: 0;
@@ -199,6 +215,7 @@ $user-info-spacing: 15px;
         height: 42px;
         line-height: 42px;
         padding: 0;
+        font-size: 10pt;
     }
 }
 
@@ -229,7 +246,7 @@ $user-info-spacing: 15px;
         line-height: 20pt;
 	}
     p.header-text {
-        font-size: 13pt;
+        font-size: 12pt;
         line-height: 10pt;
     }
     .svg-container {
@@ -277,6 +294,7 @@ $user-info-spacing: 15px;
             bottom: 0;
             height: 48px; // The bottom padding of the gallery box + 2 because of margin on content boxes
             background: $white;
+            font-size: 14pt;
             display: -webkit-flex;
             -webkit-align-items: center;
             -webkit-justify-content: center;

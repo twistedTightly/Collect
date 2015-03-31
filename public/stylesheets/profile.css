@@ -3215,43 +3215,68 @@ blockquote p {
 }
 /********************
  *
- * Profile Header
+ * Header
  *
  ********************/
 /* line 13, ../scss/profile.scss */
 header {
+  display: -webkit-flex;
+  -webkit-align-items: center;
   height: 64px;
-  min-height: 30px;
   background-color: #272727;
-  text-align: right;
-  vertical-align: middle;
   color: white;
   padding-right: 0;
-  padding-left: 20px;
   -webkit-transition: padding 1s;
   transition: padding 1s;
 }
-/* line 25, ../scss/profile.scss */
-header #toolbar {
-  padding-right: 79px;
-  height: 100%;
-  display: table;
-}
-/* line 29, ../scss/profile.scss */
-header #toolbar .wrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
-/* line 34, ../scss/profile.scss */
+/* line 23, ../scss/profile.scss */
 header #logo {
-  float: left;
-  width: 104px;
-  height: auto;
-  line-height: 64px;
+  margin-left: 40px;
+  width: auto;
+  height: 28px;
 }
-/* line 40, ../scss/profile.scss */
-header img {
-  display: inline-block;
+/* line 28, ../scss/profile.scss */
+header #middle {
+  -webkit-flex-grow: 1;
+}
+/* line 31, ../scss/profile.scss */
+header #toolbar {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  margin-right: 80px;
+}
+/* line 35, ../scss/profile.scss */
+header #toolbar > * {
+  -webkit-flex-shrink: 0;
+  margin-right: 30px;
+}
+/* line 39, ../scss/profile.scss */
+header #toolbar #username {
+  font-size: 12pt;
+}
+/* line 42, ../scss/profile.scss */
+header #toolbar #profile-icon {
+  border-radius: 50%;
+  background: url(../images/my-profile-pic.jpg);
+  background-size: cover;
+  height: 27px;
+  width: 27px;
+  margin-right: 25px;
+}
+/* line 50, ../scss/profile.scss */
+header #toolbar .svg-container {
+  width: 31px;
+  height: 27px;
+}
+/* line 53, ../scss/profile.scss */
+header #toolbar .svg-container #connections-icon {
+  height: 100%;
+  width: auto;
+}
+/* line 57, ../scss/profile.scss */
+header #toolbar .svg-container #messages-icon {
+  width: 31px;
+  height: 23px;
 }
 
 /********************
@@ -3259,16 +3284,16 @@ header img {
  * Pullout Menu
  *
  ********************/
-/* line 53, ../scss/profile.scss */
+/* line 73, ../scss/profile.scss */
 .triangle-left {
   width: 0;
   height: 0;
   border-top: 64px solid transparent;
-  border-right: 64px solid #5F7F8E;
+  border-right: 74px solid #5F7F8E;
   border-bottom: 64px solid transparent;
 }
 
-/* line 60, ../scss/profile.scss */
+/* line 80, ../scss/profile.scss */
 #pullout-menu-tab {
   z-index: 100;
   position: absolute;
@@ -3279,19 +3304,15 @@ header img {
   cursor: pointer;
 }
 
-/* line 69, ../scss/profile.scss */
+/* line 89, ../scss/profile.scss */
 #pullout-menu-icon-holder {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 50px 0;
-}
-/* line 75, ../scss/profile.scss */
-#pullout-menu-icon-holder .svg-icon {
-  padding-right: 10px;
+  padding: 50px 15px;
 }
 
-/* line 79, ../scss/profile.scss */
+/* line 95, ../scss/profile.scss */
 #pullout-menu {
   width: 20%;
   height: 100%;
@@ -3312,18 +3333,18 @@ header img {
   background: linear-gradient(135deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8f8f', endColorstr='#8f8f8f', GradientType=1 );
 }
-/* line 101, ../scss/profile.scss */
+/* line 117, ../scss/profile.scss */
 #pullout-menu a {
   display: block;
   color: #FFFFFF;
   margin-top: 45px;
   margin-left: 15px;
 }
-/* line 106, ../scss/profile.scss */
+/* line 122, ../scss/profile.scss */
 #pullout-menu a:hover {
   color: #5F7F8E;
 }
-/* line 110, ../scss/profile.scss */
+/* line 126, ../scss/profile.scss */
 #pullout-menu input[type="search"] {
   border-radius: 50px;
   padding: 5px 15px;
@@ -3332,21 +3353,21 @@ header img {
   letter-spacing: 3px;
 }
 
-/* line 119, ../scss/profile.scss */
+/* line 135, ../scss/profile.scss */
 #pullout-menu.show {
   right: 0;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 124, ../scss/profile.scss */
+/* line 140, ../scss/profile.scss */
 #pullout-menu-tab.show {
   right: 20%;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 129, ../scss/profile.scss */
+/* line 145, ../scss/profile.scss */
 header.shift {
   padding-right: 20%;
   -webkit-transition: padding 1s;
@@ -3358,7 +3379,7 @@ header.shift {
  * User Profile
  *
  ********************/
-/* line 142, ../scss/profile.scss */
+/* line 158, ../scss/profile.scss */
 #user-information {
   -webkit-flex-shrink: 0;
   min-height: 220px;
@@ -3370,47 +3391,47 @@ header.shift {
   text-align: center;
   font-size: 85%;
 }
-/* line 153, ../scss/profile.scss */
+/* line 169, ../scss/profile.scss */
 #user-information #user-memories-count {
   width: 25px;
   height: 25px;
   margin-top: 15px;
 }
-/* line 157, ../scss/profile.scss */
+/* line 173, ../scss/profile.scss */
 #user-information #user-memories-count img {
   width: 100%;
   height: auto;
 }
-/* line 163, ../scss/profile.scss */
+/* line 179, ../scss/profile.scss */
 #user-information #user-connections-count {
   width: 26px;
   height: 28px;
   margin-top: 15px;
 }
-/* line 167, ../scss/profile.scss */
+/* line 183, ../scss/profile.scss */
 #user-information #user-connections-count img {
   width: 100%;
   height: auto;
 }
-/* line 173, ../scss/profile.scss */
+/* line 189, ../scss/profile.scss */
 #user-information #profile-picture {
   margin-top: 20px;
   width: 160px;
   height: 120px;
 }
-/* line 177, ../scss/profile.scss */
+/* line 193, ../scss/profile.scss */
 #user-information #profile-picture img {
   width: auto;
   height: 100%;
 }
-/* line 182, ../scss/profile.scss */
+/* line 198, ../scss/profile.scss */
 #user-information p {
   line-height: 8pt;
   padding: 15px 0;
   margin: 0px;
-  font-size: 12pt;
+  font-size: 10pt;
 }
-/* line 188, ../scss/profile.scss */
+/* line 204, ../scss/profile.scss */
 #user-information hr {
   border: 0;
   margin: 0 auto 0 auto;
@@ -3418,7 +3439,7 @@ header.shift {
   height: 1pt;
   width: 95px;
 }
-/* line 195, ../scss/profile.scss */
+/* line 211, ../scss/profile.scss */
 #user-information a {
   display: block;
   margin-top: 10px;
@@ -3426,14 +3447,15 @@ header.shift {
   height: 42px;
   line-height: 42px;
   padding: 0;
+  font-size: 10pt;
 }
 
-/* line 205, ../scss/profile.scss */
+/* line 222, ../scss/profile.scss */
 #main {
   display: -webkit-flex;
   -webkit-flex-direction: row;
 }
-/* line 208, ../scss/profile.scss */
+/* line 225, ../scss/profile.scss */
 #main #body-section {
   -webkit-flex-grow: 1;
 }
@@ -3444,40 +3466,40 @@ header.shift {
  *
  ********************/
 /****** Header ******/
-/* line 219, ../scss/profile.scss */
+/* line 236, ../scss/profile.scss */
 #gallery-header {
   padding-left: 40px;
   padding-top: 48px;
 }
-/* line 222, ../scss/profile.scss */
+/* line 239, ../scss/profile.scss */
 #gallery-header p {
   margin: 0;
   display: inline-block;
 }
-/* line 226, ../scss/profile.scss */
+/* line 243, ../scss/profile.scss */
 #gallery-header p#username {
   font-style: italic;
   font-size: 25pt;
   line-height: 20pt;
 }
-/* line 231, ../scss/profile.scss */
+/* line 248, ../scss/profile.scss */
 #gallery-header p.header-text {
-  font-size: 13pt;
+  font-size: 12pt;
   line-height: 10pt;
 }
-/* line 235, ../scss/profile.scss */
+/* line 252, ../scss/profile.scss */
 #gallery-header .svg-container {
   width: 13px;
   height: 20px;
 }
-/* line 238, ../scss/profile.scss */
+/* line 255, ../scss/profile.scss */
 #gallery-header .svg-container img {
   width: 100%;
   height: auto;
 }
 
 /****** Rows and Memory Boxes *******/
-/* line 246, ../scss/profile.scss */
+/* line 263, ../scss/profile.scss */
 #gallery {
   margin-right: 85px;
   margin-top: 37px;
@@ -3486,7 +3508,7 @@ header.shift {
   -webkit-flex-flow: row wrap;
   -webkit-justify-content: flex-start;
 }
-/* line 253, ../scss/profile.scss */
+/* line 270, ../scss/profile.scss */
 #gallery .gallery-box {
   -webkit-flex-grow: 1;
   min-width: 230px;
@@ -3500,13 +3522,13 @@ header.shift {
   overflow: hidden;
   position: relative;
 }
-/* line 266, ../scss/profile.scss */
+/* line 283, ../scss/profile.scss */
 #gallery .gallery-box .content {
   margin: 3px;
   background-color: #D8D8D8;
   -webkit-flex-grow: 1;
 }
-/* line 271, ../scss/profile.scss */
+/* line 288, ../scss/profile.scss */
 #gallery .gallery-box .collection-title {
   text-align: center;
   position: absolute;
@@ -3515,29 +3537,30 @@ header.shift {
   bottom: 0;
   height: 48px;
   background: #FFFFFF;
+  font-size: 14pt;
   display: -webkit-flex;
   -webkit-align-items: center;
   -webkit-justify-content: center;
 }
-/* line 285, ../scss/profile.scss */
+/* line 303, ../scss/profile.scss */
 #gallery .four-pic .content-col {
   display: -webkit-flex;
   -webkit-flex-flow: column wrap;
   -webkit-flex-grow: 1;
 }
-/* line 290, ../scss/profile.scss */
+/* line 308, ../scss/profile.scss */
 #gallery .text-only .content {
   width: 50px;
   height: 106px;
   background-color: white;
   font-style: italic;
 }
-/* line 296, ../scss/profile.scss */
+/* line 314, ../scss/profile.scss */
 #gallery .gallery-box.ghost {
   background: none;
   height: 0;
 }
-/* line 300, ../scss/profile.scss */
+/* line 318, ../scss/profile.scss */
 #gallery .gallery-box::after {
   content: '';
   padding-top: 62%;
@@ -3549,7 +3572,7 @@ header.shift {
  * Footer
  *
  ********************/
-/* line 312, ../scss/profile.scss */
+/* line 330, ../scss/profile.scss */
 #footer {
   height: 80px;
 }
