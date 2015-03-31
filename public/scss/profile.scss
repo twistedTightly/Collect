@@ -255,16 +255,32 @@ $user-info-spacing: 15px;
         -webkit-flex-grow: 1;
         min-width: 230px;
         //max-width: 280px; // Add back in to restrict gallery box size but leave whitespace sometimes
-        border: 2pt solid $light-grey;
+        background: url(../images/frame_icon.svg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
         margin: 20px;
-        padding: 22px 27px 32px 27px;
+        padding: 22px 27px 46px 27px; // 50px bottom padding makes room for title
         display: -webkit-flex;
         -webkit-flex-wrap: wrap;
         overflow: hidden;
+        position: relative;
         .content {
             margin: 3px;
             background-color: $light-grey;
         -webkit-flex-grow: 1;
+        }
+        .collection-title {
+            text-align: center;
+            position: absolute;
+            // Left and right position = side padding of the gallery box
+            left: 27px;
+            right: 27px;
+            bottom: 0;
+            height: 48px; // The bottom padding of the gallery box + 2 because of margin on content boxes
+            background: $white;
+            display: -webkit-flex;
+            -webkit-align-items: center;
+            -webkit-justify-content: center;
         }
     }
     .four-pic .content-col {
@@ -279,7 +295,8 @@ $user-info-spacing: 15px;
         font-style: italic;
     }
     .gallery-box.ghost {
-        border: none;
+        background: none;
+        height: 0;
     }
     .gallery-box::after {
         content: '';

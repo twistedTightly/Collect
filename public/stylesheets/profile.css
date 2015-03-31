@@ -3491,37 +3491,54 @@ header.shift {
 #gallery .gallery-box {
   -webkit-flex-grow: 1;
   min-width: 230px;
-  border: 2pt solid #D8D8D8;
+  background: url(../images/frame_icon.svg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   margin: 20px;
-  padding: 22px 27px 32px 27px;
+  padding: 22px 27px 46px 27px;
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
   overflow: hidden;
+  position: relative;
 }
-/* line 264, ../scss/profile.scss */
+/* line 267, ../scss/profile.scss */
 #gallery .gallery-box .content {
   margin: 3px;
   background-color: #D8D8D8;
   -webkit-flex-grow: 1;
 }
-/* line 270, ../scss/profile.scss */
+/* line 272, ../scss/profile.scss */
+#gallery .gallery-box .collection-title {
+  text-align: center;
+  position: absolute;
+  left: 27px;
+  right: 27px;
+  bottom: 0;
+  height: 48px;
+  background: #FFFFFF;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+}
+/* line 286, ../scss/profile.scss */
 #gallery .four-pic .content-col {
   display: -webkit-flex;
   -webkit-flex-flow: column wrap;
   -webkit-flex-grow: 1;
 }
-/* line 275, ../scss/profile.scss */
+/* line 291, ../scss/profile.scss */
 #gallery .text-only .content {
   width: 50px;
   height: 106px;
   background-color: white;
   font-style: italic;
 }
-/* line 281, ../scss/profile.scss */
+/* line 297, ../scss/profile.scss */
 #gallery .gallery-box.ghost {
-  border: none;
+  background: none;
+  height: 0;
 }
-/* line 284, ../scss/profile.scss */
+/* line 301, ../scss/profile.scss */
 #gallery .gallery-box::after {
   content: '';
   padding-top: 62%;
@@ -3533,7 +3550,7 @@ header.shift {
  * Footer
  *
  ********************/
-/* line 296, ../scss/profile.scss */
+/* line 313, ../scss/profile.scss */
 #footer {
   height: 80px;
 }
