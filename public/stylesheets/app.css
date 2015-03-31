@@ -3307,3 +3307,164 @@ body > .wrapper {
   font-family: AxelSC, "Orator Std", monospace;
   text-transform: lowercase;
 }
+
+/********************
+ *
+ * Header
+ *
+ ********************/
+/* line 119, ../scss/app.scss */
+header {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  height: 64px;
+  background-color: #272727;
+  color: white;
+  padding-right: 0;
+  -webkit-transition: padding 1s;
+  transition: padding 1s;
+}
+/* line 129, ../scss/app.scss */
+header #logo {
+  margin-left: 40px;
+  width: auto;
+  height: 28px;
+}
+/* line 134, ../scss/app.scss */
+header #middle {
+  -webkit-flex-grow: 1;
+}
+/* line 137, ../scss/app.scss */
+header #toolbar {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  margin-right: 80px;
+}
+/* line 141, ../scss/app.scss */
+header #toolbar > * {
+  -webkit-flex-shrink: 0;
+  margin-right: 30px;
+}
+/* line 145, ../scss/app.scss */
+header #toolbar #username {
+  font-size: 12pt;
+}
+/* line 148, ../scss/app.scss */
+header #toolbar #profile-icon {
+  border-radius: 50%;
+  background: url(../images/my-profile-pic.jpg);
+  background-size: cover;
+  height: 27px;
+  width: 27px;
+  margin-right: 25px;
+}
+/* line 156, ../scss/app.scss */
+header #toolbar .svg-container {
+  width: 31px;
+  height: 27px;
+}
+/* line 159, ../scss/app.scss */
+header #toolbar .svg-container #connections-icon {
+  height: 100%;
+  width: auto;
+}
+/* line 163, ../scss/app.scss */
+header #toolbar .svg-container #messages-icon {
+  width: 31px;
+  height: 23px;
+}
+
+/********************
+ *
+ * Pullout Menu
+ *
+ ********************/
+/* line 179, ../scss/app.scss */
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 64px solid transparent;
+  border-right: 74px solid #5F7F8E;
+  border-bottom: 64px solid transparent;
+}
+
+/* line 186, ../scss/app.scss */
+#pullout-menu-tab {
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: right 1s;
+  transition: right 1s;
+  cursor: pointer;
+}
+
+/* line 195, ../scss/app.scss */
+#pullout-menu-icon-holder {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 50px 15px;
+}
+
+/* line 201, ../scss/app.scss */
+#pullout-menu {
+  width: 20%;
+  height: 100%;
+  padding: 45px 2%;
+  text-align: left;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  right: -20%;
+  -webkit-transition: right 1s;
+  transition: right 1s;
+  background: #707070;
+  background: -moz-linear-gradient(-45deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #707070), color-stop(37%, rgba(112, 112, 112, 0.95)), color-stop(81%, rgba(112, 112, 112, 0.85)), color-stop(100%, rgba(112, 112, 112, 0.7)));
+  background: -webkit-linear-gradient(-45deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
+  background: -o-linear-gradient(-45deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
+  background: -ms-linear-gradient(-45deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
+  background: linear-gradient(135deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8f8f', endColorstr='#8f8f8f', GradientType=1 );
+}
+/* line 223, ../scss/app.scss */
+#pullout-menu a {
+  display: block;
+  color: #FFFFFF;
+  margin-top: 45px;
+  margin-left: 15px;
+}
+/* line 228, ../scss/app.scss */
+#pullout-menu a:hover {
+  color: #5F7F8E;
+}
+/* line 232, ../scss/app.scss */
+#pullout-menu input[type="search"] {
+  border-radius: 50px;
+  padding: 5px 15px;
+  margin-bottom: 0;
+  text-transform: lowercase;
+  letter-spacing: 3px;
+}
+
+/* line 241, ../scss/app.scss */
+#pullout-menu.show {
+  right: 0;
+  -webkit-transition: right 1s;
+  transition: right 1s;
+}
+
+/* line 246, ../scss/app.scss */
+#pullout-menu-tab.show {
+  right: 20%;
+  -webkit-transition: right 1s;
+  transition: right 1s;
+}
+
+/* line 251, ../scss/app.scss */
+header.shift {
+  padding-right: 20%;
+  -webkit-transition: padding 1s;
+  transition: padding 1s;
+}
