@@ -5,18 +5,13 @@
         "foundation/components/type";
 
 // Main page structure
-#main.flex-container {
+#main {
 	display: -webkit-flex;
-	-webkit-flex-direction: row;
 	padding: 0;
-	#user-info.flex-item {
-		-webkit-flex-grow: 1;
-		margin-top: 50px;
-		margin-left: 40px;
-	}
-	#collection.flex-item {
+	margin-top: 50px;
+	margin-left: 40px;
+	#collection {
 		-webkit-flex-grow: 25;
-		margin-top: 45px;
 	}
 }
 
@@ -27,6 +22,7 @@
  ********************/
  #info-box {
  	width: 65px;
+ 	margin-right: 45px;
  	#profile-pic {
  		background-image: url(../images/my-profile-pic.jpg);
  		background-repeat: no-repeat;
@@ -59,16 +55,68 @@
  * Collection
  *
  ********************/
- // Structure for collection section
-#collection.flex-container {
+
+#collection {
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
 }
-#memory-gallery.flex-container {
+ /****** Header ******/
+#gallery-header {
+    padding-left: 35px;
+    p {
+    	margin: 0;
+    	display: inline-block;
+    }
+	p#name {
+	    font-style: italic;
+        font-size: 25pt;
+        line-height: 20pt;
+	}
+    p.header-text {
+        font-size: 12pt;
+        line-height: 10pt;
+    }
+}
+
+#memory-gallery {
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
+	margin-right: 150px;
 }
-.memory.flex-container {
+.memory {
 	display: -webkit-flex;
-	-webkit-flex-direction: row;
+	-webkit-flex-direction: column;
+	& > * {
+		display: -webkit-flex;
+		margin-top: 40px;
+	}
+	// Image and text content are in the central column
+	.center-col {
+		-webkit-flex-basis: 800px;
+	}
+	// First, upper section of the memory
+	.multimedia {
+		margin-left: 170px;
+		.image {
+			background-color: $light-grey;
+			height: 450px;
+		}
+		.memory-media {
+			width: 80px;
+			margin-left: 40px;
+			-webkit-flex-shrink: 0;
+		}
+	}
+	// Second, lower part of the memory
+	.metadata {
+		-webkit-flex-shrink: 0;
+		width: 103px;
+	}
+	.author-icon {
+		-webkit-flex-shrink: 0;
+		width: 67px;
+	}
+	.text.center-col {
+		margin-right: 120px; // Matches width of memory media icons + its left margin
+	}
 }

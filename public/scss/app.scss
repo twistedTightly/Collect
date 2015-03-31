@@ -110,6 +110,13 @@ body > .wrapper {
     font-family: $font-family-monospace;
     text-transform: lowercase;
 }
+.user-icon {
+    border-radius: 50%;
+    background: url(../images/my-profile-pic.jpg);
+    height: 27px;
+    width: 27px;
+    background-size: cover;
+}
 
 /********************
  *
@@ -130,6 +137,7 @@ body > .wrapper {
         margin-left: 40px;
         width: auto;
         height: 28px;
+        -webkit-flex-shrink: 0;
     }
     #middle {
         -webkit-flex-grow: 1;
@@ -145,12 +153,7 @@ body > .wrapper {
         #username {
             font-size: 12pt;
         }
-        #profile-icon {
-            border-radius: 50%;
-            background: url(../images/my-profile-pic.jpg);
-            background-size: cover;
-            height: 27px;
-            width: 27px;
+        .user-icon {
             margin-right: 25px;
         }
         .svg-container {

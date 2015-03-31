@@ -3214,21 +3214,15 @@ blockquote p {
   }
 }
 /* line 8, ../scss/collection.scss */
-#main.flex-container {
+#main {
   display: -webkit-flex;
-  -webkit-flex-direction: row;
   padding: 0;
-}
-/* line 12, ../scss/collection.scss */
-#main.flex-container #user-info.flex-item {
-  -webkit-flex-grow: 1;
   margin-top: 50px;
   margin-left: 40px;
 }
-/* line 17, ../scss/collection.scss */
-#main.flex-container #collection.flex-item {
+/* line 13, ../scss/collection.scss */
+#main #collection {
   -webkit-flex-grow: 25;
-  margin-top: 45px;
 }
 
 /********************
@@ -3236,25 +3230,26 @@ blockquote p {
  * Info box
  *
  ********************/
-/* line 28, ../scss/collection.scss */
+/* line 23, ../scss/collection.scss */
 #info-box {
   width: 65px;
+  margin-right: 45px;
 }
-/* line 30, ../scss/collection.scss */
+/* line 26, ../scss/collection.scss */
 #info-box #profile-pic {
   background-image: url(../images/my-profile-pic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 65px;
 }
-/* line 36, ../scss/collection.scss */
+/* line 32, ../scss/collection.scss */
 #info-box a.button {
   width: 100%;
   padding: 0;
   height: 25px;
   line-height: 25px;
 }
-/* line 42, ../scss/collection.scss */
+/* line 38, ../scss/collection.scss */
 #info-box #back.button {
   background-color: #5F7F8E;
   border-width: 0;
@@ -3263,7 +3258,7 @@ blockquote p {
   -webkit-transition: color 0.5s;
   margin-bottom: 10px;
 }
-/* line 49, ../scss/collection.scss */
+/* line 45, ../scss/collection.scss */
 #info-box #back.button:hover {
   color: rgba(39, 39, 39, 0.7);
   transition: color 0.5s;
@@ -3275,20 +3270,81 @@ blockquote p {
 * Collection
 *
 ********************/
-/* line 63, ../scss/collection.scss */
-#collection.flex-container {
+/* line 59, ../scss/collection.scss */
+#collection {
   display: -webkit-flex;
   -webkit-flex-direction: column;
 }
 
-/* line 67, ../scss/collection.scss */
-#memory-gallery.flex-container {
+/****** Header ******/
+/* line 64, ../scss/collection.scss */
+#gallery-header {
+  padding-left: 35px;
+}
+/* line 66, ../scss/collection.scss */
+#gallery-header p {
+  margin: 0;
+  display: inline-block;
+}
+/* line 70, ../scss/collection.scss */
+#gallery-header p#name {
+  font-style: italic;
+  font-size: 25pt;
+  line-height: 20pt;
+}
+/* line 75, ../scss/collection.scss */
+#gallery-header p.header-text {
+  font-size: 12pt;
+  line-height: 10pt;
+}
+
+/* line 81, ../scss/collection.scss */
+#memory-gallery {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  margin-right: 150px;
+}
+
+/* line 86, ../scss/collection.scss */
+.memory {
   display: -webkit-flex;
   -webkit-flex-direction: column;
 }
-
-/* line 71, ../scss/collection.scss */
-.memory.flex-container {
+/* line 89, ../scss/collection.scss */
+.memory > * {
   display: -webkit-flex;
-  -webkit-flex-direction: row;
+  margin-top: 40px;
+}
+/* line 94, ../scss/collection.scss */
+.memory .center-col {
+  -webkit-flex-basis: 800px;
+}
+/* line 98, ../scss/collection.scss */
+.memory .multimedia {
+  margin-left: 170px;
+}
+/* line 100, ../scss/collection.scss */
+.memory .multimedia .image {
+  background-color: #D8D8D8;
+  height: 450px;
+}
+/* line 104, ../scss/collection.scss */
+.memory .multimedia .memory-media {
+  width: 80px;
+  margin-left: 40px;
+  -webkit-flex-shrink: 0;
+}
+/* line 111, ../scss/collection.scss */
+.memory .metadata {
+  -webkit-flex-shrink: 0;
+  width: 103px;
+}
+/* line 115, ../scss/collection.scss */
+.memory .author-icon {
+  -webkit-flex-shrink: 0;
+  width: 67px;
+}
+/* line 119, ../scss/collection.scss */
+.memory .text.center-col {
+  margin-right: 120px;
 }

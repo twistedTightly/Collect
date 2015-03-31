@@ -3,8 +3,6 @@
 <html class="no-js" lang="en" >
   <head>
     <% include partials/head.ejs %>
-    <!-- TODO: Remove this and generalize the code in it that this page needs -->
-    <link rel="stylesheet" href="stylesheets/profile.css">
     <link rel="stylesheet" href="stylesheets/collection.css">
     <title>Collection</title>
     <meta name="description" content="View Your Memory Collections">
@@ -25,20 +23,18 @@
           </div>
         </a>
         <p class="header-text" id="username"><%= username %></p>
-        <div id="profile-icon"></div>
+        <div class="user-icon"></div>
       </div>
     <!-- NOTE: The following *must* be included as it closes the header tag -->
     <% include partials/header-end.ejs %>
 
     <!-- Display all collections -->
-    <div id="main" class="flex-container">
-      <div id="user-info" class="flex-item">
+    <div id="main">
+      <div id="user-info">
         <div id="info-box">
-          <div class="profile-pic"></div>
+          <div id="profile-pic"></div>
           <a href="/profile?email=testUser" id="back" class="button">back</a>
-          <a href="#" class='button dark' data-reveal-id="add-memory-modal">
-            add
-          </a>
+          <a href="#" class='button dark' data-reveal-id="add-memory-modal">add</a>
 
           <div id="add-memory-modal" class="reveal-modal" data-reveal data-options="animation:fade;">
             <!-- TODO: Add HTML from profile.ejs when it's done -->
@@ -46,23 +42,69 @@
         </div>
       </div>
 
-      <div id="collection" class="flex-item flex-container">
-          <div class="flex-item">Name of the Collection<!-- TODO: Get markup and CSS from profile.ejs --></div>
-
-          <div id="memory-gallery" class="flex-item flex-container">
-              <div class="memory flex-item flex-container">
-                <div class="flex-item"></div>
-                <div class="flex-item"></div>
-              </div>
-              <div class="memory flex-item flex-container">
-                <div class="flex-item"></div>
-                <div class="flex-item"></div>
-              </div>
-              <div class="memory flex-item flex-container">
-                <div class="flex-item"></div>
-                <div class="flex-item"></div>
-              </div>
+      <div id="collection">
+        <div id="gallery-header"> <!-- User Information in the Body Section. Gallery Header. -->
+          <p id="name">Name of the Collection</p>
+          <div>
+            <p class="header-text">4 memories, 2 contributors</p>
           </div>
+        </div> <!-- End User Information in the Body Section. Gallery Header. -->
+
+        <div id="memory-gallery">
+            <div class="memory">
+              <div class="multimedia">
+                <div class="image center-col"></div>
+                <div class="memory-media">Media</div>
+              </div>
+              <div>
+                <div class="metadata">First name</div>
+                <div class="author-icon">
+                  <div class="user-icon"></div>
+                </div>
+                <div class="text center-col">
+                  <h5>Here is an example of what a title would look like</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <span class="tags"><a href="#">tag</a>,<a href="#">tag</a>,<a href="#">tag</a></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="memory">
+              <div class="multimedia">
+                <div class="image center-col"></div>
+                <div class="memory-media">Media</div>
+              </div>
+              <div>
+                <div class="metadata">First name</div>
+                <div class="author-icon">
+                  <div class="user-icon"></div>
+                </div>
+                <div class="text center-col">
+                  <h5>Here is an example of what a title would look like</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <span class="tags"><a href="#">tag</a>,<a href="#">tag</a>,<a href="#">tag</a></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="memory">
+              <div class="multimedia">
+                <div class="image center-col"></div>
+                <div class="memory-media">Media</div>
+              </div>
+              <div>
+                <div class="metadata">First name</div>
+                <div class="author-icon">
+                  <div class="user-icon"></div>
+                </div>
+                <div class="text center-col">
+                  <h5>Here is an example of what a title would look like</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <span class="tags"><a href="#">tag</a>,<a href="#">tag</a>,<a href="#">tag</a></span>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
 

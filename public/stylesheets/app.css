@@ -3308,12 +3308,21 @@ body > .wrapper {
   text-transform: lowercase;
 }
 
+/* line 113, ../scss/app.scss */
+.user-icon {
+  border-radius: 50%;
+  background: url(../images/my-profile-pic.jpg);
+  height: 27px;
+  width: 27px;
+  background-size: cover;
+}
+
 /********************
  *
  * Header
  *
  ********************/
-/* line 119, ../scss/app.scss */
+/* line 126, ../scss/app.scss */
 header {
   display: -webkit-flex;
   -webkit-align-items: center;
@@ -3324,51 +3333,47 @@ header {
   -webkit-transition: padding 1s;
   transition: padding 1s;
 }
-/* line 129, ../scss/app.scss */
+/* line 136, ../scss/app.scss */
 header #logo {
   margin-left: 40px;
   width: auto;
   height: 28px;
+  -webkit-flex-shrink: 0;
 }
-/* line 134, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 header #middle {
   -webkit-flex-grow: 1;
 }
-/* line 137, ../scss/app.scss */
+/* line 145, ../scss/app.scss */
 header #toolbar {
   display: -webkit-flex;
   -webkit-align-items: center;
   margin-right: 80px;
 }
-/* line 141, ../scss/app.scss */
+/* line 149, ../scss/app.scss */
 header #toolbar > * {
   -webkit-flex-shrink: 0;
   margin-right: 30px;
 }
-/* line 145, ../scss/app.scss */
+/* line 153, ../scss/app.scss */
 header #toolbar #username {
   font-size: 12pt;
 }
-/* line 148, ../scss/app.scss */
-header #toolbar #profile-icon {
-  border-radius: 50%;
-  background: url(../images/my-profile-pic.jpg);
-  background-size: cover;
-  height: 27px;
-  width: 27px;
+/* line 156, ../scss/app.scss */
+header #toolbar .user-icon {
   margin-right: 25px;
 }
-/* line 156, ../scss/app.scss */
+/* line 159, ../scss/app.scss */
 header #toolbar .svg-container {
   width: 31px;
   height: 27px;
 }
-/* line 159, ../scss/app.scss */
+/* line 162, ../scss/app.scss */
 header #toolbar .svg-container #connections-icon {
   height: 100%;
   width: auto;
 }
-/* line 163, ../scss/app.scss */
+/* line 166, ../scss/app.scss */
 header #toolbar .svg-container #messages-icon {
   width: 31px;
   height: 23px;
@@ -3379,7 +3384,7 @@ header #toolbar .svg-container #messages-icon {
  * Pullout Menu
  *
  ********************/
-/* line 179, ../scss/app.scss */
+/* line 182, ../scss/app.scss */
 .triangle-left {
   width: 0;
   height: 0;
@@ -3388,7 +3393,7 @@ header #toolbar .svg-container #messages-icon {
   border-bottom: 64px solid transparent;
 }
 
-/* line 186, ../scss/app.scss */
+/* line 189, ../scss/app.scss */
 #pullout-menu-tab {
   z-index: 100;
   position: absolute;
@@ -3399,7 +3404,7 @@ header #toolbar .svg-container #messages-icon {
   cursor: pointer;
 }
 
-/* line 195, ../scss/app.scss */
+/* line 198, ../scss/app.scss */
 #pullout-menu-icon-holder {
   position: absolute;
   right: 0;
@@ -3407,7 +3412,7 @@ header #toolbar .svg-container #messages-icon {
   padding: 50px 15px;
 }
 
-/* line 201, ../scss/app.scss */
+/* line 204, ../scss/app.scss */
 #pullout-menu {
   width: 20%;
   height: 100%;
@@ -3428,18 +3433,18 @@ header #toolbar .svg-container #messages-icon {
   background: linear-gradient(135deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8f8f', endColorstr='#8f8f8f', GradientType=1 );
 }
-/* line 223, ../scss/app.scss */
+/* line 226, ../scss/app.scss */
 #pullout-menu a {
   display: block;
   color: #FFFFFF;
   margin-top: 45px;
   margin-left: 15px;
 }
-/* line 228, ../scss/app.scss */
+/* line 231, ../scss/app.scss */
 #pullout-menu a:hover {
   color: #5F7F8E;
 }
-/* line 232, ../scss/app.scss */
+/* line 235, ../scss/app.scss */
 #pullout-menu input[type="search"] {
   border-radius: 50px;
   padding: 5px 15px;
@@ -3448,21 +3453,21 @@ header #toolbar .svg-container #messages-icon {
   letter-spacing: 3px;
 }
 
-/* line 241, ../scss/app.scss */
+/* line 244, ../scss/app.scss */
 #pullout-menu.show {
   right: 0;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 246, ../scss/app.scss */
+/* line 249, ../scss/app.scss */
 #pullout-menu-tab.show {
   right: 20%;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 251, ../scss/app.scss */
+/* line 254, ../scss/app.scss */
 header.shift {
   padding-right: 20%;
   -webkit-transition: padding 1s;
