@@ -8,9 +8,9 @@ function toggleMnemonicContent() {
 function toggleButtonDropdown() {
 	$( "#banner .button" ).click(function(event) {
 		// If one button is selected but it isn't the one that was clicked...
-		if ( $( "#banner .button" ).hasClass( "permahover" ) && !$( event.target ).hasClass( "permahover" )) {
-			$( '#banner .button' ).next( "form" ).toggleClass( "show" );
-			$( '#banner .button' ).toggleClass( "permahover" );
+		if ( $( "#banner a.button" ).hasClass( "permahover" ) && !$( event.target ).hasClass( "permahover" )) {
+			$( '#banner a.button' ).next( "form" ).toggleClass( "show" );
+			$( '#banner a.button' ).toggleClass( "permahover" );
 		// Either neither is selected and now the clicked one will be
 		// or only the one clicked was selected and now it won't be
 		} else {
@@ -22,7 +22,7 @@ function toggleButtonDropdown() {
 		// log in and sign up forms are unselected
 		if (!$( "#scrollwrapper" ).hasClass( "shifted" )) {
 			$( "#scrollwrapper" ).toggleClass( "shifted" );
-		} else if (!$( "#banner .button" ).hasClass( "permahover" )) {
+		} else if (!$( "#banner a.button" ).hasClass( "permahover" )) {
 			$( "#scrollwrapper" ).toggleClass( "shifted" );
 		}
 	});
