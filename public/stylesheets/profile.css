@@ -3505,27 +3505,23 @@ header.shift {
   -webkit-flex-grow: 1;
 }
 /* line 270, ../scss/profile.scss */
-#gallery .one-pic .content, #gallery .two-pic .content, #gallery .three-pic .content {
-  max-width: 220px;
-}
-/* line 273, ../scss/profile.scss */
 #gallery .four-pic .content-col {
   display: -webkit-flex;
   -webkit-flex-flow: column wrap;
   -webkit-flex-grow: 1;
 }
-/* line 278, ../scss/profile.scss */
+/* line 275, ../scss/profile.scss */
 #gallery .text-only .content {
   width: 50px;
   height: 106px;
   background-color: white;
   font-style: italic;
 }
-/* line 284, ../scss/profile.scss */
+/* line 281, ../scss/profile.scss */
 #gallery .gallery-box.ghost {
   border: none;
 }
-/* line 287, ../scss/profile.scss */
+/* line 284, ../scss/profile.scss */
 #gallery .gallery-box::after {
   content: '';
   padding-top: 62%;
@@ -3537,7 +3533,7 @@ header.shift {
  * Footer
  *
  ********************/
-/* line 299, ../scss/profile.scss */
+/* line 296, ../scss/profile.scss */
 #footer {
   height: 80px;
 }
