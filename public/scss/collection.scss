@@ -8,10 +8,9 @@
 #main {
 	display: -webkit-flex;
 	padding: 0;
-	margin-top: 50px;
-	margin-left: 40px;
+	padding: 50px 126px 252px 40px;
 	#collection {
-		-webkit-flex-grow: 25;
+		-webkit-flex-grow: 1;
 	}
 }
 
@@ -23,6 +22,7 @@
  #info-box {
  	width: 65px;
  	margin-right: 45px;
+ 	-webkit-flex-shrink: 0;
  	#profile-pic {
  		background-image: url(../images/my-profile-pic.jpg);
  		background-repeat: no-repeat;
@@ -81,7 +81,6 @@
 #memory-gallery {
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
-	margin-right: 150px;
 }
 .memory {
 	display: -webkit-flex;
@@ -93,30 +92,92 @@
 	// Image and text content are in the central column
 	.center-col {
 		-webkit-flex-basis: 800px;
+		-webkit-flex-grow: 1;
 	}
 	// First, upper section of the memory
 	.multimedia {
 		margin-left: 170px;
 		.image {
 			background-color: $light-grey;
-			height: 450px;
+			&::after {
+				content: '';
+				display: block;
+				padding-top: 51.875%; // 415/800 l to w ratio
+			}
 		}
 		.memory-media {
-			width: 80px;
+			width: 70px;
 			margin-left: 40px;
 			-webkit-flex-shrink: 0;
+			text-align: center;
+			color: $primary-color;
+			img {
+				height: 50px;
+				width: auto;
+				margin-bottom: 25px;
+			}
+			& > * {
+				-webkit-filter: grayscale(100%);
+				filter: grayscale(100%);
+				cursor: pointer;
+				&:hover {
+					-webkit-filter: none;
+					filter: none;
+				}
+			}
+			hr {
+				margin-top: 0;
+				margin-bottom: 8px;
+				border-color: $primary-color;
+			}
 		}
 	}
 	// Second, lower part of the memory
 	.metadata {
 		-webkit-flex-shrink: 0;
 		width: 103px;
+		p:first-child { // Only applied if author shown in margin
+			margin: 7.5px 0; // To vertically align it with the user icon
+		}
+		.date {
+			line-height: 1;
+			color: $primary-color;
+			&:first-child { // Only applied if no author shown in margin, overriding above
+				margin-top: 12px;
+				margin-bottom: 0;
+			}
+		}
 	}
 	.author-icon {
 		-webkit-flex-shrink: 0;
 		width: 67px;
+		.user-icon {
+			width: 40px;
+			height: 40px;
+		}
 	}
 	.text.center-col {
 		margin-right: 120px; // Matches width of memory media icons + its left margin
+		p:first-child { // Will only be applied if no title
+			margin-top: 7.5px; // To vertically align it with the user icon
+		}
+		.title:first-child { // Applied, overriding above, when there's a title
+			font-style: italic;
+			font-size: 22px;
+			margin-top: 2.5px; // To vertically align it with the user icon
+		}
+		p {
+			margin-bottom: 10px;
+		}
+		.tags {
+			margin-top: 30px;
+			color: $dark-grey;
+			a {
+				color: inherit;
+				&:hover {
+					color: $anchor-font-color-hover;
+				}
+			}
+		}
 	}
 }

@@ -22,7 +22,7 @@
             <img id="messages-icon" class="svg-icon" src="images/messages_icon_white.svg" alt="Messages">
           </div>
         </a>
-        <p class="header-text" id="username"><%= username %></p>
+        <p class="header-text" id="username">Maribeth Rauh</p>
         <div class="user-icon"></div>
       </div>
     <!-- NOTE: The following *must* be included as it closes the header tag -->
@@ -30,15 +30,13 @@
 
     <!-- Display all collections -->
     <div id="main">
-      <div id="user-info">
-        <div id="info-box">
-          <div id="profile-pic"></div>
-          <a href="/profile?email=testUser" id="back" class="button">back</a>
-          <a href="#" class='button dark' data-reveal-id="add-memory-modal">add</a>
+      <div id="info-box">
+        <div id="profile-pic"></div>
+        <a href="/profile?email=testUser" id="back" class="button">back</a>
+        <a href="#" class='button dark' data-reveal-id="add-memory-modal">add</a>
 
-          <div id="add-memory-modal" class="reveal-modal" data-reveal data-options="animation:fade;">
-            <!-- TODO: Add HTML from profile.ejs when it's done -->
-          </div>
+        <div id="add-memory-modal" class="reveal-modal" data-reveal data-options="animation:fade;">
+          <!-- TODO: Add HTML from profile.ejs when it's done -->
         </div>
       </div>
 
@@ -54,17 +52,27 @@
             <div class="memory">
               <div class="multimedia">
                 <div class="image center-col"></div>
-                <div class="memory-media">Media</div>
+                <div class="memory-media">
+                  <img class="selected" src="../images/titled-icons/2_visit_icon_black.svg" alt="Visit" />
+                  <img src="../images/titled-icons/watch_icon_color.svg" alt="Watch" />
+                  <img src="../images/titled-icons/4_listen_icon_black.svg" alt="Listen" />
+                  <img src="../images/titled-icons/5_connect_icon_black.svg" alt="Connect" />
+                  <div id="comment" class="header-text"><hr>comment</div>
+                </div>
               </div>
               <div>
-                <div class="metadata">First name</div>
+                <div class="metadata">
+                  <p>First name</p>                  
+                  <p class="date header-text">month</p>
+                  <p class="date header-text">year</p>
+                </div>
                 <div class="author-icon">
                   <div class="user-icon"></div>
                 </div>
                 <div class="text center-col">
-                  <h5>Here is an example of what a title would look like</h5>
+                  <p class="title">Here is an example of what a title would look like</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <span class="tags"><a href="#">tag</a>,<a href="#">tag</a>,<a href="#">tag</a></span>
+                  <div class="tags"><a href="#">tag</a>, <a href="#">tag</a>, <a href="#">tag</a></div>
                 </div>
               </div>
             </div>
@@ -72,17 +80,20 @@
             <div class="memory">
               <div class="multimedia">
                 <div class="image center-col"></div>
-                <div class="memory-media">Media</div>
+                <div class="memory-media"></div>
               </div>
               <div>
-                <div class="metadata">First name</div>
+                <div class="metadata">
+                  <p>First name</p>
+                  <p class="date header-text">month</p>
+                  <p class="date header-text">year</p>
+                </div>
                 <div class="author-icon">
                   <div class="user-icon"></div>
                 </div>
                 <div class="text center-col">
-                  <h5>Here is an example of what a title would look like</h5>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <span class="tags"><a href="#">tag</a>,<a href="#">tag</a>,<a href="#">tag</a></span>
+                  <div class="tags"><a href="#">tag</a>, <a href="#">tag</a>, <a href="#">tag</a></div>
                 </div>
               </div>
             </div>
@@ -90,17 +101,22 @@
             <div class="memory">
               <div class="multimedia">
                 <div class="image center-col"></div>
-                <div class="memory-media">Media</div>
+                <div class="memory-media">
+                  <img class="selected" src="../images/titled-icons/2_visit_icon_black.svg" alt="Visit" />
+                  <img src="../images/titled-icons/watch_icon_color.svg" alt="Watch" />
+                  <div id="comment" class="header-text"><hr>comment</div>
+                </div>
               </div>
               <div>
-                <div class="metadata">First name</div>
-                <div class="author-icon">
-                  <div class="user-icon"></div>
+                <div class="metadata">
+                  <p class="date header-text">month</p>
+                  <p class="date header-text">year</p>
                 </div>
+                <div class="author-icon"></div>
                 <div class="text center-col">
-                  <h5>Here is an example of what a title would look like</h5>
+                  <p class="title">Here is an example of what a title would look like</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <span class="tags"><a href="#">tag</a>,<a href="#">tag</a>,<a href="#">tag</a></span>
+                  <div class="tags"><a href="#">tag</a>, <a href="#">tag</a>, <a href="#">tag</a></div>
                 </div>
               </div>
             </div>
