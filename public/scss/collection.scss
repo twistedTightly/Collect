@@ -78,6 +78,11 @@
     }
 }
 
+ /********************
+ *
+ * Memory
+ *
+ ********************/
 #memory-gallery {
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
@@ -94,8 +99,9 @@
 		-webkit-flex-basis: 800px;
 		-webkit-flex-grow: 1;
 	}
+	/****** Upper Section ******/
 	// First, upper section of the memory
-	.multimedia {
+	.upper-section {
 		margin-left: 170px;
 		.image {
 			background-color: $light-grey;
@@ -111,6 +117,7 @@
 			-webkit-flex-shrink: 0;
 			text-align: center;
 			color: $primary-color;
+			position: relative;
 			img {
 				height: 50px;
 				width: auto;
@@ -125,13 +132,47 @@
 					filter: none;
 				}
 			}
-			hr {
-				margin-top: 0;
-				margin-bottom: 8px;
-				border-color: $primary-color;
-			}
+			 /********************
+			 *
+			 * Comments
+			 *
+			 ********************/
+			 .comment-section {
+			 	text-align: left; // Because content is same size as width, this has no effect expect easing transitions
+				position: absolute;
+			 	left: 0px;
+			 	bottom: 200px;
+			 	right: 0;
+		 		-webkit-transition: bottom 1s 1s, left 1s;
+		 		transition: bottom 1s 1s, left 1s;
+		 		hr {
+					margin-top: 0;
+					margin-bottom: 8px;
+					width: 70px;
+		 			-webkit-transition: width 1s;
+		 			transition: width 1s;
+					border-color: $primary-color;
+				}
+			 	&.expanded {
+			 		filter: none;
+			 		-webkit-filter: none;
+			 		cursor: default;
+			 		left: -430px;
+			 		bottom: -279px;
+					-webkit-transition: left 1s 1s, bottom 1s;
+					transition: left 1s 1s, bottom 1s;
+			 		hr {
+			 			border-color: $primary-color;
+			 			margin-top: 30px;
+			 			width: 500px;
+						-webkit-transition: width 1s 1s;
+						transition: width 1s 1s;
+			 		}
+			 	}
+			 }
 		}
 	}
+	/****** Lower Section ******/
 	// Second, lower part of the memory
 	.metadata {
 		-webkit-flex-shrink: 0;
