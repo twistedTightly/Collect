@@ -141,7 +141,6 @@
 			 	text-align: left; // Because content is same size as width, this has no effect expect easing transitions
 				position: absolute;
 			 	left: 0px;
-			 	bottom: 200px;
 			 	right: 0;
 		 		-webkit-transition: bottom 1s 1s, left 1s;
 		 		transition: bottom 1s 1s, left 1s;
@@ -154,16 +153,15 @@
 					border-color: $primary-color;
 				}
 			 	&.expanded {
+			 		margin-top: 30px;
 			 		filter: none;
 			 		-webkit-filter: none;
 			 		cursor: default;
 			 		left: -430px;
-			 		bottom: -279px;
 					-webkit-transition: left 1s 1s, bottom 1s;
 					transition: left 1s 1s, bottom 1s;
 			 		hr {
 			 			border-color: $primary-color;
-			 			margin-top: 30px;
 			 			width: 500px;
 						-webkit-transition: width 1s 1s;
 						transition: width 1s 1s;

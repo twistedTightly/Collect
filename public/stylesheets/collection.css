@@ -3376,12 +3376,11 @@ blockquote p {
   text-align: left;
   position: absolute;
   left: 0px;
-  bottom: 200px;
   right: 0;
   -webkit-transition: bottom 1s 1s, left 1s;
   transition: bottom 1s 1s, left 1s;
 }
-/* line 148, ../scss/collection.scss */
+/* line 147, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section hr {
   margin-top: 0;
   margin-bottom: 8px;
@@ -3390,81 +3389,80 @@ blockquote p {
   transition: width 1s;
   border-color: #5F7F8E;
 }
-/* line 156, ../scss/collection.scss */
+/* line 155, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded {
+  margin-top: 30px;
   filter: none;
   -webkit-filter: none;
   cursor: default;
   left: -430px;
-  bottom: -279px;
   -webkit-transition: left 1s 1s, bottom 1s;
   transition: left 1s 1s, bottom 1s;
 }
-/* line 164, ../scss/collection.scss */
+/* line 163, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded hr {
   border-color: #5F7F8E;
-  margin-top: 30px;
   width: 500px;
   -webkit-transition: width 1s 1s;
   transition: width 1s 1s;
 }
-/* line 177, ../scss/collection.scss */
+/* line 175, ../scss/collection.scss */
 .memory .metadata {
   -webkit-flex-shrink: 0;
   width: 103px;
 }
-/* line 180, ../scss/collection.scss */
+/* line 178, ../scss/collection.scss */
 .memory .metadata p:first-child {
   margin: 7.5px 0;
 }
-/* line 183, ../scss/collection.scss */
+/* line 181, ../scss/collection.scss */
 .memory .metadata .date {
   line-height: 1;
   color: #5F7F8E;
 }
-/* line 186, ../scss/collection.scss */
+/* line 184, ../scss/collection.scss */
 .memory .metadata .date:first-child {
   margin-top: 12px;
   margin-bottom: 0;
 }
-/* line 192, ../scss/collection.scss */
+/* line 190, ../scss/collection.scss */
 .memory .author-icon {
   -webkit-flex-shrink: 0;
   width: 67px;
 }
-/* line 195, ../scss/collection.scss */
+/* line 193, ../scss/collection.scss */
 .memory .author-icon .user-icon {
   width: 40px;
   height: 40px;
 }
-/* line 200, ../scss/collection.scss */
+/* line 198, ../scss/collection.scss */
 .memory .text.center-col {
   margin-right: 120px;
 }
-/* line 202, ../scss/collection.scss */
+/* line 200, ../scss/collection.scss */
 .memory .text.center-col p:first-child {
   margin-top: 7.5px;
 }
-/* line 205, ../scss/collection.scss */
+/* line 203, ../scss/collection.scss */
 .memory .text.center-col .title:first-child {
   font-style: italic;
   font-size: 22px;
   margin-top: 2.5px;
 }
-/* line 210, ../scss/collection.scss */
+/* line 208, ../scss/collection.scss */
 .memory .text.center-col p {
   margin-bottom: 10px;
 }
-/* line 213, ../scss/collection.scss */
+/* line 211, ../scss/collection.scss */
 .memory .text.center-col .tags {
   margin-top: 30px;
   color: #979797;
 }
-/* line 216, ../scss/collection.scss */
+/* line 214, ../scss/collection.scss */
 .memory .text.center-col .tags a {
   color: inherit;
 }
-/* line 218, ../scss/collection.scss */
+/* line 216, ../scss/collection.scss */
 .memory .text.center-col .tags a:hover {
   color: #5F7F8E;
 }
