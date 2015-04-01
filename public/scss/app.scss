@@ -38,8 +38,10 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
+html, body {
+    overflow-x: hidden;
+}
 body {
-	overflow-x: hidden;
     background: #eee;
     text-align: center;
     width: 100%;
