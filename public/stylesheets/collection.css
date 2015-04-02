@@ -3320,27 +3320,28 @@ blockquote p {
 .memory > * {
   display: -webkit-flex;
   margin-top: 40px;
+  transition: margin-top 1s;
 }
-/* line 98, ../scss/collection.scss */
+/* line 99, ../scss/collection.scss */
 .memory .center-col {
   -webkit-flex-basis: 800px;
   -webkit-flex-grow: 1;
 }
-/* line 104, ../scss/collection.scss */
+/* line 105, ../scss/collection.scss */
 .memory .upper-section {
   margin-left: 170px;
 }
-/* line 106, ../scss/collection.scss */
+/* line 107, ../scss/collection.scss */
 .memory .upper-section .image {
   background-color: #D8D8D8;
 }
-/* line 108, ../scss/collection.scss */
+/* line 109, ../scss/collection.scss */
 .memory .upper-section .image::after {
   content: '';
   display: block;
   padding-top: 51.875%;
 }
-/* line 114, ../scss/collection.scss */
+/* line 115, ../scss/collection.scss */
 .memory .upper-section .memory-media {
   width: 70px;
   margin-left: 40px;
@@ -3354,24 +3355,24 @@ blockquote p {
   *
   ********************/
 }
-/* line 121, ../scss/collection.scss */
+/* line 122, ../scss/collection.scss */
 .memory .upper-section .memory-media img {
   height: 50px;
   width: auto;
   margin-bottom: 25px;
 }
-/* line 126, ../scss/collection.scss */
+/* line 127, ../scss/collection.scss */
 .memory .upper-section .memory-media > * {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   cursor: pointer;
 }
-/* line 130, ../scss/collection.scss */
+/* line 131, ../scss/collection.scss */
 .memory .upper-section .memory-media > *:hover {
   -webkit-filter: none;
   filter: none;
 }
-/* line 140, ../scss/collection.scss */
+/* line 141, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section {
   text-align: left;
   position: absolute;
@@ -3380,7 +3381,19 @@ blockquote p {
   -webkit-transition: bottom 1s 1s, left 1s;
   transition: bottom 1s 1s, left 1s;
 }
-/* line 147, ../scss/collection.scss */
+/* line 148, ../scss/collection.scss */
+.memory .upper-section .memory-media .comment-section p {
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 1s;
+}
+/* line 153, ../scss/collection.scss */
+.memory .upper-section .memory-media .comment-section > div {
+  opacity: 0;
+  transition: opacity 1s;
+  width: 500px;
+}
+/* line 159, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section hr {
   margin-top: 0;
   margin-bottom: 8px;
@@ -3389,7 +3402,7 @@ blockquote p {
   transition: width 1s;
   border-color: #5F7F8E;
 }
-/* line 155, ../scss/collection.scss */
+/* line 167, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded {
   margin-top: 30px;
   filter: none;
@@ -3399,70 +3412,122 @@ blockquote p {
   -webkit-transition: left 1s 1s, bottom 1s;
   transition: left 1s 1s, bottom 1s;
 }
-/* line 163, ../scss/collection.scss */
+/* line 175, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded hr {
   border-color: #5F7F8E;
   width: 500px;
   -webkit-transition: width 1s 1s;
   transition: width 1s 1s;
 }
-/* line 175, ../scss/collection.scss */
+/* line 181, ../scss/collection.scss */
+.memory .upper-section .memory-media .comment-section.expanded p {
+  opacity: 0;
+}
+/* line 185, ../scss/collection.scss */
+.memory .upper-section .memory-media .comment-section.expanded > div {
+  opacity: 1;
+  transition: opacity 1s 1s;
+}
+/* line 196, ../scss/collection.scss */
 .memory .metadata {
   -webkit-flex-shrink: 0;
   width: 103px;
 }
-/* line 178, ../scss/collection.scss */
+/* line 199, ../scss/collection.scss */
 .memory .metadata p:first-child {
   margin: 7.5px 0;
 }
-/* line 181, ../scss/collection.scss */
+/* line 202, ../scss/collection.scss */
 .memory .metadata .date {
   line-height: 1;
   color: #5F7F8E;
 }
-/* line 184, ../scss/collection.scss */
+/* line 205, ../scss/collection.scss */
 .memory .metadata .date:first-child {
   margin-top: 12px;
   margin-bottom: 0;
 }
-/* line 190, ../scss/collection.scss */
+/* line 211, ../scss/collection.scss */
 .memory .author-icon {
   -webkit-flex-shrink: 0;
   width: 67px;
 }
-/* line 193, ../scss/collection.scss */
+/* line 214, ../scss/collection.scss */
 .memory .author-icon .user-icon {
   width: 40px;
   height: 40px;
 }
-/* line 198, ../scss/collection.scss */
+/* line 219, ../scss/collection.scss */
 .memory .text.center-col {
   margin-right: 120px;
 }
-/* line 200, ../scss/collection.scss */
+/* line 221, ../scss/collection.scss */
 .memory .text.center-col p:first-child {
   margin-top: 7.5px;
 }
-/* line 203, ../scss/collection.scss */
+/* line 224, ../scss/collection.scss */
 .memory .text.center-col .title:first-child {
   font-style: italic;
   font-size: 22px;
   margin-top: 2.5px;
 }
-/* line 208, ../scss/collection.scss */
+/* line 229, ../scss/collection.scss */
 .memory .text.center-col p {
   margin-bottom: 10px;
 }
-/* line 211, ../scss/collection.scss */
+/* line 232, ../scss/collection.scss */
 .memory .text.center-col .tags {
   margin-top: 30px;
   color: #979797;
 }
-/* line 214, ../scss/collection.scss */
+/* line 235, ../scss/collection.scss */
 .memory .text.center-col .tags a {
   color: inherit;
 }
-/* line 216, ../scss/collection.scss */
+/* line 237, ../scss/collection.scss */
 .memory .text.center-col .tags a:hover {
   color: #5F7F8E;
+}
+
+/********************
+ *
+ * Comment Section
+ *
+ ********************/
+/* line 249, ../scss/collection.scss */
+.comment {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+}
+/* line 252, ../scss/collection.scss */
+.comment .content {
+  font-family: "kepler-std-display", Georgia, serif;
+}
+/* line 254, ../scss/collection.scss */
+.comment .content > * {
+  display: inline-block;
+}
+/* line 257, ../scss/collection.scss */
+.comment .content .user-icon {
+  height: 40px;
+  width: 40px;
+}
+/* line 262, ../scss/collection.scss */
+.comment .content input {
+  border: none;
+  box-shadow: none;
+  background: none;
+  margin-bottom: 0;
+}
+/* line 267, ../scss/collection.scss */
+.comment .content input:focus {
+  background: none;
+}
+/* line 272, ../scss/collection.scss */
+.comment .submit {
+  text-align: right;
+}
+/* line 274, ../scss/collection.scss */
+.comment .submit > * {
+  display: inline-block;
 }

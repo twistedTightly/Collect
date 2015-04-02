@@ -93,6 +93,7 @@
 	& > * {
 		display: -webkit-flex;
 		margin-top: 40px;
+		transition: margin-top 1s;
 	}
 	// Image and text content are in the central column
 	.center-col {
@@ -144,6 +145,17 @@
 			 	right: 0;
 		 		-webkit-transition: bottom 1s 1s, left 1s;
 		 		transition: bottom 1s 1s, left 1s;
+		 		p {
+		 			pointer-events: none;
+		 			opacity: 1;
+		 			transition: opacity 1s;
+		 		}
+			 	& > div {
+			 		opacity: 0;
+			 		transition: opacity 1s;
+			 		//display: none;
+			 		width: 500px;
+			 	}
 		 		hr {
 					margin-top: 0;
 					margin-bottom: 8px;
@@ -165,6 +177,15 @@
 			 			width: 500px;
 						-webkit-transition: width 1s 1s;
 						transition: width 1s 1s;
+			 		}
+			 		p {
+			 			//display: none;
+			 			opacity: 0;
+			 		}
+			 		& > div {
+			 			//display: block;
+			 			opacity: 1;
+			 			transition: opacity 1s 1s;
 			 		}
 			 	}
 			 }
@@ -220,3 +241,38 @@
 		}
 	}
 }
+/********************
+ *
+ * Comment Section
+ *
+ ********************/
+ .comment {
+ 	display: -webkit-flex;
+ 	-webkit-flex-direction: column;
+ 	.content {
+ 		font-family: $font-family-serif;
+ 		& > * {
+ 			display: inline-block;
+ 		}
+ 		.user-icon {
+ 			height: 40px;
+ 			width: 40px;
+
+ 		}
+ 		input {
+ 			border: none;
+ 			box-shadow: none;
+ 			background: none;
+ 			margin-bottom: 0;
+ 			&:focus {
+ 				background: none;
+ 			}
+ 		}
+ 	}
+ 	.submit {
+ 		text-align: right;
+ 		& > * {
+ 			display: inline-block;
+ 		}
+ 	}
+ }

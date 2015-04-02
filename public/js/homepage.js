@@ -6,7 +6,7 @@ function toggleMnemonicContent() {
 }
 
 function toggleButtonDropdown() {
-	$( "#banner .button" ).click(function(event) {
+	$( "#banner a.button" ).click(function(event) {
 		// If one button is selected but it isn't the one that was clicked...
 		if ( $( "#banner a.button" ).hasClass( "permahover" ) && !$( event.target ).hasClass( "permahover" )) {
 			$( '#banner a.button' ).next( "form" ).toggleClass( "show" );
