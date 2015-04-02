@@ -32,25 +32,25 @@ app.get('/profile', function(req, res) {
 	// Get the rest of the user's information
 	var query = new Parse.Query(Parse.User);
 	query.equalTo('username', req.query.email);
-	query.find().then(
+	query.find({
 		// Query was successful
-		function(user) {
-			console.log('successful query');
-			age = user.get('updatedAt');
-			name = user.get('updatedAt') + ' ' + user.get('createdAt');
-			console.log(age);
-			console.log(name);
+		success: function(user) {
+			name = user[0].get('firstname');
+			res.render('profile', { username: name,
+							age: '' });
 		},
 		// Query had a error
-		function(error) {
-			console.log('failed query');
+		error: function(error) {
+			console.error('failed query');
 			console.log('Error: ' + error.code + ' ' + error.message);
 			age = error.message;
-		}
-	);
-	console.log('about to render');
-	res.render('profile', { username: req.query.email,
+			name = 'error';
+			res.render('profile', { username: name,
 							age: age });
+
+		}
+	});
+	console.log('about to render');
 });
 
 app.post('/profile', function(req, res) {
