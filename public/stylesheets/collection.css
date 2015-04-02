@@ -3385,8 +3385,9 @@ blockquote p {
 .memory .upper-section .memory-media .comment-section > a {
   opacity: 1;
   transition: opacity 1s;
+  margin-top: 8px;
 }
-/* line 152, ../scss/collection.scss */
+/* line 153, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section > div {
   opacity: 0;
   transition: opacity 1s;
@@ -3394,16 +3395,16 @@ blockquote p {
   margin-top: -25px;
   pointer-events: none;
 }
-/* line 159, ../scss/collection.scss */
+/* line 160, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section hr {
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 0;
   width: 70px;
   -webkit-transition: width 1s;
   transition: width 1s;
   border-color: #5F7F8E;
 }
-/* line 167, ../scss/collection.scss */
+/* line 168, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded {
   margin-top: 30px;
   filter: none;
@@ -3413,81 +3414,81 @@ blockquote p {
   -webkit-transition: left 1s 1s, bottom 1s;
   transition: left 1s 1s, bottom 1s;
 }
-/* line 175, ../scss/collection.scss */
+/* line 176, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded hr {
   border-color: #5F7F8E;
   width: 500px;
   -webkit-transition: width 1s 1s;
   transition: width 1s 1s;
 }
-/* line 181, ../scss/collection.scss */
+/* line 182, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded > a {
   opacity: 0;
   pointer-events: none;
 }
-/* line 185, ../scss/collection.scss */
+/* line 186, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded > div {
   opacity: 1;
   transition: opacity 1s 1s;
   pointer-events: auto;
 }
-/* line 196, ../scss/collection.scss */
+/* line 197, ../scss/collection.scss */
 .memory .metadata {
   -webkit-flex-shrink: 0;
   width: 103px;
 }
-/* line 199, ../scss/collection.scss */
+/* line 200, ../scss/collection.scss */
 .memory .metadata p:first-child {
   margin: 7.5px 0;
 }
-/* line 202, ../scss/collection.scss */
+/* line 203, ../scss/collection.scss */
 .memory .metadata .date {
   line-height: 1;
   color: #5F7F8E;
 }
-/* line 205, ../scss/collection.scss */
+/* line 206, ../scss/collection.scss */
 .memory .metadata .date:first-child {
   margin-top: 12px;
   margin-bottom: 0;
 }
-/* line 211, ../scss/collection.scss */
+/* line 212, ../scss/collection.scss */
 .memory .author-icon {
   -webkit-flex-shrink: 0;
   width: 67px;
 }
-/* line 214, ../scss/collection.scss */
+/* line 215, ../scss/collection.scss */
 .memory .author-icon .user-icon {
   width: 40px;
   height: 40px;
 }
-/* line 219, ../scss/collection.scss */
+/* line 220, ../scss/collection.scss */
 .memory .text.center-col {
   margin-right: 120px;
 }
-/* line 221, ../scss/collection.scss */
+/* line 222, ../scss/collection.scss */
 .memory .text.center-col p:first-child {
   margin-top: 7.5px;
 }
-/* line 224, ../scss/collection.scss */
+/* line 225, ../scss/collection.scss */
 .memory .text.center-col .title:first-child {
   font-style: italic;
   font-size: 22px;
   margin-top: 2.5px;
 }
-/* line 229, ../scss/collection.scss */
+/* line 230, ../scss/collection.scss */
 .memory .text.center-col p {
   margin-bottom: 10px;
 }
-/* line 232, ../scss/collection.scss */
+/* line 233, ../scss/collection.scss */
 .memory .text.center-col .tags {
   margin-top: 30px;
   color: #979797;
 }
-/* line 235, ../scss/collection.scss */
+/* line 236, ../scss/collection.scss */
 .memory .text.center-col .tags a {
   color: inherit;
 }
-/* line 237, ../scss/collection.scss */
+/* line 238, ../scss/collection.scss */
 .memory .text.center-col .tags a:hover {
   color: #5F7F8E;
 }
@@ -3497,48 +3498,61 @@ blockquote p {
  * Comment Section
  *
  ********************/
-/* line 249, ../scss/collection.scss */
+/* line 250, ../scss/collection.scss */
 .comment {
   display: -webkit-flex;
   -webkit-flex-direction: column;
 }
-/* line 252, ../scss/collection.scss */
+/* line 253, ../scss/collection.scss */
 .comment .content {
   font-family: "kepler-std-display", Georgia, serif;
   color: #272727;
   letter-spacing: 1px;
   text-transform: none;
+  display: -webkit-flex;
 }
-/* line 257, ../scss/collection.scss */
-.comment .content > * {
-  display: inline-block;
-}
-/* line 260, ../scss/collection.scss */
+/* line 259, ../scss/collection.scss */
 .comment .content .user-icon {
   height: 40px;
   width: 40px;
+  margin-top: 10px;
+  -webkit-flex-shrink: 0;
 }
 /* line 265, ../scss/collection.scss */
-.comment .content p {
-  font-style: italic;
+.comment .content div:last-child {
+  margin-left: 20px;
 }
 /* line 268, ../scss/collection.scss */
+.comment .content p {
+  font-style: italic;
+  margin-top: 20px;
+}
+/* line 272, ../scss/collection.scss */
 .comment .content input {
   border: none;
   box-shadow: none;
   background: none;
-  margin-bottom: 0;
-  margin-left: 40px;
+  padding-left: 0;
+  padding-top: 0;
 }
-/* line 274, ../scss/collection.scss */
+/* line 278, ../scss/collection.scss */
 .comment .content input:focus {
   background: none;
 }
-/* line 279, ../scss/collection.scss */
+/* line 283, ../scss/collection.scss */
 .comment .submit {
   text-align: right;
+  color: #979797;
 }
-/* line 281, ../scss/collection.scss */
+/* line 286, ../scss/collection.scss */
 .comment .submit > * {
   display: inline-block;
+}
+/* line 289, ../scss/collection.scss */
+.comment .submit a {
+  color: #979797;
+}
+/* line 291, ../scss/collection.scss */
+.comment .submit a:hover {
+  color: #5F7F8E;
 }

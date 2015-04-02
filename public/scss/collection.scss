@@ -148,6 +148,7 @@
 		 		& > a {
 		 			opacity: 1;
 		 			transition: opacity 1s;
+		 			margin-top: 8px;
 		 		}
 			 	& > div {
 			 		opacity: 0;
@@ -158,7 +159,7 @@
 			 	}
 		 		hr {
 					margin-top: 0;
-					margin-bottom: 8px;
+					margin-bottom: 0;
 					width: 70px;
 		 			-webkit-transition: width 1s;
 		 			transition: width 1s;
@@ -254,23 +255,26 @@
 		color: $black;
 		letter-spacing: 1px;
 		text-transform: none;
- 		& > * {
- 			display: inline-block;
- 		}
+ 		display: -webkit-flex;
  		.user-icon {
  			height: 40px;
  			width: 40px;
-
+ 			margin-top: 10px;
+ 			-webkit-flex-shrink: 0;
+ 		}
+ 		div:last-child {
+ 			margin-left: 20px;
  		}
  		p {
  			font-style: italic;
+ 			margin-top: 20px;
  		}
  		input {
  			border: none;
  			box-shadow: none;
  			background: none;
- 			margin-bottom: 0;
- 			margin-left: 40px;
+ 			padding-left: 0;
+ 			padding-top: 0;
  			&:focus {
  				background: none;
  			}
@@ -278,8 +282,15 @@
  	}
  	.submit {
  		text-align: right;
+ 		color: $dark-grey;
  		& > * {
  			display: inline-block;
+ 		}
+ 		a {
+ 			color: $dark-grey;
+ 		&:hover {
+ 			color: $primary-color;
+ 		}
  		}
  	}
  }
