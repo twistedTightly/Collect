@@ -3382,16 +3382,17 @@ blockquote p {
   transition: bottom 1s 1s, left 1s;
 }
 /* line 148, ../scss/collection.scss */
-.memory .upper-section .memory-media .comment-section p {
-  pointer-events: none;
+.memory .upper-section .memory-media .comment-section > a {
   opacity: 1;
   transition: opacity 1s;
 }
-/* line 153, ../scss/collection.scss */
+/* line 152, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section > div {
   opacity: 0;
   transition: opacity 1s;
   width: 500px;
+  margin-top: -25px;
+  pointer-events: none;
 }
 /* line 159, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section hr {
@@ -3420,13 +3421,15 @@ blockquote p {
   transition: width 1s 1s;
 }
 /* line 181, ../scss/collection.scss */
-.memory .upper-section .memory-media .comment-section.expanded p {
+.memory .upper-section .memory-media .comment-section.expanded > a {
   opacity: 0;
+  pointer-events: none;
 }
 /* line 185, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded > div {
   opacity: 1;
   transition: opacity 1s 1s;
+  pointer-events: auto;
 }
 /* line 196, ../scss/collection.scss */
 .memory .metadata {
@@ -3502,32 +3505,40 @@ blockquote p {
 /* line 252, ../scss/collection.scss */
 .comment .content {
   font-family: "kepler-std-display", Georgia, serif;
+  color: #272727;
+  letter-spacing: 1px;
+  text-transform: none;
 }
-/* line 254, ../scss/collection.scss */
+/* line 257, ../scss/collection.scss */
 .comment .content > * {
   display: inline-block;
 }
-/* line 257, ../scss/collection.scss */
+/* line 260, ../scss/collection.scss */
 .comment .content .user-icon {
   height: 40px;
   width: 40px;
 }
-/* line 262, ../scss/collection.scss */
+/* line 265, ../scss/collection.scss */
+.comment .content p {
+  font-style: italic;
+}
+/* line 268, ../scss/collection.scss */
 .comment .content input {
   border: none;
   box-shadow: none;
   background: none;
   margin-bottom: 0;
+  margin-left: 40px;
 }
-/* line 267, ../scss/collection.scss */
+/* line 274, ../scss/collection.scss */
 .comment .content input:focus {
   background: none;
 }
-/* line 272, ../scss/collection.scss */
+/* line 279, ../scss/collection.scss */
 .comment .submit {
   text-align: right;
 }
-/* line 274, ../scss/collection.scss */
+/* line 281, ../scss/collection.scss */
 .comment .submit > * {
   display: inline-block;
 }

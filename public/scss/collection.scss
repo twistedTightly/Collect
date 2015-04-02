@@ -145,16 +145,16 @@
 			 	right: 0;
 		 		-webkit-transition: bottom 1s 1s, left 1s;
 		 		transition: bottom 1s 1s, left 1s;
-		 		p {
-		 			pointer-events: none;
+		 		& > a {
 		 			opacity: 1;
 		 			transition: opacity 1s;
 		 		}
 			 	& > div {
 			 		opacity: 0;
 			 		transition: opacity 1s;
-			 		//display: none;
 			 		width: 500px;
+			 		margin-top: -25px;
+			 		pointer-events: none;
 			 	}
 		 		hr {
 					margin-top: 0;
@@ -178,14 +178,14 @@
 						-webkit-transition: width 1s 1s;
 						transition: width 1s 1s;
 			 		}
-			 		p {
-			 			//display: none;
+			 		& > a {
 			 			opacity: 0;
+			 			pointer-events: none;
 			 		}
 			 		& > div {
-			 			//display: block;
 			 			opacity: 1;
 			 			transition: opacity 1s 1s;
+			 			pointer-events: auto;
 			 		}
 			 	}
 			 }
@@ -251,6 +251,9 @@
  	-webkit-flex-direction: column;
  	.content {
  		font-family: $font-family-serif;
+		color: $black;
+		letter-spacing: 1px;
+		text-transform: none;
  		& > * {
  			display: inline-block;
  		}
@@ -259,11 +262,15 @@
  			width: 40px;
 
  		}
+ 		p {
+ 			font-style: italic;
+ 		}
  		input {
  			border: none;
  			box-shadow: none;
  			background: none;
  			margin-bottom: 0;
+ 			margin-left: 40px;
  			&:focus {
  				background: none;
  			}

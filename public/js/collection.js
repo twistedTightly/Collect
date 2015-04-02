@@ -1,32 +1,33 @@
 // Move comments HTML to sit just below the lower section of the memory
-function showComments() {
-	$( ".comment-section" ).click(function(event) {
-		var bottom, memoryShift;
-		var commentsHeight = $( event.target ).outerHeight();
-		var lowerSectionHeight = $( event.target ).closest( ".upper-section" ).next().outerHeight(true);
-		var memoryMediaHeight = $( event.target ).closest( ".memory-media" ).outerHeight(true);
+function showComments(event) {
 
-		if ($( event.target ).hasClass( "expanded" )) {
+		var commentSection = $( event.target ).closest( ".comment-section" );
+
+		var bottom, memoryShift = 40; // Standard spacing between memories
+		var commentsHeight = commentSection.outerHeight();
+		var lowerSectionHeight = commentSection.closest( ".upper-section" ).next().outerHeight(true);
+		var memoryMediaHeight = commentSection.closest( ".memory-media" ).outerHeight(true);
+
+		if (commentSection.hasClass( "expanded" )) {
 			bottom = memoryMediaHeight
 						- commentsHeight
 						// The height of the media icons for this memory
-						- ($( event.target ).prev().outerHeight(true) 
-							* ($( event.target ).closest( ".memory-media" ).children().length - 1));
-			memoryShift = "40px"; // Standard spacing between memories
+						- (commentSection.prev().outerHeight(true) 
+							* (commentSection.closest( ".memory-media" ).children().length - 1));
 		} else {
 			bottom = -1 * (lowerSectionHeight + commentsHeight);
-			memoryShift = commentsHeight; // Shift following memories down the same height as the comments that will appear
+			memoryShift += commentsHeight; // Shift following memories down the same height as the comments that will appear
 		}
 		// Reposition the comments section, from the side bar to below the relevant memory
-		$( event.target ).css( "bottom", bottom );
-		$( event.target ).toggleClass( "expanded" );
+		commentSection.css( "bottom", bottom );
+		commentSection.toggleClass( "expanded" );
 
 		// Shift the following memories down
-		$( event.target ).closest( ".memory" ).next( ".memory" ).children(0).css( "margin-top", memoryShift );
-	});
+		commentSection.closest( ".memory" ).next( ".memory" ).children(0).css( "margin-top", memoryShift );
 }
 
 // Attaches listeners to the DOM once it has loaded
 $( document ).ready(function() {
-	showComments();
+	$( ".comment-section > a" ).click(showComments);
+	$( ".submit a:last-child" ).click(showComments);
 });
