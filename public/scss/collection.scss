@@ -62,7 +62,6 @@
 }
  /****** Header ******/
 #gallery-header {
-    padding-left: 35px;
     p {
     	margin: 0;
     	display: inline-block;
@@ -71,10 +70,22 @@
 	    font-style: italic;
         font-size: 25pt;
         line-height: 20pt;
+        margin-bottom: 15px;
+        a {
+        	padding-right: 11px;
+        	background-image: url(../images/icons/back_arrow.svg);
+        	background-size: 100% 100%;
+        	margin-bottom: 3.5px; // Vertically align the img with the text
+        	margin-right: 20px;
+        	&:hover {
+        		background-image: url(../images/icons/back_arrow_blue.svg);
+        	}
+        }
 	}
     p.header-text {
         font-size: 12pt;
         line-height: 10pt;
+        padding-left: 35px;
     }
 }
 
