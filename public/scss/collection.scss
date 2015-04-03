@@ -86,10 +86,16 @@
 #memory-gallery {
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
+	.memory:first-child > div:first-child {
+		margin-top: 47px; // Align with top of 'add' button
+	}
 }
 .memory {
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
+	& > div:first-child {
+		margin-top: 100px;
+	}
 	& > * {
 		display: -webkit-flex;
 		margin-top: 40px;
@@ -148,7 +154,6 @@
 		 		& > a {
 		 			opacity: 1;
 		 			transition: opacity 1s;
-		 			margin-top: 8px;
 		 		}
 			 	& > div {
 			 		opacity: 0;
@@ -159,10 +164,10 @@
 			 	}
 		 		hr {
 					margin-top: 0;
-					margin-bottom: 0;
+					margin-bottom: 8px;
 					width: 70px;
 		 			-webkit-transition: width 1s;
-		 			transition: width 1s;
+		 			transition: width 1s, margin-bottom 1s 1s;
 					border-color: $primary-color;
 				}
 			 	&.expanded {
@@ -176,8 +181,9 @@
 			 		hr {
 			 			border-color: $primary-color;
 			 			width: 500px;
+			 			margin-bottom: 0;
 						-webkit-transition: width 1s 1s;
-						transition: width 1s 1s;
+						transition: width 1s 1s, margin-bottom 1s;
 			 		}
 			 		& > a {
 			 			opacity: 0;
@@ -231,10 +237,12 @@
 			margin-bottom: 10px;
 		}
 		.tags {
-			margin-top: 30px;
+			margin-top: 20px;
 			color: $dark-grey;
 			a {
 				color: inherit;
+				font-family: $font-family-monospace-lower;
+				font-size: 10pt;
 				&:hover {
 					color: $anchor-font-color-hover;
 				}
