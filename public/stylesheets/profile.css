@@ -979,7 +979,7 @@ label.error {
 .row {
   width: 100%;
   margin: 0 auto;
-  max-width: 90rem;
+  max-width: 105rem;
 }
 /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
 .row:before, .row:after {
@@ -2518,7 +2518,7 @@ label.error {
   /* line 171, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal {
     width: 80%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2546,7 +2546,7 @@ label.error {
   /* line 185, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.tiny {
     width: 30%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2556,7 +2556,7 @@ label.error {
   /* line 186, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.small {
     width: 40%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2566,7 +2566,7 @@ label.error {
   /* line 187, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.medium {
     width: 60%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2576,7 +2576,7 @@ label.error {
   /* line 188, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.large {
     width: 70%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2586,7 +2586,7 @@ label.error {
   /* line 189, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.xlarge {
     width: 95%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2606,7 +2606,7 @@ label.error {
   /* line 190, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.full {
     width: 100%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
