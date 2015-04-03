@@ -2486,7 +2486,7 @@ label.error {
   left: 0;
   background-color: #FFFFFF;
   padding: 1.875rem;
-  border: solid 1px #666666;
+  border: solid 0px #666666;
   box-shadow: 0 0 10px rgba(39, 39, 39, 0.4);
 }
 @media only screen and (max-width: 40em) {
@@ -2611,13 +2611,13 @@ label.error {
 }
 /* line 206, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
 .reveal-modal .close-reveal-modal {
-  font-size: 2.5rem;
+  font-size: 35px;
   line-height: 1;
   position: absolute;
-  top: 0.625rem;
-  right: 1.375rem;
-  color: #AAAAAA;
-  font-weight: bold;
+  top: 0;
+  right: -45px;
+  color: #FFFFFF;
+  font-weight: normal;
   cursor: pointer;
 }
 

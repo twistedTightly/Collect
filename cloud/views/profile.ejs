@@ -49,9 +49,10 @@
           </div>
           <p>30 memories</p>
 
-          <a href="#" class='button dark' data-reveal-id="add-memory-modal">add a memory</a>
+          <a href="#" class="button dark" data-reveal-id="add-memory-modal">add a memory</a>
 
           <div id="add-memory-modal" class="reveal-modal" data-reveal data-options="animation:fade;">
+            <a class="close-reveal-modal">&#x2715;</a>
             <ul>
               <li><img src="../images/icons/narrative_icon_black.svg" alt="Write" /></li>
               <li><img src="../images/icons/location_icon_black.svg" alt="Location" /></li>
@@ -59,10 +60,62 @@
               <li><img src="../images/icons/sound_icon_black.svg" alt="Listen" /></li>
               <li><img src="../images/icons/connections_icon_black.svg" alt="Connect" /></li>
             </ul>
-            <p>What do you remember?</p>
+            <p id="remember-header">What do you remember?</p>
             <p class="header-text">Begin writing or drag media</p>
-            <a class="close-reveal-modal">&#215;</a>
-          </div>
+
+            <form id="add-memory" name="addMemory" method="put" action="/profile">
+              <div class="row">
+                <label>When was this?</label>
+                <select id="season-month" class="half-width" name="season-month" placeholder="season or month">
+                  <option value="">season or month</option>
+                  <option value="Winter">Winter</option>
+                  <option value="Spring">Spring</option>
+                  <option value="Summer">Summer</option>
+                  <option value="Fall">Fall</option>
+                  <option value="January">January</option>
+                  <option value="February">February</option>
+                  <option value="March">March</option>
+                  <option value="April">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="August">August</option>
+                  <option value="September">September</option>
+                  <option value="October">October</option>
+                  <option value="November">November</option>
+                  <option value="December">December</option>
+                </select>
+                <input type="number" id="day" class="quarter-width" name="day" placeholder="day" />
+                <input type="number" id="year" class="quarter-width" name="year" placeholder="year" />
+              </div>
+
+              <div class="row">
+                <label>Add to Collections:</label>
+                <select id="existing-collection" class="half-width" placeholder="existing collection">
+                  <option value="">existing collection</option>
+                  <option value="Short Title">Short Title</option>
+                  <option value="My Birthday">My Birthday</option>
+                  <option value="Another Collection">Another Collection</option>
+                </select>
+                <input type="text" id="new-collection" class="half-width" placeholder="create new collection" />
+              </div>
+
+              <div class="row">
+                <label id="sharing">Who can see this?</label>
+                <div>
+                  <input type="radio" name="sharing" id="public" value="Public"/>
+                  <label class="header-text" for="public">Public</label><br>
+                  <input type="radio" name="sharing" id="private" value="Private" />
+                  <label class="header-text" for="private">Private</label><br>
+                  <input type="radio" name="sharing" id="specify" value="Specify" />
+                  <label class="header-text" for="specify">Specify</label>
+                </div>
+              </div>
+              <div id="submit">
+                <button class="header-text button dark" type="submit">add</button>
+              </div>
+            </form>
+          </div><!-- End Add Memory modal -->
         </div><!-- End User Information -->
           
         <div id="body-section"> <!-- Body Section. This is where the memories are shown in table form. The memory gallery. -->

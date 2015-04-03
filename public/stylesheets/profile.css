@@ -28,11 +28,110 @@
   /* Safari, Android, iOS */
   font-weight: bold;
 }
-/* line 4, ../scss/_addModal.scss */
+/* line 2, ../scss/_addModal.scss */
+#add-memory-modal {
+  padding-top: 65px;
+  width: 60%;
+}
+/* line 5, ../scss/_addModal.scss */
 #add-memory-modal li {
   height: 27px;
   width: auto;
+  margin-right: 100px;
   display: inline-block;
+}
+/* line 10, ../scss/_addModal.scss */
+#add-memory-modal li img {
+  height: 100%;
+}
+/* line 14, ../scss/_addModal.scss */
+#add-memory-modal li:last-child {
+  margin-right: 0;
+}
+/* line 17, ../scss/_addModal.scss */
+#add-memory-modal #remember-header {
+  color: #5F7F8E;
+  font-style: italic;
+  font-size: 26pt;
+  letter-spacing: 1px;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+/* line 26, ../scss/_addModal.scss */
+#add-memory-modal > p.header-text {
+  color: #979797;
+  font-size: 12pt;
+}
+/* line 30, ../scss/_addModal.scss */
+#add-memory-modal form {
+  text-align: left;
+  padding-top: 65px;
+  width: 90%;
+  margin: auto;
+}
+/* line 35, ../scss/_addModal.scss */
+#add-memory-modal form .row > * {
+  display: inline-block;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  box-shadow: none;
+  outline: none;
+}
+/* line 44, ../scss/_addModal.scss */
+#add-memory-modal form label {
+  font-family: Axel, "Orator Std", monospace;
+  color: #5F7F8E;
+  font-size: 14pt;
+  letter-spacing: 3px;
+}
+/* line 50, ../scss/_addModal.scss */
+#add-memory-modal form input, #add-memory-modal form select {
+  text-align: center;
+  margin-right: 25px;
+  font-style: italic;
+}
+/* line 54, ../scss/_addModal.scss */
+#add-memory-modal form input:last-child, #add-memory-modal form select:last-child {
+  margin-right: 0;
+}
+/* line 58, ../scss/_addModal.scss */
+#add-memory-modal form .half-width, #add-memory-modal form label {
+  width: 265px;
+}
+/* line 61, ../scss/_addModal.scss */
+#add-memory-modal form .quarter-width {
+  width: 120px;
+}
+/* line 64, ../scss/_addModal.scss */
+#add-memory-modal form button {
+  width: 70px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0;
+}
+/* line 69, ../scss/_addModal.scss */
+#add-memory-modal form button:hover {
+  background-color: #5F7F8E;
+  border: #5F7F8E;
+}
+/* line 74, ../scss/_addModal.scss */
+#add-memory-modal form #submit {
+  text-align: right;
+}
+/* line 77, ../scss/_addModal.scss */
+#add-memory-modal form #sharing {
+  vertical-align: top;
+}
+/* line 79, ../scss/_addModal.scss */
+#add-memory-modal form #sharing + div {
+  padding-top: 10px;
+}
+/* line 81, ../scss/_addModal.scss */
+#add-memory-modal form #sharing + div label {
+  color: #979797;
+  font-family: AxelSC, "Orator Std", monospace;
 }
 
 /* line 348, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -2493,7 +2592,7 @@ label.error {
   left: 0;
   background-color: #FFFFFF;
   padding: 1.875rem;
-  border: solid 1px #666666;
+  border: solid 0px #666666;
   box-shadow: 0 0 10px rgba(39, 39, 39, 0.4);
 }
 @media only screen and (max-width: 40em) {
@@ -2618,13 +2717,13 @@ label.error {
 }
 /* line 206, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
 .reveal-modal .close-reveal-modal {
-  font-size: 2.5rem;
+  font-size: 35px;
   line-height: 1;
   position: absolute;
-  top: 0.625rem;
-  right: 1.375rem;
-  color: #AAAAAA;
-  font-weight: bold;
+  top: 0;
+  right: -45px;
+  color: #FFFFFF;
+  font-weight: normal;
   cursor: pointer;
 }
 
