@@ -23,6 +23,11 @@ app.get('/connections', function(req, res) {
 	res.render('connections', { username: ''});
 });
 
+app.get('/profile', function(req, res) {
+	res.render('profile', { username: 'Maribeth Rauh',
+							age: '' });
+});
+
 app.post('/profile', function(req, res) {
 	var age = '';
 	var name = '';
