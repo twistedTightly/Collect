@@ -23,15 +23,13 @@ app.get('/connections', function(req, res) {
 	res.render('connections', { username: ''});
 });
 
-app.get('/profile', function(req, res) {
-	console.log('profile get');
-	console.log(req.query.email);
+app.post('/profile', function(req, res) {
 	var age = '';
 	var name = '';
 
 	// Get the rest of the user's information
 	var query = new Parse.Query(Parse.User);
-	query.equalTo('username', req.query.email);
+	query.equalTo('username', 'mrauh1@nd.edu'); //req.body.email);
 	query.find({
 		// Query was successful
 		success: function(user) {
@@ -41,22 +39,17 @@ app.get('/profile', function(req, res) {
 		},
 		// Query had a error
 		error: function(error) {
-			console.error('failed query');
 			console.log('Error: ' + error.code + ' ' + error.message);
 			age = error.message;
 			name = 'error';
 			res.render('profile', { username: name,
 							age: age });
-
 		}
 	});
-	console.log('about to render');
 });
 
-app.post('/profile', function(req, res) {
-	console.log(req.body);
-	res.render('profile', { username: req.body.firstname,
-							age: '' });
+app.post('/signup', function(req, res) {
+	res.redirect(307, '/profile');
 });
 
 // This line is required to make Express respond to http requests.
