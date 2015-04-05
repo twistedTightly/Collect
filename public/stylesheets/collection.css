@@ -28,6 +28,231 @@
   /* Safari, Android, iOS */
   font-weight: bold;
 }
+/* line 11, ../scss/_addModal.scss */
+.select-style select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+}
+
+/* line 21, ../scss/_addModal.scss */
+.select-style select:focus {
+  outline: none;
+}
+
+/* line 25, ../scss/_addModal.scss */
+#add-memory-modal {
+  padding-top: 65px;
+  width: 60%;
+}
+/* line 28, ../scss/_addModal.scss */
+#add-memory-modal li {
+  height: 27px;
+  width: auto;
+  margin-right: 100px;
+  display: inline-block;
+}
+/* line 33, ../scss/_addModal.scss */
+#add-memory-modal li img {
+  height: 100%;
+}
+/* line 37, ../scss/_addModal.scss */
+#add-memory-modal li:last-child {
+  margin-right: 0;
+}
+/* line 40, ../scss/_addModal.scss */
+#add-memory-modal #remember-header {
+  color: #5F7F8E;
+  font-style: italic;
+  font-size: 26pt;
+  letter-spacing: 1px;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+/* line 49, ../scss/_addModal.scss */
+#add-memory-modal > p.header-text {
+  color: #979797;
+  font-size: 12pt;
+}
+/* line 53, ../scss/_addModal.scss */
+#add-memory-modal form {
+  text-align: left;
+  padding-top: 20px;
+  width: 90%;
+  margin: auto;
+}
+/* line 58, ../scss/_addModal.scss */
+#add-memory-modal form .row > * {
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  box-shadow: none;
+  outline: none;
+}
+/* line 66, ../scss/_addModal.scss */
+#add-memory-modal form label {
+  font-size: 14pt;
+  color: #5F7F8E;
+}
+/* line 70, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row {
+  text-align: right;
+}
+/* line 72, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row .svg-container {
+  margin-top: 35px;
+  height: 27px;
+  width: 100%;
+  text-align: center;
+}
+/* line 78, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row p {
+  font-style: italic;
+  color: #979797;
+  text-align: center;
+  margin-bottom: 25px;
+}
+/* line 84, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row .media-inputs {
+  margin: 0 55px;
+  text-align: center;
+}
+/* line 87, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row .media-inputs > * {
+  display: inline-block;
+}
+/* line 90, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row .media-inputs a.button {
+  color: #FFFFFF;
+  border: none;
+  background: #d8d8d8;
+  background: -moz-linear-gradient(top, #d8d8d8 0%, #979797 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #d8d8d8), color-stop(100%, #979797));
+  background: -webkit-linear-gradient(top, #d8d8d8 0%, #979797 100%);
+  background: -o-linear-gradient(top, #d8d8d8 0%, #979797 100%);
+  background: -ms-linear-gradient(top, #d8d8d8 0%, #979797 100%);
+  background: linear-gradient(to bottom, #d8d8d8 0%, #979797 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8d8d8', endColorstr='#979797', GradientType=0 );
+}
+/* line 102, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row .media-inputs .select-files {
+  width: 290px;
+  height: 48px;
+}
+/* line 106, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row .media-inputs .social-media {
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+}
+/* line 110, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row .media-inputs .social-media:last-child {
+  margin-right: 0;
+}
+/* line 115, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row label {
+  text-align: left;
+  width: auto;
+  margin-bottom: 0;
+  pointer-events: none;
+}
+/* line 121, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row input {
+  border: none;
+  text-align: center;
+  padding-bottom: 0;
+  margin-bottom: -30px;
+}
+/* line 127, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row hr {
+  border-width: 1px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  border-color: #5F7F8E;
+}
+/* line 134, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row a {
+  color: #979797;
+}
+/* line 136, ../scss/_addModal.scss */
+#add-memory-modal form .optional-input.row a:hover {
+  color: #5F7F8E;
+}
+/* line 142, ../scss/_addModal.scss */
+#add-memory-modal form .main-input.row > * {
+  display: inline-block;
+  text-align: right;
+}
+/* line 146, ../scss/_addModal.scss */
+#add-memory-modal form .main-input.row label {
+  font-family: Axel, "Orator Std", monospace;
+  letter-spacing: 3px;
+  text-align: left;
+}
+/* line 152, ../scss/_addModal.scss */
+#add-memory-modal form input, #add-memory-modal form select {
+  text-align: center !important;
+  margin-right: 25px;
+  font-style: italic;
+}
+/* line 156, ../scss/_addModal.scss */
+#add-memory-modal form input:last-child, #add-memory-modal form select:last-child {
+  margin-right: 0;
+}
+/* line 160, ../scss/_addModal.scss */
+#add-memory-modal form .half-width, #add-memory-modal form label {
+  width: 265px;
+}
+/* line 163, ../scss/_addModal.scss */
+#add-memory-modal form .quarter-width {
+  width: 120px;
+}
+/* line 166, ../scss/_addModal.scss */
+#add-memory-modal form #submit {
+  text-align: right;
+}
+/* line 168, ../scss/_addModal.scss */
+#add-memory-modal form #submit button {
+  width: 70px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0;
+}
+/* line 173, ../scss/_addModal.scss */
+#add-memory-modal form #submit button:hover {
+  background-color: #5F7F8E;
+  border: #5F7F8E;
+}
+/* line 179, ../scss/_addModal.scss */
+#add-memory-modal form #sharing {
+  vertical-align: top;
+}
+/* line 181, ../scss/_addModal.scss */
+#add-memory-modal form #sharing + div {
+  padding-top: 10px;
+}
+/* line 183, ../scss/_addModal.scss */
+#add-memory-modal form #sharing + div label {
+  color: #979797;
+  font-family: AxelSC, "Orator Std", monospace;
+}
+/* line 189, ../scss/_addModal.scss */
+#add-memory-modal form #add-info {
+  color: #979797;
+  margin: 65px 0;
+}
+/* line 192, ../scss/_addModal.scss */
+#add-memory-modal form #add-info a {
+  color: #979797;
+  padding-left: 10px;
+}
+
 /* line 348, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.5.1/";
@@ -3213,13 +3438,13 @@ blockquote p {
     font-size: 1rem;
   }
 }
-/* line 8, ../scss/collection.scss */
+/* line 9, ../scss/collection.scss */
 #main {
   display: -webkit-flex;
   padding: 0;
   padding: 50px 126px 252px 40px;
 }
-/* line 12, ../scss/collection.scss */
+/* line 13, ../scss/collection.scss */
 #main #collection {
   -webkit-flex-grow: 1;
 }
@@ -3229,27 +3454,27 @@ blockquote p {
  * Info box
  *
  ********************/
-/* line 22, ../scss/collection.scss */
+/* line 23, ../scss/collection.scss */
 #info-box {
   width: 65px;
   margin-right: 45px;
   -webkit-flex-shrink: 0;
 }
-/* line 26, ../scss/collection.scss */
+/* line 27, ../scss/collection.scss */
 #info-box #profile-pic {
   background-image: url(../images/my-profile-pic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 65px;
 }
-/* line 32, ../scss/collection.scss */
+/* line 33, ../scss/collection.scss */
 #info-box a.button {
   width: 100%;
   padding: 0;
   height: 25px;
   line-height: 25px;
 }
-/* line 38, ../scss/collection.scss */
+/* line 39, ../scss/collection.scss */
 #info-box #back.button {
   background-color: #5F7F8E;
   border-width: 0;
@@ -3258,7 +3483,7 @@ blockquote p {
   -webkit-transition: color 0.5s;
   margin-bottom: 10px;
 }
-/* line 45, ../scss/collection.scss */
+/* line 46, ../scss/collection.scss */
 #info-box #back.button:hover {
   color: rgba(39, 39, 39, 0.7);
   transition: color 0.5s;
@@ -3270,26 +3495,26 @@ blockquote p {
 * Collection
 *
 ********************/
-/* line 59, ../scss/collection.scss */
+/* line 60, ../scss/collection.scss */
 #collection {
   display: -webkit-flex;
   -webkit-flex-direction: column;
 }
 
 /****** Header ******/
-/* line 65, ../scss/collection.scss */
+/* line 66, ../scss/collection.scss */
 #gallery-header p {
   margin: 0;
   display: inline-block;
 }
-/* line 69, ../scss/collection.scss */
+/* line 70, ../scss/collection.scss */
 #gallery-header p#name {
   font-style: italic;
   font-size: 25pt;
   line-height: 20pt;
   margin-bottom: 15px;
 }
-/* line 74, ../scss/collection.scss */
+/* line 75, ../scss/collection.scss */
 #gallery-header p#name a {
   padding-right: 11px;
   background-image: url(../images/icons/back_arrow.svg);
@@ -3297,11 +3522,11 @@ blockquote p {
   margin-bottom: 3.5px;
   margin-right: 20px;
 }
-/* line 80, ../scss/collection.scss */
+/* line 81, ../scss/collection.scss */
 #gallery-header p#name a:hover {
   background-image: url(../images/icons/back_arrow_blue.svg);
 }
-/* line 85, ../scss/collection.scss */
+/* line 86, ../scss/collection.scss */
 #gallery-header p.header-text {
   font-size: 12pt;
   line-height: 10pt;
@@ -3313,53 +3538,53 @@ blockquote p {
 * Memory
 *
 ********************/
-/* line 97, ../scss/collection.scss */
+/* line 98, ../scss/collection.scss */
 #memory-gallery {
   display: -webkit-flex;
   -webkit-flex-direction: column;
 }
-/* line 100, ../scss/collection.scss */
+/* line 101, ../scss/collection.scss */
 #memory-gallery .memory:first-child > div:first-child {
   margin-top: 47px;
 }
 
-/* line 104, ../scss/collection.scss */
+/* line 105, ../scss/collection.scss */
 .memory {
   display: -webkit-flex;
   -webkit-flex-direction: column;
   /****** Upper Section ******/
   /****** Lower Section ******/
 }
-/* line 107, ../scss/collection.scss */
+/* line 108, ../scss/collection.scss */
 .memory > div:first-child {
   margin-top: 100px;
 }
-/* line 110, ../scss/collection.scss */
+/* line 111, ../scss/collection.scss */
 .memory > * {
   display: -webkit-flex;
   margin-top: 40px;
   transition: margin-top 1s;
 }
-/* line 116, ../scss/collection.scss */
+/* line 117, ../scss/collection.scss */
 .memory .center-col {
   -webkit-flex-basis: 800px;
   -webkit-flex-grow: 1;
 }
-/* line 122, ../scss/collection.scss */
+/* line 123, ../scss/collection.scss */
 .memory .upper-section {
   margin-left: 170px;
 }
-/* line 124, ../scss/collection.scss */
+/* line 125, ../scss/collection.scss */
 .memory .upper-section .image {
   background-color: #D8D8D8;
 }
-/* line 126, ../scss/collection.scss */
+/* line 127, ../scss/collection.scss */
 .memory .upper-section .image::after {
   content: '';
   display: block;
   padding-top: 51.875%;
 }
-/* line 132, ../scss/collection.scss */
+/* line 133, ../scss/collection.scss */
 .memory .upper-section .memory-media {
   width: 70px;
   margin-left: 40px;
@@ -3373,24 +3598,24 @@ blockquote p {
   *
   ********************/
 }
-/* line 139, ../scss/collection.scss */
+/* line 140, ../scss/collection.scss */
 .memory .upper-section .memory-media img {
   height: 50px;
   width: auto;
   margin-bottom: 25px;
 }
-/* line 144, ../scss/collection.scss */
+/* line 145, ../scss/collection.scss */
 .memory .upper-section .memory-media > * {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   cursor: pointer;
 }
-/* line 148, ../scss/collection.scss */
+/* line 149, ../scss/collection.scss */
 .memory .upper-section .memory-media > *:hover {
   -webkit-filter: none;
   filter: none;
 }
-/* line 158, ../scss/collection.scss */
+/* line 159, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section {
   text-align: left;
   position: absolute;
@@ -3399,12 +3624,12 @@ blockquote p {
   -webkit-transition: bottom 1s 1s, left 1s;
   transition: bottom 1s 1s, left 1s;
 }
-/* line 165, ../scss/collection.scss */
+/* line 166, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section > a {
   opacity: 1;
   transition: opacity 1s;
 }
-/* line 169, ../scss/collection.scss */
+/* line 170, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section > div {
   opacity: 0;
   transition: opacity 1s;
@@ -3412,7 +3637,7 @@ blockquote p {
   margin-top: -25px;
   pointer-events: none;
 }
-/* line 176, ../scss/collection.scss */
+/* line 177, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section hr {
   margin-top: 0;
   margin-bottom: 8px;
@@ -3421,7 +3646,7 @@ blockquote p {
   transition: width 1s, margin-bottom 1s 1s;
   border-color: #5F7F8E;
 }
-/* line 184, ../scss/collection.scss */
+/* line 185, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded {
   margin-top: 30px;
   filter: none;
@@ -3431,7 +3656,7 @@ blockquote p {
   -webkit-transition: left 1s 1s, bottom 1s;
   transition: left 1s 1s, bottom 1s;
 }
-/* line 192, ../scss/collection.scss */
+/* line 193, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded hr {
   border-color: #5F7F8E;
   width: 500px;
@@ -3439,76 +3664,76 @@ blockquote p {
   -webkit-transition: width 1s 1s;
   transition: width 1s 1s, margin-bottom 1s;
 }
-/* line 199, ../scss/collection.scss */
+/* line 200, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded > a {
   opacity: 0;
   pointer-events: none;
 }
-/* line 203, ../scss/collection.scss */
+/* line 204, ../scss/collection.scss */
 .memory .upper-section .memory-media .comment-section.expanded > div {
   opacity: 1;
   transition: opacity 1s 1s;
   pointer-events: auto;
 }
-/* line 214, ../scss/collection.scss */
+/* line 215, ../scss/collection.scss */
 .memory .metadata {
   -webkit-flex-shrink: 0;
   width: 103px;
 }
-/* line 217, ../scss/collection.scss */
+/* line 218, ../scss/collection.scss */
 .memory .metadata p:first-child {
   margin: 7.5px 0;
 }
-/* line 220, ../scss/collection.scss */
+/* line 221, ../scss/collection.scss */
 .memory .metadata .date {
   line-height: 1;
   color: #5F7F8E;
 }
-/* line 223, ../scss/collection.scss */
+/* line 224, ../scss/collection.scss */
 .memory .metadata .date:first-child {
   margin-top: 12px;
   margin-bottom: 0;
 }
-/* line 229, ../scss/collection.scss */
+/* line 230, ../scss/collection.scss */
 .memory .author-icon {
   -webkit-flex-shrink: 0;
   width: 67px;
 }
-/* line 232, ../scss/collection.scss */
+/* line 233, ../scss/collection.scss */
 .memory .author-icon .user-icon {
   width: 40px;
   height: 40px;
 }
-/* line 237, ../scss/collection.scss */
+/* line 238, ../scss/collection.scss */
 .memory .text.center-col {
   margin-right: 120px;
 }
-/* line 239, ../scss/collection.scss */
+/* line 240, ../scss/collection.scss */
 .memory .text.center-col p:first-child {
   margin-top: 7.5px;
 }
-/* line 242, ../scss/collection.scss */
+/* line 243, ../scss/collection.scss */
 .memory .text.center-col .title:first-child {
   font-style: italic;
   font-size: 22px;
   margin-top: 2.5px;
 }
-/* line 247, ../scss/collection.scss */
+/* line 248, ../scss/collection.scss */
 .memory .text.center-col p {
   margin-bottom: 10px;
 }
-/* line 250, ../scss/collection.scss */
+/* line 251, ../scss/collection.scss */
 .memory .text.center-col .tags {
   margin-top: 20px;
   color: #979797;
 }
-/* line 253, ../scss/collection.scss */
+/* line 254, ../scss/collection.scss */
 .memory .text.center-col .tags a {
   color: inherit;
   font-family: Axel, "Orator Std", monospace;
   font-size: 10pt;
 }
-/* line 257, ../scss/collection.scss */
+/* line 258, ../scss/collection.scss */
 .memory .text.center-col .tags a:hover {
   color: #5F7F8E;
 }
@@ -3518,12 +3743,12 @@ blockquote p {
  * Comment Section
  *
  ********************/
-/* line 269, ../scss/collection.scss */
+/* line 270, ../scss/collection.scss */
 .comment {
   display: -webkit-flex;
   -webkit-flex-direction: column;
 }
-/* line 272, ../scss/collection.scss */
+/* line 273, ../scss/collection.scss */
 .comment .content {
   font-family: "kepler-std-display", Georgia, serif;
   color: #272727;
@@ -3531,23 +3756,23 @@ blockquote p {
   text-transform: none;
   display: -webkit-flex;
 }
-/* line 278, ../scss/collection.scss */
+/* line 279, ../scss/collection.scss */
 .comment .content .user-icon {
   height: 40px;
   width: 40px;
   margin-top: 10px;
   -webkit-flex-shrink: 0;
 }
-/* line 284, ../scss/collection.scss */
+/* line 285, ../scss/collection.scss */
 .comment .content div:last-child {
   margin-left: 20px;
 }
-/* line 287, ../scss/collection.scss */
+/* line 288, ../scss/collection.scss */
 .comment .content p {
   font-style: italic;
   margin-top: 20px;
 }
-/* line 291, ../scss/collection.scss */
+/* line 292, ../scss/collection.scss */
 .comment .content input {
   border: none;
   box-shadow: none;
@@ -3555,24 +3780,24 @@ blockquote p {
   padding-left: 0;
   padding-top: 0;
 }
-/* line 297, ../scss/collection.scss */
+/* line 298, ../scss/collection.scss */
 .comment .content input:focus {
   background: none;
 }
-/* line 302, ../scss/collection.scss */
+/* line 303, ../scss/collection.scss */
 .comment .submit {
   text-align: right;
   color: #979797;
 }
-/* line 305, ../scss/collection.scss */
+/* line 306, ../scss/collection.scss */
 .comment .submit > * {
   display: inline-block;
 }
-/* line 308, ../scss/collection.scss */
+/* line 309, ../scss/collection.scss */
 .comment .submit a {
   color: #979797;
 }
-/* line 310, ../scss/collection.scss */
+/* line 311, ../scss/collection.scss */
 .comment .submit a:hover {
   color: #5F7F8E;
 }
