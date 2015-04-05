@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
+  <head>
+    <% include partials/head.ejs %>
+    <link rel="stylesheet" href="stylesheets/profile.css">
+    <title><%= username %></title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+    	<header>
+        <a href="/profile"><img id="logo" src="images/collect_logo.svg" alt="Logo"></a>
+        <div id="middle"></div>
+        <div id="toolbar">
+          <a href="#">
+            <div class="svg-container">
+              <img id="connections-icon" class="svg-icon" src="images/connections_icon_white.svg" alt="Connections">
+            </div>
+          </a>
+          <a href="#">
+            <div class="svg-container">
+              <img id="messages-icon" class="svg-icon" src="images/messages_icon_white.svg" alt="Messages">
+            </div>
+          </a>
+          <p class="header-text" id="username"><%= username %></p>
+          <div class="user-icon"></div>
+        </div>
+      <!-- NOTE: The following *must* be included as it closes the header tag -->
+      <% include partials/header-end.ejs %>
+
+      <!-- Main body of the site -->
+      <div id="main">
+
+        <!-- User Information. Profile information on the side of the page. -->
+        <div class="header-text" id="user-information">
+
+          <div id="profile-picture">
+            <img src="images/my-profile-pic.jpg" alt="Profile picture">
+          </div>
+        
+          <div class="svg-container" id="user-connections-count">
+            <img class="svg-icon" src="images/icons/connections_icon_black.svg" alt="Connections icon">
+          </div>
+          <p>12 connections</p>
+          <hr />
+          <div class="svg-container" id="user-memories-count">
+            <img class="svg-icon" src="images/icons/narrative_icon_black.svg" alt="Memories icon">
+          </div>
+          <p>30 memories</p>
+
+          <a href="#" class="button dark" data-reveal-id="add-memory-modal">add a memory</a>
+          <% include partials/addModal.ejs %>
+          
+        </div><!-- End User Information -->
+          
+        <div id="body-section"> <!-- Body Section. This is where the memories are shown in table form. The memory gallery. -->
+
+          <div id="gallery-header"> <!-- User Information in the Body Section. Gallery Header. -->
+            <p id="username"><%= username %></p>
+            <div id="user-location">
+              <p class="header-text">Location, Location</p>
+            </div>
+          </div> <!-- End User Information in the Body Section. Gallery Header. -->
+          <div id="gallery"> <!-- Gallery of memory boxes -->
+            <div class="gallery-box four-pic">
+              <div class="content-col">
+                <div class="content"></div>
+                <div class="content"></div>
+              </div>
+              <div class="content-col">
+                <div class="content"></div>
+                <div class="content"></div>
+              </div>
+              <div class="collection-title header-text">short title</div>
+            </div>
+            <div class="gallery-box text-only">
+              <p class="content">Here's a bunch of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum. Here's a bunch of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum. Here's a bunch of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum.</p>
+              <div class="collection-title header-text">title of collection</div>
+            </div>
+            <div class="gallery-box two-pic">
+              <div class="content"></div>
+              <div class="content"></div>
+              <div class="collection-title header-text">short title</div>
+            </div>
+            <div class="gallery-box three-pic">
+              <div class="content"></div>
+              <div class="content"></div>
+              <div class="content"></div>
+              <div class="collection-title header-text">title of collection</div>
+            </div>
+            <div class="gallery-box one-pic">
+              <div class="content"></div>
+              <div class="collection-title header-text">scary long title of a collection</div>
+            </div>
+            <div class="gallery-box four-pic">
+              <div class="content-col">
+                <div class="content"></div>
+                <div class="content"></div>
+              </div>
+              <div class="content-col">
+                <div class="content"></div>
+                <div class="content"></div>
+              </div>
+              <div class="collection-title header-text">short title</div>
+            </div>
+            <div class="gallery-box text-only">
+              <p class="content">Here's a bunch of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum. Here's a bunch of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum. Here's a bunch of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum.</p>
+              <div class="collection-title header-text">short title</div>
+            </div>
+            <div class="gallery-box ghost">
+            </div>
+            <div class="gallery-box ghost">
+            </div>
+            <div class="gallery-box ghost">
+            </div>
+          </div>
+        </div> <!-- End Body Section. The memory gallery. -->
+      </div>
+    </div>
+
+    <% include partials/footer.ejs %>
+    <% include partials/scripts.ejs %>
+  </body>
+</html>
