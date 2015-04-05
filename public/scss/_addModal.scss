@@ -138,7 +138,7 @@
 				}
 			}
 		}
-		.main-input.row {
+		.basic-input.row {
 			& > * {
 				display: inline-block;
 				text-align: right;
@@ -189,10 +189,23 @@
 		#add-info {
 			color: $dark-grey;
 			margin: 65px 0;
-			a {
-				color: $dark-grey;
+			cursor: pointer;
+			span {
 				padding-left: 10px;
 			}
+			&:hover {
+				color: $primary-color;
+			}
+		}
+		#add-info.show ~ .additional-input {
+			max-height: 400px; // Larger than would ever be needed
+			opacity: 1;
+		}
+		.additional-input {
+			max-height: 0;
+			opacity: 0;
+			-webkit-transition: all 1s;
+			transition: all 1s;
 		}
 	}
 }

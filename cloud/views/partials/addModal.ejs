@@ -65,7 +65,7 @@
       <a href="#0" class="header-text">Remove</a>
     </div>
 
-    <div class="main-input row">
+    <div class="basic-input row">
       <label>When was this?</label>
       <select id="season-month" class="half-width" name="season-month" placeholder="season or month">
         <option value="" disabled>season or month</option>
@@ -90,7 +90,7 @@
       <input type="text" id="year" class="quarter-width" name="year" placeholder="year" />
     </div>
 
-    <div class="main-input row">
+    <div class="basic-input row">
       <label>Add to Collections:</label>
       <select id="existing-collection" class="half-width" placeholder="existing collection">
         <option value="" disabled>existing collection</option>
@@ -101,7 +101,7 @@
       <input type="text" id="new-collection" class="half-width" placeholder="create new collection" />
     </div>
 
-    <div class="main-input row">
+    <div class="basic-input row">
       <label id="sharing">Who can see this?</label>
       <div>
         <input type="radio" name="sharing" id="public" value="Public"/>
@@ -113,14 +113,14 @@
       </div>
     </div>
 
-    <p id="add-info" class="header-text">Additional Information<a href="#0">+</a></p>
-    <div class="main-input row">
+    <p id="add-info" class="header-text">Additional Information<span>+</span></p>
+    <div class="basic-input additional-input row">
       <label>Share as a message:</label>
       <input type="text" id="message-recipient" class="half-width" placeholder="user's name" />
       <input type="text" id="message" class="half-width" placeholder="message" />
     </div>
 
-    <div class="main-input row">
+    <div class="basic-input additional-input row">
       <label>Tag content:</label>
       <input type="text" id="tags" class="half-width" placeholder="tags" />
     </div>
@@ -129,4 +129,5 @@
       <button class="header-text button dark" type="submit">add</button>
     </div>
   </form>
+  <script type="text/javascript" src="/js/addModal.js"></script>
 </div><!-- End Add Memory modal -->

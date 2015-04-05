@@ -185,12 +185,12 @@
   color: #5F7F8E;
 }
 /* line 142, ../scss/_addModal.scss */
-#add-memory-modal form .main-input.row > * {
+#add-memory-modal form .basic-input.row > * {
   display: inline-block;
   text-align: right;
 }
 /* line 146, ../scss/_addModal.scss */
-#add-memory-modal form .main-input.row label {
+#add-memory-modal form .basic-input.row label {
   font-family: Axel, "Orator Std", monospace;
   letter-spacing: 3px;
   text-align: left;
@@ -246,11 +246,27 @@
 #add-memory-modal form #add-info {
   color: #979797;
   margin: 65px 0;
+  cursor: pointer;
 }
-/* line 192, ../scss/_addModal.scss */
-#add-memory-modal form #add-info a {
-  color: #979797;
+/* line 193, ../scss/_addModal.scss */
+#add-memory-modal form #add-info span {
   padding-left: 10px;
+}
+/* line 196, ../scss/_addModal.scss */
+#add-memory-modal form #add-info:hover {
+  color: #5F7F8E;
+}
+/* line 200, ../scss/_addModal.scss */
+#add-memory-modal form #add-info.show ~ .additional-input {
+  max-height: 400px;
+  opacity: 1;
+}
+/* line 204, ../scss/_addModal.scss */
+#add-memory-modal form .additional-input {
+  max-height: 0;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 /* line 348, ../bower_components/foundation/scss/foundation/components/_global.scss */
