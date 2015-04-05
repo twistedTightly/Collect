@@ -64,10 +64,64 @@
             <p class="header-text">Begin writing or drag media</p>
 
             <form id="add-memory" name="addMemory" method="put" action="/profile">
-              <div class="row">
+              <div class="optional-input row">
+                <div class="svg-container">
+                  <img class="svg-icon" src="../images/icons/location_icon_black.svg" alt="Location" />
+                </div>
+                <input type="text" id="location" name="location" placeholder="enter an address" />
+                <label class="header-text">Add a location</label>
+                <hr>
+                <a href="#0" class="header-text">Remove</a>
+              </div>
+
+              <div class="optional-input row">
+                <div class="svg-container">
+                  <img class="svg-icon" src="../images/icons/picture_icon_black.svg" alt="Picture" />
+                </div>
+                <p>upload or import</p>
+                <div class="media-inputs">
+                  <a class="header-text button select-files">select files</a>
+                  <p>or</p>
+                  <a class="header-text button social-media">.</a>
+                  <a class="header-text button social-media">.</a>
+                  <a class="header-text button social-media">.</a>
+                  <a class="header-text button social-media">.</a>
+                  <a class="header-text button social-media">.</a>
+                </div>
+                <label class="header-text">Add pictures &amp; video</label>
+                <hr>
+                <a href="#0" class="header-text">Remove</a>
+              </div>
+
+              <div class="optional-input row">
+                <div class="svg-container">
+                  <img class="svg-icon" src="../images/icons/sound_icon_black.svg" alt="Picture" />
+                </div>
+                <p>share a sound</p>
+                <div class="media-inputs">
+                  <a class="header-text button select-files">select files</a>
+                  <p>or</p>
+                  <a class="header-text button select-files">record</a>
+                </div>
+                <label class="header-text">Add pictures &amp; video</label>
+                <hr>
+                <a href="#0" class="header-text">Remove</a>
+              </div>
+
+              <div class="optional-input row">
+                <div class="svg-container">
+                  <img class="svg-icon" src="../images/icons/connections_icon_black.svg" alt="Connections" />
+                </div>
+                <input type="text" id="connection" name="connection" placeholder="tag a connection" />
+                <label class="header-text">Add a friend</label>
+                <hr>
+                <a href="#0" class="header-text">Remove</a>
+              </div>
+
+              <div class="main-input row">
                 <label>When was this?</label>
                 <select id="season-month" class="half-width" name="season-month" placeholder="season or month">
-                  <option value="">season or month</option>
+                  <option value="" disabled>season or month</option>
                   <option value="Winter">Winter</option>
                   <option value="Spring">Spring</option>
                   <option value="Summer">Summer</option>
@@ -85,14 +139,14 @@
                   <option value="November">November</option>
                   <option value="December">December</option>
                 </select>
-                <input type="number" id="day" class="quarter-width" name="day" placeholder="day" />
-                <input type="number" id="year" class="quarter-width" name="year" placeholder="year" />
+                <input type="text" id="day" class="quarter-width" name="day" placeholder="day" />
+                <input type="text" id="year" class="quarter-width" name="year" placeholder="year" />
               </div>
 
-              <div class="row">
+              <div class="main-input row">
                 <label>Add to Collections:</label>
                 <select id="existing-collection" class="half-width" placeholder="existing collection">
-                  <option value="">existing collection</option>
+                  <option value="" disabled>existing collection</option>
                   <option value="Short Title">Short Title</option>
                   <option value="My Birthday">My Birthday</option>
                   <option value="Another Collection">Another Collection</option>
@@ -100,7 +154,7 @@
                 <input type="text" id="new-collection" class="half-width" placeholder="create new collection" />
               </div>
 
-              <div class="row">
+              <div class="main-input row">
                 <label id="sharing">Who can see this?</label>
                 <div>
                   <input type="radio" name="sharing" id="public" value="Public"/>
@@ -111,6 +165,19 @@
                   <label class="header-text" for="specify">Specify</label>
                 </div>
               </div>
+
+              <p id="add-info" class="header-text">Additional Information<a href="#0">+</a></p>
+              <div class="main-input row">
+                <label>Share as a message:</label>
+                <input type="text" id="message-recipient" class="half-width" placeholder="user's name" />
+                <input type="text" id="message" class="half-width" placeholder="message" />
+              </div>
+
+              <div class="main-input row">
+                <label>Tag content:</label>
+                <input type="text" id="tags" class="half-width" placeholder="tags" />
+              </div>
+
               <div id="submit">
                 <button class="header-text button dark" type="submit">add</button>
               </div>

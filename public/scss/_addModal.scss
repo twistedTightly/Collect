@@ -1,4 +1,27 @@
 // SCSS for the Add Memory modal
+
+// Tutorial references for custom form input styling
+//
+// Checkboxes/radio buttons:
+// http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953
+// 
+// Select elements
+// http://tympanus.net/codrops/2014/07/10/inspiration-for-custom-select-elements/
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
 #add-memory-modal {
 	padding-top: 65px;
 	width: 60%;
@@ -29,11 +52,10 @@
 	}
 	form {
 		text-align: left;
-		padding-top: 65px;
+		padding-top: 20px;
 		width: 90%;
 		margin: auto;
 		.row > * {
-			display: inline-block;
 			background: none;
 			border-left: none;
 			border-right: none;
@@ -42,13 +64,93 @@
 			outline: none;
 		}
 		label {
-			font-family: $font-family-monospace-lower;
-			color: $primary-color;
 			font-size: 14pt;
-			letter-spacing: 3px;
+			color: $primary-color;
+		}
+		.optional-input.row {
+			text-align: right;
+			.svg-container {
+				margin-top: 35px; // Spacing between inputs
+				height: 27px;
+				width: 100%;
+				text-align: center;
+			}
+			p {
+				font-style: italic;
+				color: $dark-grey;
+				text-align: center;
+				margin-bottom: 25px; // 35px total between it and buttons below
+			}
+			.media-inputs {
+				margin: 0 55px;
+				text-align: center;
+				& > * {
+					display: inline-block;
+				}
+				a.button {
+					color: $white;
+					border: none;
+					background: rgba(216,216,216,1);
+					background: -moz-linear-gradient(top, rgba(216,216,216,1) 0%, rgba(151,151,151,1) 100%);
+					background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(216,216,216,1)), color-stop(100%, rgba(151,151,151,1)));
+					background: -webkit-linear-gradient(top, rgba(216,216,216,1) 0%, rgba(151,151,151,1) 100%);
+					background: -o-linear-gradient(top, rgba(216,216,216,1) 0%, rgba(151,151,151,1) 100%);
+					background: -ms-linear-gradient(top, rgba(216,216,216,1) 0%, rgba(151,151,151,1) 100%);
+					background: linear-gradient(to bottom, rgba(216,216,216,1) 0%, rgba(151,151,151,1) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8d8d8', endColorstr='#979797', GradientType=0 );
+				}
+				.select-files {
+					width: 290px;
+					height: 48px;
+				}
+				.social-media {
+					width: 48px;
+					height: 48px;
+					margin-right: 12px;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+			label {
+				text-align: left;
+				width: auto;
+				margin-bottom: 0;
+				pointer-events: none;
+			}
+			input {
+				border: none;
+				text-align: center;
+				padding-bottom: 0;
+				margin-bottom: -30px; // Vertically aligning it with the label text
+			}
+			hr {
+				border-width: 1px;
+				width: 100%;
+				margin-top: 5px;
+				margin-bottom: 2px; // 'Remove' should be 10px below it
+				border-color: $primary-color;
+			}
+			a {
+				color: $dark-grey;
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+		.main-input.row {
+			& > * {
+				display: inline-block;
+				text-align: right;
+			}
+			label {
+				font-family: $font-family-monospace-lower;
+				letter-spacing: 3px;
+				text-align: left;
+			}
 		}
 		input, select {
-			text-align: center;
+			text-align: center !important;
 			margin-right: 25px;
 			font-style: italic;
 			&:last-child {
@@ -61,18 +163,18 @@
 		.quarter-width {
 			width: 120px;
 		}
-		button {
-			width: 70px;
-			height: 45px;
-			line-height: 45px;
-			padding: 0;
-			&:hover {
-				background-color: $primary-color;
-				border: $primary-color;
-			}
-		}
 		#submit {
 			text-align: right;
+			button {
+				width: 70px;
+				height: 45px;
+				line-height: 45px;
+				padding: 0;
+				&:hover {
+					background-color: $primary-color;
+					border: $primary-color;
+				}
+			}
 		}
 		#sharing {
 			vertical-align: top;
@@ -82,6 +184,14 @@
 					color: $dark-grey;
 					font-family: $font-family-monospace;
 				}
+			}
+		}
+		#add-info {
+			color: $dark-grey;
+			margin: 65px 0;
+			a {
+				color: $dark-grey;
+				padding-left: 10px;
 			}
 		}
 	}
