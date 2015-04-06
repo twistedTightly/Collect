@@ -30,6 +30,7 @@
 		width: auto;
 		margin-right: 100px;
 		display: inline-block;
+		cursor: pointer;
 		img {
 			height: 100%;
 		}
@@ -196,10 +197,10 @@
 			&:hover {
 				color: $primary-color;
 			}
-		}
-		#add-info.show ~ .additional-input {
-			max-height: 400px; // Larger than would ever be needed
-			opacity: 1;
+			&.show ~ .additional-input {
+				max-height: 400px; // Larger than would ever be needed
+				opacity: 1;
+			}
 		}
 		.additional-input {
 			max-height: 0;
