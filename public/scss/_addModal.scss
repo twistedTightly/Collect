@@ -32,6 +32,7 @@
 		display: inline-block;
 		cursor: pointer;
 		img {
+			pointer-events: none;
 			height: 100%;
 		}
 	}
@@ -70,6 +71,10 @@
 		}
 		.optional-input.row {
 			text-align: right;
+			max-height: 0;
+			opacity: 0;
+			transition: all 1s;
+			-webkit-transition: all 1s;
 			.svg-container {
 				margin-top: 35px; // Spacing between inputs
 				height: 27px;
@@ -138,7 +143,10 @@
 					color: $primary-color;
 				}
 			}
-		}
+			&.show {
+				max-height: 1000px; // Larger than would ever be needed
+				opacity: 1;			}
+		} // End .optional-inputs
 		.basic-input.row {
 			& > * {
 				display: inline-block;
@@ -148,12 +156,14 @@
 				font-family: $font-family-monospace-lower;
 				letter-spacing: 3px;
 				text-align: left;
+				margin-right: 17px; // TODO: Use flexbox so this adjusts automatically
 			}
 		}
 		input, select {
 			text-align: center !important;
 			margin-right: 25px;
 			font-style: italic;
+			font-size: 1rem;
 			&:last-child {
 				margin-right: 0;
 			}

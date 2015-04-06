@@ -1,4 +1,4 @@
-// Move comments HTML to sit just below the lower section of the memory
+// Show or hide the "additional information" form inputs
 function showAdditionalInput(event) {
 	$( event.target ).toggleClass( "show" );
 	if ($( event.target ).hasClass( "show" )) {
@@ -8,7 +8,13 @@ function showAdditionalInput(event) {
 	}
 }
 
+function showOptionalInput(event) {
+	var optionalInputId = ".optional-input.row#" + event.target.id;
+	$( optionalInputId ).toggleClass( "show" );
+}
+
 // Attaches listeners to the DOM once it has loaded
 $( document ).ready(function() {
 	$( "#add-info" ).click(showAdditionalInput);
+	$( "#add-memory-modal ul li" ).click(showOptionalInput);
 });

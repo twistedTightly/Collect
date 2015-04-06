@@ -1,17 +1,17 @@
 <div id="add-memory-modal" class="reveal-modal" data-reveal data-options="animation:fade;">
   <a class="close-reveal-modal">&#x2715;</a>
   <ul>
-    <li><img src="../images/icons/narrative_icon_black.svg" alt="Write" /></li>
-    <li><img src="../images/icons/location_icon_black.svg" alt="Location" /></li>
-    <li><img src="../images/icons/picture_icon_black.svg" alt="Picture" /></li>
-    <li><img src="../images/icons/sound_icon_black.svg" alt="Listen" /></li>
-    <li><img src="../images/icons/connections_icon_black.svg" alt="Connect" /></li>
+    <li id="write" class=""><img src="../images/icons/narrative_icon_black.svg" alt="Write" /></li>
+    <li id="location" class=""><img src="../images/icons/location_icon_black.svg" alt="Location" /></li>
+    <li id="picture" class=""><img src="../images/icons/picture_icon_black.svg" alt="Picture" /></li>
+    <li id="listen" class=""><img src="../images/icons/sound_icon_black.svg" alt="Listen" /></li>
+    <li id="connect" class=""><img src="../images/icons/connections_icon_black.svg" alt="Connect" /></li>
   </ul>
   <p id="remember-header">What do you remember?</p>
   <p class="header-text">Begin writing or drag media</p>
 
   <form id="add-memory" name="addMemory" method="put" action="/profile">
-    <div class="optional-input row">
+    <div id="location" class="optional-input row">
       <div class="svg-container">
         <img class="svg-icon" src="../images/icons/location_icon_black.svg" alt="Location" />
       </div>
@@ -21,7 +21,7 @@
       <a href="#0" class="header-text">Remove</a>
     </div>
 
-    <div class="optional-input row">
+    <div id="picture" class="optional-input row">
       <div class="svg-container">
         <img class="svg-icon" src="../images/icons/picture_icon_black.svg" alt="Picture" />
       </div>
@@ -40,7 +40,7 @@
       <a href="#0" class="header-text">Remove</a>
     </div>
 
-    <div class="optional-input row">
+    <div id="listen" class="optional-input row">
       <div class="svg-container">
         <img class="svg-icon" src="../images/icons/sound_icon_black.svg" alt="Picture" />
       </div>
@@ -55,7 +55,7 @@
       <a href="#0" class="header-text">Remove</a>
     </div>
 
-    <div class="optional-input row">
+    <div id="connect" class="optional-input row">
       <div class="svg-container">
         <img class="svg-icon" src="../images/icons/connections_icon_black.svg" alt="Connections" />
       </div>
