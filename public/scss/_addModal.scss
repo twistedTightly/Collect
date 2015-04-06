@@ -24,11 +24,23 @@
 
 #add-memory-modal {
 	padding-top: 65px;
+	padding-bottom: 65px;
 	width: 60%;
+	max-height: 100%;
+	overflow-y: scroll;
+	overflow-x: inherit;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	ul {
+		margin: 0;
+	}
 	li {
 		height: 27px;
 		width: auto;
 		margin-right: 100px;
+		transition: margin-right 1s;
+		-webkit-transition: margin-right 1s;
 		display: inline-block;
 		cursor: pointer;
 		img {
@@ -48,9 +60,21 @@
 		padding-top: 25px;
 		padding-bottom: 15px;
 	}
-	& > p.header-text {
-		color: $dark-grey;
-		font-size: 12pt;
+	& > p {
+		cursor: auto;
+		max-height: 0;
+		opacity: 0;
+		transition: opacity 1s, max-height 1s 0.5s;
+		-webkit-transition: opacity 1s, max-height 1s 0.5s;
+		&.show {
+			max-height: 500px;
+			opacity: 1;
+			cursor: pointer;
+		}
+		.header-text {
+			color: $dark-grey;
+			font-size: 12pt;
+		}
 	}
 	form {
 		text-align: left;
@@ -69,6 +93,36 @@
 			font-size: 14pt;
 			color: $primary-color;
 		}
+		#write {
+			opacity: 0;
+			max-height: 0;
+			transition: opacity 1s 1s, max-height 2s 1s;
+			-webkit-transition: opacity 1s 1s, max-height 2s 1s;
+			input {
+				padding-left: 0;
+				font-style: italic;
+				font-size: 13pt;
+				border: none;
+				text-align: left;
+			}
+			textarea {
+				padding-left: 0;
+				resize: none;
+				border: none;
+				&:focus {
+					outline: none;
+				}
+			}
+			&.show {
+				opacity: 1;
+				max-height: 2000px;
+			}
+		}
+		#optional {
+			margin-bottom: 0;
+			transition: margin-bottom 1s;
+			-webkit-transition: margin-bottom 1s;
+		}
 		.optional-input.row {
 			text-align: right;
 			max-height: 0;
@@ -85,7 +139,7 @@
 				font-style: italic;
 				color: $dark-grey;
 				text-align: center;
-				margin-bottom: 25px; // 35px total between it and buttons below
+				margin: 0 22px 25px 22px; // 35px total between it and buttons below
 			}
 			.media-inputs {
 				margin: 0 55px;
@@ -147,6 +201,9 @@
 				max-height: 1000px; // Larger than would ever be needed
 				opacity: 1;			}
 		} // End .optional-inputs
+		#basic {
+			margin-top: 30px;
+		}
 		.basic-input.row {
 			& > * {
 				display: inline-block;
@@ -158,9 +215,11 @@
 				text-align: left;
 				margin-right: 17px; // TODO: Use flexbox so this adjusts automatically
 			}
+			input, select {
+				text-align: center;
+			}
 		}
 		input, select {
-			text-align: center !important;
 			margin-right: 25px;
 			font-style: italic;
 			font-size: 1rem;
@@ -176,6 +235,9 @@
 		}
 		#submit {
 			text-align: right;
+			margin-top: -150px;
+			transition: margin-top 1s;
+			-webkit-transition: margin-top 1s;
 			button {
 				width: 70px;
 				height: 45px;
@@ -201,6 +263,8 @@
 			color: $dark-grey;
 			margin: 65px 0;
 			cursor: pointer;
+			transition: margin-bottom 1s;
+			-webkit-transition: margin-bottom 1s;
 			span {
 				padding-left: 10px;
 			}
