@@ -23,6 +23,7 @@ var regularIcons = {
 // Replace the header with the "write" section
 function showWriteInput(event) {
 	$( "#write.row" ).addClass( "show" );
+	$( "#write.row" ).css( "pointer-events", "auto" );
 	$( "#add-memory-modal > p" ).removeClass( "show" );
 
 	// Change media icons to have titles and animate
@@ -59,10 +60,22 @@ function showAdditionalInput(event) {
 function showOptionalInput(event) {
 	var optionalInputId = ".row#" + event.target.id;
 	$( optionalInputId ).toggleClass( "show" );
+
+	// Make icon appear in color
 	if (event.target.id !== "write") {
 		$( event.target ).toggleClass( "bw" );
 	}
 
+	// Toggle pointer events
+	// They need to be disabled when the input isn't shown so it doesn't override
+	// the inputs it's behind
+	if ($( optionalInputId ).hasClass( "show" )) {
+		$( optionalInputId ).css( "pointer-events", "auto" );
+	} else {
+		$( optionalInputId ).css( "pointer-events", "none" );
+	}
+
+	// Add extra spacing below all option inputs if any optional input is open
 	if ($( ".optional-input" ).hasClass( "show" )) {
 		$( "#optional" ).css( "margin-bottom", "104px" );
 	} else {
