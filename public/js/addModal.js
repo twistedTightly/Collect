@@ -75,9 +75,50 @@ function showOptionalInput(event) {
 	}
 }
 
+function showTitledIcon(event) {
+	// The hover effect only occurs if the top inputs haven't been clicked on yet
+	if (!$( "#write.row" ).hasClass( "show" )) {
+		$( event.target ).children( "img" ).attr( "src", titledIcons[event.target.id]["color"] );
+		$( event.target ).css({
+				"height": "42px",
+				"width": "71px" 
+		});
+		// Because the titled icons are wider, the margins have to be adjusted in order to
+		// keep the icons in place
+		if ( event.target.id === "write" ) {
+			$( event.target ).next().css( "margin-left", "-30px" );
+		} else {
+			$( event.target ).css( "margin-left", "-30px" );
+			$( event.target ).toggleClass( "bw" );
+		}
+		$( "p#remember-header" ).css( "padding-top", "10px" );
+	}
+}
+
+function hideTitledIcon(event) {
+	// The hover effect only occurs if the top inputs haven't been clicked on yet
+	if (!$( "#write.row" ).hasClass( "show" )) {
+		$( event.target ).children( "img" ).attr( "src", regularIcons[event.target.id] );
+		$( event.target ).css({
+				"height": "27px",
+				"width": "auto" 
+		});
+		// Because the titled icons are wider, the margins have to be adjusted in order to
+		// keep the icons in place
+		if ( event.target.id === "write" ) {
+			$( event.target ).next().css( "margin-left", "0" );
+		} else {
+			$( event.target ).css( "margin-left", "0" );
+			$( event.target ).toggleClass( "bw" );
+		}
+		$( "p#remember-header" ).css( "padding-top", "25px" );
+	}
+}
+
 // Attaches listeners to the DOM once it has loaded
 $( document ).ready(function() {
 	$( "#add-memory-modal > p" ).click(showWriteInput);
 	$( "#add-info" ).click(showAdditionalInput);
 	$( "#add-memory-modal ul li" ).click(showOptionalInput);
+	//$( "#add-memory-modal ul li" ).hover(showTitledIcon, hideTitledIcon);
 });
