@@ -16,15 +16,26 @@ app.get('/', function(req, res) {
 });
 
 app.get('/collection', function(req, res) {
-	res.render('collection', { username: ''});
+	res.render('collection', { 	username: 		'Elizabeth Pollard',
+								collectionName: ''});
+});
+
+app.get('/collection/summer-in-co', function(req, res) {
+	res.render('collection', { 	username: 		'Elizabeth Pollard',
+								collectionName: 'Summer in Colorado'});
+});
+
+app.get('/collection/emmies-first-year', function(req, res) {
+	res.render('collection', { 	username: 		'Elizabeth Pollard',
+								collectionName: 'Emmie’s First Year'});
 });
 
 app.get('/connections', function(req, res) {
-	res.render('connections', { username: ''});
+	res.render('connections', { username: 'Elizabeth Pollard'});
 });
 
 app.get('/profile', function(req, res) {
-	res.render('profile', { username: 'Maribeth Rauh',
+	res.render('profile', { username: 'Elizabeth Pollard',
 							age: '' });
 });
 
