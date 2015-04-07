@@ -22,6 +22,11 @@
     outline: none;
 }
 
+.bw {
+	-webkit-filter: grayscale(100%) brightness(10%) contrast(100%);
+			filter: grayscale(100%) brightness(10%) contrast(100%);
+}
+
 #add-memory-modal {
 	padding-top: 65px;
 	padding-bottom: 65px;
@@ -71,7 +76,7 @@
 			opacity: 1;
 			cursor: pointer;
 		}
-		.header-text {
+		&.header-text {
 			color: $dark-grey;
 			font-size: 12pt;
 		}
