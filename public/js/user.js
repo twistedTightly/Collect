@@ -1,6 +1,6 @@
 Parse.initialize("zJmWzfcq3FcJAK4YcVpMt2EA9DScA5cgtQabb1Jo", "jInuu7BeuMeLlNocKR1DYkOiJpvPiCUcydpJuZlD");
 
-$('#sign-up').on('submit', function(){
+$('#sign-up').on('submit', function(event){
   var user = new Parse.User();
 
   // Get user information from inputs
@@ -30,7 +30,7 @@ $('#sign-up').on('submit', function(){
       alert("Error: " + error.code + " " + error.message);
     }
   });
-  alert("Thanks for joining our mailing list! This version is currently in beta.\nTry logging in as...");
+  alert("Thanks for joining our mailing list! This version is currently in beta.\nPlease log in as Elizabeth Pollard.\n\nUsername: elizabeth@gmail.com\nPassword: elizabeth");
   return false;
 });
 
