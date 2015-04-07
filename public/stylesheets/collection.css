@@ -28,7 +28,321 @@
   /* Safari, Android, iOS */
   font-weight: bold;
 }
-/* line 11, ../scss/_addModal.scss */
+/* line 5, ../scss/_basicSelect.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 6, ../scss/_basicSelect.scss */
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table;
+}
+
+/* line 7, ../scss/_basicSelect.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* Default custom select styles */
+/* line 10, ../scss/_basicSelect.scss */
+div.cs-select {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: left;
+  background: #fff;
+  z-index: 100;
+  width: 100%;
+  max-width: 500px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 27, ../scss/_basicSelect.scss */
+div.cs-select:focus {
+  outline: none;
+  /* For better accessibility add a style for this in your skin */
+}
+
+/* line 31, ../scss/_basicSelect.scss */
+.cs-select select {
+  display: none;
+}
+
+/* line 35, ../scss/_basicSelect.scss */
+.cs-select span {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Placeholder and selected option */
+/* line 46, ../scss/_basicSelect.scss */
+.cs-select > span {
+  padding-right: 3em;
+}
+
+/* line 50, ../scss/_basicSelect.scss */
+.cs-select > span::after,
+.cs-select .cs-selected span::after {
+  speak: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 61, ../scss/_basicSelect.scss */
+.cs-select > span::after {
+  content: '\25BE';
+  right: 1em;
+}
+
+/* line 66, ../scss/_basicSelect.scss */
+.cs-select .cs-selected span::after {
+  content: '\2713';
+  margin-left: 1em;
+}
+
+/* line 71, ../scss/_basicSelect.scss */
+.cs-select.cs-active > span::after {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* line 76, ../scss/_basicSelect.scss */
+div.cs-active {
+  z-index: 200;
+}
+
+/* Options */
+/* line 81, ../scss/_basicSelect.scss */
+.cs-select .cs-options {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  visibility: hidden;
+}
+
+/* line 89, ../scss/_basicSelect.scss */
+.cs-select.cs-active .cs-options {
+  visibility: visible;
+}
+
+/* line 93, ../scss/_basicSelect.scss */
+.cs-select ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 100, ../scss/_basicSelect.scss */
+.cs-select ul span {
+  padding: 1em;
+}
+
+/* line 104, ../scss/_basicSelect.scss */
+.cs-select ul li.cs-focus span {
+  background-color: #ddd;
+}
+
+/* Optgroup and optgroup label */
+/* line 109, ../scss/_basicSelect.scss */
+.cs-select li.cs-optgroup ul {
+  padding-left: 1em;
+}
+
+/* line 113, ../scss/_basicSelect.scss */
+.cs-select li.cs-optgroup > span {
+  cursor: default;
+}
+
+/* line 4, ../scss/_slideSelect.scss */
+div.cs-skin-slide {
+  color: #fff;
+  font-size: 1.5em;
+  width: 300px;
+}
+
+@media screen and (max-width: 30em) {
+  /* line 11, ../scss/_slideSelect.scss */
+  div.cs-skin-slide {
+    font-size: 1em;
+    width: 250px;
+  }
+}
+/* line 14, ../scss/_slideSelect.scss */
+div.cs-skin-slide::before {
+  content: '';
+  background: #282b30;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+/* line 28, ../scss/_slideSelect.scss */
+.cs-skin-slide.cs-active::before {
+  -webkit-transform: scale3d(1.1, 3.5, 1);
+  transform: scale3d(1.1, 3.5, 1);
+}
+
+/* line 33, ../scss/_slideSelect.scss */
+.cs-skin-slide > span {
+  height: 80px;
+  line-height: 32px;
+  -webkit-transition: text-indent 0.3s, opacity 0.3s;
+  transition: text-indent 0.3s, opacity 0.3s;
+}
+
+@media screen and (max-width: 30em) {
+  /* line 41, ../scss/_slideSelect.scss */
+  .cs-skin-slide > span {
+    height: 60px;
+    line-height: 28px;
+  }
+}
+/* line 44, ../scss/_slideSelect.scss */
+.cs-skin-slide.cs-active > span {
+  text-indent: -290px;
+  opacity: 0;
+}
+
+/* line 49, ../scss/_slideSelect.scss */
+.cs-skin-slide > span::after,
+.cs-skin-slide.cs-active > span::after {
+  font-family: 'icomoon';
+  content: '\e00f';
+  color: #eb7e7f;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 58, ../scss/_slideSelect.scss */
+.cs-skin-slide.cs-active > span::after {
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+/* line 63, ../scss/_slideSelect.scss */
+.cs-skin-slide .cs-options {
+  background: transparent;
+  width: 70%;
+  height: 400%;
+  padding: 1.9em 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@media screen and (max-width: 30em) {
+  /* line 75, ../scss/_slideSelect.scss */
+  .cs-skin-slide .cs-options {
+    padding-top: 3em;
+  }
+}
+/* line 78, ../scss/_slideSelect.scss */
+.cs-skin-slide .cs-options li {
+  opacity: 0;
+  -webkit-transform: translate3d(30%, 0, 0);
+  transform: translate3d(30%, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* line 86, ../scss/_slideSelect.scss */
+.cs-skin-slide.cs-active .cs-options li {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+/* line 92, ../scss/_slideSelect.scss */
+.cs-skin-slide.cs-active .cs-options li:first-child {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+/* line 97, ../scss/_slideSelect.scss */
+.cs-skin-slide.cs-active .cs-options li:nth-child(2) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+/* line 102, ../scss/_slideSelect.scss */
+.cs-skin-slide.cs-active .cs-options li:nth-child(3) {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+/* line 107, ../scss/_slideSelect.scss */
+.cs-skin-slide.cs-active .cs-options li:nth-child(4) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+/* line 112, ../scss/_slideSelect.scss */
+.cs-skin-slide.cs-active .cs-options li:nth-child(5) {
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+
+/* more options need more delay declaration */
+/* line 117, ../scss/_slideSelect.scss */
+.cs-skin-slide .cs-options li span {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 65%;
+  padding: 0.8em 1em 0.8em 2.5em;
+}
+
+/* line 125, ../scss/_slideSelect.scss */
+.cs-skin-slide .cs-options li span:hover,
+.cs-skin-slide .cs-options li.cs-focus span,
+.cs-skin-slide .cs-options li.cs-selected span {
+  color: #eb7e7f;
+  background: transparent;
+}
+
+/* line 132, ../scss/_slideSelect.scss */
+.cs-skin-slide .cs-selected span::after {
+  content: '';
+}
+
+/* line 136, ../scss/_slideSelect.scss */
+[class^="icon-"] span:before,
+[class*=" icon-"] span:before {
+  font-family: 'icomoon';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  font-size: 1.5em;
+}
+
+/* line 6, ../scss/_addModal.scss */
 .select-style select {
   padding: 5px 8px;
   width: 130%;
@@ -39,18 +353,18 @@
   -webkit-appearance: none;
 }
 
-/* line 21, ../scss/_addModal.scss */
+/* line 16, ../scss/_addModal.scss */
 .select-style select:focus {
   outline: none;
 }
 
-/* line 25, ../scss/_addModal.scss */
+/* line 20, ../scss/_addModal.scss */
 .bw {
   -webkit-filter: grayscale(100%) brightness(10%) contrast(100%);
   filter: grayscale(100%) brightness(10%) contrast(100%);
 }
 
-/* line 30, ../scss/_addModal.scss */
+/* line 25, ../scss/_addModal.scss */
 #add-memory-modal {
   padding-top: 65px;
   padding-bottom: 65px;
@@ -59,15 +373,15 @@
   overflow-y: scroll;
   overflow-x: inherit;
 }
-/* line 37, ../scss/_addModal.scss */
+/* line 32, ../scss/_addModal.scss */
 #add-memory-modal::-webkit-scrollbar {
   display: none;
 }
-/* line 40, ../scss/_addModal.scss */
+/* line 35, ../scss/_addModal.scss */
 #add-memory-modal ul {
   margin: 0;
 }
-/* line 43, ../scss/_addModal.scss */
+/* line 38, ../scss/_addModal.scss */
 #add-memory-modal li {
   height: 27px;
   width: auto;
@@ -77,16 +391,16 @@
   display: inline-block;
   cursor: pointer;
 }
-/* line 51, ../scss/_addModal.scss */
+/* line 46, ../scss/_addModal.scss */
 #add-memory-modal li img {
   pointer-events: none;
   height: 100%;
 }
-/* line 56, ../scss/_addModal.scss */
+/* line 51, ../scss/_addModal.scss */
 #add-memory-modal li:last-child {
   margin-right: 0;
 }
-/* line 59, ../scss/_addModal.scss */
+/* line 54, ../scss/_addModal.scss */
 #add-memory-modal #remember-header {
   color: #5F7F8E;
   font-style: italic;
@@ -95,7 +409,7 @@
   padding-top: 25px;
   padding-bottom: 15px;
 }
-/* line 68, ../scss/_addModal.scss */
+/* line 63, ../scss/_addModal.scss */
 #add-memory-modal > p {
   cursor: auto;
   max-height: 0;
@@ -103,25 +417,25 @@
   transition: opacity 1s, max-height 1s 0.5s;
   -webkit-transition: opacity 1s, max-height 1s 0.5s;
 }
-/* line 74, ../scss/_addModal.scss */
+/* line 69, ../scss/_addModal.scss */
 #add-memory-modal > p.show {
   max-height: 500px;
   opacity: 1;
   cursor: pointer;
 }
-/* line 79, ../scss/_addModal.scss */
+/* line 74, ../scss/_addModal.scss */
 #add-memory-modal > p.header-text {
   color: #979797;
   font-size: 12pt;
 }
-/* line 84, ../scss/_addModal.scss */
+/* line 79, ../scss/_addModal.scss */
 #add-memory-modal form {
   text-align: left;
   padding-top: 20px;
   width: 90%;
   margin: auto;
 }
-/* line 89, ../scss/_addModal.scss */
+/* line 84, ../scss/_addModal.scss */
 #add-memory-modal form .row > * {
   background: none;
   border-left: none;
@@ -130,19 +444,19 @@
   box-shadow: none;
   outline: none;
 }
-/* line 97, ../scss/_addModal.scss */
+/* line 92, ../scss/_addModal.scss */
 #add-memory-modal form label {
   font-size: 14pt;
   color: #5F7F8E;
 }
-/* line 101, ../scss/_addModal.scss */
+/* line 96, ../scss/_addModal.scss */
 #add-memory-modal form #write {
   opacity: 0;
   max-height: 0;
   transition: opacity 1s 1s, max-height 2s 1s;
   -webkit-transition: opacity 1s 1s, max-height 2s 1s;
 }
-/* line 106, ../scss/_addModal.scss */
+/* line 102, ../scss/_addModal.scss */
 #add-memory-modal form #write input {
   padding-left: 0;
   font-style: italic;
@@ -150,101 +464,102 @@
   border: none;
   text-align: left;
 }
-/* line 113, ../scss/_addModal.scss */
+/* line 109, ../scss/_addModal.scss */
 #add-memory-modal form #write textarea {
   padding-left: 0;
   resize: none;
   border: none;
 }
-/* line 117, ../scss/_addModal.scss */
+/* line 113, ../scss/_addModal.scss */
 #add-memory-modal form #write textarea:focus {
   outline: none;
 }
-/* line 121, ../scss/_addModal.scss */
+/* line 117, ../scss/_addModal.scss */
 #add-memory-modal form #write.show {
   opacity: 1;
   max-height: 2000px;
 }
-/* line 126, ../scss/_addModal.scss */
+/* line 122, ../scss/_addModal.scss */
 #add-memory-modal form #optional {
   margin-bottom: 0;
   transition: margin-bottom 1s;
   -webkit-transition: margin-bottom 1s;
 }
-/* line 131, ../scss/_addModal.scss */
+/* line 127, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row {
+  pointer-events: none;
   text-align: right;
   max-height: 0;
   opacity: 0;
   transition: all 1s;
   -webkit-transition: all 1s;
 }
-/* line 137, ../scss/_addModal.scss */
+/* line 134, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row .svg-container {
   margin-top: 35px;
   height: 27px;
   width: 100%;
   text-align: center;
 }
-/* line 143, ../scss/_addModal.scss */
+/* line 140, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row p {
   font-style: italic;
   color: #979797;
   text-align: center;
   margin: 0 22px 25px 22px;
 }
-/* line 149, ../scss/_addModal.scss */
+/* line 146, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row .media-inputs {
   margin: 0 55px;
   text-align: center;
 }
-/* line 152, ../scss/_addModal.scss */
+/* line 149, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row .media-inputs > * {
   display: inline-block;
 }
-/* line 155, ../scss/_addModal.scss */
+/* line 152, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row .media-inputs a.button {
   color: #FFFFFF;
   border: none;
 }
-/* line 159, ../scss/_addModal.scss */
+/* line 156, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row .media-inputs .select-files {
   width: 290px;
   height: 48px;
   background-image: url(../images/buttons/horiz_icons.svg);
   background-size: fill;
 }
-/* line 165, ../scss/_addModal.scss */
+/* line 162, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row .media-inputs .social-media {
   width: 48px;
   height: 48px;
   padding: 0;
   margin-right: 12px;
 }
-/* line 170, ../scss/_addModal.scss */
+/* line 167, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row .media-inputs .social-media img {
   height: 100%;
   width: 100%;
 }
-/* line 174, ../scss/_addModal.scss */
+/* line 171, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row .media-inputs .social-media:last-child {
   margin-right: 0;
 }
-/* line 179, ../scss/_addModal.scss */
+/* line 176, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row label {
   text-align: left;
   width: auto;
   margin-bottom: 0;
   pointer-events: none;
 }
-/* line 185, ../scss/_addModal.scss */
+/* line 182, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row input {
   border: none;
   text-align: center;
   padding-bottom: 0;
   margin-bottom: -30px;
 }
-/* line 191, ../scss/_addModal.scss */
+/* line 188, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row hr {
   border-width: 1px;
   width: 100%;
@@ -252,90 +567,90 @@
   margin-bottom: 2px;
   border-color: #5F7F8E;
 }
-/* line 198, ../scss/_addModal.scss */
+/* line 195, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row a {
   color: #979797;
 }
-/* line 200, ../scss/_addModal.scss */
+/* line 197, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row a:hover {
   color: #5F7F8E;
 }
-/* line 204, ../scss/_addModal.scss */
+/* line 201, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row.show {
   max-height: 1000px;
   opacity: 1;
 }
-/* line 208, ../scss/_addModal.scss */
+/* line 205, ../scss/_addModal.scss */
 #add-memory-modal form #basic {
   margin-top: 30px;
 }
-/* line 212, ../scss/_addModal.scss */
+/* line 209, ../scss/_addModal.scss */
 #add-memory-modal form .basic-input.row > * {
   display: inline-block;
   text-align: right;
 }
-/* line 216, ../scss/_addModal.scss */
+/* line 213, ../scss/_addModal.scss */
 #add-memory-modal form .basic-input.row label {
   font-family: Axel, "Orator Std", monospace;
   letter-spacing: 3px;
   text-align: left;
   margin-right: 17px;
 }
-/* line 222, ../scss/_addModal.scss */
+/* line 219, ../scss/_addModal.scss */
 #add-memory-modal form .basic-input.row input, #add-memory-modal form .basic-input.row select {
   text-align: center;
 }
-/* line 226, ../scss/_addModal.scss */
+/* line 223, ../scss/_addModal.scss */
 #add-memory-modal form input, #add-memory-modal form select {
   margin-right: 25px;
   font-style: italic;
   font-size: 1rem;
 }
-/* line 230, ../scss/_addModal.scss */
+/* line 227, ../scss/_addModal.scss */
 #add-memory-modal form input:last-child, #add-memory-modal form select:last-child {
   margin-right: 0;
 }
-/* line 234, ../scss/_addModal.scss */
+/* line 231, ../scss/_addModal.scss */
 #add-memory-modal form .half-width, #add-memory-modal form label {
   width: 265px;
 }
-/* line 237, ../scss/_addModal.scss */
+/* line 234, ../scss/_addModal.scss */
 #add-memory-modal form .quarter-width {
   width: 120px;
 }
-/* line 240, ../scss/_addModal.scss */
+/* line 237, ../scss/_addModal.scss */
 #add-memory-modal form #submit {
   text-align: right;
   margin-top: -150px;
   transition: margin-top 1s;
   -webkit-transition: margin-top 1s;
 }
-/* line 245, ../scss/_addModal.scss */
+/* line 242, ../scss/_addModal.scss */
 #add-memory-modal form #submit button {
   width: 70px;
   height: 45px;
   line-height: 45px;
   padding: 0;
 }
-/* line 250, ../scss/_addModal.scss */
+/* line 247, ../scss/_addModal.scss */
 #add-memory-modal form #submit button:hover {
   background-color: #5F7F8E;
   border: #5F7F8E;
 }
-/* line 256, ../scss/_addModal.scss */
+/* line 253, ../scss/_addModal.scss */
 #add-memory-modal form #sharing {
   vertical-align: top;
 }
-/* line 258, ../scss/_addModal.scss */
+/* line 255, ../scss/_addModal.scss */
 #add-memory-modal form #sharing + div {
   padding-top: 10px;
 }
-/* line 260, ../scss/_addModal.scss */
+/* line 257, ../scss/_addModal.scss */
 #add-memory-modal form #sharing + div label {
   color: #979797;
   font-family: AxelSC, "Orator Std", monospace;
 }
-/* line 266, ../scss/_addModal.scss */
+/* line 263, ../scss/_addModal.scss */
 #add-memory-modal form #add-info {
   color: #979797;
   margin: 65px 0;
@@ -343,20 +658,20 @@
   transition: margin-bottom 1s;
   -webkit-transition: margin-bottom 1s;
 }
-/* line 272, ../scss/_addModal.scss */
+/* line 269, ../scss/_addModal.scss */
 #add-memory-modal form #add-info span {
   padding-left: 10px;
 }
-/* line 275, ../scss/_addModal.scss */
+/* line 272, ../scss/_addModal.scss */
 #add-memory-modal form #add-info:hover {
   color: #5F7F8E;
 }
-/* line 278, ../scss/_addModal.scss */
+/* line 275, ../scss/_addModal.scss */
 #add-memory-modal form #add-info.show ~ .additional-input {
   max-height: 400px;
   opacity: 1;
 }
-/* line 283, ../scss/_addModal.scss */
+/* line 280, ../scss/_addModal.scss */
 #add-memory-modal form .additional-input {
   max-height: 0;
   opacity: 0;
