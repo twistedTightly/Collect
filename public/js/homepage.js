@@ -6,10 +6,25 @@ function toggleMnemonicContent() {
 }
 
 function toggleButtonDropdown() {
-	$( "#banner .button" ).click(function(event) {
-		$( event.target ).next( "form" ).toggleClass( "show" );
-		$( event.target ).toggleClass( "permahover" );
-		$( "#scrollwrapper" ).toggleClass( "shifted" );
+	$( "#banner a.button" ).click(function(event) {
+		// If one button is selected but it isn't the one that was clicked...
+		if ( $( "#banner a.button" ).hasClass( "permahover" ) && !$( event.target ).hasClass( "permahover" )) {
+			$( '#banner a.button' ).next( "form" ).toggleClass( "show" );
+			$( '#banner a.button' ).toggleClass( "permahover" );
+		// Either neither is selected and now the clicked one will be
+		// or only the one clicked was selected and now it won't be
+		} else {
+			$( event.target ).next( "form" ).toggleClass( "show" );
+			$( event.target ).toggleClass( "permahover" );
+		}
+
+		// The scroll wrapper will only shift up if both the
+		// log in and sign up forms are unselected
+		if (!$( "#scrollwrapper" ).hasClass( "shifted" )) {
+			$( "#scrollwrapper" ).toggleClass( "shifted" );
+		} else if (!$( "#banner a.button" ).hasClass( "permahover" )) {
+			$( "#scrollwrapper" ).toggleClass( "shifted" );
+		}
 	});
 }
 

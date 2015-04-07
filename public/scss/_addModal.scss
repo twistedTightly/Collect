@@ -1,0 +1,291 @@
+// SCSS for the Add Memory modal
+
+// Tutorial references for custom form input styling
+//
+// Checkboxes/radio buttons:
+// http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953
+// 
+// Select elements
+// http://tympanus.net/codrops/2014/07/10/inspiration-for-custom-select-elements/
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.bw {
+	-webkit-filter: grayscale(100%) brightness(10%) contrast(100%);
+			filter: grayscale(100%) brightness(10%) contrast(100%);
+}
+
+#add-memory-modal {
+	padding-top: 65px;
+	padding-bottom: 65px;
+	width: 60%;
+	max-height: 100%;
+	overflow-y: scroll;
+	overflow-x: inherit;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	ul {
+		margin: 0;
+	}
+	li {
+		height: 27px;
+		width: auto;
+		margin-right: 100px;
+		transition: margin-right 1s;
+		-webkit-transition: margin-right 1s;
+		display: inline-block;
+		cursor: pointer;
+		img {
+			pointer-events: none;
+			height: 100%;
+		}
+	}
+	li:last-child {
+		margin-right: 0;
+	}
+	#remember-header {
+		color: $primary-color;
+		font-style: italic;
+		font-size: 26pt;
+		letter-spacing: 1px;
+		// Accounts for the line height - total space between its neighbors is 48px
+		padding-top: 25px;
+		padding-bottom: 15px;
+	}
+	& > p {
+		cursor: auto;
+		max-height: 0;
+		opacity: 0;
+		transition: opacity 1s, max-height 1s 0.5s;
+		-webkit-transition: opacity 1s, max-height 1s 0.5s;
+		&.show {
+			max-height: 500px;
+			opacity: 1;
+			cursor: pointer;
+		}
+		&.header-text {
+			color: $dark-grey;
+			font-size: 12pt;
+		}
+	}
+	form {
+		text-align: left;
+		padding-top: 20px;
+		width: 90%;
+		margin: auto;
+		.row > * {
+			background: none;
+			border-left: none;
+			border-right: none;
+			border-top: none;
+			box-shadow: none;
+			outline: none;
+		}
+		label {
+			font-size: 14pt;
+			color: $primary-color;
+		}
+		#write {
+			opacity: 0;
+			max-height: 0;
+			transition: opacity 1s 1s, max-height 2s 1s;
+			-webkit-transition: opacity 1s 1s, max-height 2s 1s;
+			input {
+				padding-left: 0;
+				font-style: italic;
+				font-size: 13pt;
+				border: none;
+				text-align: left;
+			}
+			textarea {
+				padding-left: 0;
+				resize: none;
+				border: none;
+				&:focus {
+					outline: none;
+				}
+			}
+			&.show {
+				opacity: 1;
+				max-height: 2000px;
+			}
+		}
+		#optional {
+			margin-bottom: 0;
+			transition: margin-bottom 1s;
+			-webkit-transition: margin-bottom 1s;
+		}
+		.optional-input.row {
+			text-align: right;
+			max-height: 0;
+			opacity: 0;
+			transition: all 1s;
+			-webkit-transition: all 1s;
+			.svg-container {
+				margin-top: 35px; // Spacing between inputs
+				height: 27px;
+				width: 100%;
+				text-align: center;
+			}
+			p {
+				font-style: italic;
+				color: $dark-grey;
+				text-align: center;
+				margin: 0 22px 25px 22px; // 35px total between it and buttons below
+			}
+			.media-inputs {
+				margin: 0 55px;
+				text-align: center;
+				& > * {
+					display: inline-block;
+				}
+				a.button {
+					color: $white;
+					border: none;
+					background: rgba(216,216,216,1);
+					background: -moz-linear-gradient(top, rgba(216,216,216,1) 0%, rgba(151,151,151,1) 100%);
+					background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(216,216,216,1)), color-stop(100%, rgba(151,151,151,1)));
+					background: -webkit-linear-gradient(top, rgba(216,216,216,1) 0%, rgba(151,151,151,1) 100%);
+					background: -o-linear-gradient(top, rgba(216,216,216,1) 0%, rgba(151,151,151,1) 100%);
+					background: -ms-linear-gradient(top, rgba(216,216,216,1) 0%, rgba(151,151,151,1) 100%);
+					background: linear-gradient(to bottom, rgba(216,216,216,1) 0%, rgba(151,151,151,1) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8d8d8', endColorstr='#979797', GradientType=0 );
+				}
+				.select-files {
+					width: 290px;
+					height: 48px;
+				}
+				.social-media {
+					width: 48px;
+					height: 48px;
+					margin-right: 12px;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+			label {
+				text-align: left;
+				width: auto;
+				margin-bottom: 0;
+				pointer-events: none;
+			}
+			input {
+				border: none;
+				text-align: center;
+				padding-bottom: 0;
+				margin-bottom: -30px; // Vertically aligning it with the label text
+			}
+			hr {
+				border-width: 1px;
+				width: 100%;
+				margin-top: 5px;
+				margin-bottom: 2px; // 'Remove' should be 10px below it
+				border-color: $primary-color;
+			}
+			a {
+				color: $dark-grey;
+				&:hover {
+					color: $primary-color;
+				}
+			}
+			&.show {
+				max-height: 1000px; // Larger than would ever be needed
+				opacity: 1;			}
+		} // End .optional-inputs
+		#basic {
+			margin-top: 30px;
+		}
+		.basic-input.row {
+			& > * {
+				display: inline-block;
+				text-align: right;
+			}
+			label {
+				font-family: $font-family-monospace-lower;
+				letter-spacing: 3px;
+				text-align: left;
+				margin-right: 17px; // TODO: Use flexbox so this adjusts automatically
+			}
+			input, select {
+				text-align: center;
+			}
+		}
+		input, select {
+			margin-right: 25px;
+			font-style: italic;
+			font-size: 1rem;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		.half-width, label {
+			width: 265px;
+		}
+		.quarter-width {
+			width: 120px;
+		}
+		#submit {
+			text-align: right;
+			margin-top: -150px;
+			transition: margin-top 1s;
+			-webkit-transition: margin-top 1s;
+			button {
+				width: 70px;
+				height: 45px;
+				line-height: 45px;
+				padding: 0;
+				&:hover {
+					background-color: $primary-color;
+					border: $primary-color;
+				}
+			}
+		}
+		#sharing {
+			vertical-align: top;
+			& + div {
+				padding-top: 10px; // To align it with the top of the label
+				label {
+					color: $dark-grey;
+					font-family: $font-family-monospace;
+				}
+			}
+		}
+		#add-info {
+			color: $dark-grey;
+			margin: 65px 0;
+			cursor: pointer;
+			transition: margin-bottom 1s;
+			-webkit-transition: margin-bottom 1s;
+			span {
+				padding-left: 10px;
+			}
+			&:hover {
+				color: $primary-color;
+			}
+			&.show ~ .additional-input {
+				max-height: 400px; // Larger than would ever be needed
+				opacity: 1;
+			}
+		}
+		.additional-input {
+			max-height: 0;
+			opacity: 0;
+			-webkit-transition: all 1s;
+			transition: all 1s;
+		}
+	}
+}

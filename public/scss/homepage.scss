@@ -53,11 +53,17 @@ body {
 			padding-right: 0;
 			width: 200px;
 			font-size: 100%;
+			border-width: 2px;
+			padding: 0.7rem 0 0.65rem 0;
+		}
+		button {
+			padding: 0.7rem 0 0.65rem 0;
 		}
 	}
 	#tagline {
 		padding-left: $side-padding-base;
 		margin-top: $side-padding-base * 2;
+		pointer-events: none;
 		p {
 			font-size: $large-font-size;
 			letter-spacing: 6px;

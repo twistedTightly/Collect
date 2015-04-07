@@ -3,48 +3,195 @@
 <html class="no-js" lang="en" >
   <head>
     <% include partials/head.ejs %>
-    <!-- TODO: Remove this and generalize the code in it that this page needs -->
-    <link rel="stylesheet" href="stylesheets/profile.css">
     <link rel="stylesheet" href="stylesheets/collection.css">
     <title>Collection</title>
     <meta name="description" content="View Your Memory Collections">
   </head>
   <body>
     <header>
-      <div class="left">
-       <span id="logo"><img src="images/collect_logo.svg" alt="Logo"></span>
-     </div>
-     <div class="right" id="toolbar">
-        <div class="wrapper">
-          <a href="/connections">
-            <div class="svg-container">
-              <img class="svg-icon" src="images/connections_icon_white.svg" alt="Connections">
-            </div>
-          </a>
-          <a href="#">
-            <div class="svg-container">
-              <img class="svg-icon" src="images/messages_icon_white.svg" alt="Messages">
-            </div>
-          </a>
-          <span class="header-text" id="user-info"><%= username %></span>
-        </div>
+      <a href="/profile"><img id="logo" src="images/collect_logo.svg" alt="Logo"></a>
+      <div id="middle"></div>
+      <div id="toolbar">
+        <a href="#">
+          <div class="svg-container">
+            <img id="connections-icon" class="svg-icon" src="images/connections_icon_white.svg" alt="Connections">
+          </div>
+        </a>
+        <a href="#">
+          <div class="svg-container">
+            <img id="messages-icon" class="svg-icon" src="images/messages_icon_white.svg" alt="Messages">
+          </div>
+        </a>
+        <p class="header-text" id="username">Maribeth Rauh</p>
+        <div class="user-icon"></div>
       </div>
-      <!-- NOTE: The following *must* be included as it closes the header tag -->
-      <% include partials/header-end.ejs %>
+    <!-- NOTE: The following *must* be included as it closes the header tag -->
+    <% include partials/header-end.ejs %>
 
     <!-- Display all collections -->
-    <div class="flex-container">
-      <div id="user-info" class="flex-item">
-        <div id="info-box">
-          <div class="crop">
-            <img src="../images/my-profile-pic.jpg" alt="Profile picture" />
+    <div id="main">
+      <div id="info-box">
+        <div id="profile-pic"></div>
+        <a href="/profile" id="back" class="button">back</a>
+        <a href="#" class="button dark" data-reveal-id="add-memory-modal">add</a>
+        <% include partials/addModal.ejs %>
+      </div>
+
+      <div id="collection">
+        <div id="gallery-header"> <!-- User Information in the Body Section. Gallery Header. -->
+          <p id="name">
+            <a href="/profile"></a>Name of the Collection
+          </p>
+          <div>
+            <p class="header-text">4 memories, 2 contributors</p>
           </div>
-          <a href="/profile?email=testUser" id="back" class="button">back</a>
+        </div> <!-- End User Information in the Body Section. Gallery Header. -->
+
+        <div id="memory-gallery">
+            <div class="memory">
+              <div class="upper-section">
+                <div class="image center-col"></div>
+                <!-- Memory media -->
+                <div class="memory-media">
+                  <img src="../images/titled-icons/2_visit_icon_blue.svg" alt="Visit" />
+                  <img src="../images/titled-icons/watch_icon_blue.svg" alt="Watch" />
+                  <img src="../images/titled-icons/4_listen_icon_blue.svg" alt="Listen" />
+                  <img src="../images/titled-icons/5_connect_icon_blue.svg" alt="Connect" />
+                  <!-- Comments Section -->
+                  <div class="comment-section collapsed header-text">
+                    <hr>
+                    <a href="#">comment</a>
+                    <div>
+                      <div class="comment">
+                        <div class="content">
+                          <div class="user-icon"></div>
+                          <div>
+                            <p class="author">Patrick</p>
+                            <input type="text" placeholder="leave a comment" />
+                          </div>
+                        </div>
+
+                        <div class="submit">
+                          <a href="#" class="header-text">send</a>
+                          <p>|</p>
+                          <a href="#" class="header-text">cancel</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- End Comments Section -->
+                </div><!-- End Memory Media -->
+              </div>
+              <div>
+                <div class="metadata">
+                  <p>First name</p>                  
+                  <p class="date header-text">month</p>
+                  <p class="date header-text">year</p>
+                </div>
+                <div class="author-icon">
+                  <div class="user-icon"></div>
+                </div>
+                <div class="text center-col">
+                  <p class="title">Here is an example of what a title would look like</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <div class="tags"><a href="#">tag</a>, <a href="#">tag</a>, <a href="#">tag</a></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="memory">
+              <div class="upper-section">
+                <div class="image center-col"></div>
+                <!-- Memory media -->
+                <div class="memory-media">
+                <!-- Comments Section -->
+                  <div class="comment-section collapsed header-text">
+                    <hr>
+                    <a href="#">comment</a>
+                    <div>
+                      <div class="comment">
+                        <div class="content">
+                          <div class="user-icon"></div>
+                          <div>
+                            <p class="author">Patrick</p>
+                            <input type="text" placeholder="leave a comment" />
+                          </div>
+                        </div>
+
+                        <div class="submit">
+                          <a href="#" class="header-text">send</a>
+                          <p>|</p>
+                          <a href="#" class="header-text">cancel</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- End Comments Section -->
+                </div><!-- End Memory Media -->
+              </div>
+              <div>
+                <div class="metadata">
+                  <p>First name</p>
+                  <p class="date header-text">month</p>
+                  <p class="date header-text">year</p>
+                </div>
+                <div class="author-icon">
+                  <div class="user-icon"></div>
+                </div>
+                <div class="text center-col">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <div class="tags"><a href="#">tag</a>, <a href="#">tag</a>, <a href="#">tag</a></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="memory">
+              <div class="upper-section">
+                <div class="image center-col"></div>
+                <!-- Memory media -->
+                <div class="memory-media">
+                  <img src="../images/titled-icons/4_listen_icon_blue.svg" alt="Listen" />
+                  <img src="../images/titled-icons/5_connect_icon_blue.svg" alt="Connect" />
+                  <!-- Comments Section -->
+                  <div class="comment-section collapsed header-text">
+                    <hr>
+                    <a href="#">comment</a>
+                    <div>
+                      <div class="comment">
+                        <div class="content">
+                          <div class="user-icon"></div>
+                          <div>
+                            <p class="author">Patrick</p>
+                            <input type="text" placeholder="leave a comment" />
+                          </div>
+                        </div>
+
+                        <div class="submit">
+                          <a href="#" class="header-text">send</a>
+                          <p>|</p>
+                          <a href="#" class="header-text">cancel</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- End Comments Section -->
+                </div><!-- End Memory Media -->
+              </div>
+              <div class="lower-section">
+                <div class="metadata">
+                  <p class="date header-text">month</p>
+                  <p class="date header-text">year</p>
+                </div>
+                <div class="author-icon"></div>
+                <div class="text center-col">
+                  <p class="title">Here is an example of what a title would look like</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <div class="tags"><a href="#">tag</a>, <a href="#">tag</a>, <a href="#">tag</a></div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
-      <div id="collection" class="flex-item">Collection</div>
     </div>
 
     <% include partials/scripts.ejs %>
+    <script type="text/javascript" src="/js/collection.js"></script>
   </body>
 </html>

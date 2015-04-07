@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" >
+<html class="no-js" lang="en">
   <head>
     <% include partials/head.ejs %>
     <link rel="stylesheet" href="stylesheets/profile.css">
@@ -10,24 +10,22 @@
   <body>
     <div class="wrapper">
     	<header>
-            <div class="left">
-             <span id="logo"><img src="images/collect_logo.svg" alt="Logo"></span>
-           </div>
-           <div class="right" id="toolbar">
-              <div class="wrapper">
-                <a href="/connections">
-                  <div class="svg-container">
-                    <img class="svg-icon" src="images/connections_icon_white.svg" alt="Connections">
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="svg-container">
-                    <img class="svg-icon" src="images/messages_icon_white.svg" alt="Messages">
-                  </div>
-                </a>
-                <span class="header-text" id="user-info"><%= username %></span>
-              </div>
+        <a href="/profile"><img id="logo" src="images/collect_logo.svg" alt="Logo"></a>
+        <div id="middle"></div>
+        <div id="toolbar">
+          <a href="#">
+            <div class="svg-container">
+              <img id="connections-icon" class="svg-icon" src="images/connections_icon_white.svg" alt="Connections">
             </div>
+          </a>
+          <a href="#">
+            <div class="svg-container">
+              <img id="messages-icon" class="svg-icon" src="images/messages_icon_white.svg" alt="Messages">
+            </div>
+          </a>
+          <p class="header-text" id="username"><%= username %></p>
+          <div class="user-icon"></div>
+        </div>
       <!-- NOTE: The following *must* be included as it closes the header tag -->
       <% include partials/header-end.ejs %>
 
@@ -44,23 +42,16 @@
           <div class="svg-container" id="user-connections-count">
             <img class="svg-icon" src="images/icons/connections_icon_black.svg" alt="Connections icon">
           </div>
-          <p><%= age %> connections</p>
+          <p>12 connections</p>
           <hr />
           <div class="svg-container" id="user-memories-count">
             <img class="svg-icon" src="images/icons/narrative_icon_black.svg" alt="Memories icon">
           </div>
           <p>30 memories</p>
 
-          <a href="#" class='button dark' data-reveal-id="add-memory-modal">
-            add a memory
-          </a>
-
-          <div id="add-memory-modal" class="reveal-modal" data-reveal data-options="animation:fade;">
-            <h2>Create a memory.</h2>
-            <p class="lead">You can add info here.</p>
-            <p>I'm a cool paragraph that lives inside of an even cooler modal.</p>
-            <a class="close-reveal-modal">&#215;</a>
-          </div>
+          <a href="#" class="button dark" data-reveal-id="add-memory-modal">add a memory</a>
+          <% include partials/addModal.ejs %>
+          
         </div><!-- End User Information -->
           
         <div id="body-section"> <!-- Body Section. This is where the memories are shown in table form. The memory gallery. -->
@@ -68,33 +59,54 @@
           <div id="gallery-header"> <!-- User Information in the Body Section. Gallery Header. -->
             <p id="username"><%= username %></p>
             <div id="user-location">
-              <div class="svg-container">
-                <img class="svg-icon" src="images/icons/location_icon_black.svg" alt="Map Pin Icon"/>
-              </div>
               <p class="header-text">Location, Location</p>
             </div>
           </div> <!-- End User Information in the Body Section. Gallery Header. -->
           <div id="gallery"> <!-- Gallery of memory boxes -->
-            <div class="gallery-box one-pic">
-              <div class="content"></div>
+            <div class="gallery-box four-pic">
+              <div class="content-col">
+                <div class="content"></div>
+                <div class="content"></div>
+              </div>
+              <div class="content-col">
+                <div class="content"></div>
+                <div class="content"></div>
+              </div>
+              <div class="collection-title header-text">short title</div>
+            </div>
+            <div class="gallery-box text-only">
+              <p class="content">Here's a bunch of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum. Here's a bunch of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum. Here's a bunch of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum.</p>
+              <div class="collection-title header-text">title of collection</div>
             </div>
             <div class="gallery-box two-pic">
               <div class="content"></div>
               <div class="content"></div>
+              <div class="collection-title header-text">short title</div>
             </div>
             <div class="gallery-box three-pic">
               <div class="content"></div>
               <div class="content"></div>
               <div class="content"></div>
+              <div class="collection-title header-text">title of collection</div>
+            </div>
+            <div class="gallery-box one-pic">
+              <div class="content"></div>
+              <div class="collection-title header-text">scary long title of a collection</div>
             </div>
             <div class="gallery-box four-pic">
-              <div class="content"></div>
-              <div class="content"></div>
-              <div class="content"></div>
-              <div class="content"></div>
+              <div class="content-col">
+                <div class="content"></div>
+                <div class="content"></div>
+              </div>
+              <div class="content-col">
+                <div class="content"></div>
+                <div class="content"></div>
+              </div>
+              <div class="collection-title header-text">short title</div>
             </div>
             <div class="gallery-box text-only">
-              <p class="content">Here's a bunch of text content. Lorem ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum.</p>
+              <p class="content">Here's a bunch of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum. Here's a bunch of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum. Here's a bunch of text content. Lor ipsum dolor sic amet. E pluribus unum. Et tu, Brute! De gustibus non est disputandum. Mens sano in corpore sanum.</p>
+              <div class="collection-title header-text">short title</div>
             </div>
             <div class="gallery-box ghost">
             </div>

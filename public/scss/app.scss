@@ -38,8 +38,10 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
+html, body {
+    overflow-x: hidden;
+}
 body {
-	overflow-x: hidden;
     background: #eee;
     text-align: center;
     width: 100%;
@@ -65,7 +67,7 @@ body > .wrapper {
 .button {
     letter-spacing: 3px;
     text-transform: lowercase;
-    padding: 0.7rem 0 0.65rem 0 !important;
+    padding: 0.7rem 0 0.65rem 0;
     font-size: 85%;
     &:hover {
         border-color: $button-border-color-hover;
@@ -109,4 +111,150 @@ body > .wrapper {
     letter-spacing: 3px;
     font-family: $font-family-monospace;
     text-transform: lowercase;
+}
+.user-icon {
+    border-radius: 50%;
+    background: url(../images/my-profile-pic.jpg);
+    height: 27px;
+    width: 27px;
+    background-size: cover;
+}
+
+/********************
+ *
+ * Header
+ *
+ ********************/
+ header {
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    height: $header-height;
+    background-color: $black;
+    color: white;
+    padding-right: 0; // This will change when menu expands
+    -webkit-transition:  padding 1s;
+    transition: padding 1s;
+
+    #logo {
+        margin-left: 40px;
+        width: auto;
+        height: 28px;
+        -webkit-flex-shrink: 0;
+    }
+    #middle {
+        -webkit-flex-grow: 1;
+    }
+    #toolbar {
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        margin-right: 80px; // Width of pullout menu triangle
+        & > * {
+            -webkit-flex-shrink: 0;
+            margin-right: 30px;
+        }
+        #username {
+            font-size: 12pt;
+        }
+        .user-icon {
+            margin-right: 25px;
+        }
+        .svg-container {
+            width: 31px;
+            height: 27px;
+            #connections-icon {
+                height: 100%;
+                width: auto;
+            }
+            #messages-icon {
+                width: 31px;
+                height: 23px;
+            }
+        }
+    }
+}
+
+/********************
+ *
+ * Pullout Menu
+ *
+ ********************/
+$pullout-menu-width: 20%;
+$pullout-menu-contents-spacing: 45px;
+$link-alignment-padding: 15px;
+.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: $header-height solid transparent;
+    border-right: ($header-height + 10) solid $primary-color;
+    border-bottom: $header-height solid transparent;
+}
+#pullout-menu-tab {
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition:  right 1s;
+    transition: right 1s;
+    cursor: pointer;
+}
+#pullout-menu-icon-holder {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 50px 15px;
+}
+#pullout-menu {
+    width: $pullout-menu-width;
+    height: 100%;
+    padding: $pullout-menu-contents-spacing 2%;
+    text-align: left;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: -$pullout-menu-width; // "Hides" the menu off screen
+    -webkit-transition:  right 1s;
+    transition: right 1s;
+
+    // Cursor generated using: http://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28\-45deg\%2C\%20rgba\%28112\%2C112\%2C112\%2C1\%29\%200\%25\%2C\%20rgba\%28123\%2C123\%2C123\%2C0\.95\%29\%2037\%25\%2C\%20rgba\%28137\%2C137\%2C137\%2C0\.85\%29\%2081\%25\%2C\%20rgba\%28143\%2C143\%2C143\%2C0\.7\%29\%20100\%25\%29\%3B'
+    background: rgba(112,112,112,1);
+    background: -moz-linear-gradient(-45deg, rgba(112,112,112,1) 0%, rgba(112,112,112,0.95) 37%, rgba(112,112,112,0.85) 81%, rgba(112,112,112,0.7) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(112,112,112,1)), color-stop(37%, rgba(112,112,112,0.95)), color-stop(81%, rgba(112,112,112,0.85)), color-stop(100%, rgba(112,112,112,0.7)));
+    background: -webkit-linear-gradient(-45deg, rgba(112,112,112,1) 0%, rgba(112,112,112,0.95) 37%, rgba(112,112,112,0.85) 81%, rgba(112,112,112,0.7) 100%);
+    background: -o-linear-gradient(-45deg, rgba(112,112,112,1) 0%, rgba(112,112,112,0.95) 37%, rgba(112,112,112,0.85) 81%, rgba(112,112,112,0.7) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(112,112,112,1) 0%, rgba(112,112,112,0.95) 37%, rgba(112,112,112,0.85) 81%, rgba(112,112,112,0.7) 100%);
+    background: linear-gradient(135deg, rgba(112,112,112,1) 0%, rgba(112,112,112,0.95) 37%, rgba(112,112,112,0.85) 81%, rgba(112,112,112,0.7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8f8f', endColorstr='#8f8f8f', GradientType=1 );
+
+    a {
+        display: block;
+        color: $white;
+        margin-top: $pullout-menu-contents-spacing;
+        margin-left: $link-alignment-padding;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    input[type="search"] {
+        border-radius: 50px;
+        padding: 5px $link-alignment-padding;
+        margin-bottom: 0;
+        text-transform: lowercase;
+        letter-spacing: 3px;
+    }
+}
+// Pulled out menu styles
+#pullout-menu.show {
+    right: 0;
+    -webkit-transition:  right 1s;
+    transition: right 1s;
+}
+#pullout-menu-tab.show {
+    right: $pullout-menu-width;
+    -webkit-transition:  right 1s;
+    transition: right 1s;
+}
+header.shift {
+    padding-right: $pullout-menu-width;
+    -webkit-transition:  padding 1s;
+    transition: padding 1s;
 }

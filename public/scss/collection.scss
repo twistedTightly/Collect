@@ -1,19 +1,17 @@
 @import "settings",
+		"addModal",
         "foundation/components/buttons",
         "foundation/components/forms",
         "foundation/components/reveal",
         "foundation/components/type";
 
-div.flex-container {
+// Main page structure
+#main {
 	display: -webkit-flex;
-	-webkit-flex-direction: row;
-	#user-info.flex-item {
+	padding: 0;
+	padding: 50px 126px 252px 40px;
+	#collection {
 		-webkit-flex-grow: 1;
-		margin-top: 50px;
-		margin-left: 40px;
-	}
-	#collection.flex-item {
-		-webkit-flex-grow: 20;
 	}
 }
 
@@ -24,23 +22,295 @@ div.flex-container {
  ********************/
  #info-box {
  	width: 65px;
- 	.crop {
+ 	margin-right: 45px;
+ 	-webkit-flex-shrink: 0;
+ 	#profile-pic {
+ 		background-image: url(../images/my-profile-pic.jpg);
+ 		background-repeat: no-repeat;
+ 		background-size: cover;
  		height: 65px;
- 		width: 65px;
- 		position: relative;
- 		overflow: hidden;
+ 	}
+ 	a.button {
+ 		width: 100%;
+ 		padding: 0;
+ 		height: 25px;
+ 		line-height: 25px;
  	}
  	#back.button {
  		background-color: $primary-color;
- 		height: 25px;
- 		width: 100%;
+ 		border-width: 0;
  		color: transparent;
- 		transition: color 1s;
- 		-webkit-transition: color 1s;
+ 		transition: color 0.5s;
+ 		-webkit-transition: color 0.5s;
+ 		margin-bottom: 10px;
  		&:hover {
  			color: rgba(39,39,39,0.7); // $black
-	 		transition: color 1s;
-	 		-webkit-transition: color 1s;
+	 		transition: color 0.5s;
+	 		-webkit-transition: color 0.5s;
+ 		}
+ 	}
+ }
+
+ /********************
+ *
+ * Collection
+ *
+ ********************/
+
+#collection {
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+}
+ /****** Header ******/
+#gallery-header {
+    p {
+    	margin: 0;
+    	display: inline-block;
+    }
+	p#name {
+	    font-style: italic;
+        font-size: 25pt;
+        line-height: 20pt;
+        margin-bottom: 15px;
+        a {
+        	padding-right: 11px;
+        	background-image: url(../images/icons/back_arrow.svg);
+        	background-size: 100% 100%;
+        	margin-bottom: 3.5px; // Vertically align the img with the text
+        	margin-right: 20px;
+        	&:hover {
+        		background-image: url(../images/icons/back_arrow_blue.svg);
+        	}
+        }
+	}
+    p.header-text {
+        font-size: 12pt;
+        line-height: 10pt;
+        padding-left: 35px;
+    }
+}
+
+ /********************
+ *
+ * Memory
+ *
+ ********************/
+#memory-gallery {
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	.memory:first-child > div:first-child {
+		margin-top: 47px; // Align with top of 'add' button
+	}
+}
+.memory {
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	& > div:first-child {
+		margin-top: 100px;
+	}
+	& > * {
+		display: -webkit-flex;
+		margin-top: 40px;
+		transition: margin-top 1s;
+	}
+	// Image and text content are in the central column
+	.center-col {
+		-webkit-flex-basis: 800px;
+		-webkit-flex-grow: 1;
+	}
+	/****** Upper Section ******/
+	// First, upper section of the memory
+	.upper-section {
+		margin-left: 170px;
+		.image {
+			background-color: $light-grey;
+			&::after {
+				content: '';
+				display: block;
+				padding-top: 51.875%; // 415/800 l to w ratio
+			}
+		}
+		.memory-media {
+			width: 70px;
+			margin-left: 40px;
+			-webkit-flex-shrink: 0;
+			text-align: center;
+			color: $primary-color;
+			position: relative;
+			img {
+				height: 50px;
+				width: auto;
+				margin-bottom: 25px;
+			}
+			& > * {
+				-webkit-filter: grayscale(100%);
+				filter: grayscale(100%);
+				cursor: pointer;
+				&:hover {
+					-webkit-filter: none;
+					filter: none;
+				}
+			}
+			 /********************
+			 *
+			 * Comments
+			 *
+			 ********************/
+			 .comment-section {
+			 	text-align: left; // Because content is same size as width, this has no effect expect easing transitions
+				position: absolute;
+			 	left: 0px;
+			 	right: 0;
+		 		-webkit-transition: bottom 1s 1s, left 1s;
+		 		transition: bottom 1s 1s, left 1s;
+		 		& > a {
+		 			opacity: 1;
+		 			transition: opacity 1s;
+		 		}
+			 	& > div {
+			 		opacity: 0;
+			 		transition: opacity 1s;
+			 		width: 500px;
+			 		margin-top: -25px;
+			 		pointer-events: none;
+			 	}
+		 		hr {
+					margin-top: 0;
+					margin-bottom: 8px;
+					width: 70px;
+		 			-webkit-transition: width 1s;
+		 			transition: width 1s, margin-bottom 1s 1s;
+					border-color: $primary-color;
+				}
+			 	&.expanded {
+			 		margin-top: 30px;
+			 		filter: none;
+			 		-webkit-filter: none;
+			 		cursor: default;
+			 		left: -430px;
+					-webkit-transition: left 1s 1s, bottom 1s;
+					transition: left 1s 1s, bottom 1s;
+			 		hr {
+			 			border-color: $primary-color;
+			 			width: 500px;
+			 			margin-bottom: 0;
+						-webkit-transition: width 1s 1s;
+						transition: width 1s 1s, margin-bottom 1s;
+			 		}
+			 		& > a {
+			 			opacity: 0;
+			 			pointer-events: none;
+			 		}
+			 		& > div {
+			 			opacity: 1;
+			 			transition: opacity 1s 1s;
+			 			pointer-events: auto;
+			 		}
+			 	}
+			 }
+		}
+	}
+	/****** Lower Section ******/
+	// Second, lower part of the memory
+	.metadata {
+		-webkit-flex-shrink: 0;
+		width: 103px;
+		p:first-child { // Only applied if author shown in margin
+			margin: 7.5px 0; // To vertically align it with the user icon
+		}
+		.date {
+			line-height: 1;
+			color: $primary-color;
+			&:first-child { // Only applied if no author shown in margin, overriding above
+				margin-top: 12px;
+				margin-bottom: 0;
+			}
+		}
+	}
+	.author-icon {
+		-webkit-flex-shrink: 0;
+		width: 67px;
+		.user-icon {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	.text.center-col {
+		margin-right: 120px; // Matches width of memory media icons + its left margin
+		p:first-child { // Will only be applied if no title
+			margin-top: 7.5px; // To vertically align it with the user icon
+		}
+		.title:first-child { // Applied, overriding above, when there's a title
+			font-style: italic;
+			font-size: 22px;
+			margin-top: 2.5px; // To vertically align it with the user icon
+		}
+		p {
+			margin-bottom: 10px;
+		}
+		.tags {
+			margin-top: 20px;
+			color: $dark-grey;
+			a {
+				color: inherit;
+				font-family: $font-family-monospace-lower;
+				font-size: 10pt;
+				&:hover {
+					color: $anchor-font-color-hover;
+				}
+			}
+		}
+	}
+}
+/********************
+ *
+ * Comment Section
+ *
+ ********************/
+ .comment {
+ 	display: -webkit-flex;
+ 	-webkit-flex-direction: column;
+ 	.content {
+ 		font-family: $font-family-serif;
+		color: $black;
+		letter-spacing: 1px;
+		text-transform: none;
+ 		display: -webkit-flex;
+ 		.user-icon {
+ 			height: 40px;
+ 			width: 40px;
+ 			margin-top: 10px;
+ 			-webkit-flex-shrink: 0;
+ 		}
+ 		div:last-child {
+ 			margin-left: 20px;
+ 		}
+ 		p {
+ 			font-style: italic;
+ 			margin-top: 20px;
+ 		}
+ 		input {
+ 			border: none;
+ 			box-shadow: none;
+ 			background: none;
+ 			padding-left: 0;
+ 			padding-top: 0;
+ 			&:focus {
+ 				background: none;
+ 			}
+ 		}
+ 	}
+ 	.submit {
+ 		text-align: right;
+ 		color: $dark-grey;
+ 		& > * {
+ 			display: inline-block;
+ 		}
+ 		a {
+ 			color: $dark-grey;
+ 		&:hover {
+ 			color: $primary-color;
+ 		}
  		}
  	}
  }

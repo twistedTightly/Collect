@@ -972,7 +972,7 @@ label.error {
 .row {
   width: 100%;
   margin: 0 auto;
-  max-width: 90rem;
+  max-width: 105rem;
 }
 /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
 .row:before, .row:after {
@@ -2486,7 +2486,7 @@ label.error {
   left: 0;
   background-color: #FFFFFF;
   padding: 1.875rem;
-  border: solid 1px #666666;
+  border: solid 0px #666666;
   box-shadow: 0 0 10px rgba(39, 39, 39, 0.4);
 }
 @media only screen and (max-width: 40em) {
@@ -2511,7 +2511,7 @@ label.error {
   /* line 171, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal {
     width: 80%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2539,7 +2539,7 @@ label.error {
   /* line 185, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.tiny {
     width: 30%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2549,7 +2549,7 @@ label.error {
   /* line 186, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.small {
     width: 40%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2559,7 +2559,7 @@ label.error {
   /* line 187, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.medium {
     width: 60%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2569,7 +2569,7 @@ label.error {
   /* line 188, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.large {
     width: 70%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2579,7 +2579,7 @@ label.error {
   /* line 189, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.xlarge {
     width: 95%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2599,7 +2599,7 @@ label.error {
   /* line 190, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
   .reveal-modal.full {
     width: 100%;
-    max-width: 90rem;
+    max-width: 105rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -2611,13 +2611,13 @@ label.error {
 }
 /* line 206, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
 .reveal-modal .close-reveal-modal {
-  font-size: 2.5rem;
+  font-size: 35px;
   line-height: 1;
   position: absolute;
-  top: 0.625rem;
-  right: 1.375rem;
-  color: #AAAAAA;
-  font-weight: bold;
+  top: 0;
+  right: -45px;
+  color: #FFFFFF;
+  font-weight: normal;
   cursor: pointer;
 }
 
@@ -3268,18 +3268,25 @@ body {
   padding-right: 0;
   width: 200px;
   font-size: 100%;
+  border-width: 2px;
+  padding: 0.7rem 0 0.65rem 0;
 }
-/* line 58, ../scss/homepage.scss */
+/* line 59, ../scss/homepage.scss */
+#main .button-container button {
+  padding: 0.7rem 0 0.65rem 0;
+}
+/* line 63, ../scss/homepage.scss */
 #main #tagline {
   padding-left: 50px;
   margin-top: 100px;
+  pointer-events: none;
 }
-/* line 61, ../scss/homepage.scss */
+/* line 67, ../scss/homepage.scss */
 #main #tagline p {
   font-size: 140%;
   letter-spacing: 6px;
 }
-/* line 66, ../scss/homepage.scss */
+/* line 72, ../scss/homepage.scss */
 #main form {
   height: 0;
   overflow: hidden;
@@ -3292,7 +3299,7 @@ body {
   right: 0;
   padding: 0 25%;
 }
-/* line 77, ../scss/homepage.scss */
+/* line 83, ../scss/homepage.scss */
 #main form p {
   font-family: Axel, "Orator Std", monospace;
   font-size: 14px;
@@ -3301,21 +3308,21 @@ body {
   text-align: left;
   margin: 10px 0;
 }
-/* line 85, ../scss/homepage.scss */
+/* line 91, ../scss/homepage.scss */
 #main form #social-account-icons {
   padding: 0;
   margin: auto;
 }
-/* line 88, ../scss/homepage.scss */
+/* line 94, ../scss/homepage.scss */
 #main form #social-account-icons li {
   display: inline-block;
   padding: 10px;
 }
-/* line 91, ../scss/homepage.scss */
+/* line 97, ../scss/homepage.scss */
 #main form #social-account-icons li img {
   height: 26px;
 }
-/* line 96, ../scss/homepage.scss */
+/* line 102, ../scss/homepage.scss */
 #main form input {
   background: none;
   text-align: center;
@@ -3329,7 +3336,7 @@ body {
   box-shadow: none;
   padding: 25px 0;
 }
-/* line 109, ../scss/homepage.scss */
+/* line 115, ../scss/homepage.scss */
 #main form .button {
   border-width: 1px;
   padding-left: 0;
@@ -3337,7 +3344,7 @@ body {
   width: 100px;
   margin-top: 25px;
 }
-/* line 117, ../scss/homepage.scss */
+/* line 123, ../scss/homepage.scss */
 #main form.show {
   height: auto;
   opacity: 1;
@@ -3345,7 +3352,7 @@ body {
   -webkit-transition: opacity 1s;
 }
 
-/* line 124, ../scss/homepage.scss */
+/* line 130, ../scss/homepage.scss */
 #tagline-subtext {
   margin-left: 190px;
   font-style: italic;
@@ -3353,7 +3360,7 @@ body {
   letter-spacing: 2px !important;
 }
 
-/* line 130, ../scss/homepage.scss */
+/* line 136, ../scss/homepage.scss */
 .permahover {
   background-color: rgba(95, 127, 142, 0.7);
   border-color: transparent;
@@ -3364,7 +3371,7 @@ body {
  * Memory Carousel
  *
  ********************/
-/* line 140, ../scss/homepage.scss */
+/* line 146, ../scss/homepage.scss */
 ul#memory-carousel {
   height: 100px;
   position: relative;
@@ -3375,11 +3382,11 @@ ul#memory-carousel {
   -webkit-justify-content: flex-start;
   right: 0px;
 }
-/* line 149, ../scss/homepage.scss */
+/* line 155, ../scss/homepage.scss */
 ul#memory-carousel .memory {
   -webkit-flex-shrink: 0;
 }
-/* line 152, ../scss/homepage.scss */
+/* line 158, ../scss/homepage.scss */
 ul#memory-carousel li {
   display: inline-block;
   height: 100px;
@@ -3387,7 +3394,7 @@ ul#memory-carousel li {
   padding: 0 5px;
 }
 
-/* line 159, ../scss/homepage.scss */
+/* line 165, ../scss/homepage.scss */
 #scrollwrapper {
   position: relative;
   margin: 100px 0;
@@ -3395,7 +3402,7 @@ ul#memory-carousel li {
   -webkit-transition: margin 1s;
   transition: margin 1s;
 }
-/* line 165, ../scss/homepage.scss */
+/* line 171, ../scss/homepage.scss */
 #scrollwrapper.shifted {
   margin-top: 250px;
   margin-bottom: 0;
@@ -3408,38 +3415,38 @@ ul#memory-carousel li {
  * About section
  *
  ********************/
-/* line 178, ../scss/homepage.scss */
+/* line 184, ../scss/homepage.scss */
 #about {
   background-color: #76727C;
   color: #272727;
   text-align: left;
 }
-/* line 182, ../scss/homepage.scss */
+/* line 188, ../scss/homepage.scss */
 #about .row {
   height: 450px;
 }
-/* line 185, ../scss/homepage.scss */
+/* line 191, ../scss/homepage.scss */
 #about p.header-text {
   text-align: center;
   padding-bottom: 50px;
 }
-/* line 189, ../scss/homepage.scss */
+/* line 195, ../scss/homepage.scss */
 #about p {
   font-size: 85%;
   color: black;
 }
-/* line 193, ../scss/homepage.scss */
+/* line 199, ../scss/homepage.scss */
 #about .about-block {
   height: 100%;
   padding: 0;
   float: left !important;
 }
-/* line 198, ../scss/homepage.scss */
+/* line 204, ../scss/homepage.scss */
 #about .about-background {
   width: 100%;
   height: 100%;
 }
-/* line 201, ../scss/homepage.scss */
+/* line 207, ../scss/homepage.scss */
 #about .about-background::after {
   content: "";
   background-image: url(../images/background_blur.jpg);
@@ -3450,19 +3457,19 @@ ul#memory-carousel li {
   right: 0;
   position: absolute;
 }
-/* line 212, ../scss/homepage.scss */
+/* line 218, ../scss/homepage.scss */
 #about #yellow-about {
   background-color: rgba(209, 219, 189, 0.7);
 }
-/* line 215, ../scss/homepage.scss */
+/* line 221, ../scss/homepage.scss */
 #about #green-about {
   background-color: rgba(145, 170, 157, 0.7);
 }
-/* line 218, ../scss/homepage.scss */
+/* line 224, ../scss/homepage.scss */
 #about #blue-about {
   background-color: rgba(95, 127, 142, 0.7);
 }
-/* line 221, ../scss/homepage.scss */
+/* line 227, ../scss/homepage.scss */
 #about .about-content {
   padding: 90px 16%;
   height: 100%;
@@ -3476,38 +3483,38 @@ ul#memory-carousel li {
  * How It Works section
  *
  ********************/
-/* line 236, ../scss/homepage.scss */
+/* line 242, ../scss/homepage.scss */
 #how-it-works {
   text-align: left;
   padding: 90px 50px;
   width: 100%;
   background-color: #FFFFFF;
 }
-/* line 241, ../scss/homepage.scss */
+/* line 247, ../scss/homepage.scss */
 #how-it-works p {
   width: 600px;
 }
 
-/* line 245, ../scss/homepage.scss */
+/* line 251, ../scss/homepage.scss */
 ul#mnemonic-explanation {
   text-align: right;
   margin-top: 130px;
   margin-bottom: 200px;
 }
-/* line 249, ../scss/homepage.scss */
+/* line 255, ../scss/homepage.scss */
 ul#mnemonic-explanation li {
   display: inline-block;
   margin-left: 12%;
   position: relative;
 }
-/* line 253, ../scss/homepage.scss */
+/* line 259, ../scss/homepage.scss */
 ul#mnemonic-explanation li img {
   cursor: pointer;
   height: 50px;
   width: auto;
   opacity: 0.5;
 }
-/* line 259, ../scss/homepage.scss */
+/* line 265, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-left {
   display: none;
   position: absolute;
@@ -3515,21 +3522,21 @@ ul#mnemonic-explanation li .mnemonic-content-left {
   left: 0;
   pointer-events: none;
 }
-/* line 265, ../scss/homepage.scss */
+/* line 271, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-left .vertical-line {
   position: absolute;
   top: 0;
   left: -20px;
   height: 100%;
 }
-/* line 271, ../scss/homepage.scss */
+/* line 277, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-left p {
   font-style: italic;
   text-align: left;
   width: 300px;
   margin-top: 75px;
 }
-/* line 278, ../scss/homepage.scss */
+/* line 284, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-right {
   display: none;
   position: absolute;
@@ -3537,48 +3544,48 @@ ul#mnemonic-explanation li .mnemonic-content-right {
   right: 0;
   pointer-events: none;
 }
-/* line 284, ../scss/homepage.scss */
+/* line 290, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-right .vertical-line {
   position: absolute;
   top: 0;
   right: -20px;
   height: 100%;
 }
-/* line 290, ../scss/homepage.scss */
+/* line 296, ../scss/homepage.scss */
 ul#mnemonic-explanation li .mnemonic-content-right p {
   font-style: italic;
   text-align: right;
   width: 300px;
   margin-top: 75px;
 }
-/* line 299, ../scss/homepage.scss */
+/* line 305, ../scss/homepage.scss */
 ul#mnemonic-explanation .selected img {
   opacity: 1;
 }
-/* line 302, ../scss/homepage.scss */
+/* line 308, ../scss/homepage.scss */
 ul#mnemonic-explanation .selected .mnemonic-content-right, ul#mnemonic-explanation .selected .mnemonic-content-left {
   display: block;
 }
 
-/* line 308, ../scss/homepage.scss */
+/* line 314, ../scss/homepage.scss */
 #quote {
   text-align: left;
   background: #D9D5C2;
   padding: 90px 0;
 }
-/* line 312, ../scss/homepage.scss */
+/* line 318, ../scss/homepage.scss */
 #quote .wrapper {
   margin: auto;
   width: 600px;
 }
-/* line 316, ../scss/homepage.scss */
+/* line 322, ../scss/homepage.scss */
 #quote blockquote {
   border: none;
   color: black;
   padding: 0;
 }
 
-/* line 323, ../scss/homepage.scss */
+/* line 329, ../scss/homepage.scss */
 footer {
   background: black;
   padding: 50px;
@@ -3586,13 +3593,13 @@ footer {
   font-size: 85%;
   text-align: left;
 }
-/* line 329, ../scss/homepage.scss */
+/* line 335, ../scss/homepage.scss */
 footer h5 {
   letter-spacing: regular;
   color: #FFFFFF;
   margin-bottom: 15px;
 }
-/* line 334, ../scss/homepage.scss */
+/* line 340, ../scss/homepage.scss */
 footer p#version {
   margin-top: 15px;
   font-style: italic;

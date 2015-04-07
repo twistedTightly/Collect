@@ -1,136 +1,10 @@
 @import "settings",
+        "addModal",
         "foundation/components/buttons",
         "foundation/components/forms",
         "foundation/components/grid",
         "foundation/components/reveal",
         "foundation/components/type";
-
-/********************
- *
- * Profile Header
- *
- ********************/
- header {
-    height: $header-height;
-    min-height: 30px;
-    background-color: $black;
-    text-align: right;
-    vertical-align: middle;
-    color: white;
-    padding-right: 0; // This will change when menu expands
-    padding-left: 20px; 
-    -webkit-transition:  padding 1s;
-    transition: padding 1s;
-
-    #toolbar {
-        padding-right: $header-height + 15px;
-        height: 100%;
-        display: table;
-        .wrapper {
-            display: table-cell;
-            vertical-align: middle;
-        }
-    }
-	#logo {
-	    float: left;
-	    width: 104px;
-	    height: auto;
-        line-height: $header-height;
-	}
-	img {
-    	display: inline-block;
-	}
-}
-
-/********************
- *
- * Pullout Menu
- *
- ********************/
-$pullout-menu-width: 20%;
-$pullout-menu-contents-spacing: 45px;
-$link-alignment-padding: 15px;
-.triangle-left {
-    width: 0;
-    height: 0;
-    border-top: $header-height solid transparent;
-    border-right: $header-height solid $primary-color;
-    border-bottom: $header-height solid transparent;
-}
-#pullout-menu-tab {
-    z-index: 100;
-    position: absolute;
-    right: 0;
-    top: 0;
-    -webkit-transition:  right 1s;
-    transition: right 1s;
-    cursor: pointer;
-}
-#pullout-menu-icon-holder {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 50px 0;
-
-    .svg-icon {
-        padding-right: 10px;
-    }
-}
-#pullout-menu {
-    width: $pullout-menu-width;
-    height: 100%;
-    padding: $pullout-menu-contents-spacing 2%;
-    text-align: left;
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    right: -$pullout-menu-width; // "Hides" the menu off screen
-    -webkit-transition:  right 1s;
-    transition: right 1s;
-
-    // Cursor generated using: http://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28\-45deg\%2C\%20rgba\%28112\%2C112\%2C112\%2C1\%29\%200\%25\%2C\%20rgba\%28123\%2C123\%2C123\%2C0\.95\%29\%2037\%25\%2C\%20rgba\%28137\%2C137\%2C137\%2C0\.85\%29\%2081\%25\%2C\%20rgba\%28143\%2C143\%2C143\%2C0\.7\%29\%20100\%25\%29\%3B'
-    background: rgba(112,112,112,1);
-	background: -moz-linear-gradient(-45deg, rgba(112,112,112,1) 0%, rgba(112,112,112,0.95) 37%, rgba(112,112,112,0.85) 81%, rgba(112,112,112,0.7) 100%);
-	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(112,112,112,1)), color-stop(37%, rgba(112,112,112,0.95)), color-stop(81%, rgba(112,112,112,0.85)), color-stop(100%, rgba(112,112,112,0.7)));
-	background: -webkit-linear-gradient(-45deg, rgba(112,112,112,1) 0%, rgba(112,112,112,0.95) 37%, rgba(112,112,112,0.85) 81%, rgba(112,112,112,0.7) 100%);
-	background: -o-linear-gradient(-45deg, rgba(112,112,112,1) 0%, rgba(112,112,112,0.95) 37%, rgba(112,112,112,0.85) 81%, rgba(112,112,112,0.7) 100%);
-	background: -ms-linear-gradient(-45deg, rgba(112,112,112,1) 0%, rgba(112,112,112,0.95) 37%, rgba(112,112,112,0.85) 81%, rgba(112,112,112,0.7) 100%);
-	background: linear-gradient(135deg, rgba(112,112,112,1) 0%, rgba(112,112,112,0.95) 37%, rgba(112,112,112,0.85) 81%, rgba(112,112,112,0.7) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8f8f', endColorstr='#8f8f8f', GradientType=1 );
-
-    a {
-    	display: block;
-    	color: $white;
-    	padding-top: $pullout-menu-contents-spacing;
-    	padding-left: $link-alignment-padding;
-        &:hover {
-        	color: $primary-color;
-        }
-    }
-    input[type="search"] {
-	    border-radius: 50px;
-		padding: 5px $link-alignment-padding;
-		margin-bottom: 0;
-        text-transform: lowercase;
-        letter-spacing: 3px;
-    }
-}
-// Pulled out menu styles
-#pullout-menu.show {
-    right: 0;
-    -webkit-transition:  right 1s;
-    transition: right 1s;
-}
-#pullout-menu-tab.show {
-    right: $pullout-menu-width;
-    -webkit-transition:  right 1s;
-    transition: right 1s;
-}
-header.shift {
-    padding-right: $pullout-menu-width;
-    -webkit-transition:  padding 1s;
-    transition: padding 1s;
-}
 
 /********************
  *
@@ -149,10 +23,6 @@ $user-info-spacing: 15px;
     position: relative; // Necessary to postiion 'add' button absolutely on it
     text-align: center;
    	font-size: $small-font-size;
-
-    img {
-
-    }
 
     #user-memories-count {
         width: 25px;
@@ -187,7 +57,7 @@ $user-info-spacing: 15px;
         line-height: 8pt;
 	   	padding: 15px 0;
 	   	margin: 0px;
-	    font-size: 12pt;
+	    font-size: 10pt;
 	}
 	hr {
 	   border: 0;
@@ -201,6 +71,9 @@ $user-info-spacing: 15px;
         margin-top: 10px;
         width: 100%;
         height: 42px;
+        line-height: 42px;
+        padding: 0;
+        font-size: 10pt;
     }
 }
 
@@ -231,10 +104,10 @@ $user-info-spacing: 15px;
         line-height: 20pt;
 	}
     p.header-text {
-        font-size: 13pt;
+        font-size: 12pt;
         line-height: 10pt;
-        margin-left: 8px;
     }
+    /* Icon was removed
     .svg-container {
         width: 13px;
         height: 20px;
@@ -242,7 +115,7 @@ $user-info-spacing: 15px;
             width: 100%;
             height: auto;
         }
-    }
+    }*/
 }
 /****** Rows and Memory Boxes *******/
 
@@ -256,33 +129,54 @@ $user-info-spacing: 15px;
     .gallery-box {
         -webkit-flex-grow: 1;
         min-width: 230px;
-        max-width: 280px;
-        border: 2pt solid $light-grey;
+        //max-width: 280px; // Add back in to restrict gallery box size but leave whitespace sometimes
+        background: url(../images/frame_icon.svg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
         margin: 20px;
-        padding: 22px 27px 32px 27px;
+        padding: 22px 27px 46px 27px; // 50px bottom padding makes room for title
         display: -webkit-flex;
         -webkit-flex-wrap: wrap;
+        overflow: hidden;
+        position: relative;
         .content {
             margin: 3px;
             background-color: $light-grey;
         -webkit-flex-grow: 1;
         }
+        .collection-title {
+            text-align: center;
+            position: absolute;
+            // Left and right position = side padding of the gallery box
+            left: 27px;
+            right: 27px;
+            bottom: 0;
+            height: 48px; // The bottom padding of the gallery box + 2 because of margin on content boxes
+            background: $white;
+            font-size: 14pt;
+            display: -webkit-flex;
+            -webkit-align-items: center;
+            -webkit-justify-content: center;
+        }
     }
-    .one-pic .content, .two-pic .content, .three-pic .content {
-        max-width: 220px;
+    .four-pic .content-col {
+        display: -webkit-flex;
+        -webkit-flex-flow: column wrap;
+        -webkit-flex-grow: 1;
     }
-    .four-pic .content {
-        min-width: 82px;
-    }
-    .text-only .content{
+    .text-only .content {
+        width: 50px; // Arbitrary - just needs to be less than minimum width of the gallery box (172)
+        height: 106px; // Arbitrary - just needs to be less than minimum height of the gallery box (106)
         background-color: white;
+        font-style: italic;
     }
     .gallery-box.ghost {
-        border: none;
+        background: none;
+        height: 0;
     }
     .gallery-box::after {
         content: '';
-        padding-top: 71.4%;
+        padding-top: 62%;
         display: block;
     }
 }
