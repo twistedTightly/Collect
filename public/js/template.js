@@ -30,7 +30,6 @@ function showPulloutMenu() {
 function checkIdleTime() {
     idleSecondsCounter++;
     if (idleSecondsCounter >= IDLE_TIMEOUT) {
-        alert("Time expired!");
         document.location.href = "http://collect.parseapp.com";
     }
 }
