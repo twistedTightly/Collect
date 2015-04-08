@@ -123,7 +123,6 @@ var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.
 							year: '2013',
 							comments: [],
 						},
-
 						{	images: '/images/Elizabeth/emmies-first-year/2.jpg',
 							title: 'Coming into the world smiling',
 							text: ['On our wedding day, I told Liza that I would never love anyone more than her, and I truly meant it.  But as Emmie was brought into the world, I broke that promise for the first time.  Liza knew it, because she felt the same thing.  Emmie was the most gorgeous 7 pound, 4 oz ball of goo I’ve ever seen.  The enormous amount of unconditional love we felt for her the instant she was born was beautiful, overwhelming and something I’ll will never forget.'],
@@ -133,7 +132,7 @@ var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.
 							month: 'November 12',
 							year: '2013',
 							comments: [],
-						},					},
+						},
 						{	images: '/images/Elizabeth/emmies-first-year/3.jpg',
 							title: 'First Halloween',
 							text: ['Emmie couldn’t speak come her first Halloween, but we felt very confident that we knew what she wanted to be for her first big celebration. Based on her excessive giggling and general joyfulness while watching Sesame Street these last few months, Big Bird seemed like the perfect choice! She stares at the television with the most intense focus whenever the show comes on. And whenever Elmo opens his mouth Emmie just explodes with laughter. That show has pretty much become our only opportunity for rest these past few months!','I dusted off the old Singer sewing machine for the first time in years and had my go at making the costume. She ended up looking more like a Peep than anything else, but Emmie—if you ever read this—just remember that it’s the thought that counts! And you still looked adorable ;)'],

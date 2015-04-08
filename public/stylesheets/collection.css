@@ -534,8 +534,8 @@ div.cs-skin-slide::before {
   height: 48px;
   background-image: url(../images/buttons/horiz_icons.svg);
   background-size: cover;
-  -webkit-transition: color 300ms ease-out;
-  transition: color 300ms ease-out;
+  -webkit-transition: color 300ms ease-out, background-color 300ms ease-out;
+  transition: color 300ms ease-out, background-color 300ms ease-out;
 }
 /* line 167, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row .media-inputs .select-files:hover {
