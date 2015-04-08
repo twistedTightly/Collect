@@ -149,7 +149,7 @@ var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.
 						}];
 
 app.get('/collection/emmies-first-year', function(req, res) {
-	res.render('collection', { 	username: 			'Elizabeth Pollard',
+	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'Emmie’s First Year',
 								memoryCount: 		'5 memories',
 								contributorCount: 	'2 contributors',
@@ -159,45 +159,70 @@ app.get('/collection/emmies-first-year', function(req, res) {
 							});
 });
 
+app.get('/collection/nick/emmies-first-year', function(req, res) {
+	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
+								collectionName: 	'Emmie’s First Year',
+								memoryCount: 		'5 memories',
+								contributorCount: 	'2 contributors',
+								profilePic:  		'nick.jpg',
+								backLink: 			'/profile/nick-pollard', 
+								memories: 			emmiesFirstYearMemories	
+							});
+});
+
 app.get('/collection/nick-and-elizabeth', function(req, res) {
-	res.render('collection', { 	username: 			'Elizabeth Pollard',
+	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'Nick &amp; Elizabeth',
 								memoryCount: 		'3 memories',
 								contributorCount: 	'2 contributors',
 								profilePic:  		'elizabeth.jpg',
-								backLink: 			'/profile'});
+								backLink: 			'/profile',
+								memories: 			[] });
+});
+
+app.get('/collection/nick/nick-and-elizabeth', function(req, res) {
+	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
+								collectionName: 	'Nick &amp; Elizabeth',
+								memoryCount: 		'3 memories',
+								contributorCount: 	'2 contributors',
+								profilePic:  		'nick.jpg',
+								backLink: 			'/profile/nick-pollard',
+								memories: 			[] });
 });
 
 // Elizabeth's Collections
 app.get('/collection/jack-and-diane', function(req, res) {
-	res.render('collection', { 	username: 			'Elizabeth Pollard',
+	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'Jack &amp; Diane',
 								memoryCount: 		'4 memories',
 								contributorCount: 	'1 contributor',
 								profilePic:  		'elizabeth.jpg',
-								backLink: 			'/profile'});
+								backLink: 			'/profile',
+								memories: 			[] });
 });
 
 app.get('/collection/growing-up-at-the-cape', function(req, res) {
-	res.render('collection', { 	username: 			'Elizabeth Pollard',
+	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'Growing Up at the Cape',
 								memoryCount: 		'3 memories',
 								contributorCount: 	'1 contributor',
 								profilePic:  		'elizabeth.jpg',
-								backLink: 			'/profile'});
+								backLink: 			'/profile',
+								memories: 			[] });
 });
 
 app.get('/collection/as-a-child', function(req, res) {
-	res.render('collection', { 	username: 			'Elizabeth Pollard',
+	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'As a Child',
 								memoryCount: 		'2 memories',
 								contributorCount: 	'1 contributor',
 								profilePic:  		'elizabeth.jpg',
-								backLink: 			'/profile'});
+								backLink: 			'/profile',
+								memories: 			[] });
 });
 
 app.get('/collection/yale-university', function(req, res) {
-	res.render('collection', { 	username: 			'Elizabeth Pollard',
+	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'Yale University',
 								memoryCount: 		'2 memories',
 								contributorCount: 	'1 contributor',
