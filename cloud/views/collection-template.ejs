@@ -75,6 +75,7 @@
                     <div id="video<%= i %>" class="videoClass popup youtube-container">
                       <div class="wrapper">
                         <div class="youtube-player" data-id="<%= memories[i].videoId %>"></div>
+                        <a class="close-popup">&#x2715;</a>
                       </div>
                     </div>
                   <% } %>
@@ -86,11 +87,16 @@
                           <button id="<%= i %>" class="paused audio-player"></button>
                         </div>
                         <p><%= memories[i].soundDescription %></p>
+                        <a class="close-popup">&#x2715;</a>
                       </div>
                     </div>
                   <% } %>
                   <% if (memories[i].connections) { %>
-                    <div id="connect<%= i %>" class="connectClass popup"></div>
+                    <div id="connect<%= i %>" class="connectClass popup">
+                      <div class="wrapper">
+                        <a class="close-popup">&#x2715;</a>
+                      </div>
+                    </div>
                   <% } %>
                 </div>
                 <!-- Memory media -->

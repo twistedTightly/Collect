@@ -154,6 +154,18 @@
 				-webkit-align-items: center;
 				.wrapper {
 					box-shadow: 0 0 60px rgba(39, 39, 39, 0.3);
+					position: relative;
+					a.close-popup {
+						position: absolute;
+						bottom: 0;
+						right: -35px;
+						line-height: 35px; // Same as paragraph height in location
+						font-size: 2rem;
+						color: $black;
+						&:hover {
+							color: $primary-color;
+						}
+					}
 				}
 				p {
 					font-family: $font-family-monospace-lower;
@@ -205,6 +217,9 @@
 					line-height: 80px;
 					min-width: 400px;
 					padding: 0 10px;
+				}
+				a.close-popup {
+					line-height: 80px; // Same as height of entire audio player
 				}
 			}
 			.videoClass.youtube-container {

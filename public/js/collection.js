@@ -73,7 +73,8 @@ $( document ).ready(function() {
 	$( ".comment-section > a" ).click(showComments);
 	$( ".submit a:last-child" ).click(showComments);
 	$( ".memory-media > img" ).click(showMedia);
-	$( ".upper-section .center-col #fade" ).click(closeAllMedia);
+	$( ".upper-section .center-col" ).click(closeAllMedia);
+	$( ".upper-section .center-col .wrapper a" ).click(closeAllMedia);
 	$( "button.audio-player" ).click(playPauseSound);
 
 	// Handles youtube videos
