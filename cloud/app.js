@@ -83,7 +83,13 @@ var summerInCOMemories = [{	images: '/images/Elizabeth/summer-in-co/1.jpg',
 							title: 'First Words',
 							text: ['Emmie couldn’t have planned a better moment to say her first words. We were all gathered together after dinner playing scrabble and getting Emmie ready for bed. Grandma P and I were reading “Goodnight Moon” when the word quietly leapt from her lips. Her first word was moon. I always thought it would be Dada! At least now we know she isn’t picking favorites!'],
 							author: 'Elizabeth',
-						}]
+						},
+						{	images: '/images/Elizabeth/summer-in-co/3.jpg',
+							title: 'Fishing with Dad',
+							text: ['On Tuesday morning of our trip to Colorado, Dad and I left the girls at home and ventured out for a day of fishing on Stone Creek.  Growing up we would always fit in a father-son day there and it was great to continue the tradition. As per usual, Dad won our competition, catching three rainbow trout to beat my two. I claim the real victory, though, because only my two were big enough to keep.', 'This was the first chance since Emmie was born that Dad and I got to spend some real alone time together. Finally being able to relate to him on the joys of being a father brought our relationship to an entirely different level. For the first time I really felt like I appreciated everything he did for me growing up.'],
+							author: 'Nick',
+							location: 'Freedom Park, Miller Ranch Road | Edwards, CO',
+						}];
 
 app.get('/collection/summer-in-co', function(req, res) {
 	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
@@ -107,13 +113,42 @@ app.get('/collection/nick/summer-in-co', function(req, res) {
 	});
 });
 
+var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.jpg',
+							title: 'The Big Announcement',
+							text: ['It was a Friday morning in late February, and Liza and I had plans to spend the weekend skiing with our friends, Jake and Lauren, in the Poconos. I had planned to take a half-day so I woke up early to get into the office and finish up some work.  I opened my eyes and saw that Liza was already awake and cooking breakfast (normally my job), so I knew something was up.','I went to the kitchen to make sure everything was OK and she greeted me with a big smile and cup of coffee. “Just figured I’d get a jump start on the weekend!,” she said as she eagerly led me into a chair in front of a plate of eggs and bacon.  Hesitantly, I sat down and took a sip of the coffee.  Liza had forgotten to add my usual milk so I asked her to bring some over for me.', 'Liza quickly brought the milk and even though I grabbed it from her hand, it wasn’t until I started trying to pour it in my coffee that I realized I was holding a baby bottle. It took me a second to figure out what was going on, but as I started to turn to question Liza, it hit me – we were pregnant! So many thoughts ran through my head in that moment. I felt like the luckiest man in the world.'],
+							author: 'Nick',
+							authorPic: 'nick.jpg',
+							authorLink: '/profile/nick-pollard',
+							month: 'February 18',
+							year: '2013',
+							comments: [],
+						},
+
+						{	images: '/images/Elizabeth/emmies-first-year/2.jpg',
+							title: 'Coming into the world smiling',
+							text: ['On our wedding day, I told Liza that I would never love anyone more than her, and I truly meant it.  But as Emmie was brought into the world, I broke that promise for the first time.  Liza knew it, because she felt the same thing.  Emmie was the most gorgeous 7 pound, 4 oz ball of goo I’ve ever seen.  The enormous amount of unconditional love we felt for her the instant she was born was beautiful, overwhelming and something I’ll will never forget.'],
+							author: 'Nick',
+							authorPic: 'nick.jpg',
+							authorLink: '/profile/nick-pollard',
+							month: 'November 12',
+							year: '2013',
+							comments: [],
+						},					},
+						{	images: '/images/Elizabeth/emmies-first-year/3.jpg',
+							title: 'First Halloween',
+							text: ['Emmie couldn’t speak come her first Halloween, but we felt very confident that we knew what she wanted to be for her first big celebration. Based on her excessive giggling and general joyfulness while watching Sesame Street these last few months, Big Bird seemed like the perfect choice! She stares at the television with the most intense focus whenever the show comes on. And whenever Elmo opens his mouth Emmie just explodes with laughter. That show has pretty much become our only opportunity for rest these past few months!','I dusted off the old Singer sewing machine for the first time in years and had my go at making the costume. She ended up looking more like a Peep than anything else, but Emmie—if you ever read this—just remember that it’s the thought that counts! And you still looked adorable ;)'],
+							author: 'Elizabeth',
+						}];
+
 app.get('/collection/emmies-first-year', function(req, res) {
 	res.render('collection', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'Emmie’s First Year',
 								memoryCount: 		'5 memories',
 								contributorCount: 	'2 contributors',
 								profilePic:  		'elizabeth.jpg',
-								backLink: 			'/profile'});
+								backLink: 			'/profile', 
+								memories: 			emmiesFirstYearMemories	
+							});
 });
 
 app.get('/collection/nick-and-elizabeth', function(req, res) {
@@ -208,7 +243,6 @@ app.get('/collection/family-stories', function(req, res) {
 });
 
 app.get('/collection/marilyn/family-stories', function(req, res) {
-	console.log('hello');
 	res.render('collection-template', {
 								username: 			'Elizabeth Pollard',
 								collectionName: 	'Family Stories',
