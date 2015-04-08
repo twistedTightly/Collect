@@ -65,9 +65,11 @@
                   <div id="location" class="popup">
                     Location
                   </div>
-                  <div id="video" class="popup youtube-container">
-                    <div class="youtube-player" data-id="WzGgOPZdJ3g"></div>
-                  </div>
+                  <% if (memories[i].videoId) { %>
+                    <div id="video" class="popup youtube-container">
+                      <div class="youtube-player" data-id="<%= memories[i].videoId %>"></div>
+                    </div>
+                  <% } %>
                   <div id="sound" class="popup">
                     Sound
                   </div>
@@ -80,7 +82,7 @@
                   <% if (memories[i].location) { %>
                      <img id="location" src="/images/titled-icons/2_visit_icon_blue.svg" alt="Visit" />
                   <% } %>
-                  <% if (memories[i].videoLink) { %>
+                  <% if (memories[i].videoId) { %>
                      <img id="video" src="/images/titled-icons/watch_icon_blue.svg" alt="Watch" />
                   <% } %>
                   <% if (memories[i].soundFile) { %>

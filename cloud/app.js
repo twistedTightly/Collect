@@ -42,7 +42,7 @@ app.get('/collection', function(req, res) {
 // 		dateCreated: 'January 2015',
 // 		tags: ['vacation', 'family', 'emmie'],
 // 		location: '104 An Address',
-// 		videoLink: 'www.linkToVideo.com',
+// 		videoId: 'letters and numbers after = at the end of the URL',
 // 		soundFile: 'path/to/soundFile',
 //		connections: '',
 //		comments: []
@@ -58,7 +58,7 @@ app.get('/collection', function(req, res) {
 // 		dateCreated: 'January 2015',
 // 		tags: ['vacation', 'family', 'emmie'],
 // 		location: '104 An Address',
-// 		videoLink: 'www.linkToVideo.com',
+// 		videoId: 'letters and numbers after = at the end of the URL',
 // 		soundFile: 'path/to/soundFile',
 //		connections: '',
 //		comments: []
@@ -77,7 +77,7 @@ var summerInCOMemories = [{	images: '/images/Elizabeth/summer-in-co/1.jpg',
 							month: 'June 22',
 							year: '2014',
 							location: 'Telluride, CO',
-							videoLink: 'https://www.youtube.com/watch?v=WzGgOPZdJ3g',
+							videoId: 'WzGgOPZdJ3g',
 							tags: ['Written April 1, 2015','hiking','Colorado']
 						},
 						{	images: '/images/Elizabeth/summer-in-co/2.jpg',
@@ -257,7 +257,7 @@ var familyStoriesMemories = [
 		dateCreated: 'January 2015',
 		tags: ['vacation', 'family', 'emmie'],
 		location: '104 An Address',
-		videoLink: 'www.linkToVideo.com',
+		videoId: 'www.linkToVideo.com',
 		soundFile: 'path/to/soundFile',
 		comments: []
 	}
