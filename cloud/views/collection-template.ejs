@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+  <head>
+    <% include partials/head.ejs %>
+    <link rel="stylesheet" href="/stylesheets/collection.css">
+    <title>Collection</title>
+    <meta name="description" content="View Your Memory Collections">
+  </head>
+  <body>
+    <header>
+      <a href="/profile"><img id="logo" src="/images/collect_logo.svg" alt="Logo"></a>
+      <div id="middle"></div>
+      <div id="toolbar">
+        <a href="#">
+          <div class="svg-container">
+            <img id="connections-icon" class="svg-icon" src="/images/connections_icon_white.svg" alt="Connections">
+          </div>
+        </a>
+        <a href="#">
+          <div class="svg-container">
+            <img id="messages-icon" class="svg-icon" src="/images/messages_icon_white.svg" alt="Messages">
+          </div>
+        </a>
+        <a href="/profile">
+          <p class="header-text" id="username"><%= username %></p>
+        </a>
+        <a href="/profile">
+          <div class="user-icon"></div>
+        </a>
+      </div>
+    <!-- NOTE: The following *must* be included as it closes the header tag -->
+    <% include partials/header-end.ejs %>
+
+    <!-- Display all collections -->
+    <div id="main">
+      <div id="info-box">
+        <div id="profile-pic" style="background-image: url(/images/content/<%= profilePic %>);"></div>
+        <a href="<%= backLink %>" id="back" class="button">back</a>
+        <a href="#" class="button dark" data-reveal-id="add-memory-modal">add</a>
+        <% include partials/addModal.ejs %>
+      </div>
+
+      <div id="collection">
+        <div id="gallery-header"> <!-- User Information in the Body Section. Gallery Header. -->
+          <p id="name">
+            <a href="/profile"></a><%= collectionName %>
+          </p>
+          <div>
+            <p class="header-text"><%= memoryCount %>, <%= contributorCount %></p>
+          </div>
+        </div> <!-- End User Information in the Body Section. Gallery Header. -->
+
+        <div id="memory-gallery">
+
+        <% for(var i=0; i < memories.length; i++) { %>
+            <div class="memory">
+              <div class="upper-section">
+                <div class="image center-col">
+                  <% if (memories[i].images) { %>
+                    <img src="<%= memories[i].images %>" />
+                  <% } %>  
+                </div>
+                <!-- Memory media -->
+                <div class="memory-media">
+                  <% if (memories[i].location) { %>
+                     <img src="/images/titled-icons/2_visit_icon_blue.svg" alt="Visit" />
+                  <% } %>
+                  <% if (memories[i].videoLink) { %>
+                     <img src="/images/titled-icons/watch_icon_blue.svg" alt="Watch" />
+                  <% } %>
+                  <% if (memories[i].soundFile) { %>
+                    <img src="../images/titled-icons/4_listen_icon_blue.svg" alt="Listen" />
+                  <% } %>
+                  <% if (memories[i].connections) { %>
+                    <img src="../images/titled-icons/5_connect_icon_blue.svg" alt="Connect" />
+                  <% } %>
+                  <!-- Comments Section -->
+                  <div class="comment-section collapsed header-text">
+                    <hr>
+                    <a href="#">comment</a>
+                    <div>
+                      <div class="comment">
+                        <div class="content">
+                          <div class="user-icon"></div>
+                          <div>
+                            <p class="author">Elizabeth</p>
+                            <input type="text" placeholder="leave a comment" />
+                          </div>
+                        </div>
+
+                        <div class="submit">
+                          <a href="#" class="header-text">send</a>
+                          <p>|</p>
+                          <a href="#" class="header-text">cancel</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- End Comments Section -->
+                </div><!-- End Memory Media -->
+              </div>
+              <div>
+                <div class="metadata">
+                  <% if (memories[i].author && memories[i].author !== "Elizabeth") { %>
+                    <p><a href="<%= memories[i].authorLink %>"><%= memories[i].author %></a></p> 
+                  <% } %>                 
+                  <% if (memories[i].month) { %>
+                    <p class="date header-text"><%= memories[i].month %></p>
+                  <% } %>
+                  <% if (memories[i].year) { %>
+                    <p class="date header-text"><%= memories[i].year %></p>
+                  <% } %>
+                </div>
+                <div class="author-icon">
+                  <% if (memories[i].author && memories[i].author !== "Elizabeth") { %>
+                    <a href="<%= memories[i].authorLink %>">
+                      <div class="user-icon" style="background-image: url(/images/content/<%= memories[i].authorPic %>);"></div>
+                    </a>
+                  <% } %>
+                </div> 
+                <div class="text center-col">
+                  <% if (memories[i].title) { %>
+                    <p class="title"><%= memories[i].title %></p>
+                  <% } %>
+                  <% if (memories[i].text) {
+                    for(var k=0; k < memories[i].text.length; k++) { %>
+                      <p><%= memories[i].text[k] %></p>
+                    <% }
+                  } %>
+                  <% if (memories[i].tags) { %>
+                    <div class="tags">
+                    <% for(var j=0; j < memories[i].tags.length; j++) { %>
+                        <a href="#"><%= memories[i].tags[j] %></a>
+                        <% if (j < memories[i].tags.length - 1) { %>
+                          , 
+                        <% } %>
+                    <% } %>
+                    </div>
+                  <% } %>
+                </div>
+              </div>
+            </div><!-- End memory -->
+          <% } %>
+        
+        </div>
+      </div>
+    </div>
+
+    <% include partials/scripts.ejs %>
+    <script type="text/javascript" src="/js/collection.js"></script>
+  </body>
+</html>

@@ -15,69 +15,213 @@ app.get('/', function(req, res) {
 	res.render('homepage');
 });
 
-// Custom collections
+// NOTE: Do not use this as an example for actual collection pages
+// 			Instead, see comments below
 app.get('/collection', function(req, res) {
 	res.render('collection', { 	username: 			'Username',
 								collectionName: 	'Name of Collection',
 								memoryCount: 		'0 memories',
-								contributorCount: 	'0 contributors'});
+								contributorCount: 	'0 contributors',
+								profilePic:  		'elizabeth.jpg',
+								backLink: 			'/profile'});
 });
 
+// Custom collections
+// All fields a memory could have are shown below
+// Do not include a field *at all* if there is no content of that type for that memory
+// 
+// var memories = [
+// 	{	images: 'path/to/image',
+// 		title: 'William Dubilier',
+// 		text: ['only one paragraph'],
+// 		author: 'Marilyn',
+// 		authorPic: 'image.jpg',
+// 		authorLink: '/profile/name',
+// 		month: 'June',
+// 		year: '1949',
+// 		dateCreated: 'January 2015',
+// 		tags: ['vacation', 'family', 'emmie'],
+// 		location: '104 An Address',
+// 		videoLink: 'www.linkToVideo.com',
+// 		soundFile: 'path/to/soundFile',
+//		connections: '',
+//		comments: []
+//	},
+//	{	images: 'path/to/image',
+// 		title: 'William Dubilier',
+// 		text: [{'paragraph 1', 'second paragraph'}],
+// 		author: 'Marilyn',
+// 		authorPic: 'image.jpg',
+// 		authorLink: '/profile/name',
+// 		month: 'June 22',
+// 		year: '1949',
+// 		dateCreated: 'January 2015',
+// 		tags: ['vacation', 'family', 'emmie'],
+// 		location: '104 An Address',
+// 		videoLink: 'www.linkToVideo.com',
+// 		soundFile: 'path/to/soundFile',
+//		connections: '',
+//		comments: []
+//	}
+// ];
+//
+// The above example has two memories in it
+// The last memory and the last field in the memory should not have a comma after them
+
+// Elizabeth and Nick's Collections
+var summerInCOMemories = [{	images: '/images/Elizabeth/summer-in-co/1.jpg',
+							text: ['Last week Liza, Emmie and I flew out to my family’s place in Beaver Creek, CO for a much needed vacation.  It was Emmie’s first time flying and she did surprisingly well. Minus a little crying on the descent she was the perfect passenger.','We rented a car in Denver and made the two-hour trek to Beaver Creek.  The drive always takes me back to my childhood and how we used to spend the drive competing to spot mountain goats.  Being at the house with Liza brought back memories of our first trip together only years earlier when I taught her how to ski.','After some family time early in the week, hiking and taking advantage of the beautiful weather, my parents watched Emmie for a few days while Liza and I drove down to the Telluride Music Festival.  We used Airbnb to find an awesome little ski cabin right in downtown Town Park and enjoyed trying out the restaurants and bars in the area.','Telluride was an awesome place to see a concert.  The festival took place over the summer solstice so it seemed like it was midnight by the time the sun finally set. Steve Martin and the Steep Canyon Rangers headlined but I was especially excited to see Dispatch. Hearing The General brought me back to summer nights during my college years, drinking out on the porch of the Langdon St. house with the guys.','Despite the enjoyable trip, being away from Emmie for the first time was a little tough for both of us so we were happy to be back with her after a couple days in Telluride.'],
+							author: 'Nick',
+							authorPic: 'nick.jpg',
+							authorLink: '/profile/nick-pollard',
+							month: 'June 22',
+							year: '2014',
+							location: 'Telluride, CO',
+							videoLink: 'https://www.youtube.com/watch?v=WzGgOPZdJ3g',
+						},
+						{	images: '/images/Elizabeth/summer-in-co/2.jpg',
+							title: 'First Words',
+							text: ['Emmie couldn’t have planned a better moment to say her first words. We were all gathered together after dinner playing scrabble and getting Emmie ready for bed. Grandma P and I were reading “Goodnight Moon” when the word quietly leapt from her lips. Her first word was moon. I always thought it would be Dada! At least now we know she isn’t picking favorites!'],
+							author: 'Elizabeth',
+						}]
+
 app.get('/collection/summer-in-co', function(req, res) {
-	res.render('collection', { 	username: 			'Elizabeth Pollard',
-								collectionName: 	'Summer in Colorado',
-								memoryCount: 		'3 memories',
-								contributorCount: 	'2 contributors'});
+	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
+											collectionName: 	'Summer in Colorado',
+											memoryCount: 		'3 memories',
+											contributorCount: 	'2 contributors',
+											profilePic:  		'elizabeth.jpg',
+											backLink: 			'/profile',
+											memories: 			summerInCOMemories
+	});
+});
+
+app.get('/collection/nick/summer-in-co', function(req, res) {
+	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
+											collectionName: 	'Summer in Colorado',
+											memoryCount: 		'3 memories',
+											contributorCount: 	'2 contributors',
+											profilePic:  		'nick.jpg',
+											backLink: 			'/profile/nick-pollard',
+											memories: 			summerInCOMemories
+	});
 });
 
 app.get('/collection/emmies-first-year', function(req, res) {
 	res.render('collection', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'Emmie’s First Year',
 								memoryCount: 		'5 memories',
-								contributorCount: 	'2 contributors'});
+								contributorCount: 	'2 contributors',
+								profilePic:  		'elizabeth.jpg',
+								backLink: 			'/profile'});
 });
 
 app.get('/collection/nick-and-elizabeth', function(req, res) {
 	res.render('collection', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'Nick &amp; Elizabeth',
 								memoryCount: 		'3 memories',
-								contributorCount: 	'2 contributors'});
+								contributorCount: 	'2 contributors',
+								profilePic:  		'elizabeth.jpg',
+								backLink: 			'/profile'});
 });
 
+// Elizabeth's Collections
 app.get('/collection/jack-and-diane', function(req, res) {
 	res.render('collection', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'Jack &amp; Diane',
 								memoryCount: 		'4 memories',
-								contributorCount: 	'1 contributor'});
+								contributorCount: 	'1 contributor',
+								profilePic:  		'elizabeth.jpg',
+								backLink: 			'/profile'});
 });
 
 app.get('/collection/growing-up-at-the-cape', function(req, res) {
 	res.render('collection', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'Growing Up at the Cape',
 								memoryCount: 		'3 memories',
-								contributorCount: 	'1 contributor'});
+								contributorCount: 	'1 contributor',
+								profilePic:  		'elizabeth.jpg',
+								backLink: 			'/profile'});
 });
 
 app.get('/collection/as-a-child', function(req, res) {
 	res.render('collection', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'As a Child',
 								memoryCount: 		'2 memories',
-								contributorCount: 	'1 contributor'});
+								contributorCount: 	'1 contributor',
+								profilePic:  		'elizabeth.jpg',
+								backLink: 			'/profile'});
 });
 
 app.get('/collection/yale-university', function(req, res) {
 	res.render('collection', { 	username: 			'Elizabeth Pollard',
 								collectionName: 	'Yale University',
 								memoryCount: 		'2 memories',
-								contributorCount: 	'1 contributor'});
+								contributorCount: 	'1 contributor',
+								profilePic:  		'elizabeth.jpg',
+								backLink: 			'/profile',
+								memories: 			[]
+	});
 });
 
+// Elizabeth and Marilyn's Collections
+var familyStoriesMemories = [
+	{	images: '/images/Elizabeth/jack-diane/3.jpg',
+		title: 'William Dubilier',
+		text: ['My grandpa, William Dubilier, was honored by the French Government for his contributions to the rebuilding of France. He was a brilliant person. By the age of 8 he had dozens of patents and supported his entire family of 10 while living in the Bowery of New York City. He left home when he was 12 and lived alone and focused on creating. He invented burglar alarms to catch criminals in his building, developed the modern condenser, and also created sonar technology. He was even sent to install wireless telephone technology in the Russian Czar’s palace when he was 16 years old! The condenser/capacitor made modern broadcasting and commercial radio possible. There’s a long line of inventors in this family!'],
+		author: 'Marilyn',
+		authorPic: 'marilyn.jpg',
+		month: 'June',
+		year: '1949',
+		dateCreated: '',
+		tags: []
+	},
+	{	images: '/images/Elizabeth/jack-diane/3.jpg',
+		title: 'Hello',
+		text: ['paragraph 1', 'second paragraph'],
+		author: 'Marilyn',
+		authorPic: 'image.jpg',
+		authorLink: '/profile/name',
+		month: 'June 22',
+		year: '1949',
+		dateCreated: 'January 2015',
+		tags: ['vacation', 'family', 'emmie'],
+		location: '104 An Address',
+		videoLink: 'www.linkToVideo.com',
+		soundFile: 'path/to/soundFile',
+		comments: []
+	}
+];
+
+
+
 app.get('/collection/family-stories', function(req, res) {
-	res.render('collection', { 	username: 			'Elizabeth Pollard',
+	res.render('collection-template', {
+								username: 			'Elizabeth Pollard',
 								collectionName: 	'Family Stories',
 								memoryCount: 		'1 memory',
-								contributorCount: 	'2 contributors'});
+								contributorCount: 	'2 contributors',
+								profilePic:  		'elizabeth.jpg',
+								backLink: 			'/profile',
+								memories: 			familyStoriesMemories
+	});
 });
+
+app.get('/collection/marilyn/family-stories', function(req, res) {
+	console.log('hello');
+	res.render('collection-template', {
+								username: 			'Elizabeth Pollard',
+								collectionName: 	'Family Stories',
+								memoryCount: 		'1 memory',
+								contributorCount: 	'2 contributors',
+								profilePic:  		'marilyn.jpg',
+								backLink: 			'/profile/marilyn-camps',
+								memories: 			familyStoriesMemories
+	});
+});
+
+// Marilyn's Collections
+// TODO
 
 // Unused
 app.get('/connections', function(req, res) {
@@ -94,13 +238,13 @@ app.get('/profile/nick-pollard', function(req, res) {
 app.get('/profile/marilyn-camps', function(req, res) {
 	res.render('profile-marilyn', { username: 	'Marilyn Camps',
 									location: 	'Larchmont, New York',
-									profilePic: 'marilyn.jpg' });
+									profilePic: 'marilyn.jpg'});
 });
 
 app.get('/profile', function(req, res) {
 	res.render('profile', { username: 	'Elizabeth Pollard',
 							location: 	'New York, New York',
-							profilePic: 'elizabeth.jpg' });
+							profilePic: 'elizabeth.jpg'});
 });
 
 app.post('/profile', function(req, res) {
