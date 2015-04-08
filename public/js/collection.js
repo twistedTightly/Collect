@@ -27,8 +27,23 @@ function showComments(event) {
 		commentSection.closest( ".memory" ).next( ".memory" ).children( ":first-child" ).css( "margin-top", memoryShift );
 }
 
+function showMedia(event) {
+	var mediaId = ".upper-section .center-col #" + event.target.id;
+	var allOtherMedia = ".upper-section .center-col > *:not(#" + event.target.id;
+	
+	// Make sure only the selected media is "popped up"
+	$( allOtherMedia ).removeClass( "show" );
+	$( mediaId ).toggleClass( "show" );
+
+	// If any media is showing, the fade layer needs to be on
+	if ( $( ".upper-section .center-col > *" ).hasClass( "show" ) ) {
+		$( ".upper-section .center-col #fade" ).addClass( "show" );
+	}
+}
+
 // Attaches listeners to the DOM once it has loaded
 $( document ).ready(function() {
 	$( ".comment-section > a" ).click(showComments);
 	$( ".submit a:last-child" ).click(showComments);
+	$( ".memory-media > img" ).click(showMedia);
 });
