@@ -122,12 +122,13 @@
 	.upper-section {
 		margin-left: 170px;
 		.image {
-			background-color: $light-grey;
-			&::after {
-				content: '';
-				display: block;
-				padding-top: 51.875%; // 415/800 l to w ratio
-			}
+			//background-color: $light-grey;
+			text-align: center;
+			// &::after {
+			// 	content: '';
+			// 	display: block;
+			// 	padding-top: 51.875%; // 415/800 l to w ratio
+			// }
 		}
 		.memory-media {
 			width: 70px;
@@ -216,6 +217,13 @@
 		width: 103px;
 		p:first-child { // Only applied if author shown in margin
 			margin: 7.5px 0; // To vertically align it with the user icon
+			font-style: italic;
+			a {
+				color: $black;
+				&:hover {
+					color: $primary-color;
+				}
+			}
 		}
 		.date {
 			line-height: 1;
