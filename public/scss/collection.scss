@@ -143,12 +143,20 @@
 				left: 0;
 				right: 0;
 				margin: auto;
-				background-color: $primary-color;
-				height: 30px;
-				width: 500px;
+				width: 600px;
 				opacity: 0;
 				transition: opacity 300ms;
 				-webkit-transition: opacity 300ms;
+				display: -webkit-flex;
+				-webkit-flex-direction: column;
+				-webkit-justify-content: center;
+				-webkit-align-content: center;
+				p {
+					font-family: $font-family-monospace-lower;
+					background-color: $primary-color;
+					letter-spacing: 3px;
+					padding: 5px 0;
+				}
 				&.show:not(#fade) {
 					opacity: 1;
 					pointer-events: auto;

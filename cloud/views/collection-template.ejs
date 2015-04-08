@@ -62,6 +62,12 @@
                   <% } %>  
                   >
                   <div id="fade" class="fadeClass popup"></div>
+                  <% if (memories[i].location) { %>
+                    <div id="location<%= i %>" class="locationClass popup">
+                      <img src="<%= memories[i].locationImage %>" />
+                      <p><%= memories[i].location %></p>
+                    </div>
+                  <% } %>
                   <% if (memories[i].videoId) { %>
                     <div id="video<%= i %>" class="videoClass popup youtube-container">
                       <div class="youtube-player" data-id="<%= memories[i].videoId %>"></div>
