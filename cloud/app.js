@@ -103,7 +103,7 @@ var summerInCOMemories = [{	images: '/images/Elizabeth/summer-in-co/1.jpg',
 							year: '2015',
 							location: 'Freedom Park, Miller Ranch Road | Edwards, CO',
 							locationImage: '/images/locations/freedom-park-co2.png',
-							tags: ['Written April 2, 2015']
+							tags: ['Written April 2, 2015', 'fishing', 'Colorado']
 						}];
 
 app.get('/collection/summer-in-co', function(req, res) {
@@ -136,23 +136,53 @@ var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.
 							authorLink: '/profile/nick-pollard',
 							month: 'February 18',
 							year: '2013',
-							comments: []
+							comments: [{	content: 'I couldn’t think of a creative way to tell you for what felt like the longest time. I woke up at 4am to get everything ready and calm down my nerves!',
+											author: 'Elizabeth'
+										},
+										{	content: 'That was much more creative than how I told your father about Ryan, Heather! He’s is lucky to have you!',
+											author: 'Marilyn'}],
+							tags: ['Written March 22, 2015', 'baby']
 						},
 						{	images: '/images/Elizabeth/emmies-first-year/2.jpg',
 							title: 'Coming into the world smiling',
-							text: ['On our wedding day, I told Liza that I would never love anyone more than her, and I truly meant it.  But as Emmie was brought into the world, I broke that promise for the first time.  Liza knew it, because she felt the same thing.  Emmie was the most gorgeous 7 pound, 4 oz ball of goo I’ve ever seen.  The enormous amount of unconditional love we felt for her the instant she was born was beautiful, overwhelming and something I’ll will never forget.'],
+							text: ['On our wedding day, I told Liza that I would never love anyone more than her, and I truly meant it. But as Emmie was brought into the world, I broke that promise for the first time.  Liza knew it, because she felt the same thing.  Emmie was the most gorgeous 7 pound, 4 oz ball of goo I’ve ever seen.  The enormous amount of unconditional love we felt for her the instant she was born was beautiful, overwhelming and something I’ll will never forget.'],
 							author: 'Nick',
 							authorPic: 'nick.jpg',
 							authorLink: '/profile/nick-pollard',
 							month: 'November 12',
 							year: '2013',
-							comments: []
+							comments: [{	content: 'the most precious goo in the world :)',
+											author: 'Elizabeth'}],
+							tags: ['Written March 22, 2015', 'baby', 'birth']
 						},
 						{	images: '/images/Elizabeth/emmies-first-year/3.jpg',
 							title: 'First Halloween',
 							text: ['Emmie couldn’t speak come her first Halloween, but we felt very confident that we knew what she wanted to be for her first big celebration. Based on her excessive giggling and general joyfulness while watching Sesame Street these last few months, Big Bird seemed like the perfect choice! She stares at the television with the most intense focus whenever the show comes on. And whenever Elmo opens his mouth Emmie just explodes with laughter. That show has pretty much become our only opportunity for rest these past few months!','I dusted off the old Singer sewing machine for the first time in years and had my go at making the costume. She ended up looking more like a Peep than anything else, but Emmie—if you ever read this—just remember that it’s the thought that counts! And you still looked adorable ;)'],
-							author: 'Elizabeth'
+							author: 'Elizabeth',
+							month: 'October 31',
+							year: '2014',
+							tags: ['Written March 30, 2015', 'Halloween', 'baby']
+						}
+						{	images: '/images/Elizabeth/emmies-first-year/4.jpg',
+							title: 'It’s revealed',
+							text: ['She’s a lefty just like her mom and Grandpa Joe! Here she is helping me finish up my work. She’ll be one smart cookie  (after all, lefties are know to carry the genius trait)! Nick owes me twenty bucks.'],
+							author: 'Elizabeth', 
+							month: 'November',
+							year: '2014',
+							tags: ['Written March 30, 2015', 'writing', 'baby']
+						}
+
+						{	images: '/images/Elizabeth/emmies-first-year/5.jpg',
+							title: 'Our favorite book',
+							text: ['Emmie’s Favorite Book is still Good Night Moon. That was also Elizabeth\'s favorite book as a child, or so her parent’s told me. I think she takes their similar taste as a source of pride. Like Mother Like Daughter, or so she says.'],
+							author: 'Nick',
+							authorPic: 'nick.jpg',
+							authorLink: '/profile/nick-pollard',
+							month: 'December',
+							year: '2014',
+							tags: ['Written March 30, 2015', 'Winter', 'baby']
 						}];
+
 
 app.get('/collection/emmies-first-year', function(req, res) {
 	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
