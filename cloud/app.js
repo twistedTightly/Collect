@@ -83,7 +83,7 @@ var summerInCOMemories = [{	images: '/images/Elizabeth/summer-in-co/1.jpg',
 						{	images: '/images/Elizabeth/summer-in-co/2.jpg',
 							title: 'First Words',
 							text: ['Emmie couldn’t have planned a better moment to say her first words. We were all gathered together after dinner playing scrabble and getting Emmie ready for bed. Grandma P and I were reading “Goodnight Moon” when the word quietly leapt from her lips. Her first word was moon. I always thought it would be Dada! At least now we know she isn’t picking favorites!'],
-							author: 'Elizabeth'
+							author: 'Elizabeth',
 							month: 'July 2',
 							year: '2014',
 							tags: ['Written April 1,2015','baby', 'words,']
@@ -130,7 +130,7 @@ var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.
 							authorLink: '/profile/nick-pollard',
 							month: 'February 18',
 							year: '2013',
-							comments: [],
+							comments: []
 						},
 						{	images: '/images/Elizabeth/emmies-first-year/2.jpg',
 							title: 'Coming into the world smiling',
@@ -140,12 +140,12 @@ var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.
 							authorLink: '/profile/nick-pollard',
 							month: 'November 12',
 							year: '2013',
-							comments: [],
+							comments: []
 						},
 						{	images: '/images/Elizabeth/emmies-first-year/3.jpg',
 							title: 'First Halloween',
 							text: ['Emmie couldn’t speak come her first Halloween, but we felt very confident that we knew what she wanted to be for her first big celebration. Based on her excessive giggling and general joyfulness while watching Sesame Street these last few months, Big Bird seemed like the perfect choice! She stares at the television with the most intense focus whenever the show comes on. And whenever Elmo opens his mouth Emmie just explodes with laughter. That show has pretty much become our only opportunity for rest these past few months!','I dusted off the old Singer sewing machine for the first time in years and had my go at making the costume. She ended up looking more like a Peep than anything else, but Emmie—if you ever read this—just remember that it’s the thought that counts! And you still looked adorable ;)'],
-							author: 'Elizabeth',
+							author: 'Elizabeth'
 						}];
 
 app.get('/collection/emmies-first-year', function(req, res) {
