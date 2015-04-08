@@ -148,7 +148,7 @@ body > .wrapper {
         display: -webkit-flex;
         -webkit-align-items: center;
         margin-right: 80px; // Width of pullout menu triangle
-        & > * {
+        & > *:not(:last-child) {
             -webkit-flex-shrink: 0;
             margin-right: 30px;
         }
