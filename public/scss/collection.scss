@@ -151,6 +151,7 @@
 				-webkit-flex-direction: column;
 				-webkit-justify-content: center;
 				-webkit-align-content: center;
+				-webkit-align-items: center;
 				p {
 					font-family: $font-family-monospace-lower;
 					background-color: $primary-color;
@@ -177,11 +178,14 @@
 				}
 			}
 			.soundClass {
-				height: 80px;
-				.audio-player {
+				-webkit-flex-direction: row;
+				#player {
+					background-color: $white;
+					height: 80px;
+				}
+				button {
 					background-image: url(../images/icons/play.svg);
 					background-repeat: no-repeat;
-					background-size: 60%;
 					background-position: center;
 					border: none;
 					height: 100%;
@@ -192,7 +196,11 @@
 					}
 				}
 				p {
-					display: inline-block;
+					font-family: $font-family-serif;
+					text-align: center;
+					line-height: 80px;
+					min-width: 400px;
+					padding: 0 10px;
 				}
 			}
 			.videoClass.youtube-container {

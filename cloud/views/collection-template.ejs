@@ -66,6 +66,7 @@
                     <div id="location<%= i %>" class="locationClass popup">
                       <img src="<%= memories[i].locationImage %>" />
                       <p><%= memories[i].location %></p>
+                      <a class="close-popup">&#x2715;</a>
                     </div>
                   <% } %>
                   <% if (memories[i].videoId) { %>
@@ -75,8 +76,10 @@
                   <% } %>
                   <% if (memories[i].soundFile) { %>
                     <div id="sound<%= i %>" class="soundClass popup">
-                      <audio id="<%= i %>" src="<%= memories[i].soundFile %>"></audio>
-                      <button id="<%= i %>" class="paused audio-player"></button>
+                      <div id="player">
+                        <audio id="<%= i %>" src="<%= memories[i].soundFile %>"></audio>
+                        <button id="<%= i %>" class="paused audio-player"></button>
+                      </div>
                       <p><%= memories[i].soundDescription %></p>
                     </div>
                   <% } %>
