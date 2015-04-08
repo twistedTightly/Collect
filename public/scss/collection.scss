@@ -123,12 +123,25 @@
 		margin-left: 170px;
 		.image {
 			//background-color: $light-grey;
-			text-align: center;
-			// &::after {
-			// 	content: '';
-			// 	display: block;
-			// 	padding-top: 51.875%; // 415/800 l to w ratio
-			// }
+			position: relative;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			opacity: 1;
+			transition: opacity 300ms;
+			-webkit-transition: opacity 300ms;
+			&::after {
+				content: '';
+				display: block;
+				padding-top: 51.875%; // 415/800 l to w ratio
+			}
+			.popup {
+				position: absolute;
+				width: 575px;
+				opacity: 0;
+				transition: opacity 300ms;
+				-webkit-transition: opacity 300ms;
+			}
 		}
 		.memory-media {
 			width: 70px;
