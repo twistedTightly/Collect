@@ -543,7 +543,7 @@ div.cs-skin-slide::before {
 }
 /* line 170, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row .media-inputs .select-files#record {
-  background-image: url(../images/buttons/record_button.svg);
+  background-image: url(../images/buttons/record.svg);
 }
 /* line 174, ../scss/_addModal.scss */
 #add-memory-modal form .optional-input.row .media-inputs .social-media {
