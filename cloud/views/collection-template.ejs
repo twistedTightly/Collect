@@ -64,23 +64,29 @@
                   <div id="fade" class="fadeClass popup"></div>
                   <% if (memories[i].location) { %>
                     <div id="location<%= i %>" class="locationClass popup">
-                      <img src="<%= memories[i].locationImage %>" />
-                      <p><%= memories[i].location %></p>
-                      <a class="close-popup">&#x2715;</a>
+                      <div class="wrapper">
+                        <img src="<%= memories[i].locationImage %>" />
+                        <p><%= memories[i].location %></p>
+                        <a class="close-popup">&#x2715;</a>
+                      </div>
                     </div>
                   <% } %>
                   <% if (memories[i].videoId) { %>
                     <div id="video<%= i %>" class="videoClass popup youtube-container">
-                      <div class="youtube-player" data-id="<%= memories[i].videoId %>"></div>
+                      <div class="wrapper">
+                        <div class="youtube-player" data-id="<%= memories[i].videoId %>"></div>
+                      </div>
                     </div>
                   <% } %>
                   <% if (memories[i].soundFile) { %>
                     <div id="sound<%= i %>" class="soundClass popup">
-                      <div id="player">
-                        <audio id="<%= i %>" src="<%= memories[i].soundFile %>"></audio>
-                        <button id="<%= i %>" class="paused audio-player"></button>
+                      <div class="wrapper">
+                        <div id="player">
+                          <audio id="<%= i %>" src="<%= memories[i].soundFile %>"></audio>
+                          <button id="<%= i %>" class="paused audio-player"></button>
+                        </div>
+                        <p><%= memories[i].soundDescription %></p>
                       </div>
-                      <p><%= memories[i].soundDescription %></p>
                     </div>
                   <% } %>
                   <% if (memories[i].connections) { %>
