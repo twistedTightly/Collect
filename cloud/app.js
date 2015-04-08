@@ -92,12 +92,12 @@ var summerInCOMemories = [{	images: '/images/Elizabeth/summer-in-co/1.jpg',
 						}];
 
 app.get('/collection/summer-in-co', function(req, res) {
-	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
+	res.render('collection-template', { 	username: 			'Elizabeth Pollard',// Always Elizabeth
 											collectionName: 	'Summer in Colorado',
 											memoryCount: 		'3 memories',
 											contributorCount: 	'2 contributors',
-											profilePic:  		'elizabeth.jpg',
-											backLink: 			'/profile',
+											profilePic:  		'elizabeth.jpg', // Who's profile you came from
+											backLink: 			'/profile', // Link to who's profile you came from
 											memories: 			summerInCOMemories
 	});
 });
