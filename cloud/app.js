@@ -130,11 +130,11 @@ app.get('/collection/nick/summer-in-co', function(req, res) {
 
 var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.jpg',
 							title: 'The Big Announcement',
-							text: ['It was a Friday morning in late February, and Liza and I had plans to spend the weekend skiing with our friends, Jake and Lauren, in the Poconos. I had planned to take a half-day so I woke up early to get into the office and finish up some work.  I opened my eyes and saw that Liza was already awake and cooking breakfast (normally my job), so I knew something was up.','I went to the kitchen to make sure everything was OK and she greeted me with a big smile and cup of coffee. “Just figured I’d get a jump start on the weekend!,” she said as she eagerly led me into a chair in front of a plate of eggs and bacon.  Hesitantly, I sat down and took a sip of the coffee.  Liza had forgotten to add my usual milk so I asked her to bring some over for me.', 'Liza quickly brought the milk and even though I grabbed it from her hand, it wasn’t until I started trying to pour it in my coffee that I realized I was holding a baby bottle. It took me a second to figure out what was going on, but as I started to turn to question Liza, it hit me – we were pregnant! So many thoughts ran through my head in that moment. I felt like the luckiest man in the world.'],
+							text: ['It was a Friday morning in late February, and Liza and I had plans to spend the weekend skiing with our friends, Jake and Lauren, in the Poconos. I had planned to take a half-day so I woke up early to get into the office and finish up some work.  I opened my eyes and saw that Liza was already awake and cooking breakfast, so I knew something was up.','I went to the kitchen to make sure everything was OK and she greeted me with a big smile and cup of coffee. “Just figured I’d get a jump start on the weekend!,” she said as she eagerly led me into a chair in front of a plate of eggs and bacon.  Hesitantly, I sat down and took a sip of the coffee.  Liza had forgotten to add my usual milk so I asked her to bring some over for me.', 'Liza quickly brought the milk and even though I grabbed it from her hand, it wasn’t until I started trying to pour it in my coffee that I realized I was holding a baby bottle. It took me a second to figure out what was going on, but as I started to turn to question Liza, it hit me – we were pregnant! So many thoughts ran through my head in that moment. I felt like the luckiest man in the world.'],
 							author: 'Nick',
 							authorPic: 'nick.jpg',
 							authorLink: '/profile/nick-pollard',
-							month: 'February 18',
+							month: 'Feb 18',
 							year: '2013',
 							comments: [{	content: 'I couldn’t think of a creative way to tell you for what felt like the longest time. I woke up at 4am to get everything ready and calm down my nerves!',
 											author: 'Elizabeth'
@@ -206,7 +206,36 @@ app.get('/collection/nick/emmies-first-year', function(req, res) {
 							});
 });
 
-var nickAndElizabethMemories = [];
+var nickAndElizabethMemories = [{	title: 'How we met',
+									text: ['For the three months before Liza and I met, we both worked in the same building at 155 Avenue of the Americas – her at Dave Meyer on the 7th floor and me at Ardown Engineering on the 12th.  She caught my eye so many times crossing paths in the lobby or riding the elevator but I never got the courage to ask her out, or even find out her name.','Fortunately, fate led us together through mutual friends. One night in November, my co-worker, Michael, invited me out for drinks with some friends at a new brewery in Williamsburg. I couldn’t believe it when I saw Liza sitting next to Michael at the bar. Turns out his friend worked at Dave Meyer also and had asked Liza to tag along.','There were a couple decks of cards out on the table so we ended up playing some games. I pride myself on being quite the card shark, but Liza quickly put me in my place. Her competitiveness was adorable and her cockiness completely warranted.','We ended up playing and chatting late into the night, even after Michael and his friends left. We even did some karaoke, reliving out teenage angst with some Blink-182.  We took the L back together, and I somehow convinced her to grab coffee with me at 8am before I had to leave for my two-week business trip to Scottsdale.','I know it was silly but I just had to see her again. And the rest unfolded from there.'],
+									author: 'Nick',
+									authorPic: 'nick.jpg',
+									authorLink: '/profile/nick-pollard',
+									month: 'July 28',
+									year: '2010',
+									tags: ['Written March 15, 2015']
+									},
+								{	image: '/images/Elizabeth/nickAndElizabethMemories/1.jpg',
+									title: 'Our first vacation',
+									text: ['Liza was asleep on my shoulder on a flight to Denver for a spur of the moment ski trip after a big snowstorm hit the Rockies. It was our first trip together and I was so excited for the weekend.','The last week was pretty hectic and we were both worn out, Liza especially after pulling an all nighter the night before for work. She could barely keep her eyes open but it was cute watching her try and listening to the way she told me she was so tired. It was quite effective as despite my own tiredness, the only thing I wanted to do was make sure she was able to rest.','I took this picture as she lay there asleep with her hands wrapped around my arm. Its hard to explain but there was just this sense of mutual comfort and security. I felt like it was a moment I would want to remember. Our first long drive together, first flight together, first vacation together. Looking down at her asleep on my shoulder she looked so beautiful, and I just knew that she was the one.'],
+									author: 'Nick',
+									authorPic: 'nick.jpg',
+									authorLink: '/profile/nick-pollard',
+									month: 'December',
+									year: '2010',
+									tags: ['Written March 15, 2015']
+								},
+								{	images: '/images/Elizabeth/nickAndElizabethMemories/2.jpg',
+									title: 'The Swings',
+									text: ['Nick took me to Ann Hamilton’s show at the Park Avenue Armory. The installation was called “The Event of the Thread,” and it was one of the most surreal experiences I’ve ever had. We entered the space and I was just taken aback by the beauty of the art. The huge wing was divided in half by a large silk curtain suspended in space by hundreds of small strings. The curtain’s movement was controlled by the viewers who sat on swings. Children were running around laughing and playing, and Nick and I just laid down underneath the curtain and looked up into the cloud of white above us. He held my hand and I nearly lost my breath. It was so beautiful, and I knew then that he was something special.'],
+									author: 'Elizabeth',
+									month: 'January',
+									year: '2011',
+									videoId: 'TDTPgbehKMY',
+									location: 'Park Avenue Armory | New York, NY',
+									locationImage: '/images/locations/park-ave-armory.png',
+									tags: ['Written March 30, 2015', 'Ann Hamilton', 'Armory']
+								}];
 
 app.get('/collection/nick-and-elizabeth', function(req, res) {
 	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
@@ -229,6 +258,36 @@ app.get('/collection/nick/nick-and-elizabeth', function(req, res) {
 });
 
 // Elizabeth's Collections
+var jackAndDianeMemories = [{	images: '/images/Elizabeth/jack-diane/1.jpg',
+								title: 'Their Story',
+								text: ['My grandpa always said that he first met grandma outside the bank in downtown Larchmont. She claimed that he followed her when she left the teller and abandoned his place in line to chase after her. He said it was an immediate and mutual attraction; she said how creeped out she felt and how she only agreed to give him her number if she let him go! Funny how we remember things differently. My parents said they started changing their story after John Mellencamp’s song came out in 1982: then they met as two American kids growing up in the heartland…'],
+								author: 'Elizabeth'
+								month: 'April',
+								year: '1949',
+								videoId: 'h04CH9YZcpI',
+								tags: ['Written March 20, 2015', 'John Mellencamp']
+							},
+							{	images: '/images/Elizabeth/jack-diane/2.jpg',
+								title: '50th Anniversary',
+								text: ['My dad and I made this illustration as an invitation to my grandparent’s 50th anniversary party. They loved it. That was always my favorite thing about them— their amazing sense of humor and their ability to laugh at themselves. I think they threw a better party at that age than I can ever hope to manage!'],
+								month: 'May 22',
+								year: '2004',
+								tags: ['Written March 20, 2015', 'Anniversary', '50']
+							},
+							{	images: '/images/Elizabeth/jack-diane/3.jpg',
+								title: 'Finding old treasures',
+								text: ['When I was training for field hockey preseason I spent the summer at my grandparents house. It was so strange sleeping in my dad’s old bedroom. It felt like living inside a time capsule. Nothing seemed to have moved from the 70s. His drawers were still full of polaroids and class notes on loose leaf sheets of paper (To be honest, I’m surprised I even FOUND notes from class after hearing the things I’ve heard). My grandma would comb through the drawers and show off her favorite items and recite the stories that went along with them. This was her favorite object: my dad’s first drawing of Scruffles. He used to draw the cartoon all the time and even sold holiday cards with this little fellow. I loved the fact that they kept everything in place. It was like an homage to the past, and I could tell how much they loved being parents.'],
+								month: 'Summer',
+								year: '2001',
+								tags: ['Written March 20, 2015']
+							},
+							{	title: 'Grandma\'s Singing',
+								text: ['Grandma was a natural performer. That was our biggest connection actually, as she always encouraged me and helped me prepare for my auditions for the school musicals. I loved her voice; it wasn’t the most beautiful sound in the world, but it always amazed me. She commanded attention when she sang. When she was a child living in Hell’s Kitchen she was recruited to be a model. She landed several ads even even got a role as Shirley Temple’s stage double! Unfortunately Shirley never missed a day on set so Grandma never got to test out her tap skills.'],
+								month: 'August',
+								year: '2012',
+								tags: ['Written March 20, 2015']
+							}];
+
 app.get('/collection/jack-and-diane', function(req, res) {
 	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
 											collectionName: 	'Jack &amp; Diane',
@@ -236,7 +295,7 @@ app.get('/collection/jack-and-diane', function(req, res) {
 											contributorCount: 	'1 contributor',
 											profilePic:  		'elizabeth.jpg',
 											backLink: 			'/profile',
-											memories: 			[] });
+											memories: 			jackAndDianeMemories });
 });
 
 app.get('/collection/growing-up-at-the-cape', function(req, res) {
