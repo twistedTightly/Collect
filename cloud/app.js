@@ -162,7 +162,7 @@ var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.
 							month: 'October 31',
 							year: '2014',
 							tags: ['Written March 30, 2015', 'Halloween', 'baby']
-						}
+						},
 						{	images: '/images/Elizabeth/emmies-first-year/4.jpg',
 							title: 'It’s revealed',
 							text: ['She’s a lefty just like her mom and Grandpa Joe! Here she is helping me finish up my work. She’ll be one smart cookie  (after all, lefties are know to carry the genius trait)! Nick owes me twenty bucks.'],
@@ -170,7 +170,7 @@ var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.
 							month: 'November',
 							year: '2014',
 							tags: ['Written March 30, 2015', 'writing', 'baby']
-						}
+						},
 
 						{	images: '/images/Elizabeth/emmies-first-year/5.jpg',
 							title: 'Our favorite book',
