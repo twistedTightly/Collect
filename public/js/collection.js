@@ -41,6 +41,14 @@ function showMedia(event) {
 	}
 }
 
+function closeAllMedia(event) {
+	$( ".upper-section .center-col > *" ).removeClass( "show" );
+}
+ 
+function labnolThumb(id) {
+    return '<img class="youtube-thumb" src="//i.ytimg.com/vi/' + id + '/hqdefault.jpg"><div class="play-button"></div>';
+}
+ 
 function labnolIframe() {
     var iframe = document.createElement("iframe");
     iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&controls=0&showinfo=0");
@@ -54,6 +62,7 @@ $( document ).ready(function() {
 	$( ".comment-section > a" ).click(showComments);
 	$( ".submit a:last-child" ).click(showComments);
 	$( ".memory-media > img" ).click(showMedia);
+	$( ".upper-section .center-col #fade" ).click(closeAllMedia);
 
 	// Handles youtube videos
 	// From http://www.labnol.org/internet/light-youtube-embeds/27941/
