@@ -61,37 +61,36 @@
                     style="background-image: url(<%= memories[i].images %>)"
                   <% } %>  
                   >
-                  <div id="fade" class="popup"></div>
-                  <div id="location" class="popup">
-                    Location
-                  </div>
+                  <div id="fade" class="fadeClass popup"></div>
                   <% if (memories[i].videoId) { %>
-                    <div id="video" class="popup youtube-container">
+                    <div id="video<%= i %>" class="videoClass popup youtube-container">
                       <div class="youtube-player" data-id="<%= memories[i].videoId %>"></div>
                     </div>
                   <% } %>
                   <% if (memories[i].soundFile) { %>
-                    <div id="sound" class="popup">
+                    <div id="sound<%= i %>" class="soundClass popup">
                       <audio id="<%= i %>" src="<%= memories[i].soundFile %>"></audio>
                       <button id="<%= i %>" class="paused audio-player"></button>
                       <p><%= memories[i].soundDescription %></p>
                     </div>
                   <% } %>
-                  <div id="connect" class="popup"></div>
+                  <% if (memories[i].connections) { %>
+                    <div id="connect<%= i %>" class="connectClass popup"></div>
+                  <% } %>
                 </div>
                 <!-- Memory media -->
                 <div class="memory-media">
                   <% if (memories[i].location) { %>
-                     <img id="location" src="/images/titled-icons/2_visit_icon_blue.svg" alt="Visit" />
+                     <img id="location<%= i %>" src="/images/titled-icons/2_visit_icon_blue.svg" alt="Visit" />
                   <% } %>
                   <% if (memories[i].videoId) { %>
-                     <img id="video" src="/images/titled-icons/watch_icon_blue.svg" alt="Watch" />
+                     <img id="video<%= i %>" src="/images/titled-icons/watch_icon_blue.svg" alt="Watch" />
                   <% } %>
                   <% if (memories[i].soundFile) { %>
-                    <img id="sound" src="../images/titled-icons/4_listen_icon_blue.svg" alt="Listen" />
+                    <img id="sound<%= i %>" src="../images/titled-icons/4_listen_icon_blue.svg" alt="Listen" />
                   <% } %>
                   <% if (memories[i].connections) { %>
-                    <img id="connet" src="../images/titled-icons/5_connect_icon_blue.svg" alt="Connect" />
+                    <img id="connet<%= i %>" src="../images/titled-icons/5_connect_icon_blue.svg" alt="Connect" />
                   <% } %>
                   <!-- Comments Section -->
                   <div class="comment-section collapsed header-text">

@@ -37,7 +37,7 @@ function showMedia(event) {
 
 	// If any media is showing, the fade layer needs to be on
 	if ( $( ".upper-section .center-col > *" ).hasClass( "show" ) ) {
-		$( ".upper-section .center-col #fade" ).addClass( "show" );
+		$( mediaId ).closest( ".upper-section .center-col" ).children( "#fade" ).addClass( "show" );
 	}
 }
 
