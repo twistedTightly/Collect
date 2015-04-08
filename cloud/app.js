@@ -77,18 +77,27 @@ var summerInCOMemories = [{	images: '/images/Elizabeth/summer-in-co/1.jpg',
 							month: 'June 22',
 							year: '2014',
 							location: 'Telluride, CO',
-							videoLink: 'https://www.youtube.com/watch?v=WzGgOPZdJ3g',
+							videoLink: 'https://www.youtube.com/watch?v=WzGgOPZdJ3g'
+							tags: ['Written April 1, 2015','hiking','Colorado'],
 						},
 						{	images: '/images/Elizabeth/summer-in-co/2.jpg',
 							title: 'First Words',
 							text: ['Emmie couldn’t have planned a better moment to say her first words. We were all gathered together after dinner playing scrabble and getting Emmie ready for bed. Grandma P and I were reading “Goodnight Moon” when the word quietly leapt from her lips. Her first word was moon. I always thought it would be Dada! At least now we know she isn’t picking favorites!'],
-							author: 'Elizabeth',
+							author: 'Elizabeth'
+							month: 'July 2',
+							year: '2014',
+							tags: ['Written April 1,2015','baby', 'words,']
 						},
 						{	images: '/images/Elizabeth/summer-in-co/3.jpg',
 							title: 'Fishing with Dad',
 							text: ['On Tuesday morning of our trip to Colorado, Dad and I left the girls at home and ventured out for a day of fishing on Stone Creek.  Growing up we would always fit in a father-son day there and it was great to continue the tradition. As per usual, Dad won our competition, catching three rainbow trout to beat my two. I claim the real victory, though, because only my two were big enough to keep.', 'This was the first chance since Emmie was born that Dad and I got to spend some real alone time together. Finally being able to relate to him on the joys of being a father brought our relationship to an entirely different level. For the first time I really felt like I appreciated everything he did for me growing up.'],
 							author: 'Nick',
+							authorPic: 'nick.jpg',
+							authorLink: '/profile/nick-pollard',
+							month: 'June',
+							year: '2015',
 							location: 'Freedom Park, Miller Ranch Road | Edwards, CO',
+							tags: ['Written April 2, 2015'],
 						}];
 
 app.get('/collection/summer-in-co', function(req, res) {
