@@ -23,6 +23,7 @@ var regularIcons = {
 // Replace the header with the "write" section
 function showWriteInput(event) {
 	$( "#write.row" ).addClass( "show" );
+	$( "li#write" ).removeClass( "bw" );
 	$( "#write.row" ).css( "pointer-events", "auto" );
 	$( "#add-memory-modal > p" ).removeClass( "show" );
 
@@ -38,7 +39,7 @@ function showWriteInput(event) {
 				"height": "42px",
 				"width": "71px" 
 		});
-		$( "#add-memory-modal li:not(:last-child)" ).css( "margin-right", "154px" );
+		$( "#add-memory-modal li:not(:last-child)" ).css( "margin-right", "129px" );
 	} else {
 		$( "#add-memory-modal li:not(:last-child)" ).css( "margin-right", "100px" );
 	}

@@ -18,15 +18,14 @@
 }
 
 .bw {
-	-webkit-filter: grayscale(100%) brightness(10%) contrast(100%);
-			filter: grayscale(100%) brightness(10%) contrast(100%);
+	-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
 }
 
 #add-memory-modal {
 	padding-top: 65px;
 	padding-bottom: 65px;
-	width: 60%;
-	max-height: 100%;
+	width: 999px;
 	overflow-y: scroll;
 	overflow-x: inherit;
 	&::-webkit-scrollbar {
@@ -46,6 +45,10 @@
 		img {
 			pointer-events: none;
 			height: 100%;
+		}
+		&:hover {
+			filter: none;
+			-webkit-filter: none;
 		}
 	}
 	li:last-child {
@@ -94,7 +97,7 @@
 			color: $primary-color;
 		}
 		#write {
-			//pointer-events: none;
+			pointer-events: none;
 			opacity: 0;
 			max-height: 0;
 			transition: opacity 1s 1s, max-height 2s 1s;
@@ -105,6 +108,7 @@
 				font-size: 13pt;
 				border: none;
 				text-align: left;
+				margin-bottom: 0px;
 			}
 			textarea {
 				padding-left: 0;
@@ -156,8 +160,16 @@
 				.select-files {
 					width: 290px;
 					height: 48px;
-					background-image: url(../images/buttons/horiz_icons.svg);
-					background-size: fill;
+					background-image: url(../images/buttons/horiz_icons.svg); 
+					background-size: cover;
+					-webkit-transition: color 300ms ease-out;
+					transition: color 300ms ease-out;
+					&:hover {
+						color: $primary-color;
+					}
+					&#record {
+						background-image: url(../images/buttons/record_button.svg);
+					}
 				}
 				.social-media {
 					width: 48px;

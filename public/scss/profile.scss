@@ -127,6 +127,7 @@ $user-info-spacing: 15px;
     -webkit-flex-flow: row wrap;
     -webkit-justify-content: flex-start;
     .gallery-box {
+        color: $black;
         -webkit-flex-grow: 1;
         min-width: 230px;
         //max-width: 280px; // Add back in to restrict gallery box size but leave whitespace sometimes
