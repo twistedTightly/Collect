@@ -23,8 +23,11 @@ var regularIcons = {
 // Replace the header with the "write" section
 function showWriteInput(event) {
 	$( "#write.row" ).addClass( "show" );
+	// Write icon is shown in color immediately since write section appears by default
 	$( "li#write" ).removeClass( "bw" );
+	// Also allow the write section, which always appears, to be interactive
 	$( "#write.row" ).css( "pointer-events", "auto" );
+	// This hides the headers the write section replaces
 	$( "#add-memory-modal > p" ).removeClass( "show" );
 
 	// Change media icons to have titles and animate
