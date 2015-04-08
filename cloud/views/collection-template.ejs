@@ -70,12 +70,13 @@
                       <div class="youtube-player" data-id="<%= memories[i].videoId %>"></div>
                     </div>
                   <% } %>
-                  <div id="sound" class="popup">
-                    Sound
-                  </div>
-                  <div id="connect" class="popup">
-                    
-                  </div>
+                  <% if (memories[i].soundFile) { %>
+                    <div id="sound" class="popup">
+                      <audio id="<%= i %>" src="<%= memories[i].soundFile %>"></audio>
+                      <button id="<%= i %>" class="paused audio-player">Play</button>
+                    </div>
+                  <% } %>
+                  <div id="connect" class="popup"></div>
                 </div>
                 <!-- Memory media -->
                 <div class="memory-media">
