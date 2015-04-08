@@ -77,8 +77,8 @@ var summerInCOMemories = [{	images: '/images/Elizabeth/summer-in-co/1.jpg',
 							month: 'June 22',
 							year: '2014',
 							location: 'Telluride, CO',
-							videoLink: 'https://www.youtube.com/watch?v=WzGgOPZdJ3g'
-							tags: ['Written April 1, 2015','hiking','Colorado'],
+							videoLink: 'https://www.youtube.com/watch?v=WzGgOPZdJ3g',
+							tags: ['Written April 1, 2015','hiking','Colorado']
 						},
 						{	images: '/images/Elizabeth/summer-in-co/2.jpg',
 							title: 'First Words',
@@ -97,7 +97,7 @@ var summerInCOMemories = [{	images: '/images/Elizabeth/summer-in-co/1.jpg',
 							month: 'June',
 							year: '2015',
 							location: 'Freedom Park, Miller Ranch Road | Edwards, CO',
-							tags: ['Written April 2, 2015'],
+							tags: ['Written April 2, 2015']
 						}];
 
 app.get('/collection/summer-in-co', function(req, res) {
