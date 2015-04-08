@@ -41,9 +41,29 @@ function showMedia(event) {
 	}
 }
 
+function labnolIframe() {
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&controls=0&showinfo=0");
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("id", "youtube-iframe");
+    this.parentNode.replaceChild(iframe, this);
+}
+
 // Attaches listeners to the DOM once it has loaded
 $( document ).ready(function() {
 	$( ".comment-section > a" ).click(showComments);
 	$( ".submit a:last-child" ).click(showComments);
 	$( ".memory-media > img" ).click(showMedia);
+
+	// Handles youtube videos
+	// From http://www.labnol.org/internet/light-youtube-embeds/27941/
+	(function() {
+	    var v = document.getElementsByClassName("youtube-player");
+	    for (var n = 0; n < v.length; n++) {
+	        var p = document.createElement("div");
+	        p.innerHTML = labnolThumb(v[n].dataset.id);
+	        p.onclick = labnolIframe;
+	        v[n].appendChild(p);
+	    }
+	})();
 });
