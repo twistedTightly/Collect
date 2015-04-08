@@ -85,9 +85,22 @@ app.get('/connections', function(req, res) {
 });
 
 // Profiles
+app.get('/profile/nick-pollard', function(req, res) {
+	res.render('profile-nick', { 	username: 	'Nick Pollard',
+									location: 	'New York, New York',
+									profilePic: 'nick.jpg'});
+});
+
+app.get('/profile/marilyn-camps', function(req, res) {
+	res.render('profile-marilyn', { username: 	'Marilyn Camps',
+									location: 	'Larchmont, New York',
+									profilePic: 'marilyn.jpg' });
+});
+
 app.get('/profile', function(req, res) {
-	res.render('profile', { username: 'Elizabeth Pollard',
-							age: '' });
+	res.render('profile', { username: 	'Elizabeth Pollard',
+							location: 	'New York, New York',
+							profilePic: 'elizabeth.jpg' });
 });
 
 app.post('/profile', function(req, res) {
@@ -102,7 +115,7 @@ app.post('/profile', function(req, res) {
 		success: function(user) {
 			name = user[0].get('firstname');
 			res.render('profile', { username: name,
-							age: '' });
+									location: 'New York, New York' });
 		},
 		// Query had a error
 		error: function(error) {
@@ -110,7 +123,7 @@ app.post('/profile', function(req, res) {
 			age = error.message;
 			name = 'error';
 			res.render('profile', { username: name,
-							age: age });
+									location: 'New York, New York' });
 		}
 	});
 });

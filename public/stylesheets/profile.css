@@ -3924,18 +3924,17 @@ blockquote p {
   margin-top: 20px;
   width: 160px;
   height: 120px;
-  background-image: url(../images/content/elizabeth.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 55, ../scss/profile.scss */
+/* line 54, ../scss/profile.scss */
 #user-information p {
   line-height: 8pt;
   padding: 15px 0;
   margin: 0px;
   font-size: 10pt;
 }
-/* line 61, ../scss/profile.scss */
+/* line 60, ../scss/profile.scss */
 #user-information hr {
   border: 0;
   margin: 0 auto 0 auto;
@@ -3943,7 +3942,7 @@ blockquote p {
   height: 1pt;
   width: 95px;
 }
-/* line 68, ../scss/profile.scss */
+/* line 67, ../scss/profile.scss */
 #user-information a {
   display: block;
   margin-top: 10px;
@@ -3954,12 +3953,12 @@ blockquote p {
   font-size: 10pt;
 }
 
-/* line 79, ../scss/profile.scss */
+/* line 78, ../scss/profile.scss */
 #main {
   display: -webkit-flex;
   -webkit-flex-direction: row;
 }
-/* line 82, ../scss/profile.scss */
+/* line 81, ../scss/profile.scss */
 #main #body-section {
   -webkit-flex-grow: 1;
 }
@@ -3970,7 +3969,7 @@ blockquote p {
  *
  ********************/
 /****** Header ******/
-/* line 93, ../scss/profile.scss */
+/* line 92, ../scss/profile.scss */
 #gallery-header {
   padding-left: 40px;
   padding-top: 48px;
@@ -3984,25 +3983,25 @@ blockquote p {
       }
   }*/
 }
-/* line 96, ../scss/profile.scss */
+/* line 95, ../scss/profile.scss */
 #gallery-header p {
   margin: 0;
   display: inline-block;
 }
-/* line 100, ../scss/profile.scss */
+/* line 99, ../scss/profile.scss */
 #gallery-header p#username {
   font-style: italic;
   font-size: 25pt;
   line-height: 20pt;
 }
-/* line 105, ../scss/profile.scss */
+/* line 104, ../scss/profile.scss */
 #gallery-header p.header-text {
   font-size: 12pt;
   line-height: 10pt;
 }
 
 /****** Rows and Memory Boxes *******/
-/* line 121, ../scss/profile.scss */
+/* line 120, ../scss/profile.scss */
 #gallery {
   margin-right: 85px;
   margin-top: 37px;
@@ -4011,7 +4010,7 @@ blockquote p {
   -webkit-flex-flow: row wrap;
   -webkit-justify-content: flex-start;
 }
-/* line 128, ../scss/profile.scss */
+/* line 127, ../scss/profile.scss */
 #gallery .gallery-box {
   color: #272727;
   -webkit-flex-grow: 1;
@@ -4026,13 +4025,13 @@ blockquote p {
   overflow: hidden;
   position: relative;
 }
-/* line 142, ../scss/profile.scss */
+/* line 141, ../scss/profile.scss */
 #gallery .gallery-box .content {
   margin: 3px;
   background-color: #D8D8D8;
   -webkit-flex-grow: 1;
 }
-/* line 147, ../scss/profile.scss */
+/* line 146, ../scss/profile.scss */
 #gallery .gallery-box .collection-title {
   text-align: center;
   position: absolute;
@@ -4046,25 +4045,25 @@ blockquote p {
   -webkit-align-items: center;
   -webkit-justify-content: center;
 }
-/* line 162, ../scss/profile.scss */
+/* line 161, ../scss/profile.scss */
 #gallery .four-pic .content-col {
   display: -webkit-flex;
   -webkit-flex-flow: column wrap;
   -webkit-flex-grow: 1;
 }
-/* line 167, ../scss/profile.scss */
+/* line 166, ../scss/profile.scss */
 #gallery .text-only .content {
   width: 50px;
   height: 106px;
   background-color: white;
   font-style: italic;
 }
-/* line 173, ../scss/profile.scss */
+/* line 172, ../scss/profile.scss */
 #gallery .gallery-box.ghost {
   background: none;
   height: 0;
 }
-/* line 177, ../scss/profile.scss */
+/* line 176, ../scss/profile.scss */
 #gallery .gallery-box::after {
   content: '';
   padding-top: 62%;
@@ -4076,7 +4075,7 @@ blockquote p {
  * Footer
  *
  ********************/
-/* line 189, ../scss/profile.scss */
+/* line 188, ../scss/profile.scss */
 #footer {
   height: 80px;
 }
