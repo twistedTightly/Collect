@@ -50,6 +50,10 @@ h1, h2, h3, h4, h5 {
     letter-spacing: 3px;
     text-transform: lowercase;
 }
+button:focus {
+    outline: none;
+    border-color: $primary-color;
+}
 // Universal classes
 // Maintains footer at bottom of page
 // Credit: http://ryanfait.com/sticky-footer/

@@ -3231,7 +3231,13 @@ h1, h2, h3, h4, h5 {
   text-transform: lowercase;
 }
 
-/* line 56, ../scss/app.scss */
+/* line 53, ../scss/app.scss */
+button:focus {
+  outline: none;
+  border-color: #5F7F8E;
+}
+
+/* line 60, ../scss/app.scss */
 body > .wrapper {
   min-height: 100%;
   height: auto !important;
@@ -3239,80 +3245,80 @@ body > .wrapper {
   margin: 0 auto-80px;
 }
 
-/* line 62, ../scss/app.scss */
+/* line 66, ../scss/app.scss */
 .flat-button {
   background-color: #272727;
   color: #FFFFFF;
   text-align: center;
 }
 
-/* line 67, ../scss/app.scss */
+/* line 71, ../scss/app.scss */
 .button {
   letter-spacing: 3px;
   text-transform: lowercase;
   padding: 0.7rem 0 0.65rem 0;
   font-size: 85%;
 }
-/* line 72, ../scss/app.scss */
+/* line 76, ../scss/app.scss */
 .button:hover {
   border-color: transparent;
 }
 
-/* line 76, ../scss/app.scss */
+/* line 80, ../scss/app.scss */
 .dark.button {
   color: #272727;
   border-color: #272727;
 }
-/* line 79, ../scss/app.scss */
+/* line 83, ../scss/app.scss */
 .dark.button:hover {
   border-color: transparent;
   background-color: #272727;
 }
 
-/* line 84, ../scss/app.scss */
+/* line 88, ../scss/app.scss */
 .svg-icon {
   height: 100%;
 }
 
-/* line 87, ../scss/app.scss */
+/* line 91, ../scss/app.scss */
 .svg-container {
   display: inline-block;
   height: 1.5em;
   min-height: 10px;
 }
 
-/* line 92, ../scss/app.scss */
+/* line 96, ../scss/app.scss */
 .centered {
   position: absolute;
   left: 50%;
   top: 50%;
 }
 
-/* line 97, ../scss/app.scss */
+/* line 101, ../scss/app.scss */
 #main {
   width: 100%;
   margin: auto;
   text-align: left;
   padding: 40px 0;
 }
-/* line 102, ../scss/app.scss */
+/* line 106, ../scss/app.scss */
 #main h1 {
   margin-top: 0;
   font-size: 35px;
 }
-/* line 106, ../scss/app.scss */
+/* line 110, ../scss/app.scss */
 #main ul {
   padding-left: 20px;
 }
 
-/* line 110, ../scss/app.scss */
+/* line 114, ../scss/app.scss */
 .header-text {
   letter-spacing: 3px;
   font-family: AxelSC, "Orator Std", monospace;
   text-transform: lowercase;
 }
 
-/* line 115, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 .user-icon {
   border-radius: 50%;
   background: url(../images/content/elizabeth.jpg);
@@ -3326,7 +3332,7 @@ body > .wrapper {
  * Header
  *
  ********************/
-/* line 128, ../scss/app.scss */
+/* line 132, ../scss/app.scss */
 header {
   display: -webkit-flex;
   -webkit-align-items: center;
@@ -3337,48 +3343,48 @@ header {
   -webkit-transition: padding 1s;
   transition: padding 1s;
 }
-/* line 138, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 header #logo {
   margin-left: 40px;
   width: auto;
   height: 28px;
   -webkit-flex-shrink: 0;
 }
-/* line 144, ../scss/app.scss */
+/* line 148, ../scss/app.scss */
 header #middle {
   -webkit-flex-grow: 1;
 }
-/* line 147, ../scss/app.scss */
+/* line 151, ../scss/app.scss */
 header #toolbar {
   display: -webkit-flex;
   -webkit-align-items: center;
   margin-right: 80px;
 }
-/* line 151, ../scss/app.scss */
+/* line 155, ../scss/app.scss */
 header #toolbar > *:not(:last-child) {
   -webkit-flex-shrink: 0;
   margin-right: 30px;
 }
-/* line 155, ../scss/app.scss */
+/* line 159, ../scss/app.scss */
 header #toolbar #username {
   font-size: 12pt;
   color: #FFFFFF;
 }
-/* line 159, ../scss/app.scss */
+/* line 163, ../scss/app.scss */
 header #toolbar .user-icon {
   margin-right: 25px;
 }
-/* line 162, ../scss/app.scss */
+/* line 166, ../scss/app.scss */
 header #toolbar .svg-container {
   width: 31px;
   height: 27px;
 }
-/* line 165, ../scss/app.scss */
+/* line 169, ../scss/app.scss */
 header #toolbar .svg-container #connections-icon {
   height: 100%;
   width: auto;
 }
-/* line 169, ../scss/app.scss */
+/* line 173, ../scss/app.scss */
 header #toolbar .svg-container #messages-icon {
   width: 31px;
   height: 23px;
@@ -3389,7 +3395,7 @@ header #toolbar .svg-container #messages-icon {
  * Pullout Menu
  *
  ********************/
-/* line 185, ../scss/app.scss */
+/* line 189, ../scss/app.scss */
 .triangle-left {
   width: 0;
   height: 0;
@@ -3398,7 +3404,7 @@ header #toolbar .svg-container #messages-icon {
   border-bottom: 64px solid transparent;
 }
 
-/* line 192, ../scss/app.scss */
+/* line 196, ../scss/app.scss */
 #pullout-menu-tab {
   z-index: 100;
   position: absolute;
@@ -3409,7 +3415,7 @@ header #toolbar .svg-container #messages-icon {
   cursor: pointer;
 }
 
-/* line 201, ../scss/app.scss */
+/* line 205, ../scss/app.scss */
 #pullout-menu-icon-holder {
   position: absolute;
   right: 0;
@@ -3417,7 +3423,7 @@ header #toolbar .svg-container #messages-icon {
   padding: 50px 15px;
 }
 
-/* line 207, ../scss/app.scss */
+/* line 211, ../scss/app.scss */
 #pullout-menu {
   width: 20%;
   height: 100%;
@@ -3438,18 +3444,18 @@ header #toolbar .svg-container #messages-icon {
   background: linear-gradient(135deg, #707070 0%, rgba(112, 112, 112, 0.95) 37%, rgba(112, 112, 112, 0.85) 81%, rgba(112, 112, 112, 0.7) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f8f8f', endColorstr='#8f8f8f', GradientType=1 );
 }
-/* line 229, ../scss/app.scss */
+/* line 233, ../scss/app.scss */
 #pullout-menu a {
   display: block;
   color: #FFFFFF;
   margin-top: 45px;
   margin-left: 15px;
 }
-/* line 234, ../scss/app.scss */
+/* line 238, ../scss/app.scss */
 #pullout-menu a:hover {
   color: #5F7F8E;
 }
-/* line 238, ../scss/app.scss */
+/* line 242, ../scss/app.scss */
 #pullout-menu input[type="search"] {
   border-radius: 50px;
   padding: 5px 15px;
@@ -3458,21 +3464,21 @@ header #toolbar .svg-container #messages-icon {
   letter-spacing: 3px;
 }
 
-/* line 247, ../scss/app.scss */
+/* line 251, ../scss/app.scss */
 #pullout-menu.show {
   right: 0;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 252, ../scss/app.scss */
+/* line 256, ../scss/app.scss */
 #pullout-menu-tab.show {
   right: 20%;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 257, ../scss/app.scss */
+/* line 261, ../scss/app.scss */
 header.shift {
   padding-right: 20%;
   -webkit-transition: padding 1s;

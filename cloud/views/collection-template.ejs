@@ -73,7 +73,8 @@
                   <% if (memories[i].soundFile) { %>
                     <div id="sound" class="popup">
                       <audio id="<%= i %>" src="<%= memories[i].soundFile %>"></audio>
-                      <button id="<%= i %>" class="paused audio-player">Play</button>
+                      <button id="<%= i %>" class="paused audio-player"></button>
+                      <p><%= memories[i].soundDescription %></p>
                     </div>
                   <% } %>
                   <div id="connect" class="popup"></div>

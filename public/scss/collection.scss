@@ -136,6 +136,7 @@
 				padding-top: 51.875%; // 415/800 l to w ratio
 			}
 			.popup {
+				pointer-events: none;
 				position: absolute;
 				top: 0;
 				bottom: 0;
@@ -150,6 +151,7 @@
 				-webkit-transition: opacity 300ms;
 				&.show:not(#fade) {
 					opacity: 1;
+					pointer-events: auto;
 				}
 			}
 			#fade {
@@ -160,8 +162,28 @@
 					opacity: 0.7;
 				}
 			}
+			#sound {
+				height: 80px;
+				.audio-player {
+					background-image: url(../images/icons/play.svg);
+					background-repeat: no-repeat;
+					background-size: 60%;
+					background-position: center;
+					border: none;
+					height: 100%;
+					width: 80px;
+					padding: 0;
+					&.paused {
+						background-image: url(../images/icons/pause.svg);
+					}
+				}
+				p {
+					display: inline-block;
+					color: $white;
+				}
+			}
 			#video.youtube-container {
-				display: block; margin: 20px auto;
+				display: block; margin: 100px auto;
 				width: 100%;
 				max-width: 600px;
 			}
