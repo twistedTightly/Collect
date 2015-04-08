@@ -22,8 +22,12 @@
             <img id="messages-icon" class="svg-icon" src="/images/messages_icon_white.svg" alt="Messages">
           </div>
         </a>
-        <p class="header-text" id="username"><%= username %></p>
-        <div class="user-icon"></div>
+        <a href="/profile">
+          <p class="header-text" id="username"><%= username %></p>
+        </a>
+        <a href="/profile">
+          <div class="user-icon"></div>
+        </a>
       </div>
     <!-- NOTE: The following *must* be included as it closes the header tag -->
     <% include partials/header-end.ejs %>

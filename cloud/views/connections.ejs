@@ -8,15 +8,25 @@
   </head>
   <body>
     <header>
-      <div class="left">
-        <span id="logo"><img scr="images/collect_logo.svg" alt="Logo"></span>
-      </div>
-     <div class="right">
-        <div class="svg-container">
-          <a href="#"><img class="svg-icon" src="images/connections_icon_white.svg" alt="Connections"></a>
-          <a href="#"><img class="svg-icon" src="images/messages_icon_white.svg" alt="Messages"></a>
-        </div>
-        <span class="header-text" id="user-info"><%= username %></span>
+      <a href="/profile"><img id="logo" src="/images/collect_logo.svg" alt="Logo"></a>
+      <div id="middle"></div>
+      <div id="toolbar">
+        <a href="#">
+          <div class="svg-container">
+            <img id="connections-icon" class="svg-icon" src="/images/connections_icon_white.svg" alt="Connections">
+          </div>
+        </a>
+        <a href="#">
+          <div class="svg-container">
+            <img id="messages-icon" class="svg-icon" src="/images/messages_icon_white.svg" alt="Messages">
+          </div>
+        </a>
+        <a href="/profile">
+          <p class="header-text" id="username"><%= username %></p>
+        </a>
+        <a href="/profile">
+          <div class="user-icon"></div>
+        </a>
       </div>
     <!-- NOTE: The following *must* be included as it closes the header tag -->
     <% include partials/header-end.ejs %>
