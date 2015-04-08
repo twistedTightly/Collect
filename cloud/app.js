@@ -170,6 +170,8 @@ app.get('/collection/nick/emmies-first-year', function(req, res) {
 							});
 });
 
+var nickAndElizabethMemories = [];
+
 app.get('/collection/nick-and-elizabeth', function(req, res) {
 	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
 											collectionName: 	'Nick &amp; Elizabeth',
@@ -177,7 +179,7 @@ app.get('/collection/nick-and-elizabeth', function(req, res) {
 											contributorCount: 	'2 contributors',
 											profilePic:  		'elizabeth.jpg',
 											backLink: 			'/profile',
-											memories: 			[] });
+											memories: 			nickAndElizabethMemories });
 });
 
 app.get('/collection/nick/nick-and-elizabeth', function(req, res) {
@@ -187,7 +189,7 @@ app.get('/collection/nick/nick-and-elizabeth', function(req, res) {
 											contributorCount: 	'2 contributors',
 											profilePic:  		'nick.jpg',
 											backLink: 			'/profile/nick-pollard',
-											memories: 			[] });
+											memories: 			nickAndElizabethMemories });
 });
 
 // Elizabeth's Collections
@@ -288,7 +290,65 @@ app.get('/collection/marilyn/family-stories', function(req, res) {
 });
 
 // Marilyn's Collections
-// TODO
+app.get('/collection/marilyn/year-in-kenya', function(req, res) {
+	res.render('collection-template', {
+								username: 			'Elizabeth Pollard',
+								collectionName: 	'Year in Kenya',
+								memoryCount: 		'4 memories',
+								contributorCount: 	'1 contributor',
+								profilePic:  		'marilyn.jpg',
+								backLink: 			'/profile/marilyn-camps',
+								memories: 			[]
+	});
+});
+
+app.get('/collection/marilyn/ending-up-in-sf', function(req, res) {
+	res.render('collection-template', {
+								username: 			'Elizabeth Pollard',
+								collectionName: 	'Ending Up in San Francisco',
+								memoryCount: 		'4 memories',
+								contributorCount: 	'1 contributor',
+								profilePic:  		'marilyn.jpg',
+								backLink: 			'/profile/marilyn-camps',
+								memories: 			[]
+	});
+});
+
+app.get('/collection/marilyn/working-in-baltimore', function(req, res) {
+	res.render('collection-template', {
+								username: 			'Elizabeth Pollard',
+								collectionName: 	'Working in Baltimore',
+								memoryCount: 		'1 memory',
+								contributorCount: 	'1 contributor',
+								profilePic:  		'marilyn.jpg',
+								backLink: 			'/profile/marilyn-camps',
+								memories: 			[]
+	});
+});
+
+app.get('/collection/marilyn/mamaroneck-high-school', function(req, res) {
+	res.render('collection-template', {
+								username: 			'Elizabeth Pollard',
+								collectionName: 	'Mamaroneck High School',
+								memoryCount: 		'2 memories',
+								contributorCount: 	'1 contributor',
+								profilePic:  		'marilyn.jpg',
+								backLink: 			'/profile/marilyn-camps',
+								memories: 			[]
+	});
+});
+
+app.get('/collection/marilyn/younger-years', function(req, res) {
+	res.render('collection-template', {
+								username: 			'Elizabeth Pollard',
+								collectionName: 	'Younger Years',
+								memoryCount: 		'2 memories',
+								contributorCount: 	'1 contributor',
+								profilePic:  		'marilyn.jpg',
+								backLink: 			'/profile/marilyn-camps',
+								memories: 			[]
+	});
+});
 
 // Unused
 app.get('/connections', function(req, res) {
