@@ -267,7 +267,7 @@ var jackAndDianeMemories = [{	images: '/images/Elizabeth/jack-diane/1.jpg',
 								videoId: 'h04CH9YZcpI',
 								tags: ['Written March 20, 2015', 'John Mellencamp']
 							},
-							{	images: '/images/Elizabeth/jack-diane/2.jpg',
+							{	images: '/images/Elizabeth/jack-diane/2.png',
 								title: '50th Anniversary',
 								text: ['My dad and I made this illustration as an invitation to my grandparent’s 50th anniversary party. They loved it. That was always my favorite thing about them— their amazing sense of humor and their ability to laugh at themselves. I think they threw a better party at that age than I can ever hope to manage!'],
 								author: 'Elizabeth',								
