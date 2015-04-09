@@ -281,10 +281,13 @@ var jackAndDianeMemories = [{	images: '/images/Elizabeth/jack-diane/1.jpg',
 								year: '2001',
 								tags: ['Written March 20, 2015']
 							},
-							{	title: 'Grandma\'s Singing',
+							{	images: '/images/Elizabeth/jack-diane/4.jpg',
+								title: 'Grandma\'s Singing',
 								text: ['Grandma was a natural performer. That was our biggest connection actually, as she always encouraged me and helped me prepare for my auditions for the school musicals. I loved her voice; it wasn’t the most beautiful sound in the world, but it always amazed me. She commanded attention when she sang. When she was a child living in Hell’s Kitchen she was recruited to be a model. She landed several ads even even got a role as Shirley Temple’s stage double! Unfortunately Shirley never missed a day on set so Grandma never got to test out her tap skills.'],
 								month: 'August',
 								year: '2012',
+								soundFile: 'images/Elizabeth/jack-diane/grandma.mp3',
+								soundDescription: 'Grandma Diane singing ‘Danny Boy’',
 								tags: ['Written March 20, 2015']
 							}];
 
@@ -298,14 +301,38 @@ app.get('/collection/jack-and-diane', function(req, res) {
 											memories: 			jackAndDianeMemories });
 });
 
+var	lifeAtTheCape 	= 		[{	images: '/images/Elizabeth/summers-at-the-cape/1',
+								title: 'The Cottage',
+								text: ['We’ve been coming to the cape for years. I think my parents actually bought the cottage in 1993, but it’s felt like my second home for as long as I can remember. It has always been a little oasis from the hectic world back in New York. Summer always meant Cape Camp, where I met up with all my old friends from the summers before. Even though I saw the Cape kids so much less than my friends from home, those relationships have stayed with my much longer. Patricia—who I met at age six and bonded over friendship bracelets— was even my maid of honor at my wedding! I can’t wait to bring Emmie out here when she’s a bit older. I have a feeling she’ll be a big swimmer, just like her father.'],
+								location: '102 Salt March Rd | Sandwich, MA',
+								locationImage: '/images/locations/salt-marsh-rd.png',
+								month: 'Summer',
+								year: '1993',
+								tags: ['Written March 18, 2015', 'Cape Cod']
+							},
+							{	images: '/images/Elizabeth/summers-at-the-cape/2',
+								title: 'Clam Bakes',
+								text: ['Growing up we would spend two weeks every summer on Cape Cod at our family’s cottage. The cottage has been in my mother’s family since she was four years old and has grown over the years as family size demanded it. Those two weeks were ones I looked forward to all year and the source of some of my most treasured memories.','For one weekend every year, my dad’s extended family would join us at the beach for our annual clambake. When I was younger my dad was always the Bake Master but as I grew older it was fun to watch my brothers take over the duties and my dad move into a self-appointed advisory role.','The clambake is quite the process and keeps everyone— young and old—busy. Digging a pit, collecting hundreds of rocks, braving the slippery jetties to gather seaweed, prepping the lobsters and veggies...the number of jobs are endless. My favorite part was always when one of my brothers would get dressed head to toe in ridiculous clothes and jump in the ocean to drench himself in saltwater before climbing in the steaming pit. The outfit got better and better every year as they started going to thrift shops to prepare for it!'],
+								month: 'Summer',
+								year: '2004',
+								tags: ['Written March 18, 2015', 'Cape Cod']
+							},
+							{	title: 'Province Town',
+								text: ['One of my favorite things to do at the Cape was our annual trip up to Provincetown at the tip of Massachusetts. The town is known as one of the most gay friendly towns in the country, creating an atmosphere that is lively, eclectic, and charming all at the same time.***We would normally start the hour drive up around lunch time and get to P-town in time to take a whale watch around the bay. I always enjoyed coming back into the harbor and seeing the huge portraits of old people facing the ocean.','Once back on land we would get dinner at a seafood restaurant and then spend hours wandering through the three main streets of the quaint little town. There were tons of art shops, candy stores, and performance halls but our favorite places were the puzzle and marine surplus stores. Dad would spend hours in the puzzle store attempting to solve as many as he could and then bring them home to us to show off his intelligence. I would spend hours in the surplus store looking through everything from license plates to pirate flags to old army posters.','Finally, we would always end the night getting ice cream at the small shop near the parking lot before driving back to our cottage.'],
+								month: 'Summer',
+								year: '2004',
+								location: 'Lewis Brother’s Ice Cream | Provincetown, MA',
+								locationImage: '/images/locations/provincetown.png',
+								tags: ['Written March 18, 2015', 'Cape Cod']
+								}];
 app.get('/collection/growing-up-at-the-cape', function(req, res) {
 	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
-											collectionName: 	'Growing Up at the Cape',
+											collectionName: 	'Life at the Cape',
 											memoryCount: 		'3 memories',
 											contributorCount: 	'1 contributor',
 											profilePic:  		'elizabeth.jpg',
 											backLink: 			'/profile',
-											memories: 			[] });
+											memories: 			lifeAtTheCape });
 });
 
 app.get('/collection/as-a-child', function(req, res) {
