@@ -22,8 +22,10 @@ function toggleButtonDropdown() {
 		// log in and sign up forms are unselected
 		if (!$( "#scrollwrapper" ).hasClass( "shifted" )) {
 			$( "#scrollwrapper" ).toggleClass( "shifted" );
+			$( "#main #pullout-menu" ).toggleClass( "longer" );
 		} else if (!$( "#banner a.button" ).hasClass( "permahover" )) {
 			$( "#scrollwrapper" ).toggleClass( "shifted" );
+			$( "#main #pullout-menu" ).toggleClass( "longer" );
 		}
 	});
 }

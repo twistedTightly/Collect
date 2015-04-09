@@ -35,6 +35,29 @@ body {
 	    top: 0;
 	    right: 0;
 	}
+	.svg-container {
+    	width: 20px;
+    }
+    #pullout-menu {
+    	height: 700px;
+    	-webkit-transition: all 1s;
+    	transition: all 1s;
+    	&.longer {
+    		height: 750px;
+    	}
+    	#title {
+    		font-size: 22px;
+    	}
+    	.credits-text {
+    		font-family: $font-family-serif;
+    		font-size: 12px;
+    		line-height: 20px;
+    		margin-top: 10px;
+    		span {
+	    		font-style: italic;
+	    	}
+    	}
+    }
 	#banner {
 		margin: 150px 0 0 $side-padding-base;
 		font-size: $large-font-size;
@@ -96,6 +119,7 @@ body {
 				padding: 10px;
 				img {
 					height: 26px;
+					cursor: pointer;
 				}
 			}
 		}
