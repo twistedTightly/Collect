@@ -270,6 +270,7 @@ var jackAndDianeMemories = [{	images: '/images/Elizabeth/jack-diane/1.jpg',
 							{	images: '/images/Elizabeth/jack-diane/2.jpg',
 								title: '50th Anniversary',
 								text: ['My dad and I made this illustration as an invitation to my grandparent’s 50th anniversary party. They loved it. That was always my favorite thing about them— their amazing sense of humor and their ability to laugh at themselves. I think they threw a better party at that age than I can ever hope to manage!'],
+								author: 'Elizabeth',								
 								month: 'May 22',
 								year: '2004',
 								tags: ['Written March 20, 2015', 'Anniversary', '50']
@@ -277,6 +278,7 @@ var jackAndDianeMemories = [{	images: '/images/Elizabeth/jack-diane/1.jpg',
 							{	images: '/images/Elizabeth/jack-diane/3.jpg',
 								title: 'Finding old treasures',
 								text: ['When I was training for field hockey preseason I spent the summer at my grandparents house. It was so strange sleeping in my dad’s old bedroom. It felt like living inside a time capsule. Nothing seemed to have moved from the 70s. His drawers were still full of polaroids and class notes on loose leaf sheets of paper (To be honest, I’m surprised I even FOUND notes from class after hearing the things I’ve heard). My grandma would comb through the drawers and show off her favorite items and recite the stories that went along with them. This was her favorite object: my dad’s first drawing of Scruffles. He used to draw the cartoon all the time and even sold holiday cards with this little fellow. I loved the fact that they kept everything in place. It was like an homage to the past, and I could tell how much they loved being parents.'],
+								author: 'Elizabeth',								
 								month: 'Summer',
 								year: '2001',
 								tags: ['Written March 20, 2015']
@@ -284,6 +286,7 @@ var jackAndDianeMemories = [{	images: '/images/Elizabeth/jack-diane/1.jpg',
 							{	images: '/images/Elizabeth/jack-diane/4.jpg',
 								title: 'Grandma\'s Singing',
 								text: ['Grandma was a natural performer. That was our biggest connection actually, as she always encouraged me and helped me prepare for my auditions for the school musicals. I loved her voice; it wasn’t the most beautiful sound in the world, but it always amazed me. She commanded attention when she sang. When she was a child living in Hell’s Kitchen she was recruited to be a model. She landed several ads even even got a role as Shirley Temple’s stage double! Unfortunately Shirley never missed a day on set so Grandma never got to test out her tap skills.'],
+								author: 'Elizabeth',
 								month: 'August',
 								year: '2012',
 								soundFile: 'images/Elizabeth/jack-diane/grandma.mp3',
@@ -301,24 +304,28 @@ app.get('/collection/jack-and-diane', function(req, res) {
 											memories: 			jackAndDianeMemories });
 });
 
-var	lifeAtTheCape 	= 		[{	images: '/images/Elizabeth/summers-at-the-cape/1',
+var	lifeAtTheCape 	= 		[{	images: '/images/Elizabeth/summers-at-the-cape/1.jpg',
 								title: 'The Cottage',
 								text: ['We’ve been coming to the cape for years. I think my parents actually bought the cottage in 1993, but it’s felt like my second home for as long as I can remember. It has always been a little oasis from the hectic world back in New York. Summer always meant Cape Camp, where I met up with all my old friends from the summers before. Even though I saw the Cape kids so much less than my friends from home, those relationships have stayed with my much longer. Patricia—who I met at age six and bonded over friendship bracelets— was even my maid of honor at my wedding! I can’t wait to bring Emmie out here when she’s a bit older. I have a feeling she’ll be a big swimmer, just like her father.'],
+								author: 'Elizabeth',
 								location: '102 Salt March Rd | Sandwich, MA',
 								locationImage: '/images/locations/salt-marsh-rd.png',
 								month: 'Summer',
 								year: '1993',
 								tags: ['Written March 18, 2015', 'Cape Cod']
 							},
-							{	images: '/images/Elizabeth/summers-at-the-cape/2',
-								title: 'Clam Bakes',
+							{	images: '/images/Elizabeth/summers-at-the-cape/2.jpg',
+								title: 'Clam Bake',
 								text: ['Growing up we would spend two weeks every summer on Cape Cod at our family’s cottage. The cottage has been in my mother’s family since she was four years old and has grown over the years as family size demanded it. Those two weeks were ones I looked forward to all year and the source of some of my most treasured memories.','For one weekend every year, my dad’s extended family would join us at the beach for our annual clambake. When I was younger my dad was always the Bake Master but as I grew older it was fun to watch my brothers take over the duties and my dad move into a self-appointed advisory role.','The clambake is quite the process and keeps everyone— young and old—busy. Digging a pit, collecting hundreds of rocks, braving the slippery jetties to gather seaweed, prepping the lobsters and veggies...the number of jobs are endless. My favorite part was always when one of my brothers would get dressed head to toe in ridiculous clothes and jump in the ocean to drench himself in saltwater before climbing in the steaming pit. The outfit got better and better every year as they started going to thrift shops to prepare for it!'],
+								author: 'Elizabeth',
 								month: 'Summer',
-								year: '2004',
+								year: '2012',
+								videoId: 'ghJwYQu-JBs&feature=youtu.be',
 								tags: ['Written March 18, 2015', 'Cape Cod']
 							},
 							{	title: 'Province Town',
 								text: ['One of my favorite things to do at the Cape was our annual trip up to Provincetown at the tip of Massachusetts. The town is known as one of the most gay friendly towns in the country, creating an atmosphere that is lively, eclectic, and charming all at the same time.***We would normally start the hour drive up around lunch time and get to P-town in time to take a whale watch around the bay. I always enjoyed coming back into the harbor and seeing the huge portraits of old people facing the ocean.','Once back on land we would get dinner at a seafood restaurant and then spend hours wandering through the three main streets of the quaint little town. There were tons of art shops, candy stores, and performance halls but our favorite places were the puzzle and marine surplus stores. Dad would spend hours in the puzzle store attempting to solve as many as he could and then bring them home to us to show off his intelligence. I would spend hours in the surplus store looking through everything from license plates to pirate flags to old army posters.','Finally, we would always end the night getting ice cream at the small shop near the parking lot before driving back to our cottage.'],
+								author: 'Elizabeth',
 								month: 'Summer',
 								year: '2004',
 								location: 'Lewis Brother’s Ice Cream | Provincetown, MA',
@@ -335,6 +342,27 @@ app.get('/collection/growing-up-at-the-cape', function(req, res) {
 											memories: 			lifeAtTheCape });
 });
 
+var	asAChild		=			[{	images: '/images/Elizabeth/as-a-child/1.jpg',
+								title: 'Curious Nature',
+								text: ['When Liza was little—and still today!—she was always fascinated with exploring. Joe and I would take our eyes off her for one second and the next thing we knew she’d have disappeared. We’d always find her poking around in bushes or backyards. She was always covered in dirt with a huge smile on her face. She’d have worms and rocks strewn about her and she’d just clamour on about how this was a little ecosystem. She must have learned about that school. Art was always her favorite class, but she was amazing at science. She would create the most beautiful and intricate projects for Mrs. Simpsons class. My favorite was her report on the “Harris Hawk.” I so wish I kept the model she made of the bird!'],
+								author: 'Marilyn',
+								authorPic: 'marilyn.jpg',
+								authorLink: '/profile/marilyn-camps',
+								month: 'Spring',
+								year: '1993',
+								tags: ['Written March 15, 2015', 'exploring']
+							},
+							{	images: '/images/Elizabeth/as-a-child/2.jpg',
+								title: 'Camp Lochearn',
+								text: ['I spent 5 summers at a camp Lochearn in Post Mills Vermont. They were some of the best weeks of my life. It was an all girls camp, so the atmosphere was incredibly welcoming and free. Every day we would dress up in crazy outfits and sing songs non stop. I learned how to sail, ride horses, and even throw clay. I was on the blue team for color wars, and I’ll forever feel a sense of peace while wearing blue. My favorite memory of camp was always the pine cone ceremony that they had on the last night of camp. “When the council fire is burning...” I’m forever humming the songs and singing them as lullabies. Whenever I smell pine trees I close my eyes and remember sleeping out under the stars.'],
+								author: 'Elizabeth',
+								month: 'Summer',
+								year: '1998',
+								location: 'Lochearn Camp for Girls | Post Mills, VT',
+								locationImage: '/images/locations/camp-lochearn.png',
+								videoId: 'upSlEPGNOsA?t=29s',
+								tags: ['Written March 15, 2015', 'camp', 'Lochearn Camp for Girls']
+							}];
 app.get('/collection/as-a-child', function(req, res) {
 	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
 											collectionName: 	'As a Child',
@@ -342,12 +370,29 @@ app.get('/collection/as-a-child', function(req, res) {
 											contributorCount: 	'1 contributor',
 											profilePic:  		'elizabeth.jpg',
 											backLink: 			'/profile',
-											memories: 			[] });
+											memories: 			as-a-child});
 });
 
-app.get('/collection/yale-university', function(req, res) {
+
+var	collegeYears	=		[{  title: 'Freshman year',
+								text: ['I can still remember showing up for freshman year move-in with my parents and the terror of meeting all my future roommates. This was before facebook, so I had absolutely no idea what I was getting into. I was placed in Davenport College, so I lived in Welch Hall on Old Campus.','Somehow I was lucky enough to end up in Yale’s famed “Princess Suites.” I spent the year on the receiving end of a lot of jealous complainers— I mean classmates—but it was so worth it. The suite was two stories with a large common room, winding staircase, and private in-suite bathroom.  I am still extremely close friends with six of the nine. Most of us lived together for the next three years too.','Our freshman year was an enjoyable mess, if I were to describe it properly. College was so different than high school for me. I was pretty overwhelmed for much of the first semester, and I was also in the slow process of splitting from my high school, now long distance boyfriend. But once that ended, I had much more time to find myself. I joined the mock trial club a couple weeks later and it changed my whole mindset. I made my best friends there and discovered my passion for law. My first mock case was Wilson v. Gander’s, Inc. I lost. Dreadfully, really.  But I went on to win all of my other cases in college! I miss those days when law was more like play...'],
+								author: 'Elizabeth',
+								month: 'September',
+								year: '2004',
+								location: 'Welch Hall | New Haven, CT',
+								locationImage: '/images/locations/welch-hall.png',
+								tags: ['Written March 18, 2015', 'Yale', 'Welch Hall']
+							},
+							{	title: 'Harvard vs Yale',
+								text: ['During my Junior year at Yale, my friends and I took a trip up to Boston for the annual Harvard-Yale rivalry game. We stayed right in downtown Boston at a friend’s place and enjoyed seeing the sights around Quincy Market and Faneuil Hall. ///Although we lost for the only time during my college career, the game was crazy for another reason - two MIT students streaked across the field! One of them made it almost across the stadium! It provided a much needed lift of our spirits and we couldn’t stop talking about it for months after.'],
+								month: 'November',
+								year: '2015',
+								videoId: 'HYs0KnuYwns',
+								tags: ['Written March 18, 2015', 'Yale','Harvard']
+							}];
+app.get('/collection/college-years', function(req, res) {
 	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
-											collectionName: 	'Yale University',
+											collectionName: 	'College Years',
 											memoryCount: 		'2 memories',
 											contributorCount: 	'1 contributor',
 											profilePic:  		'elizabeth.jpg',
@@ -358,32 +403,22 @@ app.get('/collection/yale-university', function(req, res) {
 
 // Elizabeth and Marilyn's Collections
 var familyStoriesMemories = [
-	{	images: '/images/Elizabeth/jack-diane/3.jpg',
-		title: 'William Dubilier',
+	{	title: 'William Dubilier',
 		text: ['My grandpa, William Dubilier, was honored by the French Government for his contributions to the rebuilding of France. He was a brilliant person. By the age of 8 he had dozens of patents and supported his entire family of 10 while living in the Bowery of New York City. He left home when he was 12 and lived alone and focused on creating. He invented burglar alarms to catch criminals in his building, developed the modern condenser, and also created sonar technology. He was even sent to install wireless telephone technology in the Russian Czar’s palace when he was 16 years old! The condenser/capacitor made modern broadcasting and commercial radio possible. There’s a long line of inventors in this family!'],
 		author: 'Marilyn',
 		authorPic: 'marilyn.jpg',
 		month: 'June',
 		year: '1949',
-		dateCreated: '',
-		tags: []
+		tags: ['Written April 2, 2015']
 	},
-	{	images: '/images/Elizabeth/jack-diane/3.jpg',
-		title: 'Hello',
-		text: ['paragraph 1', 'second paragraph'],
-		author: 'Marilyn',
-		authorPic: 'image.jpg',
-		authorLink: '/profile/name',
-		month: 'June 22',
-		year: '1949',
-		dateCreated: 'January 2015',
-		tags: ['vacation', 'family', 'emmie'],
-		location: '104 An Address',
-		videoId: 'www.linkToVideo.com',
-		soundFile: 'path/to/soundFile',
-		comments: []
-	}
-];
+	{	images: '/images/Elizabeth/family-stories/1.jpg',
+		title: 'Mom\'s Parents',
+		text: ['I remember when I first found this photo. I think it was the first time I actually saw my mother’s parent’s smiling. I sat in the den looking at it for what must have been close to an hour. They both died before I was born. I grew up hearing so many stories, but our photos never really painted a truly dimensional portrait of them. I always felt so detached from them; It was like they weren’t real to me until I had this moment.//My mom always spoke of her parents sense of humor. How they were always laughing and poking fun at each other. When my mom found me there that day, she spent the afternoon sharing memories from her childhood with me. I had never heard most of them before, and they completely changed my understanding of my grandparents. She imitated her Dad’s laughter, demonstrated her mom’s impressions of the parish priest. Everything felt so tangible for the first time. And I felt so close to my mom afterwards. It was as if before that moment I only saw her as my parent. She had so much more than maternal support to share with me.'],
+		author: 'Elizabeth',
+		month: 'March',
+		year: '2008',
+		tags: ['Written April 4, 2015']
+	}];
 
 
 
