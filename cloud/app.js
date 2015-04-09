@@ -155,7 +155,7 @@ var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.
 											author: 'Elizabeth'}],
 							tags: ['Written March 22, 2015', 'baby', 'birth']
 						},
-						{	images: '/images/Elizabeth/emmies-first-year/3.jpg',
+						{	//images: '/images/Elizabeth/emmies-first-year/3.jpg',
 							title: 'First Halloween',
 							text: ['Emmie couldn’t speak come her first Halloween, but we felt very confident that we knew what she wanted to be for her first big celebration. Based on her excessive giggling and general joyfulness while watching Sesame Street these last few months, Big Bird seemed like the perfect choice! She stares at the television with the most intense focus whenever the show comes on. And whenever Elmo opens his mouth Emmie just explodes with laughter. That show has pretty much become our only opportunity for rest these past few months!','I dusted off the old Singer sewing machine for the first time in years and had my go at making the costume. She ended up looking more like a Peep than anything else, but Emmie—if you ever read this—just remember that it’s the thought that counts! And you still looked adorable ;)'],
 							author: 'Elizabeth',
@@ -215,7 +215,7 @@ var nickAndElizabethMemories = [{	title: 'How we met',
 									year: '2010',
 									tags: ['Written March 15, 2015']
 									},
-								{	image: '/images/Elizabeth/nickAndElizabethMemories/1.jpg',
+								{	images: '/images/Elizabeth/nick-elizabeth/1.jpg',
 									title: 'Our first vacation',
 									text: ['Liza was asleep on my shoulder on a flight to Denver for a spur of the moment ski trip after a big snowstorm hit the Rockies. It was our first trip together and I was so excited for the weekend.','The last week was pretty hectic and we were both worn out, Liza especially after pulling an all nighter the night before for work. She could barely keep her eyes open but it was cute watching her try and listening to the way she told me she was so tired. It was quite effective as despite my own tiredness, the only thing I wanted to do was make sure she was able to rest.','I took this picture as she lay there asleep with her hands wrapped around my arm. Its hard to explain but there was just this sense of mutual comfort and security. I felt like it was a moment I would want to remember. Our first long drive together, first flight together, first vacation together. Looking down at her asleep on my shoulder she looked so beautiful, and I just knew that she was the one.'],
 									author: 'Nick',
@@ -225,7 +225,7 @@ var nickAndElizabethMemories = [{	title: 'How we met',
 									year: '2010',
 									tags: ['Written March 15, 2015']
 								},
-								{	images: '/images/Elizabeth/nickAndElizabethMemories/2.jpg',
+								{	images: '/images/Elizabeth/nick-elizabeth/2.jpg',
 									title: 'The Swings',
 									text: ['Nick took me to Ann Hamilton’s show at the Park Avenue Armory. The installation was called “The Event of the Thread,” and it was one of the most surreal experiences I’ve ever had. We entered the space and I was just taken aback by the beauty of the art. The huge wing was divided in half by a large silk curtain suspended in space by hundreds of small strings. The curtain’s movement was controlled by the viewers who sat on swings. Children were running around laughing and playing, and Nick and I just laid down underneath the curtain and looked up into the cloud of white above us. He held my hand and I nearly lost my breath. It was so beautiful, and I knew then that he was something special.'],
 									author: 'Elizabeth',
@@ -261,7 +261,7 @@ app.get('/collection/nick/nick-and-elizabeth', function(req, res) {
 var jackAndDianeMemories = [{	images: '/images/Elizabeth/jack-diane/1.jpg',
 								title: 'Their Story',
 								text: ['My grandpa always said that he first met grandma outside the bank in downtown Larchmont. She claimed that he followed her when she left the teller and abandoned his place in line to chase after her. He said it was an immediate and mutual attraction; she said how creeped out she felt and how she only agreed to give him her number if she let him go! Funny how we remember things differently. My parents said they started changing their story after John Mellencamp’s song came out in 1982: then they met as two American kids growing up in the heartland…'],
-								author: 'Elizabeth'
+								author: 'Elizabeth',
 								month: 'April',
 								year: '1949',
 								videoId: 'h04CH9YZcpI',
@@ -342,11 +342,11 @@ app.get('/collection/growing-up-at-the-cape', function(req, res) {
 											memories: 			lifeAtTheCape });
 });
 
-var	asAChild		=			[{	images: '/images/Elizabeth/as-a-child/1.jpg',
+var	asAChildMemories =			[{	images: '/images/Elizabeth/as-a-child/1.jpg',
 								title: 'Curious Nature',
 								text: ['When Liza was little—and still today!—she was always fascinated with exploring. Joe and I would take our eyes off her for one second and the next thing we knew she’d have disappeared. We’d always find her poking around in bushes or backyards. She was always covered in dirt with a huge smile on her face. She’d have worms and rocks strewn about her and she’d just clamour on about how this was a little ecosystem. She must have learned about that school. Art was always her favorite class, but she was amazing at science. She would create the most beautiful and intricate projects for Mrs. Simpsons class. My favorite was her report on the “Harris Hawk.” I so wish I kept the model she made of the bird!'],
 								author: 'Marilyn',
-								authorPic: 'marilyn.jpg',
+								authorPic: 'marilyn-crop.JPG',
 								authorLink: '/profile/marilyn-camps',
 								month: 'Spring',
 								year: '1993',
@@ -360,7 +360,7 @@ var	asAChild		=			[{	images: '/images/Elizabeth/as-a-child/1.jpg',
 								year: '1998',
 								location: 'Lochearn Camp for Girls | Post Mills, VT',
 								locationImage: '/images/locations/camp-lochearn.png',
-								videoId: 'upSlEPGNOsA?t=29s',
+								videoId: 'upSlEPGNOsA',
 								tags: ['Written March 15, 2015', 'camp', 'Lochearn Camp for Girls']
 							}];
 app.get('/collection/as-a-child', function(req, res) {
@@ -370,11 +370,11 @@ app.get('/collection/as-a-child', function(req, res) {
 											contributorCount: 	'1 contributor',
 											profilePic:  		'elizabeth.jpg',
 											backLink: 			'/profile',
-											memories: 			as-a-child});
+											memories: 			asAChildMemories });
 });
 
 
-var	collegeYears	=		[{  title: 'Freshman year',
+var	collegeYearsMemories =		[{  title: 'Freshman year',
 								text: ['I can still remember showing up for freshman year move-in with my parents and the terror of meeting all my future roommates. This was before facebook, so I had absolutely no idea what I was getting into. I was placed in Davenport College, so I lived in Welch Hall on Old Campus.','Somehow I was lucky enough to end up in Yale’s famed “Princess Suites.” I spent the year on the receiving end of a lot of jealous complainers— I mean classmates—but it was so worth it. The suite was two stories with a large common room, winding staircase, and private in-suite bathroom.  I am still extremely close friends with six of the nine. Most of us lived together for the next three years too.','Our freshman year was an enjoyable mess, if I were to describe it properly. College was so different than high school for me. I was pretty overwhelmed for much of the first semester, and I was also in the slow process of splitting from my high school, now long distance boyfriend. But once that ended, I had much more time to find myself. I joined the mock trial club a couple weeks later and it changed my whole mindset. I made my best friends there and discovered my passion for law. My first mock case was Wilson v. Gander’s, Inc. I lost. Dreadfully, really.  But I went on to win all of my other cases in college! I miss those days when law was more like play...'],
 								author: 'Elizabeth',
 								month: 'September',
@@ -397,7 +397,7 @@ app.get('/collection/college-years', function(req, res) {
 											contributorCount: 	'1 contributor',
 											profilePic:  		'elizabeth.jpg',
 											backLink: 			'/profile',
-											memories: 			[]
+											memories: 			collegeYearsMemories
 	});
 });
 
@@ -406,7 +406,7 @@ var familyStoriesMemories = [
 	{	title: 'William Dubilier',
 		text: ['My grandpa, William Dubilier, was honored by the French Government for his contributions to the rebuilding of France. He was a brilliant person. By the age of 8 he had dozens of patents and supported his entire family of 10 while living in the Bowery of New York City. He left home when he was 12 and lived alone and focused on creating. He invented burglar alarms to catch criminals in his building, developed the modern condenser, and also created sonar technology. He was even sent to install wireless telephone technology in the Russian Czar’s palace when he was 16 years old! The condenser/capacitor made modern broadcasting and commercial radio possible. There’s a long line of inventors in this family!'],
 		author: 'Marilyn',
-		authorPic: 'marilyn.jpg',
+		authorPic: 'marilyn-crop.JPG',
 		month: 'June',
 		year: '1949',
 		tags: ['Written April 2, 2015']
@@ -440,7 +440,7 @@ app.get('/collection/marilyn/family-stories', function(req, res) {
 								collectionName: 	'Family Stories',
 								memoryCount: 		'1 memory',
 								contributorCount: 	'2 contributors',
-								profilePic:  		'marilyn.jpg',
+								profilePic:  		'marilyn-crop.JPG',
 								backLink: 			'/profile/marilyn-camps',
 								memories: 			familyStoriesMemories
 	});
@@ -453,7 +453,7 @@ app.get('/collection/marilyn/year-in-kenya', function(req, res) {
 								collectionName: 	'Year in Kenya',
 								memoryCount: 		'4 memories',
 								contributorCount: 	'1 contributor',
-								profilePic:  		'marilyn.jpg',
+								profilePic:  		'marilyn-crop.JPG',
 								backLink: 			'/profile/marilyn-camps',
 								memories: 			[]
 	});
@@ -465,7 +465,7 @@ app.get('/collection/marilyn/ending-up-in-sf', function(req, res) {
 								collectionName: 	'Ending Up in San Francisco',
 								memoryCount: 		'4 memories',
 								contributorCount: 	'1 contributor',
-								profilePic:  		'marilyn.jpg',
+								profilePic:  		'marilyn.JPG',
 								backLink: 			'/profile/marilyn-camps',
 								memories: 			[]
 	});
@@ -477,7 +477,7 @@ app.get('/collection/marilyn/working-in-baltimore', function(req, res) {
 								collectionName: 	'Working in Baltimore',
 								memoryCount: 		'1 memory',
 								contributorCount: 	'1 contributor',
-								profilePic:  		'marilyn.jpg',
+								profilePic:  		'marilyn.JPG',
 								backLink: 			'/profile/marilyn-camps',
 								memories: 			[]
 	});
@@ -489,7 +489,7 @@ app.get('/collection/marilyn/mamaroneck-high-school', function(req, res) {
 								collectionName: 	'Mamaroneck High School',
 								memoryCount: 		'2 memories',
 								contributorCount: 	'1 contributor',
-								profilePic:  		'marilyn.jpg',
+								profilePic:  		'marilyn.JPG',
 								backLink: 			'/profile/marilyn-camps',
 								memories: 			[]
 	});
@@ -501,7 +501,7 @@ app.get('/collection/marilyn/younger-years', function(req, res) {
 								collectionName: 	'Younger Years',
 								memoryCount: 		'2 memories',
 								contributorCount: 	'1 contributor',
-								profilePic:  		'marilyn.jpg',
+								profilePic:  		'marilyn-crop.JPG',
 								backLink: 			'/profile/marilyn-camps',
 								memories: 			[]
 	});
@@ -522,7 +522,7 @@ app.get('/profile/nick-pollard', function(req, res) {
 app.get('/profile/marilyn-camps', function(req, res) {
 	res.render('profile-marilyn', { username: 	'Marilyn Camps',
 									location: 	'Larchmont, New York',
-									profilePic: 'marilyn.jpg' });
+									profilePic: 'marilyn.JPG' });
 });
 
 app.get('/profile', function(req, res) {

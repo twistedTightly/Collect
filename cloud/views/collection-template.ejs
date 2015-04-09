@@ -35,8 +35,10 @@
     <!-- Display all collections -->
     <div id="main">
       <div id="info-box">
-        <div id="profile-pic" style="background-image: url(/images/content/<%= profilePic %>);"></div>
-        <a href="<%= backLink %>" id="back" class="button">back</a>
+        <a href="<%= backLink %>" id="back" class="button">
+          <div id="profile-pic" style="background-image: url(/images/content/<%= profilePic %>);"></div>
+            <p>back</p>
+        </a>
         <a href="#" class="button dark" data-reveal-id="add-memory-modal">add</a>
         <% include partials/addModal.ejs %>
       </div>
@@ -54,13 +56,14 @@
         <div id="memory-gallery">
 
         <% for(var i=0; i < memories.length; i++) { %>
-            <div class="memory">
+            <div id="memory<%= i %>" class="memory">
               <div class="upper-section">
                 <div class="image center-col"
                   <% if (memories[i].images) { %>
-                    style="background-image: url(<%= memories[i].images %>)"
-                  <% } %>  
-                  >
+                    style="background-image: url(<%= memories[i].images %>)">
+                  <% } else { %>  
+                    ><style>#memory<%= i %> .upper-section .image::after { padding-top: 0; }</style>
+                  <% } %>
                   <div id="fade" class="fadeClass popup"></div>
                   <% if (memories[i].location) { %>
                     <div id="location<%= i %>" class="locationClass popup">
