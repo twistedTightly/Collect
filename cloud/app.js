@@ -447,6 +447,41 @@ app.get('/collection/marilyn/family-stories', function(req, res) {
 });
 
 // Marilyn's Collections
+var	yearInKenya =	[{ 	images: '/images/MarilynCamps/year-in-kenya/1.jpg',
+						title: 'The experience',
+						text: ['This was definitely the period in my life that I matured the most; educationally, spiritually, emotionally and culturally. I got completely out of the bubble I was living in both at home and in college. I experienced cultures in a way I never would have had I gone the standard Europe route. I was lucky at the time I went, a very low-key geology professor and his wife ran the program. It was run very differently than year’s prior or any year since. Bill Elberty believed that we were going to get the most out of the experience not through classroom experiences or group travel activities, but through traveling through the country by ourselves. He allowed us a degree of freedom that would have gotten him fired and parents apoplectic in this day and age. His only rule was, girls had to travel with a guy at all times, and we had to tell him where we were headed each weekend.','We picked names out of a hat to get our apartment assignments. I was in an apartment with 5 girls in 2 bedrooms. We had to cook all our own meals and basically lived on plantains, fruit and rice that we could pick up from the street vendors. We had classes at the University of Nairobi and then would spend many an afternoon hanging out at the YMCA pool cooling off and eating at their snack bar. We lived on the same street as the Westlands Mall where the terrorist attacks happened a few years ago. When we were there it was just an open market. Across the street was a very low-income area with tin huts that many families lived in and cooked outside their huts on open fires. It was such a strange juxtaposition living in a modern apt. complex across the street from such poverty.'],
+						month: 'August',
+						year: '1979',
+						author: 'Marilyn',
+						locationImage:'/images/locations/high-ridge-kenya.png',
+						location: 'High Ridge | Nairobi, Kenya',
+						tags: ['Written April 3, 2015','Nairobi']
+					},
+					{	images: '/images/MarilynCamps/year-in-kenya/2.jpg'
+						title: 'Rural Homestays',
+						text: ['The first week we were there we had Swahili lessons for 8 hours a day. Then we were all taken to an outdoor area where a multitude of rural families were gathered. Our names were read one by one and we were escorted away to our individual rural homestays. We were all in different small villages and never saw each other for about 2 weeks. My family had a daughter and son and lived in a mud/tin hut with mud floors. We were told ahead of time that it was extremely rude to not accept food when it was offered to you so I had to eat a lot of maze (white goo), vegetables and chicken eyeballs (for the most honored guest), and goat. I spent the days working in the fields, milking cows, and cooking food in a dark windowless hut filled with smoke and women. My family spoke a bit of English and I found myself lying about the size of my father’s tomato garden because they simply could not understand that we did not grow our own food. I had a great experience, albeit a little freaked out by the amount of bugs in the hut at night that the little boy would catch and throw out the front door. I remember him laughing at me because I was so afraid of the size and abundance of them.'],
+						month: 'September',
+						year: '1979',
+						author: 'Marilyn',
+						tags: ['Written April 3, 2015','Nairobi']
+					},
+					{	images: '/images/MarilynCamps/year-in-kenya/3.jpg',
+						title: 'Internships',
+						text: ['I had two internships— one with the Probation Department in Nairobi and one at an orphanage outside the city. The Probation Dept. job was interesting. I spent a lot of time in court watching men get sentenced to lashings and watching them take place. I also accompanied the probation officers to offsite locations to settle disputes between people.  One day we went to see the heads of two Maasai tribes: one of them had stolen some cows and for every cow stolen, two people had to die. It was the Probation Officer’s job to get them to resolve the issue with no further deaths. We went into their circle mud hut compounds and spoke to the leaders. It was chilling.','The second internship I had was at an orphanage where I played with the children and helped out in the schoolhouse. It was filled with kids that had severe deformities due to the effects of thalidomide that was given to pregnant women in the 60’s to combat morning sickness. I have never seen so many abandoned or handicapped children, but what I remember most were their amazing attitudes and outlooks on life.'],
+						month: 'January',
+						year: '1979',
+						author: 'Marilyn',
+						tags: ['Written April 3, 2015', 'Nairobi']
+					},
+					{	title: 'The gazelle',
+						text: ['We went on several safaris as a group and had an amazing time together, staying at nicer places, swimming in pools and drinking copious amounts of beer. “Can I have a cold beer” is one of the few phrases I remember in Swahili. During these trips I remember being charged by an elephant cause I went too close to him outside the pool area, being attacked by a dozen monkeys on the top of our straw hut trying to get in because they smelled the hard boiled egg I had been eating. I finally had to open a shaky window and throw all our food out of it so that we would not be torn to shreds. I also had a nice little gazelle who somehow would try and attack me every time I went outside of my hut. Literally, just me. I would always check if the coast was clear and he would run from out of nowhere to attack me. I had to carry something to prevent him from butting me with his horns. I must have smelled bad to him or something!'],
+						author: 'Marilyn',
+						month: 'November',
+						year: '1979',
+						tags: ['Written April 3, 2015','Nairobi']
+					}];
+
+
 app.get('/collection/marilyn/year-in-kenya', function(req, res) {
 	res.render('collection-template', {
 								username: 			'Elizabeth Pollard',
@@ -455,7 +490,7 @@ app.get('/collection/marilyn/year-in-kenya', function(req, res) {
 								contributorCount: 	'1 contributor',
 								profilePic:  		'marilyn-crop.JPG',
 								backLink: 			'/profile/marilyn-camps',
-								memories: 			[]
+								memories: 			yearInKenya
 	});
 });
 
