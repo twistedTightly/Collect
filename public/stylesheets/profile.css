@@ -4031,8 +4031,10 @@ blockquote p {
   margin: 3px;
   background-color: #D8D8D8;
   -webkit-flex-grow: 1;
+  background-position: top center;
+  background-size: cover;
 }
-/* line 146, ../scss/profile.scss */
+/* line 148, ../scss/profile.scss */
 #gallery .gallery-box .collection-title {
   text-align: center;
   position: absolute;
@@ -4046,25 +4048,25 @@ blockquote p {
   -webkit-align-items: center;
   -webkit-justify-content: center;
 }
-/* line 161, ../scss/profile.scss */
+/* line 163, ../scss/profile.scss */
 #gallery .four-pic .content-col {
   display: -webkit-flex;
   -webkit-flex-flow: column wrap;
   -webkit-flex-grow: 1;
 }
-/* line 166, ../scss/profile.scss */
+/* line 168, ../scss/profile.scss */
 #gallery .text-only .content {
   width: 50px;
   height: 106px;
   background-color: white;
   font-style: italic;
 }
-/* line 172, ../scss/profile.scss */
+/* line 174, ../scss/profile.scss */
 #gallery .gallery-box.ghost {
   background: none;
   height: 0;
 }
-/* line 176, ../scss/profile.scss */
+/* line 178, ../scss/profile.scss */
 #gallery .gallery-box::after {
   content: '';
   padding-top: 62%;
@@ -4076,7 +4078,7 @@ blockquote p {
  * Footer
  *
  ********************/
-/* line 188, ../scss/profile.scss */
+/* line 190, ../scss/profile.scss */
 #footer {
   height: 80px;
 }

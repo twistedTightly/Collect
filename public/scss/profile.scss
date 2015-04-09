@@ -142,6 +142,8 @@ $user-info-spacing: 15px;
             margin: 3px;
             background-color: $light-grey;
         -webkit-flex-grow: 1;
+            background-position: top center;
+            background-size: cover;
         }
         .collection-title {
             text-align: center;

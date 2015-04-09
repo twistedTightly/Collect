@@ -332,7 +332,7 @@ var	lifeAtTheCape 	= 		[{	images: '/images/Elizabeth/summers-at-the-cape/1.jpg',
 								locationImage: '/images/locations/provincetown.png',
 								tags: ['Written March 18, 2015', 'Cape Cod']
 								}];
-app.get('/collection/growing-up-at-the-cape', function(req, res) {
+app.get('/collection/life-at-the-cape', function(req, res) {
 	res.render('collection-template', { 	username: 			'Elizabeth Pollard',
 											collectionName: 	'Life at the Cape',
 											memoryCount: 		'3 memories',
@@ -384,7 +384,7 @@ var	collegeYearsMemories =		[{  title: 'Freshman year',
 								tags: ['Written March 18, 2015', 'Yale', 'Welch Hall']
 							},
 							{	title: 'Harvard vs Yale',
-								text: ['During my Junior year at Yale, my friends and I took a trip up to Boston for the annual Harvard-Yale rivalry game. We stayed right in downtown Boston at a friend’s place and enjoyed seeing the sights around Quincy Market and Faneuil Hall. ///Although we lost for the only time during my college career, the game was crazy for another reason - two MIT students streaked across the field! One of them made it almost across the stadium! It provided a much needed lift of our spirits and we couldn’t stop talking about it for months after.'],
+								text: ['During my Junior year at Yale, my friends and I took a trip up to Boston for the annual Harvard-Yale rivalry game. We stayed right in downtown Boston at a friend’s place and enjoyed seeing the sights around Quincy Market and Faneuil Hall.','Although we lost for the only time during my college career, the game was crazy for another reason - two MIT students streaked across the field! One of them made it almost across the stadium! It provided a much needed lift of our spirits and we couldn’t stop talking about it for months after.'],
 								month: 'November',
 								year: '2015',
 								videoId: 'HYs0KnuYwns',
@@ -407,6 +407,7 @@ var familyStoriesMemories = [
 		text: ['My grandpa, William Dubilier, was honored by the French Government for his contributions to the rebuilding of France. He was a brilliant person. By the age of 8 he had dozens of patents and supported his entire family of 10 while living in the Bowery of New York City. He left home when he was 12 and lived alone and focused on creating. He invented burglar alarms to catch criminals in his building, developed the modern condenser, and also created sonar technology. He was even sent to install wireless telephone technology in the Russian Czar’s palace when he was 16 years old! The condenser/capacitor made modern broadcasting and commercial radio possible. There’s a long line of inventors in this family!'],
 		author: 'Marilyn',
 		authorPic: 'marilyn-crop.JPG',
+		authorLink: '/profile/marilyn-camps',
 		month: 'June',
 		year: '1949',
 		tags: ['Written April 2, 2015']
