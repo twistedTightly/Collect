@@ -4003,7 +4003,7 @@ blockquote p {
 /* line 109, ../scss/collection.scss */
 .memory > * {
   display: -webkit-flex;
-  margin-top: 40px;
+  margin-top: 20px;
   transition: margin-top 1s;
 }
 /* line 115, ../scss/collection.scss */
