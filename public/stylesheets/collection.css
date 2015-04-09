@@ -4367,8 +4367,8 @@ blockquote p {
 }
 /* line 425, ../scss/collection.scss */
 .comment .content .user-icon {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   margin-top: 10px;
   -webkit-flex-shrink: 0;
 }
@@ -4379,7 +4379,7 @@ blockquote p {
 /* line 434, ../scss/collection.scss */
 .comment .content p {
   font-style: italic;
-  margin-top: 20px;
+  margin-top: 14px;
 }
 /* line 438, ../scss/collection.scss */
 .comment .content input {
@@ -4398,21 +4398,23 @@ blockquote p {
   margin-top: 5px;
   font-style: normal;
   font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: normal;
 }
-/* line 454, ../scss/collection.scss */
+/* line 456, ../scss/collection.scss */
 .comment .submit {
   text-align: right;
   color: #979797;
 }
-/* line 457, ../scss/collection.scss */
+/* line 459, ../scss/collection.scss */
 .comment .submit > * {
   display: inline-block;
 }
-/* line 460, ../scss/collection.scss */
+/* line 462, ../scss/collection.scss */
 .comment .submit a {
   color: #979797;
 }
-/* line 462, ../scss/collection.scss */
+/* line 464, ../scss/collection.scss */
 .comment .submit a:hover {
   color: #5F7F8E;
 }

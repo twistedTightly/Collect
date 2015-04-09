@@ -144,6 +144,18 @@ $user-info-spacing: 15px;
         -webkit-flex-grow: 1;
             background-position: top center;
             background-size: cover;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%) brightness(115%) contrast(80%);
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+            &:hover {
+                -webkit-filter: none;
+                filter: none;
+            }
+        }
+        .text-only.content {
+            -webkit-filter: none;
+            filter: none;
         }
         .collection-title {
             text-align: center;
@@ -189,4 +201,5 @@ $user-info-spacing: 15px;
  ********************/
 #footer {
     height: $footer-height;
+    display: none;
 }

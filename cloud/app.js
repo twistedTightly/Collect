@@ -160,7 +160,7 @@ var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.
 										}],
 							tags: ['Written March 22, 2015', 'baby', 'birth']
 						},
-						{	//images: '/images/Elizabeth/emmies-first-year/3.jpg',
+						{	images: '/images/Elizabeth/emmies-first-year/3.jpg',
 							title: 'First Halloween',
 							text: ['Emmie couldn’t speak come her first Halloween, but we felt very confident that we knew what she wanted to be for her first big celebration. Based on her excessive giggling and general joyfulness while watching Sesame Street these last few months, Big Bird seemed like the perfect choice! She stares at the television with the most intense focus whenever the show comes on. And whenever Elmo opens his mouth Emmie just explodes with laughter. That show has pretty much become our only opportunity for rest these past few months!','I dusted off the old Singer sewing machine for the first time in years and had my go at making the costume. She ended up looking more like a Peep than anything else, but Emmie—if you ever read this—just remember that it’s the thought that counts! And you still looked adorable ;)'],
 							author: 'Elizabeth',

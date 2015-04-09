@@ -4033,8 +4033,22 @@ blockquote p {
   -webkit-flex-grow: 1;
   background-position: top center;
   background-size: cover;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%) brightness(115%) contrast(80%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
-/* line 148, ../scss/profile.scss */
+/* line 151, ../scss/profile.scss */
+#gallery .gallery-box .content:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+/* line 156, ../scss/profile.scss */
+#gallery .gallery-box .text-only.content {
+  -webkit-filter: none;
+  filter: none;
+}
+/* line 160, ../scss/profile.scss */
 #gallery .gallery-box .collection-title {
   text-align: center;
   position: absolute;
@@ -4048,25 +4062,25 @@ blockquote p {
   -webkit-align-items: center;
   -webkit-justify-content: center;
 }
-/* line 163, ../scss/profile.scss */
+/* line 175, ../scss/profile.scss */
 #gallery .four-pic .content-col {
   display: -webkit-flex;
   -webkit-flex-flow: column wrap;
   -webkit-flex-grow: 1;
 }
-/* line 168, ../scss/profile.scss */
+/* line 180, ../scss/profile.scss */
 #gallery .text-only .content {
   width: 50px;
   height: 106px;
   background-color: white;
   font-style: italic;
 }
-/* line 174, ../scss/profile.scss */
+/* line 186, ../scss/profile.scss */
 #gallery .gallery-box.ghost {
   background: none;
   height: 0;
 }
-/* line 178, ../scss/profile.scss */
+/* line 190, ../scss/profile.scss */
 #gallery .gallery-box::after {
   content: '';
   padding-top: 62%;
@@ -4078,7 +4092,8 @@ blockquote p {
  * Footer
  *
  ********************/
-/* line 190, ../scss/profile.scss */
+/* line 202, ../scss/profile.scss */
 #footer {
   height: 80px;
+  display: none;
 }
