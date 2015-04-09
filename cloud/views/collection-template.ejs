@@ -122,6 +122,19 @@
                     <a href="#">comment</a>
                     <div>
                       <div class="comment">
+
+                        <% if (memories[i].comments) { %>
+                          <% for(var j=0; j < memories[i].comments.length; j++) { %>
+                            <div class="content">
+                              <div class="user-icon" style="background-image: url(<%= memories[i].comments[j].authorPic %>)"></div>
+                              <div>
+                                <p class="author"><%= memories[i].comments[j].author %></p>
+                                <p class="comment-body"><%= memories[i].comments[j].content %></p>
+                              </div>
+                            </div>
+                        <% }
+                        } %>
+
                         <div class="content">
                           <div class="user-icon"></div>
                           <div>

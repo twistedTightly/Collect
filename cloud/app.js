@@ -65,7 +65,7 @@ app.get('/collection', function(req, res) {
 // 		soundFile: 'path/to/soundFile',
 //		soundDescription: 'This is a sound',
 //		connections: '',
-//		comments: []
+//		comments: [{content: '', author: '', authorPic: ''},{content: '', author: '', authorPic: ''}]
 //	}
 // ];
 //
@@ -137,10 +137,13 @@ var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.
 							month: 'Feb 18',
 							year: '2013',
 							comments: [{	content: 'I couldn’t think of a creative way to tell you for what felt like the longest time. I woke up at 4am to get everything ready and calm down my nerves!',
-											author: 'Elizabeth'
+											author: 'Elizabeth',
+											authorPic: '/images/content/elizabeth.jpg'
 										},
 										{	content: 'That was much more creative than how I told your father about Ryan, Heather! He’s is lucky to have you!',
-											author: 'Marilyn'}],
+											author: 'Marilyn',
+											authorPic: '/images/content/marilyn-crop.JPG'
+										}],
 							tags: ['Written March 22, 2015', 'baby']
 						},
 						{	images: '/images/Elizabeth/emmies-first-year/2.jpg',
@@ -152,7 +155,9 @@ var emmiesFirstYearMemories = [{	images: '/images/Elizabeth/emmies-first-year/1.
 							month: 'November 12',
 							year: '2013',
 							comments: [{	content: 'the most precious goo in the world :)',
-											author: 'Elizabeth'}],
+											author: 'Elizabeth',
+											authorPic: '/images/content/elizabeth.jpg'
+										}],
 							tags: ['Written March 22, 2015', 'baby', 'birth']
 						},
 						{	//images: '/images/Elizabeth/emmies-first-year/3.jpg',
@@ -458,7 +463,7 @@ var	yearInKenya =	[{ 	images: '/images/MarilynCamps/year-in-kenya/1.jpg',
 						location: 'High Ridge | Nairobi, Kenya',
 						tags: ['Written April 3, 2015','Nairobi']
 					},
-					{	images: '/images/MarilynCamps/year-in-kenya/2.jpg'
+					{	images: '/images/MarilynCamps/year-in-kenya/2.jpg',
 						title: 'Rural Homestays',
 						text: ['The first week we were there we had Swahili lessons for 8 hours a day. Then we were all taken to an outdoor area where a multitude of rural families were gathered. Our names were read one by one and we were escorted away to our individual rural homestays. We were all in different small villages and never saw each other for about 2 weeks. My family had a daughter and son and lived in a mud/tin hut with mud floors. We were told ahead of time that it was extremely rude to not accept food when it was offered to you so I had to eat a lot of maze (white goo), vegetables and chicken eyeballs (for the most honored guest), and goat. I spent the days working in the fields, milking cows, and cooking food in a dark windowless hut filled with smoke and women. My family spoke a bit of English and I found myself lying about the size of my father’s tomato garden because they simply could not understand that we did not grow our own food. I had a great experience, albeit a little freaked out by the amount of bugs in the hut at night that the little boy would catch and throw out the front door. I remember him laughing at me because I was so afraid of the size and abundance of them.'],
 						month: 'September',

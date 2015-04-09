@@ -4393,20 +4393,26 @@ blockquote p {
 .comment .content input:focus {
   background: none;
 }
-/* line 449, ../scss/collection.scss */
+/* line 448, ../scss/collection.scss */
+.comment .content .comment-body {
+  margin-top: 5px;
+  font-style: normal;
+  font-size: 14px;
+}
+/* line 454, ../scss/collection.scss */
 .comment .submit {
   text-align: right;
   color: #979797;
 }
-/* line 452, ../scss/collection.scss */
+/* line 457, ../scss/collection.scss */
 .comment .submit > * {
   display: inline-block;
 }
-/* line 455, ../scss/collection.scss */
+/* line 460, ../scss/collection.scss */
 .comment .submit a {
   color: #979797;
 }
-/* line 457, ../scss/collection.scss */
+/* line 462, ../scss/collection.scss */
 .comment .submit a:hover {
   color: #5F7F8E;
 }
