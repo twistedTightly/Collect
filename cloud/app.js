@@ -500,6 +500,10 @@ app.get('/collection/marilyn/year-in-kenya', function(req, res) {
 	});
 });
 
+var	endingUpInSf	=	[{ 	images: '/images/MarilynCamps/san-franscisco/1.jpg',
+							title: ''
+
+}];
 app.get('/collection/marilyn/ending-up-in-sf', function(req, res) {
 	res.render('collection-template', {
 								username: 			'Elizabeth Pollard',
@@ -508,7 +512,7 @@ app.get('/collection/marilyn/ending-up-in-sf', function(req, res) {
 								contributorCount: 	'1 contributor',
 								profilePic:  		'marilyn.JPG',
 								backLink: 			'/profile/marilyn-camps',
-								memories: 			[]
+								memories: 			endingUpInSf
 	});
 });
 
