@@ -13,18 +13,25 @@
         <a href="/profile"><img id="logo" src="/images/collect_logo.svg" alt="Logo"></a>
         <div id="middle"></div>
         <div id="toolbar">
-          <a href="#">
+          <a href="#" data-reveal-id="unimplemented-warning">
             <div class="svg-container">
               <img id="connections-icon" class="svg-icon" src="/images/connections_icon_white.svg" alt="Connections">
             </div>
           </a>
-          <a href="#">
+          <a href="#" data-reveal-id="unimplemented-warning">
             <div class="svg-container">
               <img id="messages-icon" class="svg-icon" src="/images/messages_icon_white.svg" alt="Messages">
             </div>
           </a>
+
+          <div id="unimplemented-warning" class="reveal-modal" data-reveal data-options="animation:fade;">
+            <a class="close-reveal-modal">&#x2715;</a>
+            <p>Sorry, this feature hasn't been implemented yet.</p>
+            <p class="header-text">Check back soon!</p>
+          </div>
+
           <a href="/profile">
-            <p class="header-text" id="username">Elizabeth Pollard</p>
+            <p class="header-text" id="username"><%= username %></p>
           </a>
           <a href="/profile">
             <div class="user-icon"></div>

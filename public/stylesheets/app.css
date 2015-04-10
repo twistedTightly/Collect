@@ -3464,21 +3464,26 @@ header #toolbar .svg-container #messages-icon {
   letter-spacing: 3px;
 }
 
-/* line 251, ../scss/app.scss */
+/* line 250, ../scss/app.scss */
+#unimplemented-warning {
+  width: 30%;
+}
+
+/* line 254, ../scss/app.scss */
 #pullout-menu.show {
   right: 0;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 256, ../scss/app.scss */
+/* line 259, ../scss/app.scss */
 #pullout-menu-tab.show {
   right: 20%;
   -webkit-transition: right 1s;
   transition: right 1s;
 }
 
-/* line 261, ../scss/app.scss */
+/* line 264, ../scss/app.scss */
 header.shift {
   padding-right: 20%;
   -webkit-transition: padding 1s;
