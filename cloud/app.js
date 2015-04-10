@@ -272,6 +272,16 @@ var jackAndDianeMemories = [{	images: '/images/Elizabeth/jack-diane/1.jpg',
 								videoId: 'h04CH9YZcpI',
 								tags: ['Written March 20, 2015', 'John Mellencamp']
 							},
+							{	images: '/images/Elizabeth/jack-diane/4.jpg',
+								title: 'Grandma\'s Singing',
+								text: ['Grandma was a natural performer. That was our biggest connection actually, as she always encouraged me and helped me prepare for my auditions for the school musicals. I loved her voice; it wasn’t the most beautiful sound in the world, but it always amazed me. She commanded attention when she sang. When she was a child living in Hell’s Kitchen she was recruited to be a model. She landed several ads even even got a role as Shirley Temple’s stage double! Unfortunately Shirley never missed a day on set so Grandma never got to test out her tap skills.'],
+								author: 'Elizabeth',
+								month: 'August',
+								year: '2012',
+								soundFile: 'images/Elizabeth/jack-diane/grandma.mp3',
+								soundDescription: 'Grandma Diane singing ‘Danny Boy’',
+								tags: ['Written March 20, 2015']
+							},
 							{	images: '/images/Elizabeth/jack-diane/2.png',
 								title: '50th Anniversary',
 								text: ['My dad and I made this illustration as an invitation to my grandparent’s 50th anniversary party. They loved it. That was always my favorite thing about them— their amazing sense of humor and their ability to laugh at themselves. I think they threw a better party at that age than I can ever hope to manage!'],
@@ -286,16 +296,6 @@ var jackAndDianeMemories = [{	images: '/images/Elizabeth/jack-diane/1.jpg',
 								author: 'Elizabeth',								
 								month: 'Summer',
 								year: '2001',
-								tags: ['Written March 20, 2015']
-							},
-							{	images: '/images/Elizabeth/jack-diane/4.jpg',
-								title: 'Grandma\'s Singing',
-								text: ['Grandma was a natural performer. That was our biggest connection actually, as she always encouraged me and helped me prepare for my auditions for the school musicals. I loved her voice; it wasn’t the most beautiful sound in the world, but it always amazed me. She commanded attention when she sang. When she was a child living in Hell’s Kitchen she was recruited to be a model. She landed several ads even even got a role as Shirley Temple’s stage double! Unfortunately Shirley never missed a day on set so Grandma never got to test out her tap skills.'],
-								author: 'Elizabeth',
-								month: 'August',
-								year: '2012',
-								soundFile: 'images/Elizabeth/jack-diane/grandma.mp3',
-								soundDescription: 'Grandma Diane singing ‘Danny Boy’',
 								tags: ['Written March 20, 2015']
 							}];
 
@@ -418,7 +418,7 @@ var familyStoriesMemories = [
 		tags: ['Written April 2, 2015']
 	},
 	{	images: '/images/Elizabeth/family-stories/1.jpg',
-		title: 'Mom\'s Parents',
+		title: 'Mom’s Parents',
 		text: ['I remember when I first found this photo. I think it was the first time I actually saw my mother’s parent’s smiling. I sat in the den looking at it for what must have been close to an hour. They both died before I was born. I grew up hearing so many stories, but our photos never really painted a truly dimensional portrait of them. I always felt so detached from them; It was like they weren’t real to me until I had this moment.//My mom always spoke of her parents sense of humor. How they were always laughing and poking fun at each other. When my mom found me there that day, she spent the afternoon sharing memories from her childhood with me. I had never heard most of them before, and they completely changed my understanding of my grandparents. She imitated her Dad’s laughter, demonstrated her mom’s impressions of the parish priest. Everything felt so tangible for the first time. And I felt so close to my mom afterwards. It was as if before that moment I only saw her as my parent. She had so much more than maternal support to share with me.'],
 		author: 'Elizabeth',
 		month: 'March',
