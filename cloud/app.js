@@ -500,10 +500,41 @@ app.get('/collection/marilyn/year-in-kenya', function(req, res) {
 	});
 });
 
-var	endingUpInSf	=	[{ 	images: '/images/MarilynCamps/san-franscisco/1.jpg',
-							title: ''
+var	endingUpInSf	=	[{ 	title: 'Halloween introduction',
+							text: ['I met Joe at a Halloween Party at Gina Lovejoy’s house while visiting New York for the weekend. He was dressed as a DJ and I heard him doing his radio impressions from across the room. He cracked me up, but I was much too shy to approach him. Eventually, Gina dragged me over and introduced us. We ended up talking for five hours straight—sitting with our legs dangling out her fire escape. I can’t even recall the specifics of the conversation. There was something about him being in my art class in high school, but I had no memory of ever meeting him! Apparently he had a small crush on my back then and I found it incredibly endearing. The night seemed to fly by in the most amazing way','I lived in Baltimore at the time, so I had to drive home the next day. I didn’t hear from him for a week and a half, despite giving him my number after we met up for breakfast. I was thoroughly pissed off. I was about to call Gina to chastise her for introducing me to such a scumbag when the mail man knocked.. He wrote me a 10 page letter about the night and how amazing he felt around me. I called him right away and we made plans to meet up for the next few weekends. I knew I was getting into a long distance thing and that scared the death out of me, but I was hooked.'],
+							author: 'Marilyn',
+							month: 'October',
+							year: '1983',
+							tags: ['Written March 22, 2015', 'halloween']
+						},
+						{	images: '/images/MarilynCamps/san-franscisco/1.jpg',
+							title: 'Muir Beach',
+							text: ['Joe packed the car up and took me over the bridge to Muir Beach in Mill Valley. I hadn’t been to California since I was a little girl, and it had been such a nice trip thus far. We drove past my childhood home, spent the day in Danville, and explored Joe’s favorite parks and restaurants. He seemed to really love living out here, and I felt guilty for wanting him to move back to the East Coast to be closer to me.','We had lunch at the Pelican Inn—a small and cozy restaurant covered in weathered wood. Afterwards we meandered out onto the beach and took a short hike to the top of the hill. He proposed while we watched the sunset below us. As cheesy as it sounds, whenever I hum The Mamas and The Papas I smile and feel totally loved.'],
+							author: 'Marilyn',
+							videoId: 'XJYlpYF1li4',
+							month: 'May 12',
+							year: '1983',
+							tags: ['Written March 22, 2015', 'proposal']
+						},
+						{	images: '/images/MarilynCamps/san-franscisco/2.jpg',
+							title: 'Wedding Day',
+							text: ['We got married at the Church of the Resurrection in Rye, New York. Our ceremony was at Westchester Country Club. My Dad was very sick at the time. Days before the wedding his doctor told him that he wouldn’t be able to make it. I was heart broken. Despite the advisory against it, my dad showed up to walk me down the aisle. We both were stained with tears before I reached the alter. I could barely see Joe standing across from me. But he took my hand, even as the priest protested, and we recited our vows to one another. No one could hear the words besides us, but the privacy was beautiful and comforting. I felt safe and at peace.'],
+							location: 'Church of the Resurrection | Rye, NY',
+							locationImage: '/images/locations/church-of-resurrection-boston.png',
+							author: 'Marilyn',
+							month: 'July',
+							year: '1984',
+							tags: ['Written March 22, 2015', 'wedding']
+						},
+						{	images: '/images/MarilynCamps/san-franscisco/3.jepg',
+							title: '30 years later',
+							text: ['30 years later we went back to the hill where it all began. It is incredible to think about the stories and experiences we’ve lived in the meantime. The people we have brought into this world. And I’m so happy that nothing has changed—other than the fact that it was a bit harder for me to hike up this time!'],
+							author: 'Marilyn',
+							month: 'January',
+							year: '2015',
+							tags: ['Written March 22, 2015', 'anniversary']
+						}];
 
-}];
 app.get('/collection/marilyn/ending-up-in-sf', function(req, res) {
 	res.render('collection-template', {
 								username: 			'Elizabeth Pollard',
@@ -516,6 +547,16 @@ app.get('/collection/marilyn/ending-up-in-sf', function(req, res) {
 	});
 });
 
+
+var workingInBaltimore	=	[{ 	images: '/images/MarilynCamps/baltimore/1.jpg',
+								title: 'First job',
+								text: ['My first job after graduating college was at a now defunct telephone service provider in Baltimore. It was the worst job imaginable for a shy girl like myself. I had to go around neighborhoods in the suburbs and knock on doors. I’d ask whoever opened the door about their current phone systems. 99% of the time they’d slam the door on me before I could finish my opening line. It was mortifying and I cried more that year than I ever have in years before and since!','The only bright side of those two years were living with Libby. She was one of my best friends in college and we had so much fun together going out on the town. She grew up in Baltimore, so she was always trying to set me up with her friends. It never worked out, but she absolutely loved hearing the stories of the horrible dates. The next time she saw my “suitors” she would give them so much crap. They would turn so red, but the whole room would be cracking up!'],
+								author: 'Marilyn',
+								month: 'August',
+								year: '1981',
+								tags: ['Written March 25, 2015', 'Baltimore']
+							}];
+
 app.get('/collection/marilyn/working-in-baltimore', function(req, res) {
 	res.render('collection-template', {
 								username: 			'Elizabeth Pollard',
@@ -524,9 +565,26 @@ app.get('/collection/marilyn/working-in-baltimore', function(req, res) {
 								contributorCount: 	'1 contributor',
 								profilePic:  		'marilyn.JPG',
 								backLink: 			'/profile/marilyn-camps',
-								memories: 			[]
+								memories: 			workingInBaltimore
 	});
 });
+
+var	mamaroneckHighSchool 	= [{	images: '/images/MarilynCamps/mamaroneck-high-school/1.jpg',
+									title: 'The covered bridge',
+									text: ['The covered bridge outside my house was a staple of my high school years. It was like a meeting place of sorts for my friends and me. Sitting atop the small riverbank, it was a concealed space to relax, gossip, hide from my parents. I can’t really say all the things my brothers got up to out there, but let’s just say that I’m surprised it never burnt down.','Whenever I hear the Hall & Oates’s “Had I Known You Better Then” I picture dancing with Debbie in our tiny little tunnel and dreaming about how I so desperately wanted to falling in love. I had my first kiss out their with Eli Martin a few months later. It didn’t last.'],
+									author: 'Marilyn',
+									month: 'August',
+									year: '1973',
+									tags: ['Written April 2, 2015', 'bridge']
+								},
+								{	images: '/images/MarilynCamps/mamaroneck-high-school/2.jpg',
+									title: 'Andy',
+									text: ['Andy was my hippie with long hair—that is until my Dad cut it all off in our kitchen. He did look much better with short hair, but I don’t think he ever recovered from the shock of getting his ponytail snipped from behind!','He was into reading the classics, writing and acting in plays, listening to Bob Dylan and smoking pot. He also like to fish. He was incredibly intelligent and went to boarding school after 9th grade down south. He was my only boyfriend that I cared about. I was so in love with him; he was the first person I fell for. I went out with him for several years until he broke up with me after my sophomore year in college for a girl he met at Wesleyan and later married.','We would write to each other constantly. It cost too much money to talk on the phone, so he would write my the longest love notes. I still have all of them. It is so funny to go back and read them. It brings back the feelings slightly—but with the coloration that comes with time and experience. It all seems so silly now. But we had such good memories.'],
+									author: 'Marilyn',
+									month: 'Fall',
+									year: '1974',
+									tag: ['Written April 2, 2015', 'first love']
+								}];
 
 app.get('/collection/marilyn/mamaroneck-high-school', function(req, res) {
 	res.render('collection-template', {
@@ -536,10 +594,27 @@ app.get('/collection/marilyn/mamaroneck-high-school', function(req, res) {
 								contributorCount: 	'1 contributor',
 								profilePic:  		'marilyn.JPG',
 								backLink: 			'/profile/marilyn-camps',
-								memories: 			[]
+								memories: 			mamaroneckHighSchool
 	});
 });
 
+var youngerYears 	=	[{		images: '/images/MarilynCamps/younger-years/1.jpg',
+								title: 'Learning how to swim',
+								text: ['Moving to California was actually quite embarrassing for me. I was the only 6 year old on our block who didn’t know how to swim. We had a pool in our backyard and it seemed like all anyone ever wanted to do on play dates were cannonballs or handstands. After a couple of months of embarrassingly hiding my lack of skills, I begged my mom to take me to swim lessons despite my overwhelming fears. She wouldn’t let me start until summer vacation, but then we hit the ground running. I would work at it 5 days a week. It was always so mortifying when I saw my friends across the pool at swim practice. I practically had floaties on my arm! I was so afraid at first, but eventually I got it. I even became one of the fastest swimmers on the team the next year!'],
+								author: 'Marilyn',
+								location: 'Round Hill Country Club | Alamo, CA',
+								locationImage: '/images/locations/round-hill-country-club.png',
+								month: 'Summer',
+								year: '1965',
+								tags: ['Written April 6, 2015', 'swimming']
+							},
+							{	images: '/images/MarilynCamps/younger-years/2.jpg',
+								title: 'Most memorable birthday gift',
+								
+
+							}
+
+}]
 app.get('/collection/marilyn/younger-years', function(req, res) {
 	res.render('collection-template', {
 								username: 			'Elizabeth Pollard',
