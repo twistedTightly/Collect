@@ -284,8 +284,10 @@ var jackAndDianeMemories = [{	images: '/images/Elizabeth/jack-diane/1.jpg',
 							},
 							{	images: '/images/Elizabeth/jack-diane/2.png',
 								title: '50th Anniversary',
-								text: ['My dad and I made this illustration as an invitation to my grandparent’s 50th anniversary party. They loved it. That was always my favorite thing about them— their amazing sense of humor and their ability to laugh at themselves. I think they threw a better party at that age than I can ever hope to manage!'],
+								text: ['My dad and I made this illustration as an invitation to my grandparent’s 50th anniversary party. They loved it. That was always my favorite thing about them— their amazing sense of humor and their ability to laugh at themselves. I think they threw a better party at that age than I can ever hope to manage! It was so adorable watching them dance to their original wedding song. I almost stole the Frank Sinatra song for my own wedding to Nick. So beautiful.'],
 								author: 'Elizabeth',								
+								soundFile: '/images/Elizabeth/jack-diane/time-after-time.mp3',
+								soundDescription: 'Time After Time | Frank Sinatra',
 								month: 'May 22',
 								year: '2004',
 								tags: ['Written March 20, 2015', 'Anniversary', '50']
@@ -325,10 +327,10 @@ var	lifeAtTheCape 	= 		[{	images: '/images/Elizabeth/summers-at-the-cape/1.jpg',
 								author: 'Elizabeth',
 								month: 'Summer',
 								year: '2012',
-								videoId: 'ghJwYQu-JBs&feature=youtu.be',
+								videoId: 'ghJwYQu-JBs',
 								tags: ['Written March 18, 2015', 'Cape Cod']
 							},
-							{	title: 'Province Town',
+							{	title: 'Provincetown',
 								text: ['One of my favorite things to do at the Cape was our annual trip up to Provincetown at the tip of Massachusetts. The town is known as one of the most gay friendly towns in the country, creating an atmosphere that is lively, eclectic, and charming all at the same time.***We would normally start the hour drive up around lunch time and get to P-town in time to take a whale watch around the bay. I always enjoyed coming back into the harbor and seeing the huge portraits of old people facing the ocean.','Once back on land we would get dinner at a seafood restaurant and then spend hours wandering through the three main streets of the quaint little town. There were tons of art shops, candy stores, and performance halls but our favorite places were the puzzle and marine surplus stores. Dad would spend hours in the puzzle store attempting to solve as many as he could and then bring them home to us to show off his intelligence. I would spend hours in the surplus store looking through everything from license plates to pirate flags to old army posters.','Finally, we would always end the night getting ice cream at the small shop near the parking lot before driving back to our cottage.'],
 								author: 'Elizabeth',
 								month: 'Summer',
@@ -518,9 +520,11 @@ var	endingUpInSf	=	[{ 	title: 'Halloween introduction',
 						},
 						{	images: '/images/MarilynCamps/san-franscisco/2.jpg',
 							title: 'Wedding Day',
-							text: ['We got married at the Church of the Resurrection in Rye, New York. Our ceremony was at Westchester Country Club. My Dad was very sick at the time. Days before the wedding his doctor told him that he wouldn’t be able to make it. I was heart broken. Despite the advisory against it, my dad showed up to walk me down the aisle. We both were stained with tears before I reached the alter. I could barely see Joe standing across from me. But he took my hand, even as the priest protested, and we recited our vows to one another. No one could hear the words besides us, but the privacy was beautiful and comforting. I felt safe and at peace.'],
+							text: ['We got married at the Church of the Resurrection in Rye, New York. Our ceremony was at Westchester Country Club. My Dad was very sick at the time. Days before the wedding his doctor told him that he wouldn’t be able to make it. I was heart broken. Despite the advisory against it, my dad showed up to walk me down the aisle. We both were stained with tears before I reached the alter. I could barely see Joe standing across from me. But he took my hand, even as the priest protested, and we recited our vows to one another. No one could hear the words besides us, but the privacy was beautiful and comforting. I felt safe and at peace. Our wedding song was "You\'re the Inspiration" by Chicago, and it still rings true today.'],
 							location: 'Church of the Resurrection | Rye, NY',
 							locationImage: '/images/locations/church-of-resurrection-boston.png',
+							soundFile: '/images/MarilynCamps/san-franscisco/youre-the-inspiration.mp3',
+							soundDescription: 'You\'re the Inspiration | Chicago',
 							author: 'Marilyn',
 							month: 'July',
 							year: '1984',
@@ -610,11 +614,13 @@ var youngerYears 	=	[{		images: '/images/MarilynCamps/younger-years/1.jpg',
 							},
 							{	images: '/images/MarilynCamps/younger-years/2.jpg',
 								title: 'Most memorable birthday gift',
-								
-
-							}
-
-}]
+								text: ['I got my first camera in 1968 on my birthday. This was actually the first shot I ever took. I remember begging my dad to model for me. He eventually caved in. This is my favorite picture of him. So calm and so like him. Whenever I look at the picture I remember dancing across the living room with him. I’d step on his shoes and he’d swing me around the room.'],
+								author: 'Marilyn',
+								videoId: 'hn0ZJHVH17I',
+								month: 'April 30',
+								year: '1968',
+								tags: ['Written April 6, 2015','camera']
+							}];
 app.get('/collection/marilyn/younger-years', function(req, res) {
 	res.render('collection-template', {
 								username: 			'Elizabeth Pollard',
@@ -623,7 +629,7 @@ app.get('/collection/marilyn/younger-years', function(req, res) {
 								contributorCount: 	'1 contributor',
 								profilePic:  		'marilyn-crop.JPG',
 								backLink: 			'/profile/marilyn-camps',
-								memories: 			[]
+								memories: 			youngerYears
 	});
 });
 
