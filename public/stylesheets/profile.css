@@ -4093,6 +4093,59 @@ blockquote p {
  *
  ********************/
 /* line 202, ../scss/profile.scss */
+#profile-suggestion {
+  color: #979797;
+  text-align: left;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #979797;
+  margin-left: 40px;
+  margin-bottom: 150px;
+}
+/* line 210, ../scss/profile.scss */
+#profile-suggestion > * {
+  display: inline-block;
+}
+/* line 213, ../scss/profile.scss */
+#profile-suggestion > div:first-child {
+  width: 170px;
+}
+/* line 216, ../scss/profile.scss */
+#profile-suggestion p:first-child {
+  font-size: 14pt;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+/* line 221, ../scss/profile.scss */
+#profile-suggestion p:last-child {
+  font-size: 10pt;
+  font-family: Axel, "Orator Std", monospace;
+  letter-spacing: 3px;
+}
+/* line 226, ../scss/profile.scss */
+#profile-suggestion .profile-link {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  margin-left: 20px;
+}
+/* line 230, ../scss/profile.scss */
+#profile-suggestion .profile-link p {
+  color: #5F7F8E;
+  text-align: center;
+  margin-top: 10px;
+}
+/* line 235, ../scss/profile.scss */
+#profile-suggestion .profile-link .user-icon {
+  width: 55px;
+  height: 55px;
+}
+/* line 239, ../scss/profile.scss */
+#profile-suggestion .profile-link:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+
+/* line 245, ../scss/profile.scss */
 #footer {
   height: 80px;
   display: none;

@@ -56,7 +56,7 @@
           <div class="svg-container" id="user-memories-count">
             <img class="svg-icon" src="/images/icons/narrative_icon_black.svg" alt="Memories icon">
           </div>
-          <p>30 memories</p>
+          <p>24 memories</p>
 
           <a href="#" class="button dark" data-reveal-id="add-memory-modal">add a memory</a>
           <% include partials/addModal.ejs %>
@@ -132,7 +132,28 @@
           </div>
         </div> <!-- End Body Section. The memory gallery. -->
       </div>
-    </div>
+
+      <div id="profile-suggestion">
+        <div>
+          <p class="header-text">Quick tip!</p>
+          <p>Visit other profiles to explore additional memories.</p>
+        </div>
+        <div class="profile-link">
+          <a href="/profile/nick-pollard" alt="Go to Nick's profile">
+            <div class="user-icon" style="background-image: url(/images/content/nick.jpg)"></div>
+            <p>Nick</p>
+          </a>
+        </div>
+        <div class="profile-link">
+          <a href="/profile/marilyn-camps" alt="Go to Marilyn's profile">
+            <div class="user-icon" style="background-image: url(/images/content/marilyn-crop.JPG)"></div>
+            <p>Marilyln</p>
+          </a>
+        </div>
+      </div>
+    </div><!-- End wrapper -->
+
+
 
     <% include partials/footer.ejs %>
     <% include partials/scripts.ejs %>

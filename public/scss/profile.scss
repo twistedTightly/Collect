@@ -199,6 +199,49 @@ $user-info-spacing: 15px;
  * Footer
  *
  ********************/
+ #profile-suggestion {
+    color: $dark-grey;
+    text-align: left;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid $dark-grey;
+    margin-left: 40px;
+    margin-bottom: 150px;
+    & > * {
+        display: inline-block;
+    }
+    & > div:first-child {
+        width: 170px;
+    }
+    p:first-child {
+        font-size: 14pt;
+        margin-bottom: 10px;
+        margin-right: 15px;
+    }
+    p:last-child {
+        font-size: 10pt;
+        font-family: $font-family-monospace-lower;
+        letter-spacing: 3px;
+    }
+    .profile-link {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        margin-left: 20px;
+        p {
+            color: $primary-color;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .user-icon {
+            width: 55px;
+            height: 55px;
+        }
+        &:hover {
+            -webkit-filter: none;
+            filter: none;
+        }
+    }
+ }
 #footer {
     height: $footer-height;
     display: none;
