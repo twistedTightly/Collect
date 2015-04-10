@@ -653,21 +653,24 @@ app.get('/connections', function(req, res) {
 
 // Profiles
 app.get('/profile/nick-pollard', function(req, res) {
-	res.render('profile-nick', { 	username: 	'Nick Pollard',
+	res.render('profile-nick', { 	username: 	'Elizabeth Pollard',
 									location: 	'New York, New York',
-									profilePic: 'nick.jpg' });
+									profilePic: 'nick.jpg',
+									user: 'Nick Pollard' });
 });
 
 app.get('/profile/marilyn-camps', function(req, res) {
-	res.render('profile-marilyn', { username: 	'Marilyn Camps',
+	res.render('profile-marilyn', { username: 	'Elizabeth Pollard',
 									location: 	'Larchmont, New York',
-									profilePic: 'marilyn.JPG' });
+									profilePic: 'marilyn.JPG',
+									user: 'Marilyn Camps' });
 });
 
 app.get('/profile', function(req, res) {
 	res.render('profile', { username: 	'Elizabeth Pollard',
 							location: 	'New York, New York',
-							profilePic: 'elizabeth.jpg' });
+							profilePic: 'elizabeth.jpg',
+							user: 'Elizabeth Pollard' });
 });
 
 app.post('/profile', function(req, res) {
@@ -683,7 +686,8 @@ app.post('/profile', function(req, res) {
 			name = user[0].get('firstname');
 			res.render('profile', { username: name,
 									location: 'New York, New York',
-									profilePic: 'elizabeth.jpg' });
+									profilePic: 'elizabeth.jpg',
+									user: 'Elizabeth Pollard' });
 		},
 		// Query had a error
 		error: function(error) {
@@ -692,7 +696,8 @@ app.post('/profile', function(req, res) {
 			name = 'error';
 			res.render('profile', { username: name,
 									location: 'New York, New York',
-									profilePic: 'elizabeth.jpg' });
+									profilePic: 'elizabeth.jpg',
+									user: 'Elizabeth Pollard' });
 		}
 	});
 });
