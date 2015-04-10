@@ -23,8 +23,13 @@ function showPulloutMenu() {
 		$( '#pullout-menu' ).toggleClass( "show" );
 		$( '#pullout-menu-tab' ).toggleClass( "show" );
 		$( 'header' ).toggleClass( "shift" );
-	});
 
+		if ( $( '#pullout-menu-tab' ).hasClass( "show" ) ) {
+			$( "#pullout-menu-icon-holder img" ).attr( "src", "/images/icons/close.svg" );
+		} else {
+			$( "#pullout-menu-icon-holder img" ).attr( "src", "/images/icons/pullmenu_icon.svg" );
+		}
+	});
 }
 
 function checkIdleTime() {
