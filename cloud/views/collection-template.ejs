@@ -111,10 +111,10 @@
                      <img id="video<%= i %>" src="/images/titled-icons/watch_icon_blue.svg" alt="Watch" />
                   <% } %>
                   <% if (memories[i].soundFile) { %>
-                    <img id="sound<%= i %>" src="../images/titled-icons/4_listen_icon_blue.svg" alt="Listen" />
+                    <img id="sound<%= i %>" src="/images/titled-icons/4_listen_icon_blue.svg" alt="Listen" />
                   <% } %>
                   <% if (memories[i].connections) { %>
-                    <img id="connet<%= i %>" src="../images/titled-icons/5_connect_icon_blue.svg" alt="Connect" />
+                    <img id="connet<%= i %>" src="/images/titled-icons/5_connect_icon_blue.svg" alt="Connect" />
                   <% } %>
                   <!-- Comments Section -->
                   <div class="comment-section collapsed header-text">
@@ -155,7 +155,7 @@
               </div>
               <div>
                 <div class="metadata">
-                  <% if (memories[i].author && memories[i].author !== "Elizabeth") { %>
+                  <% if (memories[i].author) { %>
                     <p><a href="<%= memories[i].authorLink %>"><%= memories[i].author %></a></p> 
                   <% } %>                 
                   <% if (memories[i].month) { %>
@@ -166,7 +166,7 @@
                   <% } %>
                 </div>
                 <div class="author-icon">
-                  <% if (memories[i].author && memories[i].author !== "Elizabeth") { %>
+                  <% if (memories[i].author) { %>
                     <a href="<%= memories[i].authorLink %>">
                       <div class="user-icon" style="background-image: url(/images/content/<%= memories[i].authorPic %>);"></div>
                     </a>
