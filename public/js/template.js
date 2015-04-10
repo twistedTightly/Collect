@@ -1,4 +1,4 @@
-var IDLE_TIMEOUT = 120; //seconds
+var IDLE_TIMEOUT = 60; //seconds
 var idleSecondsCounter = 0;
 
 // Attaches listeners to the DOM once it has loaded
